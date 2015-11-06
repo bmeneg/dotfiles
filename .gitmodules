@@ -1,19 +1,19 @@
 [submodule "vim/bundle/jedi-vim"]
-    path = bundle/jedi-vim
+    path = vim/bundle/jedi-vim
     url = https://github.com/davidhalter/jedi-vim
 
 [submodule "vim/bundle/nerdtree"]
-    path = bundle/nerdtree
+    path = vim/bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
 
 [submodule "vim/bundle/powerline"]
-    path = bundle/powerline
+    path = vim/bundle/powerline
     url = https://github.com/powerline/powerline.git
 
 [submodule "vim/bundle/python-mode"]
-    path = bundle/python-mode
+    path = vim/bundle/python-mode
     url = https://github.com/klen/python-mode
 
 [submodule "tmux/plugins/tpm"]
-    path = plugins/tpm
+    path = tmux/plugins/tpm
     url = https://github.com/tmux-plugins/tpm
