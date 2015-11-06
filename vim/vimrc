@@ -4,7 +4,7 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 syntax on 
-colorscheme desert
+colorscheme molokai 
 
 set history=50
 set encoding=utf8
@@ -16,9 +16,10 @@ set textwidth=80
 set formatoptions+=t
 set number
 set mouse=a
-set t_Co=256
 set cursorline
 set showmatch
+set t_Co=256
+set t_ut=
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim 
 "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
