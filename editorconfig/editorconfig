@@ -1,0 +1,27 @@
+# EditorConfig file with all my coding styles
+
+# Top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+trim_trailing_whitespaces = true
+max_line_length = 80
+
+# C linux style coding standard
+[*.{c,h}]
+indent_style = tab
+tab_width = 8
+indent_size = 8
+
+[*.sh]
+indent_style = space
+tab_width = 4
+indent_size = 4
+max_line_length = 120
+
+[.md]
+trim_trailing_whitespaces = false
+max_line_length = 120
