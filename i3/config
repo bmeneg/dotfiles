@@ -30,7 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+#bindsym $mod+Return exec konsole
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -163,7 +164,8 @@ bar {
 }
 
 ## User modifications
-bindcode 133+l exec --no-startup-id i3lock
+# bindcode 133+l exec --no-startup-id i3lock
+bindsym Mod4+l exec --no-startup-id i3lock-fancy
 
 # audio controller
 bindsym F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -171,16 +173,14 @@ bindsym F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym F12 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # autostart applications
-exec_always xrandr --output DisplayPort-0 --primary --mode 1600x900 --pos 1440x0 --rotate normal --output DVI-0 --mode 1440x900 --pos 0x384 --rotate normal
+exec_always xrandr --output DisplayPort-0 --mode 1600x900 --pos 1440x0 --rotate normal --output DVI-0 --primary --mode 1440x900 --pos 0x600 --rotate normal
 exec_always feh --bg-scale /usr/share/wallpapers/Next/contents/images/1920x1080.png
 exec_always xset -b
 
 assign [class="Spotify"] $workspace10
 assign [class="Firefox"] $workspace2
-assign [class="Slack"] $workspace9
 assign [class="Skype"] $workspace9
 
 exec firefox
 exec skype
-exec slack
 exec spotify
