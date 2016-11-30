@@ -10,7 +10,7 @@ set smtp_url = 'smtps://bmeneguele@smtp.gmail.com'
 set smtp_pass = ''
 set record = ""
 
-set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
+set trash = "imaps://imap.gmail.com/[Gmail]/Lixeira"
 
 set sort = threads
 set mailcap_path = ~/.mutt/mailcap
