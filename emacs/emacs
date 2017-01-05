@@ -70,4 +70,5 @@
 (load-theme 'leuven t)
 
 ;; Line number on the left bar (linum-mode)
-(linum-mode)
+(setq linum-format "%d ")
+(global-linum-mode 1)
