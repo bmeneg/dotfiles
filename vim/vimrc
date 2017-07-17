@@ -1,54 +1,115 @@
-"--- Vundle specific ---"
+" --------------------------------------------------------------------------
+" Vundle plugin manager
+" --------------------------------------------------------------------------
 set nocompatible
 filetype off
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'mhinz/vim-signify'
 Plugin 'vim-airline/vim-airline'
+Plugin 'mhinz/vim-signify'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'python-mode/python-mode'
-Plugin 'vivien/vim-linux-coding-style'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'vivien/vim-linux-coding-style'
+Plugin 'bogado/file-line'
+Plugin 'majutsushi/tagbar'
+Plugin 'joe-skb7/cscope-maps'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'Valloric/YouCompleteMe'
 
-call vundle#end()
+call vundle#end()            
 filetype plugin indent on
 
-"--- User specific ---"
-colorscheme Tomorrow-Night-Bright
-
-set history=50
-set autoindent
-set number
-set mouse=a
-set cursorline
-set showmatch
-set t_Co=256
-set laststatus=2
+" --------------------------------------------------------------------------
+" User specific configuretion 
+" --------------------------------------------------------------------------
+syntax on se title
+" colorscheme mrkn256
+colorscheme 256-grayvim
 
 " Configs already set within editorconfig's file
+" --------------------------------------------------------------------------
 "set encoding=utf8
 "set expandtab
 "set shiftwidth=4
 "set tabstop=4
 "set textwidth=80
 "set formatoptions+=t
-"
-let python_highlight_all = 1
+
+" General VIM configuration
+" --------------------------------------------------------------------------
+set history=50
+set autoindent
+set number
+set mouse=a
+"set cursorline
+set showmatch
+set t_Co=256
+set laststatus=2
+
+hi ColorColumn ctermbg=black guibg=black
+
+" Python-mode plugin options
+" --------------------------------------------------------------------------
 let g:pymode_rope = 0
 let g:pymode_lint = 0
 let g:pymode_syntax_all = 1
 
-let g:linuxsty_pattern = ['/usr/src/', '/linux']
+" Linux style plugin options
+" --------------------------------------------------------------------------
+"let g:linuxsty_pattern = ['/usr/src/', '/linux']
 
-let g:ycm_auto_trigger = 0
-let g:ycm_autoclose_preview_window_after_completion = 1
-        
+" YouCompleteMe plugin options
+" --------------------------------------------------------------------------
+" let g:ycm_auto_trigger = 0
+" let g:ycm_autoclose_preview_window_after_completion = 1
+
+" OmniCompletition options
+" --------------------------------------------------------------------------
+set omnifunc=syntaxcomplete#Complete
+
+" Configure menu behavior
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" Use Ctrl+Space for omni-completion
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+  \ "\<lt>C-n>" :
+  \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+" Popup menu hightLight Group
+highlight Pmenu ctermbg=13 guibg=LightGray
+highlight PmenuSel ctermbg=7 guibg=DarkBlue guifg=White
+highlight PmenuSbar ctermbg=7 guibg=DarkGray
+highlight PmenuThumb guibg=Black
+
+" Enable global scope search
+let OmniCpp_GlobalScopeSearch = 1
+" Show function parameters
+let OmniCpp_ShowPrototypeInAbbr = 1
+" Show access information in pop-up menu
+let OmniCpp_ShowAccess = 1
+" Auto complete after '.'
+let OmniCpp_MayCompleteDot = 1
+" Auto complete after '->'
+let OmniCpp_MayCompleteArrow = 1
+" Auto complete after '::'
+let OmniCpp_MayCompleteScope = 0
+" Don't select first item in pop-up menu
+let OmniCpp_SelectFirstItem = 0
+
+" Key remapping
+" --------------------------------------------------------------------------
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
