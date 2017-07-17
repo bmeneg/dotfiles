@@ -8,8 +8,8 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespaces = true
-max_line_length = 76
-wrap_width = 76
+max_line_length = 80
+wrap_width = 80
 indent_style = space
 indent_size = 4
 tab_width = 4
@@ -19,11 +19,19 @@ indent_style = tab
 tab_width = 8
 indent_size = 8
 
-[*.sh]
-max_line_length = 116
-wrap_width = 116
+[Makefile]
+indent_style = tab
+tab_width = 8
+indent_size = 8
 
-[.{md,rst}]
+[*.sh]
+max_line_length = 120
+wrap_width = 120
+
+[*.md]
 trim_trailing_whitespaces = false
-max_line_length = 116
-wrap_width = 116
+
+[*.rst]
+trim_trailing_whitespaces = false
+max_line_length = 120
+wrap_width = 120
