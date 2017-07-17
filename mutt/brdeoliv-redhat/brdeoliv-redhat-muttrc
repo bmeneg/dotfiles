@@ -1,0 +1,17 @@
+set spoolfile = +brdeoliv-redhat/INBOX
+set postponed = '+brdeoliv-redhat/drafts'
+set mbox = '+brdeoliv-redhat/archive'
+set record = '+brdeoliv-redhat/sent'
+
+mailboxes = $spoolfile $postponed $mbox $record \
+            +brdeoliv-redhat/kernel-general \
+            +brdeoliv-redhat/kernel-internal \
+            +brdeoliv-redhat/rhel-product \
+            +brdeoliv-redhat/announce-list \
+            +brdeoliv-redhat/brazil-list \
+            +brdeoliv-redhat/memo-list \
+            +tmp/search
+
+set sendmail = "/usr/bin/msmtp -a brdeoliv-redhat"
+set from = "brdeoliv@redhat.com"
+set signature = "+brdeoliv-redhat-signature.txt"
