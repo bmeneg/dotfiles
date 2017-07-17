@@ -1,0 +1,1729 @@
+2017-07-03 09:25:26		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-03 09:27:07	=!=	Error with command "/server ibm-x3755m3-02.lab.bos.redhat.com 2029 brdeoliv/redhat:druMM0nd01!" (help on command: /help server)
+2017-07-03 09:28:53		irc: server redhat added
+2017-07-03 09:29:18		Option changed: irc.server.redhat.autoconnect = on  (default if null: off)
+2017-07-03 09:33:07		Passphrase added
+2017-07-03 09:33:52	=!=	Error with command "/secure add redhat_userserv_pass druMM0nd01!" (help on command: /help secure)
+2017-07-03 09:34:15		Secured data "redhat_userserv_password" set
+2017-07-03 09:34:15		Options saved to sec.conf
+2017-07-03 09:36:01		All servers:
+2017-07-03 09:36:01		   redhat
+2017-07-03 09:36:06		[irc]  /server  list|listfull [<server>]
+2017-07-03 09:36:06		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2017-07-03 09:36:06		                copy|rename <server> <new_name>
+2017-07-03 09:36:06		                reorder <server> [<server>...]
+2017-07-03 09:36:06		                del|keep <server>
+2017-07-03 09:36:06		                deloutq|jump|raw
+2017-07-03 09:36:06		list, add or remove IRC servers
+2017-07-03 09:36:06		    list: list servers (without argument, this list is displayed)
+2017-07-03 09:36:06		listfull: list servers with detailed info for each server
+2017-07-03 09:36:06		     add: add a new server
+2017-07-03 09:36:06		  server: server name, for internal and display use
+2017-07-03 09:36:06		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2017-07-03 09:36:06		   -temp: add a temporary server (not saved)
+2017-07-03 09:36:06		  option: set option for server (for boolean option, value can be omitted)
+2017-07-03 09:36:06		nooption: set boolean option to 'off' (for example: -nossl)
+2017-07-03 09:36:06		    copy: duplicate a server
+2017-07-03 09:36:06		  rename: rename a server
+2017-07-03 09:36:06		 reorder: reorder list of servers
+2017-07-03 09:36:06		    keep: keep server in config file (for temporary servers only)
+2017-07-03 09:36:06		     del: delete a server
+2017-07-03 09:36:06		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2017-07-03 09:36:06		    jump: jump to server buffer
+2017-07-03 09:36:06		     raw: open buffer with raw IRC data
+2017-07-03 09:36:06		Examples:
+2017-07-03 09:36:06		  /server listfull
+2017-07-03 09:36:06		  /server add freenode chat.freenode.net
+2017-07-03 09:36:06		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2017-07-03 09:36:06		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2017-07-03 09:36:06		  /server copy freenode freenode-test
+2017-07-03 09:36:06		  /server rename freenode-test freenode2
+2017-07-03 09:36:06		  /server reorder freenode2 freenode
+2017-07-03 09:36:06		  /server del freenode
+2017-07-03 09:36:06		  /server deloutq
+2017-07-03 09:36:14		irc: server redhat has been deleted
+2017-07-03 09:36:25		irc: server redhat-znc added
+2017-07-03 09:37:17		Secured data "redhat_nickserv_password" set
+2017-07-03 09:37:17		Options saved to sec.conf
+2017-07-03 09:39:03		Option changed: irc.server.redhat-znc.autoconnect = on  (default if null: off)
+2017-07-03 09:39:30		Option changed: irc.server.redhat-znc.command = "/msg userserv login brdeoliv ${redhat_userserv_password};/msg nickserv identify ${redhat_nickserv_password}"  (default if null: "")
+2017-07-03 09:40:07		Option changed: irc.server.redhat-znc.username = "brdeoliv"  (default if null: "bmeneg")
+2017-07-03 09:40:21		Option changed: irc.server.redhat-znc.realname = "Bruno Meneguele"  (default if null: "")
+2017-07-03 09:41:59		[irc]  /connect  <server> [<server>...] [-<option>[=<value>]] [-no<option>] [-nojoin] [-switch]
+2017-07-03 09:41:59		                 -all|-auto|-open [-nojoin] [-switch]
+2017-07-03 09:41:59		connect to IRC server(s)
+2017-07-03 09:41:59		    server: server name, which can be:
+2017-07-03 09:41:59		            - internal server name (added by /server add, recommended usage)
+2017-07-03 09:41:59		            - hostname/port or IP/port, port is 6667 by default
+2017-07-03 09:41:59		            - URL with format: irc[6][s]://[nickname[:password]@]irc.example.org[:port][/#channel1][,#channel2[...]]
+2017-07-03 09:41:59		            Note: for an address/IP/URL, a temporary server is added (NOT SAVED), see /help irc.look.temporary_servers
+2017-07-03 09:41:59		    option: set option for server (for boolean option, value can be omitted)
+2017-07-03 09:41:59		  nooption: set boolean option to 'off' (for example: -nossl)
+2017-07-03 09:41:59		      -all: connect to all servers defined in configuration
+2017-07-03 09:41:59		     -auto: connect to servers with autoconnect enabled
+2017-07-03 09:41:59		     -open: connect to all opened servers that are not currently connected
+2017-07-03 09:41:59		   -nojoin: do not join any channel (even if autojoin is enabled on server)
+2017-07-03 09:41:59		   -switch: switch to next server address
+2017-07-03 09:41:59		To disconnect from a server or stop any connection attempt, use command /disconnect.
+2017-07-03 09:41:59		Examples:
+2017-07-03 09:41:59		  /connect freenode
+2017-07-03 09:41:59		  /connect irc.oftc.net/6667
+2017-07-03 09:41:59		  /connect irc6.oftc.net/6667 -ipv6
+2017-07-03 09:41:59		  /connect irc6.oftc.net/6697 -ipv6 -ssl
+2017-07-03 09:41:59		  /connect my.server.org/6697 -ssl -password=test
+2017-07-03 09:41:59		  /connect irc://nick@irc.oftc.net/#channel
+2017-07-03 09:41:59		  /connect -switch
+2017-07-03 09:42:52		[irc]  /server  list|listfull [<server>]
+2017-07-03 09:42:52		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2017-07-03 09:42:52		                copy|rename <server> <new_name>
+2017-07-03 09:42:52		                reorder <server> [<server>...]
+2017-07-03 09:42:52		                del|keep <server>
+2017-07-03 09:42:52		                deloutq|jump|raw
+2017-07-03 09:42:52		list, add or remove IRC servers
+2017-07-03 09:42:52		    list: list servers (without argument, this list is displayed)
+2017-07-03 09:42:52		listfull: list servers with detailed info for each server
+2017-07-03 09:42:52		     add: add a new server
+2017-07-03 09:42:52		  server: server name, for internal and display use
+2017-07-03 09:42:52		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2017-07-03 09:42:52		   -temp: add a temporary server (not saved)
+2017-07-03 09:42:52		  option: set option for server (for boolean option, value can be omitted)
+2017-07-03 09:42:52		nooption: set boolean option to 'off' (for example: -nossl)
+2017-07-03 09:42:52		    copy: duplicate a server
+2017-07-03 09:42:52		  rename: rename a server
+2017-07-03 09:42:52		 reorder: reorder list of servers
+2017-07-03 09:42:52		    keep: keep server in config file (for temporary servers only)
+2017-07-03 09:42:52		     del: delete a server
+2017-07-03 09:42:52		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2017-07-03 09:42:52		    jump: jump to server buffer
+2017-07-03 09:42:52		     raw: open buffer with raw IRC data
+2017-07-03 09:42:52		Examples:
+2017-07-03 09:42:52		  /server listfull
+2017-07-03 09:42:52		  /server add freenode chat.freenode.net
+2017-07-03 09:42:52		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2017-07-03 09:42:52		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2017-07-03 09:42:52		  /server copy freenode freenode-test
+2017-07-03 09:42:52		  /server rename freenode-test freenode2
+2017-07-03 09:42:52		  /server reorder freenode2 freenode
+2017-07-03 09:42:52		  /server del freenode
+2017-07-03 09:42:52		  /server deloutq
+2017-07-03 09:43:18		All servers:
+2017-07-03 09:43:18		   redhat-znc
+2017-07-03 09:43:32		All servers:
+2017-07-03 09:43:32		Server: redhat-znc [not connected]
+2017-07-03 09:43:32		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com:2029'
+2017-07-03 09:43:32		  proxy. . . . . . . . :   ('')
+2017-07-03 09:43:32		  ipv6 . . . . . . . . :   (on)
+2017-07-03 09:43:32		  ssl. . . . . . . . . :   (off)
+2017-07-03 09:43:32		  ssl_cert . . . . . . :   ('')
+2017-07-03 09:43:32		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 09:43:32		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 09:43:32		  ssl_fingerprint. . . :   ('')
+2017-07-03 09:43:32		  ssl_verify . . . . . :   (on)
+2017-07-03 09:43:32		  password . . . . . . :   (hidden)
+2017-07-03 09:43:32		  capabilities . . . . :   ('')
+2017-07-03 09:43:32		  sasl_mechanism . . . :   ('plain')
+2017-07-03 09:43:32		  sasl_username. . . . :   ('')
+2017-07-03 09:43:32		  sasl_password. . . . :   (hidden)
+2017-07-03 09:43:32		  sasl_key. .  . . . . :   ('')
+2017-07-03 09:43:32		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 09:43:32		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 09:43:32		  autoconnect. . . . . : on
+2017-07-03 09:43:32		  autoreconnect. . . . :   (on)
+2017-07-03 09:43:32		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 09:43:32		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 09:43:32		  nicks_alternate. . . :   (on)
+2017-07-03 09:43:32		  username . . . . . . : 'brdeoliv'
+2017-07-03 09:43:32		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 09:43:32		  local_hostname . . . :   ('')
+2017-07-03 09:43:32		  usermode . . . . . . :   ('')
+2017-07-03 09:43:32		  command. . . . . . . : '/msg userserv login brdeoliv ${redhat_userserv_password};/msg nickserv identify ${redhat_nickserv_password}'
+2017-07-03 09:43:32		  command_delay. . . . :   (0 seconds)
+2017-07-03 09:43:32		  autojoin . . . . . . :   ('')
+2017-07-03 09:43:32		  autorejoin . . . . . :   (off)
+2017-07-03 09:43:32		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 09:43:32		  connection_timeout . :   (60 seconds)
+2017-07-03 09:43:32		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 09:43:32		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 09:43:32		  away_check . . . . . :   (0 minutes)
+2017-07-03 09:43:32		  away_check_max_nicks :   (25)
+2017-07-03 09:43:32		  msg_kick . . . . . . :   ('')
+2017-07-03 09:43:32		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 09:43:32		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 09:43:32		  notify . . . . . . . :   ('')
+2017-07-03 09:44:13		Option changed: irc.server.redhat-znc.addresses = "ibm-x3755m3-02.lab.bos.redhat.com/2029"  (default if null: "")
+2017-07-03 09:44:17		All servers:
+2017-07-03 09:44:17		Server: redhat-znc [not connected]
+2017-07-03 09:44:17		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 09:44:17		  proxy. . . . . . . . :   ('')
+2017-07-03 09:44:17		  ipv6 . . . . . . . . :   (on)
+2017-07-03 09:44:17		  ssl. . . . . . . . . :   (off)
+2017-07-03 09:44:17		  ssl_cert . . . . . . :   ('')
+2017-07-03 09:44:17		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 09:44:17		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 09:44:17		  ssl_fingerprint. . . :   ('')
+2017-07-03 09:44:17		  ssl_verify . . . . . :   (on)
+2017-07-03 09:44:17		  password . . . . . . :   (hidden)
+2017-07-03 09:44:17		  capabilities . . . . :   ('')
+2017-07-03 09:44:17		  sasl_mechanism . . . :   ('plain')
+2017-07-03 09:44:17		  sasl_username. . . . :   ('')
+2017-07-03 09:44:17		  sasl_password. . . . :   (hidden)
+2017-07-03 09:44:17		  sasl_key. .  . . . . :   ('')
+2017-07-03 09:44:17		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 09:44:17		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 09:44:17		  autoconnect. . . . . : on
+2017-07-03 09:44:17		  autoreconnect. . . . :   (on)
+2017-07-03 09:44:17		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 09:44:17		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 09:44:17		  nicks_alternate. . . :   (on)
+2017-07-03 09:44:17		  username . . . . . . : 'brdeoliv'
+2017-07-03 09:44:17		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 09:44:17		  local_hostname . . . :   ('')
+2017-07-03 09:44:17		  usermode . . . . . . :   ('')
+2017-07-03 09:44:17		  command. . . . . . . : '/msg userserv login brdeoliv ${redhat_userserv_password};/msg nickserv identify ${redhat_nickserv_password}'
+2017-07-03 09:44:17		  command_delay. . . . :   (0 seconds)
+2017-07-03 09:44:17		  autojoin . . . . . . :   ('')
+2017-07-03 09:44:17		  autorejoin . . . . . :   (off)
+2017-07-03 09:44:17		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 09:44:17		  connection_timeout . :   (60 seconds)
+2017-07-03 09:44:17		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 09:44:17		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 09:44:17		  away_check . . . . . :   (0 minutes)
+2017-07-03 09:44:17		  away_check_max_nicks :   (25)
+2017-07-03 09:44:17		  msg_kick . . . . . . :   ('')
+2017-07-03 09:44:17		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 09:44:17		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 09:44:17		  notify . . . . . . . :   ('')
+2017-07-03 09:47:04		Option "irc.server.redhat-znc.command":
+2017-07-03 09:47:04		  description: command(s) to run after connection to server and before auto-join of channels (many commands can be separated by ";", use "\;" for a semicolon, special variables $nick, $channel and $server are replaced by their value) (note: content is evaluated, see /help eval)
+2017-07-03 09:47:04		  type: string
+2017-07-03 09:47:04		  values: any string
+2017-07-03 09:47:04		  default value: (undefined)
+2017-07-03 09:47:04		  current value: "/msg userserv login brdeoliv ${redhat_userserv_password};/msg nickserv identify ${redhat_nickserv_password}"
+2017-07-03 09:47:04		  undefined value allowed (null)
+2017-07-03 09:52:21		Option "irc.server.redhat-znc.command":
+2017-07-03 09:52:21		  description: command(s) to run after connection to server and before auto-join of channels (many commands can be separated by ";", use "\;" for a semicolon, special variables $nick, $channel and $server are replaced by their value) (note: content is evaluated, see /help eval)
+2017-07-03 09:52:21		  type: string
+2017-07-03 09:52:21		  values: any string
+2017-07-03 09:52:21		  default value: (undefined)
+2017-07-03 09:52:21		  current value: "/msg userserv login brdeoliv ${redhat_userserv_password};/msg nickserv identify ${redhat_nickserv_password}"
+2017-07-03 09:52:21		  undefined value allowed (null)
+2017-07-03 09:53:11		Option "irc.server.redhat-znc.command":
+2017-07-03 09:53:11		  description: command(s) to run after connection to server and before auto-join of channels (many commands can be separated by ";", use "\;" for a semicolon, special variables $nick, $channel and $server are replaced by their value) (note: content is evaluated, see /help eval)
+2017-07-03 09:53:11		  type: string
+2017-07-03 09:53:11		  values: any string
+2017-07-03 09:53:11		  default value: (undefined)
+2017-07-03 09:53:11		  current value: "/msg userserv login brdeoliv ${redhat_userserv_password};/msg nickserv identify ${redhat_nickserv_password}"
+2017-07-03 09:53:11		  undefined value allowed (null)
+2017-07-03 09:53:18		Option changed: irc.server.redhat-znc.command = "/msg userserv login brdeoliv ${redhat_userserv_password}";"/msg nickserv identify ${redhat_nickserv_password}"  (default if null: "")
+2017-07-03 09:53:23		Option "irc.server.redhat-znc.command":
+2017-07-03 09:53:23		  description: command(s) to run after connection to server and before auto-join of channels (many commands can be separated by ";", use "\;" for a semicolon, special variables $nick, $channel and $server are replaced by their value) (note: content is evaluated, see /help eval)
+2017-07-03 09:53:23		  type: string
+2017-07-03 09:53:23		  values: any string
+2017-07-03 09:53:23		  default value: (undefined)
+2017-07-03 09:53:23		  current value: "/msg userserv login brdeoliv ${redhat_userserv_password}";"/msg nickserv identify ${redhat_nickserv_password}"
+2017-07-03 09:53:23		  undefined value allowed (null)
+2017-07-03 09:56:05	=!=	Error: can not merge windows, there's no other window with same size near current one
+2017-07-03 09:56:11		[core]
+2017-07-03 09:56:11		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2017-07-03 09:56:11		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2017-07-03 09:56:11		[alias]
+2017-07-03 09:56:11		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2017-07-03 09:56:11		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2017-07-03 09:56:11		[aspell]
+2017-07-03 09:56:11		  aspell
+2017-07-03 09:56:11		[charset]
+2017-07-03 09:56:11		  charset
+2017-07-03 09:56:11		[exec]
+2017-07-03 09:56:11		  exec
+2017-07-03 09:56:11		[fifo]
+2017-07-03 09:56:11		  fifo
+2017-07-03 09:56:11		[guile]
+2017-07-03 09:56:11		  guile
+2017-07-03 09:56:11		[irc]
+2017-07-03 09:56:11		  admin       cap         dehalfop    halfop      join        list        motd        notify      pong        rehash      sanick      servlist    time        userhost    wallops   
+2017-07-03 09:56:11		  allchan     connect     deop        ignore      kick        lusers      msg         op          query       remove      sapart      squery      topic       users       who       
+2017-07-03 09:56:11		  allpv       ctcp        devoice     info        kickban     map         names       oper        quiet       restart     saquit      squit       trace       version     whois     
+2017-07-03 09:56:11		  allserv     cycle       die         invite      kill        me          nick        part        quote       sajoin      server      stats       unban       voice       whowas    
+2017-07-03 09:56:11		  ban         dcc         disconnect  ison        links       mode        notice      ping        reconnect   samode      service     summon      unquiet     wallchops 
+2017-07-03 09:56:11		[logger]
+2017-07-03 09:56:11		  logger
+2017-07-03 09:56:11		[lua]
+2017-07-03 09:56:11		  lua
+2017-07-03 09:56:11		[perl]
+2017-07-03 09:56:11		  perl
+2017-07-03 09:56:11		[python]
+2017-07-03 09:56:11		  python
+2017-07-03 09:56:11		[relay]
+2017-07-03 09:56:11		  relay
+2017-07-03 09:56:11		[ruby]
+2017-07-03 09:56:11		  ruby
+2017-07-03 09:56:11		[script]
+2017-07-03 09:56:11		  script
+2017-07-03 09:56:11		[tcl]
+2017-07-03 09:56:11		  tcl
+2017-07-03 09:56:11		[trigger]
+2017-07-03 09:56:11		  trigger
+2017-07-03 09:56:11		[xfer]
+2017-07-03 09:56:11		  me  xfer
+2017-07-03 09:58:48	=!=	Error with command "/window close" (help on command: /help window)
+2017-07-03 09:58:54		[core]  /window  list
+2017-07-03 09:58:54		                 -1|+1|b#|up|down|left|right [-window <number>]
+2017-07-03 09:58:54		                 <number>
+2017-07-03 09:58:54		                 splith|splitv [-window <number>] [<pct>]
+2017-07-03 09:58:54		                 resize [-window <number>] [+/-]<pct>
+2017-07-03 09:58:54		                 balance
+2017-07-03 09:58:54		                 merge [-window <number>] [all]
+2017-07-03 09:58:54		                 page_up|page_down [-window <number>]
+2017-07-03 09:58:54		                 refresh
+2017-07-03 09:58:54		                 scroll [-window <number>] [+/-]<value>[s|m|h|d|M|y]
+2017-07-03 09:58:54		                 scroll_horiz [-window <number>] [+/-]<value>[%]
+2017-07-03 09:58:54		                 scroll_up|scroll_down|scroll_top|scroll_bottom|scroll_beyond_end|scroll_previous_highlight|scroll_next_highlight|scroll_unread [-window <number>]
+2017-07-03 09:58:54		                 swap [-window <number>] [up|down|left|right]
+2017-07-03 09:58:54		                 zoom [-window <number>]
+2017-07-03 09:58:54		                 bare [<delay>]
+2017-07-03 09:58:54		manage windows
+2017-07-03 09:58:54		         list: list opened windows (without argument, this list is displayed)
+2017-07-03 09:58:54		           -1: jump to previous window
+2017-07-03 09:58:54		           +1: jump to next window
+2017-07-03 09:58:54		           b#: jump to next window displaying buffer number #
+2017-07-03 09:58:54		           up: switch to window above current one
+2017-07-03 09:58:54		         down: switch to window below current one
+2017-07-03 09:58:54		         left: switch to window on the left
+2017-07-03 09:58:54		        right: switch to window on the right
+2017-07-03 09:58:54		       number: window number (see /window list)
+2017-07-03 09:58:54		       splith: split current window horizontally (to undo: /window merge)
+2017-07-03 09:58:54		       splitv: split current window vertically (to undo: /window merge)
+2017-07-03 09:58:54		       resize: resize window size, new size is <pct> percentage of parent window
+2017-07-03 09:58:54		      balance: balance the sizes of all windows
+2017-07-03 09:58:54		        merge: merge window with another (all = keep only one window)
+2017-07-03 09:58:54		      page_up: scroll one page up
+2017-07-03 09:58:54		    page_down: scroll one page down
+2017-07-03 09:58:54		      refresh: refresh screen
+2017-07-03 09:58:54		       scroll: scroll a number of lines (+/-N) or with time: s=seconds, m=minutes, h=hours, d=days, M=months, y=years
+2017-07-03 09:58:54		 scroll_horiz: scroll horizontally a number of columns (+/-N) or percentage of window size (this scrolling is possible only on buffers with free content)
+2017-07-03 09:58:54		    scroll_up: scroll a few lines up
+2017-07-03 09:58:54		  scroll_down: scroll a few lines down
+2017-07-03 09:58:54		   scroll_top: scroll to top of buffer
+2017-07-03 09:58:54		scroll_bottom: scroll to bottom of buffer
+2017-07-03 09:58:54		scroll_beyond_end: scroll beyond the end of buffer
+2017-07-03 09:58:54		scroll_previous_highlight: scroll to previous highlight
+2017-07-03 09:58:54		scroll_next_highlight: scroll to next highlight
+2017-07-03 09:58:54		scroll_unread: scroll to unread marker
+2017-07-03 09:58:54		         swap: swap buffers of two windows (with optional direction for target window)
+2017-07-03 09:58:54		         zoom: zoom on window
+2017-07-03 09:58:54		         bare: toggle bare display (with optional delay in seconds for automatic return to standard display mode)
+2017-07-03 09:58:54		For splith and splitv, pct is a percentage which represents size of new window, computed with current window as size reference. For example 25 means create a new window with size = current_size / 4
+2017-07-03 09:58:54		Examples:
+2017-07-03 09:58:54		  jump to window displaying buffer #1:
+2017-07-03 09:58:54		    /window b1
+2017-07-03 09:58:54		  scroll 2 lines up:
+2017-07-03 09:58:54		    /window scroll -2
+2017-07-03 09:58:54		  scroll 2 days up:
+2017-07-03 09:58:54		    /window scroll -2d
+2017-07-03 09:58:54		  scroll to beginning of current day:
+2017-07-03 09:58:54		    /window scroll -d
+2017-07-03 09:58:54		  zoom on window #2:
+2017-07-03 09:58:54		    /window zoom -window 2
+2017-07-03 09:58:54		  split window horizontally using 30%% of space for the window on top:
+2017-07-03 09:58:54		    /window splith 30
+2017-07-03 09:58:54		  remove the split:
+2017-07-03 09:58:54		    /window merge
+2017-07-03 09:58:54		  enable bare display for 2 seconds:
+2017-07-03 09:58:54		    /window bare 2
+2017-07-03 09:59:40		[core]  /secure  passphrase <passphrase>|-delete
+2017-07-03 09:59:40		                 decrypt <passphrase>|-discard
+2017-07-03 09:59:40		                 set <name> <value>
+2017-07-03 09:59:40		                 del <name>
+2017-07-03 09:59:40		manage secured data (passwords or private data encrypted in file sec.conf)
+2017-07-03 09:59:40		passphrase: change the passphrase (without passphrase, data is stored as plain text in file sec.conf)
+2017-07-03 09:59:40		   -delete: delete passphrase
+2017-07-03 09:59:40		   decrypt: decrypt data still encrypted (it happens only if passphrase was not given on startup)
+2017-07-03 09:59:40		  -discard: discard all data still encrypted
+2017-07-03 09:59:40		       set: add or change secured data
+2017-07-03 09:59:40		       del: delete secured data
+2017-07-03 09:59:40		Without argument, this command displays secured data in a new buffer.
+2017-07-03 09:59:40		Keys on secure buffer:
+2017-07-03 09:59:40		  alt+v  toggle values
+2017-07-03 09:59:40		When a passphrase is used (data encrypted), it is asked by WeeChat on startup.
+2017-07-03 09:59:40		It is possible to set environment variable "WEECHAT_PASSPHRASE" to prevent the prompt (this same variable is used by WeeChat on /upgrade).
+2017-07-03 09:59:40		Secured data with format ${sec.data.xxx} can be used in:
+2017-07-03 09:59:40		  - command /eval
+2017-07-03 09:59:40		  - command line argument "--run-command"
+2017-07-03 09:59:40		  - options weechat.startup.command_{before|after}_plugins
+2017-07-03 09:59:40		  - other options that may contain a password or sensitive data (for example proxy, irc server and relay); see /help on the options to check if they are evaluated.
+2017-07-03 09:59:40		Examples:
+2017-07-03 09:59:40		  set a passphrase:
+2017-07-03 09:59:40		    /secure passphrase this is my passphrase
+2017-07-03 09:59:40		  encrypt freenode SASL password:
+2017-07-03 09:59:40		    /secure set freenode mypassword
+2017-07-03 09:59:40		    /set irc.server.freenode.sasl_password "${sec.data.freenode}"
+2017-07-03 09:59:40		  encrypt oftc password for nickserv:
+2017-07-03 09:59:40		    /secure set oftc mypassword
+2017-07-03 09:59:40		    /set irc.server.oftc.command "/msg nickserv identify ${sec.data.oftc}"
+2017-07-03 09:59:40		  alias to ghost the nick "mynick":
+2017-07-03 09:59:40		    /alias add ghost /eval /msg -server freenode nickserv ghost mynick ${sec.data.freenode}
+2017-07-03 10:00:32		Option changed: irc.server.redhat-znc.command = "/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}"  (default if null: "")
+2017-07-03 10:06:38		script: downloading list of scripts...
+2017-07-03 10:06:41		script: 349 scripts for WeeChat 1.7.1
+2017-07-03 10:06:43		perl: loading script "/home/bmeneg/.weechat/perl/buffers.pl"
+2017-07-03 10:06:43		perl: registered script "buffers", version 5.6 (Sidebar with list of buffers)
+2017-07-03 10:06:43		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2017-07-03 10:06:43		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2017-07-03 10:06:43		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2017-07-03 10:06:43		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2017-07-03 10:07:19		Option changed: weechat.bar.buffers.size_max = 15  (default: 0)
+2017-07-03 10:07:32		Option changed: weechat.bar.buffers.position = bottom  (default: left)
+2017-07-03 10:08:36		Option changed: weechat.bar.buffers.position = right  (default: left)
+2017-07-03 10:08:44		Option changed: weechat.bar.buffers.position = top  (default: left)
+2017-07-03 10:11:36		New key binding (context "default"): meta-q => /buffer close
+2017-07-03 10:18:52		All servers:
+2017-07-03 10:18:52		   redhat-znc
+2017-07-03 10:19:10	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2017-07-03 10:19:19		All servers:
+2017-07-03 10:19:19		Server: redhat-znc [not connected]
+2017-07-03 10:19:19		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:19:19		  proxy. . . . . . . . :   ('')
+2017-07-03 10:19:19		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:19:19		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:19:19		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:19:19		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:19:19		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:19:19		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:19:19		  ssl_verify . . . . . :   (on)
+2017-07-03 10:19:19		  password . . . . . . :   (hidden)
+2017-07-03 10:19:19		  capabilities . . . . :   ('')
+2017-07-03 10:19:19		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:19:19		  sasl_username. . . . :   ('')
+2017-07-03 10:19:19		  sasl_password. . . . :   (hidden)
+2017-07-03 10:19:19		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:19:19		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:19:19		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:19:19		  autoconnect. . . . . : on
+2017-07-03 10:19:19		  autoreconnect. . . . :   (on)
+2017-07-03 10:19:19		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:19:19		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 10:19:19		  nicks_alternate. . . :   (on)
+2017-07-03 10:19:19		  username . . . . . . : 'brdeoliv'
+2017-07-03 10:19:19		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 10:19:19		  local_hostname . . . :   ('')
+2017-07-03 10:19:19		  usermode . . . . . . :   ('')
+2017-07-03 10:19:19		  command. . . . . . . : '/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}'
+2017-07-03 10:19:19		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:19:19		  autojoin . . . . . . :   ('')
+2017-07-03 10:19:19		  autorejoin . . . . . :   (off)
+2017-07-03 10:19:19		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:19:19		  connection_timeout . :   (60 seconds)
+2017-07-03 10:19:19		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:19:19		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:19:19		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:19:19		  away_check_max_nicks :   (25)
+2017-07-03 10:19:19		  msg_kick . . . . . . :   ('')
+2017-07-03 10:19:19		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:19:19		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:19:19		  notify . . . . . . . :   ('')
+2017-07-03 10:19:35		irc: server freenode-znc added
+2017-07-03 10:19:49		Option changed: irc.server.freenode-znc.addresses = "ibm-x3755m3-02.lab.bos.redhat.com/2029"  (default if null: "")
+2017-07-03 10:19:52		All servers:
+2017-07-03 10:19:52		Server: redhat-znc [not connected]
+2017-07-03 10:19:52		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:19:52		  proxy. . . . . . . . :   ('')
+2017-07-03 10:19:52		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:19:52		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:19:52		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:19:52		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:19:52		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:19:52		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:19:52		  ssl_verify . . . . . :   (on)
+2017-07-03 10:19:52		  password . . . . . . :   (hidden)
+2017-07-03 10:19:52		  capabilities . . . . :   ('')
+2017-07-03 10:19:52		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:19:52		  sasl_username. . . . :   ('')
+2017-07-03 10:19:52		  sasl_password. . . . :   (hidden)
+2017-07-03 10:19:52		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:19:52		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:19:52		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:19:52		  autoconnect. . . . . : on
+2017-07-03 10:19:52		  autoreconnect. . . . :   (on)
+2017-07-03 10:19:52		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:19:52		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 10:19:52		  nicks_alternate. . . :   (on)
+2017-07-03 10:19:52		  username . . . . . . : 'brdeoliv'
+2017-07-03 10:19:52		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 10:19:52		  local_hostname . . . :   ('')
+2017-07-03 10:19:52		  usermode . . . . . . :   ('')
+2017-07-03 10:19:52		  command. . . . . . . : '/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}'
+2017-07-03 10:19:52		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:19:52		  autojoin . . . . . . :   ('')
+2017-07-03 10:19:52		  autorejoin . . . . . :   (off)
+2017-07-03 10:19:52		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:19:52		  connection_timeout . :   (60 seconds)
+2017-07-03 10:19:52		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:19:52		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:19:52		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:19:52		  away_check_max_nicks :   (25)
+2017-07-03 10:19:52		  msg_kick . . . . . . :   ('')
+2017-07-03 10:19:52		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:19:52		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:19:52		  notify . . . . . . . :   ('')
+2017-07-03 10:19:52		Server: freenode-znc [not connected]
+2017-07-03 10:19:52		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:19:52		  proxy. . . . . . . . :   ('')
+2017-07-03 10:19:52		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:19:52		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:19:52		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:19:52		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:19:52		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:19:52		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:19:52		  ssl_verify . . . . . :   (on)
+2017-07-03 10:19:52		  password . . . . . . :   (hidden)
+2017-07-03 10:19:52		  capabilities . . . . :   ('')
+2017-07-03 10:19:52		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:19:52		  sasl_username. . . . :   ('')
+2017-07-03 10:19:52		  sasl_password. . . . :   (hidden)
+2017-07-03 10:19:52		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:19:52		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:19:52		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:19:52		  autoconnect. . . . . :   (off)
+2017-07-03 10:19:52		  autoreconnect. . . . :   (on)
+2017-07-03 10:19:52		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:19:52		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 10:19:52		  nicks_alternate. . . :   (on)
+2017-07-03 10:19:52		  username . . . . . . :   ('bmeneg')
+2017-07-03 10:19:52		  realname . . . . . . :   ('')
+2017-07-03 10:19:52		  local_hostname . . . :   ('')
+2017-07-03 10:19:52		  usermode . . . . . . :   ('')
+2017-07-03 10:19:52		  command. . . . . . . :   ('')
+2017-07-03 10:19:52		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:19:52		  autojoin . . . . . . :   ('')
+2017-07-03 10:19:52		  autorejoin . . . . . :   (off)
+2017-07-03 10:19:52		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:19:52		  connection_timeout . :   (60 seconds)
+2017-07-03 10:19:52		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:19:52		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:19:52		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:19:52		  away_check_max_nicks :   (25)
+2017-07-03 10:19:52		  msg_kick . . . . . . :   ('')
+2017-07-03 10:19:52		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:19:52		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:19:52		  notify . . . . . . . :   ('')
+2017-07-03 10:21:07		Secured data "znc_password" set
+2017-07-03 10:21:07		Options saved to sec.conf
+2017-07-03 10:21:50		Option changed: irc.server.redhat-znc.command = "/quote pass brdeoliv/redhat:${sec.data.znc_password};/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}"  (default if null: "")
+2017-07-03 10:22:29		Option changed: irc.server.freenode-znc.command = "/quote pass brdeoliv/freenode:${sec.data.znc_password};/msg nickserv identify ${sec.data.fedora_nickserv_password}"  (default if null: "")
+2017-07-03 10:22:50		Secured data "fedora_nickserv_identify" set
+2017-07-03 10:22:50		Options saved to sec.conf
+2017-07-03 10:22:57		Secured data "oftc_nickserv_identify" set
+2017-07-03 10:22:57		Options saved to sec.conf
+2017-07-03 10:23:14		irc: server oftc-znc added
+2017-07-03 10:23:33		Option changed: irc.server.oftc-znc.command = "/quote pass brdeoliv/freenode:${sec.data.znc_password};/msg nickserv identify ${sec.data.oftc_nickserv_password}"  (default if null: "")
+2017-07-03 10:23:46		Option changed: irc.server.oftc-znc.addresses = "ibm-x3755m3-02.lab.bos.redhat.com/2029"  (default if null: "")
+2017-07-03 10:24:09		Option changed: irc.server.oftc-znc.command = "/quote pass brdeoliv/oftc:${sec.data.znc_password};/msg nickserv identify ${sec.data.oftc_nickserv_password}"  (default if null: "")
+2017-07-03 10:24:20	=!=	Error: unknown command "/sever" (type /help for help)
+2017-07-03 10:24:22		All servers:
+2017-07-03 10:24:22		Server: redhat-znc [not connected]
+2017-07-03 10:24:22		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:24:22		  proxy. . . . . . . . :   ('')
+2017-07-03 10:24:22		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:24:22		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:24:22		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:24:22		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:24:22		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:24:22		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:24:22		  ssl_verify . . . . . :   (on)
+2017-07-03 10:24:22		  password . . . . . . :   (hidden)
+2017-07-03 10:24:22		  capabilities . . . . :   ('')
+2017-07-03 10:24:22		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:24:22		  sasl_username. . . . :   ('')
+2017-07-03 10:24:22		  sasl_password. . . . :   (hidden)
+2017-07-03 10:24:22		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:24:22		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:24:22		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:24:22		  autoconnect. . . . . : on
+2017-07-03 10:24:22		  autoreconnect. . . . :   (on)
+2017-07-03 10:24:22		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:24:22		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 10:24:22		  nicks_alternate. . . :   (on)
+2017-07-03 10:24:22		  username . . . . . . : 'brdeoliv'
+2017-07-03 10:24:22		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 10:24:22		  local_hostname . . . :   ('')
+2017-07-03 10:24:22		  usermode . . . . . . :   ('')
+2017-07-03 10:24:22		  command. . . . . . . : '/quote pass **********************************************************************************************************'
+2017-07-03 10:24:22		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:24:22		  autojoin . . . . . . :   ('')
+2017-07-03 10:24:22		  autorejoin . . . . . :   (off)
+2017-07-03 10:24:22		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:24:22		  connection_timeout . :   (60 seconds)
+2017-07-03 10:24:22		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:24:22		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:24:22		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:24:22		  away_check_max_nicks :   (25)
+2017-07-03 10:24:22		  msg_kick . . . . . . :   ('')
+2017-07-03 10:24:22		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:24:22		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:24:22		  notify . . . . . . . :   ('')
+2017-07-03 10:24:22		Server: freenode-znc [not connected]
+2017-07-03 10:24:22		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:24:22		  proxy. . . . . . . . :   ('')
+2017-07-03 10:24:22		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:24:22		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:24:22		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:24:22		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:24:22		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:24:22		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:24:22		  ssl_verify . . . . . :   (on)
+2017-07-03 10:24:22		  password . . . . . . :   (hidden)
+2017-07-03 10:24:22		  capabilities . . . . :   ('')
+2017-07-03 10:24:22		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:24:22		  sasl_username. . . . :   ('')
+2017-07-03 10:24:22		  sasl_password. . . . :   (hidden)
+2017-07-03 10:24:22		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:24:22		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:24:22		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:24:22		  autoconnect. . . . . :   (off)
+2017-07-03 10:24:22		  autoreconnect. . . . :   (on)
+2017-07-03 10:24:22		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:24:22		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 10:24:22		  nicks_alternate. . . :   (on)
+2017-07-03 10:24:22		  username . . . . . . :   ('bmeneg')
+2017-07-03 10:24:22		  realname . . . . . . :   ('')
+2017-07-03 10:24:22		  local_hostname . . . :   ('')
+2017-07-03 10:24:22		  usermode . . . . . . :   ('')
+2017-07-03 10:24:22		  command. . . . . . . : '/quote pass ******************************************************************************************************'
+2017-07-03 10:24:22		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:24:22		  autojoin . . . . . . :   ('')
+2017-07-03 10:24:22		  autorejoin . . . . . :   (off)
+2017-07-03 10:24:22		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:24:22		  connection_timeout . :   (60 seconds)
+2017-07-03 10:24:22		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:24:22		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:24:22		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:24:22		  away_check_max_nicks :   (25)
+2017-07-03 10:24:22		  msg_kick . . . . . . :   ('')
+2017-07-03 10:24:22		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:24:22		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:24:22		  notify . . . . . . . :   ('')
+2017-07-03 10:24:22		Server: oftc-znc [not connected]
+2017-07-03 10:24:22		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:24:22		  proxy. . . . . . . . :   ('')
+2017-07-03 10:24:22		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:24:22		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:24:22		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:24:22		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:24:22		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:24:22		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:24:22		  ssl_verify . . . . . :   (on)
+2017-07-03 10:24:22		  password . . . . . . :   (hidden)
+2017-07-03 10:24:22		  capabilities . . . . :   ('')
+2017-07-03 10:24:22		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:24:22		  sasl_username. . . . :   ('')
+2017-07-03 10:24:22		  sasl_password. . . . :   (hidden)
+2017-07-03 10:24:22		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:24:22		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:24:22		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:24:22		  autoconnect. . . . . :   (off)
+2017-07-03 10:24:22		  autoreconnect. . . . :   (on)
+2017-07-03 10:24:22		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:24:22		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 10:24:22		  nicks_alternate. . . :   (on)
+2017-07-03 10:24:22		  username . . . . . . :   ('bmeneg')
+2017-07-03 10:24:22		  realname . . . . . . :   ('')
+2017-07-03 10:24:22		  local_hostname . . . :   ('')
+2017-07-03 10:24:22		  usermode . . . . . . :   ('')
+2017-07-03 10:24:22		  command. . . . . . . : '/quote pass ************************************************************************************************'
+2017-07-03 10:24:22		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:24:22		  autojoin . . . . . . :   ('')
+2017-07-03 10:24:22		  autorejoin . . . . . :   (off)
+2017-07-03 10:24:22		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:24:22		  connection_timeout . :   (60 seconds)
+2017-07-03 10:24:22		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:24:22		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:24:22		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:24:22		  away_check_max_nicks :   (25)
+2017-07-03 10:24:22		  msg_kick . . . . . . :   ('')
+2017-07-03 10:24:22		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:24:22		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:24:22		  notify . . . . . . . :   ('')
+2017-07-03 10:24:47		Option changed: irc.server.freenode-znc.nicks = "bmeneg"  (default if null: "bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4")
+2017-07-03 10:25:05		Option changed: irc.server.freenode-znc.nicks = "bmeneg,bmeneg_"  (default if null: "bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4")
+2017-07-03 10:25:14		Option changed: irc.server.oftc-znc.nicks = "bmeneg,bmeneg_"  (default if null: "bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4")
+2017-07-03 10:25:40		Option changed: irc.server.oftc-znc.realname = "Bruno Meneguele"  (default if null: "")
+2017-07-03 10:25:49		Option changed: irc.server.freenode-znc.realname = "Bruno Meneguele"  (default if null: "")
+2017-07-03 10:26:44		Option changed: irc.server.redhat-znc.nicks = "brdeoliv,brdeoliv_"  (default if null: "bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4")
+2017-07-03 10:27:09		All servers:
+2017-07-03 10:27:09		Server: redhat-znc [not connected]
+2017-07-03 10:27:09		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:27:09		  proxy. . . . . . . . :   ('')
+2017-07-03 10:27:09		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:27:09		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:27:09		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:27:09		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:27:09		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:27:09		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:27:09		  ssl_verify . . . . . :   (on)
+2017-07-03 10:27:09		  password . . . . . . :   (hidden)
+2017-07-03 10:27:09		  capabilities . . . . :   ('')
+2017-07-03 10:27:09		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:27:09		  sasl_username. . . . :   ('')
+2017-07-03 10:27:09		  sasl_password. . . . :   (hidden)
+2017-07-03 10:27:09		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:27:09		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:27:09		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:27:09		  autoconnect. . . . . : on
+2017-07-03 10:27:09		  autoreconnect. . . . :   (on)
+2017-07-03 10:27:09		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:27:09		  nicks. . . . . . . . : 'brdeoliv,brdeoliv_'
+2017-07-03 10:27:09		  nicks_alternate. . . :   (on)
+2017-07-03 10:27:09		  username . . . . . . : 'brdeoliv'
+2017-07-03 10:27:09		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 10:27:09		  local_hostname . . . :   ('')
+2017-07-03 10:27:09		  usermode . . . . . . :   ('')
+2017-07-03 10:27:09		  command. . . . . . . : '/quote pass **********************************************************************************************************'
+2017-07-03 10:27:09		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:27:09		  autojoin . . . . . . :   ('')
+2017-07-03 10:27:09		  autorejoin . . . . . :   (off)
+2017-07-03 10:27:09		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:27:09		  connection_timeout . :   (60 seconds)
+2017-07-03 10:27:09		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:27:09		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:27:09		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:27:09		  away_check_max_nicks :   (25)
+2017-07-03 10:27:09		  msg_kick . . . . . . :   ('')
+2017-07-03 10:27:09		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:27:09		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:27:09		  notify . . . . . . . :   ('')
+2017-07-03 10:27:09		Server: freenode-znc [not connected]
+2017-07-03 10:27:09		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:27:09		  proxy. . . . . . . . :   ('')
+2017-07-03 10:27:09		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:27:09		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:27:09		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:27:09		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:27:09		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:27:09		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:27:09		  ssl_verify . . . . . :   (on)
+2017-07-03 10:27:09		  password . . . . . . :   (hidden)
+2017-07-03 10:27:09		  capabilities . . . . :   ('')
+2017-07-03 10:27:09		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:27:09		  sasl_username. . . . :   ('')
+2017-07-03 10:27:09		  sasl_password. . . . :   (hidden)
+2017-07-03 10:27:09		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:27:09		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:27:09		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:27:09		  autoconnect. . . . . :   (off)
+2017-07-03 10:27:09		  autoreconnect. . . . :   (on)
+2017-07-03 10:27:09		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:27:09		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-03 10:27:09		  nicks_alternate. . . :   (on)
+2017-07-03 10:27:09		  username . . . . . . :   ('bmeneg')
+2017-07-03 10:27:09		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 10:27:09		  local_hostname . . . :   ('')
+2017-07-03 10:27:09		  usermode . . . . . . :   ('')
+2017-07-03 10:27:09		  command. . . . . . . : '/quote pass ******************************************************************************************************'
+2017-07-03 10:27:09		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:27:09		  autojoin . . . . . . :   ('')
+2017-07-03 10:27:09		  autorejoin . . . . . :   (off)
+2017-07-03 10:27:09		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:27:09		  connection_timeout . :   (60 seconds)
+2017-07-03 10:27:09		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:27:09		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:27:09		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:27:09		  away_check_max_nicks :   (25)
+2017-07-03 10:27:09		  msg_kick . . . . . . :   ('')
+2017-07-03 10:27:09		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:27:09		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:27:09		  notify . . . . . . . :   ('')
+2017-07-03 10:27:09		Server: oftc-znc [not connected]
+2017-07-03 10:27:09		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 10:27:09		  proxy. . . . . . . . :   ('')
+2017-07-03 10:27:09		  ipv6 . . . . . . . . :   (on)
+2017-07-03 10:27:09		  ssl. . . . . . . . . :   (off)
+2017-07-03 10:27:09		  ssl_cert . . . . . . :   ('')
+2017-07-03 10:27:09		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 10:27:09		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 10:27:09		  ssl_fingerprint. . . :   ('')
+2017-07-03 10:27:09		  ssl_verify . . . . . :   (on)
+2017-07-03 10:27:09		  password . . . . . . :   (hidden)
+2017-07-03 10:27:09		  capabilities . . . . :   ('')
+2017-07-03 10:27:09		  sasl_mechanism . . . :   ('plain')
+2017-07-03 10:27:09		  sasl_username. . . . :   ('')
+2017-07-03 10:27:09		  sasl_password. . . . :   (hidden)
+2017-07-03 10:27:09		  sasl_key. .  . . . . :   ('')
+2017-07-03 10:27:09		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 10:27:09		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 10:27:09		  autoconnect. . . . . :   (off)
+2017-07-03 10:27:09		  autoreconnect. . . . :   (on)
+2017-07-03 10:27:09		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 10:27:09		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-03 10:27:09		  nicks_alternate. . . :   (on)
+2017-07-03 10:27:09		  username . . . . . . :   ('bmeneg')
+2017-07-03 10:27:09		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 10:27:09		  local_hostname . . . :   ('')
+2017-07-03 10:27:09		  usermode . . . . . . :   ('')
+2017-07-03 10:27:09		  command. . . . . . . : '/quote pass ************************************************************************************************'
+2017-07-03 10:27:09		  command_delay. . . . :   (0 seconds)
+2017-07-03 10:27:09		  autojoin . . . . . . :   ('')
+2017-07-03 10:27:09		  autorejoin . . . . . :   (off)
+2017-07-03 10:27:09		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 10:27:09		  connection_timeout . :   (60 seconds)
+2017-07-03 10:27:09		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 10:27:09		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 10:27:09		  away_check . . . . . :   (0 minutes)
+2017-07-03 10:27:09		  away_check_max_nicks :   (25)
+2017-07-03 10:27:09		  msg_kick . . . . . . :   ('')
+2017-07-03 10:27:09		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:27:09		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 10:27:09		  notify . . . . . . . :   ('')
+2017-07-03 10:27:33		Option changed: irc.server.freenode-znc.autoconnect = on  (default if null: off)
+2017-07-03 10:27:39		Option changed: irc.server.oftc-znc.autoconnect = on  (default if null: off)
+2017-07-03 10:29:18		[irc]  /server  list|listfull [<server>]
+2017-07-03 10:29:18		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2017-07-03 10:29:18		                copy|rename <server> <new_name>
+2017-07-03 10:29:18		                reorder <server> [<server>...]
+2017-07-03 10:29:18		                del|keep <server>
+2017-07-03 10:29:18		                deloutq|jump|raw
+2017-07-03 10:29:18		list, add or remove IRC servers
+2017-07-03 10:29:18		    list: list servers (without argument, this list is displayed)
+2017-07-03 10:29:18		listfull: list servers with detailed info for each server
+2017-07-03 10:29:18		     add: add a new server
+2017-07-03 10:29:18		  server: server name, for internal and display use
+2017-07-03 10:29:18		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2017-07-03 10:29:18		   -temp: add a temporary server (not saved)
+2017-07-03 10:29:18		  option: set option for server (for boolean option, value can be omitted)
+2017-07-03 10:29:18		nooption: set boolean option to 'off' (for example: -nossl)
+2017-07-03 10:29:18		    copy: duplicate a server
+2017-07-03 10:29:18		  rename: rename a server
+2017-07-03 10:29:18		 reorder: reorder list of servers
+2017-07-03 10:29:18		    keep: keep server in config file (for temporary servers only)
+2017-07-03 10:29:18		     del: delete a server
+2017-07-03 10:29:18		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2017-07-03 10:29:18		    jump: jump to server buffer
+2017-07-03 10:29:18		     raw: open buffer with raw IRC data
+2017-07-03 10:29:18		Examples:
+2017-07-03 10:29:18		  /server listfull
+2017-07-03 10:29:18		  /server add freenode chat.freenode.net
+2017-07-03 10:29:18		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2017-07-03 10:29:18		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2017-07-03 10:29:18		  /server copy freenode freenode-test
+2017-07-03 10:29:18		  /server rename freenode-test freenode2
+2017-07-03 10:29:18		  /server reorder freenode2 freenode
+2017-07-03 10:29:18		  /server del freenode
+2017-07-03 10:29:18		  /server deloutq
+2017-07-03 10:32:19		Option changed: irc.server.redhat-znc.password = "${sec.data.znc_password}"  (default if null: "")
+2017-07-03 10:32:39		[server] (irc.conf)
+2017-07-03 10:32:39		  irc.server.redhat-znc.command = "/quote pass brdeoliv/redhat:${sec.data.znc_password};/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}"  (default if null: "")
+2017-07-03 10:32:39		1 option (matching with "irc.server.redhat-znc.command")
+2017-07-03 10:33:13		Option changed: irc.server.redhat-znc.password = "brdeoliv/redhat:${sec.data.znc_password}"  (default if null: "")
+2017-07-03 10:33:34		Option changed: irc.server.redhat-znc.command = "/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}"  (default if null: "")
+2017-07-03 10:34:24		[server] (irc.conf)
+2017-07-03 10:34:24		  irc.server.freenode-znc.command = "/quote pass brdeoliv/freenode:${sec.data.znc_password};/msg nickserv identify ${sec.data.fedora_nickserv_password}"  (default if null: "")
+2017-07-03 10:34:24		1 option (matching with "irc.server.freenode-znc.command")
+2017-07-03 10:34:36		Option changed: irc.server.freenode-znc.password = "brdeoliv/freenode:${sec.data.znc_password}"  (default if null: "")
+2017-07-03 10:34:48		Option changed: irc.server.freenode-znc.command = "/msg nickserv identify ${sec.data.fedora_nickserv_password}"  (default if null: "")
+2017-07-03 10:35:05		[server] (irc.conf)
+2017-07-03 10:35:05		  irc.server.oftc-znc.command = "/quote pass brdeoliv/oftc:${sec.data.znc_password};/msg nickserv identify ${sec.data.oftc_nickserv_password}"  (default if null: "")
+2017-07-03 10:35:05		1 option (matching with "irc.server.oftc-znc.command")
+2017-07-03 10:35:19		Option changed: irc.server.oftc-znc.command = "/msg nickserv identify ${sec.data.oftc_nickserv_password}"  (default if null: "")
+2017-07-03 10:35:35		Option changed: irc.server.oftc-znc.password = "brdeoliv/oftc:${sec.data.znc_password}"  (default if null: "")
+2017-07-03 10:39:34		[server] (irc.conf)
+2017-07-03 10:39:34		  irc.server.freenode-znc.command = "/msg nickserv identify ${sec.data.fedora_nickserv_password}"  (default if null: "")
+2017-07-03 10:39:34		1 option (matching with "irc.server.freenode-znc.command")
+2017-07-03 10:39:51		Option changed: irc.server.freenode-znc.command = "/msg nickserv identify bmeneg ${sec.data.fedora_nickserv_password}"  (default if null: "")
+2017-07-03 10:40:27	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2017-07-03 10:40:27	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2017-07-03 10:43:32		Secured data "freenode_nickserv_password" set
+2017-07-03 10:43:32		Options saved to sec.conf
+2017-07-03 10:45:03		Secured data "freenode_nickserv_password" set
+2017-07-03 10:45:03		Options saved to sec.conf
+2017-07-03 10:45:35		Secured data "oftc_nickserv_password" set
+2017-07-03 10:45:35		Options saved to sec.conf
+2017-07-03 10:46:44	=!=	irc: unable to add temporary server "oftc" because the addition of temporary servers with command /connect is currently disabled
+2017-07-03 10:46:44	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2017-07-03 10:47:32		Secured data "oftc_nickserv_identify" set
+2017-07-03 10:47:32		Options saved to sec.conf
+2017-07-03 10:47:58		Option changed: weechat.bar.buffers.position = left
+2017-07-03 10:52:55		Mouse enabled
+2017-07-03 10:54:04		[alias]  /J  
+2017-07-03 10:54:04		join
+2017-07-03 10:56:11		python: loading script "/home/bmeneg/.weechat/python/autosort.py"
+2017-07-03 10:56:11		python: registered script "autosort", version 2.8 (Automatically or manually keep your buffers sorted and grouped by server.)
+2017-07-03 10:58:38		Option changed: irc.look.server_buffer = independent  (default: merge_with_core)
+2017-07-03 11:00:07	=!=	No help available, "buffers" is not a command or an option
+2017-07-03 11:03:09	=!=	Error: unknown command "/scripts" (type /help for help)
+2017-07-03 11:03:22	=!=	Error: unknown command "/scripts" (type /help for help)
+2017-07-03 11:03:27		perl: loading script "/home/bmeneg/.weechat/perl/highmon.pl"
+2017-07-03 11:03:27		perl: registered script "highmon", version 2.5 (Highlight Monitor)
+2017-07-03 11:03:27		This appears to be the first time highmon has been run. For help and common set up hints see /highmon help
+2017-07-03 11:03:49		Option changed: plugins.var.perl.highmon.alignment = "nchannel"
+2017-07-03 11:06:33	=!=	No help available, "weechat.bar." is not a command or an option
+2017-07-03 11:06:34	=!=	No help available, "weechat.bar" is not a command or an option
+2017-07-03 11:06:39	=!=	Option "weechat.bar" not found (tip: you can use wildcard "*" in option to see a sublist)
+2017-07-03 11:06:50		[bar] (weechat.conf)
+2017-07-03 11:06:50		  weechat.bar.buffers.color_bg = default
+2017-07-03 11:06:50		  weechat.bar.buffers.color_delim = default
+2017-07-03 11:06:50		  weechat.bar.buffers.color_fg = default
+2017-07-03 11:06:50		  weechat.bar.buffers.conditions = ""
+2017-07-03 11:06:50		  weechat.bar.buffers.filling_left_right = vertical
+2017-07-03 11:06:50		  weechat.bar.buffers.filling_top_bottom = columns_vertical
+2017-07-03 11:06:50		  weechat.bar.buffers.hidden = off
+2017-07-03 11:06:50		  weechat.bar.buffers.items = "buffers"  (default: "")
+2017-07-03 11:06:50		  weechat.bar.buffers.position = left
+2017-07-03 11:06:50		  weechat.bar.buffers.priority = 0
+2017-07-03 11:06:50		  weechat.bar.buffers.separator = on
+2017-07-03 11:06:50		  weechat.bar.buffers.size = 0
+2017-07-03 11:06:50		  weechat.bar.buffers.size_max = 15  (default: 0)
+2017-07-03 11:06:50		  weechat.bar.buffers.type = root
+2017-07-03 11:06:50		  weechat.bar.input.color_bg = default
+2017-07-03 11:06:50		  weechat.bar.input.color_delim = cyan
+2017-07-03 11:06:50		  weechat.bar.input.color_fg = default
+2017-07-03 11:06:50		  weechat.bar.input.conditions = ""
+2017-07-03 11:06:50		  weechat.bar.input.filling_left_right = vertical
+2017-07-03 11:06:50		  weechat.bar.input.filling_top_bottom = horizontal
+2017-07-03 11:06:50		  weechat.bar.input.hidden = off
+2017-07-03 11:06:50		  weechat.bar.input.items = "[input_prompt]+(away),[input_search],[input_paste],input_text"
+2017-07-03 11:06:50		  weechat.bar.input.position = bottom
+2017-07-03 11:06:50		  weechat.bar.input.priority = 1000
+2017-07-03 11:06:50		  weechat.bar.input.separator = off
+2017-07-03 11:06:50		  weechat.bar.input.size = 1
+2017-07-03 11:06:50		  weechat.bar.input.size_max = 0
+2017-07-03 11:06:50		  weechat.bar.input.type = window
+2017-07-03 11:06:50		  weechat.bar.nicklist.color_bg = default
+2017-07-03 11:06:50		  weechat.bar.nicklist.color_delim = cyan
+2017-07-03 11:06:50		  weechat.bar.nicklist.color_fg = default
+2017-07-03 11:06:50		  weechat.bar.nicklist.conditions = "${nicklist}"
+2017-07-03 11:06:50		  weechat.bar.nicklist.filling_left_right = vertical
+2017-07-03 11:06:50		  weechat.bar.nicklist.filling_top_bottom = columns_vertical
+2017-07-03 11:06:50		  weechat.bar.nicklist.hidden = off
+2017-07-03 11:06:50		  weechat.bar.nicklist.items = "buffer_nicklist"
+2017-07-03 11:06:50		  weechat.bar.nicklist.position = right
+2017-07-03 11:06:50		  weechat.bar.nicklist.priority = 200
+2017-07-03 11:06:50		  weechat.bar.nicklist.separator = on
+2017-07-03 11:06:50		  weechat.bar.nicklist.size = 0
+2017-07-03 11:06:50		  weechat.bar.nicklist.size_max = 0
+2017-07-03 11:06:50		  weechat.bar.nicklist.type = window
+2017-07-03 11:06:50		  weechat.bar.status.color_bg = blue
+2017-07-03 11:06:50		  weechat.bar.status.color_delim = cyan
+2017-07-03 11:06:50		  weechat.bar.status.color_fg = default
+2017-07-03 11:06:50		  weechat.bar.status.conditions = ""
+2017-07-03 11:06:50		  weechat.bar.status.filling_left_right = vertical
+2017-07-03 11:06:50		  weechat.bar.status.filling_top_bottom = horizontal
+2017-07-03 11:06:50		  weechat.bar.status.hidden = off
+2017-07-03 11:06:50		  weechat.bar.status.items = "[time],[buffer_last_number],[buffer_plugin],buffer_number+:+buffer_name+(buffer_modes)+{buffer_nicklist_count}+buffer_zoom+buffer_filter,scroll,[lag],[hotlist],completion"
+2017-07-03 11:06:50		  weechat.bar.status.position = bottom
+2017-07-03 11:06:50		  weechat.bar.status.priority = 500
+2017-07-03 11:06:50		  weechat.bar.status.separator = off
+2017-07-03 11:06:50		  weechat.bar.status.size = 1
+2017-07-03 11:06:50		  weechat.bar.status.size_max = 0
+2017-07-03 11:06:50		  weechat.bar.status.type = window
+2017-07-03 11:06:50		  weechat.bar.title.color_bg = blue
+2017-07-03 11:06:50		  weechat.bar.title.color_delim = cyan
+2017-07-03 11:06:50		  weechat.bar.title.color_fg = default
+2017-07-03 11:06:50		  weechat.bar.title.conditions = ""
+2017-07-03 11:06:50		  weechat.bar.title.filling_left_right = vertical
+2017-07-03 11:06:50		  weechat.bar.title.filling_top_bottom = horizontal
+2017-07-03 11:06:50		  weechat.bar.title.hidden = off
+2017-07-03 11:06:50		  weechat.bar.title.items = "buffer_title"
+2017-07-03 11:06:50		  weechat.bar.title.position = top
+2017-07-03 11:06:50		  weechat.bar.title.priority = 500
+2017-07-03 11:06:50		  weechat.bar.title.separator = off
+2017-07-03 11:06:50		  weechat.bar.title.size = 1
+2017-07-03 11:06:50		  weechat.bar.title.size_max = 0
+2017-07-03 11:06:50		  weechat.bar.title.type = window
+2017-07-03 11:06:50		70 options (matching with "weechat.bar*")
+2017-07-03 11:18:44		[core]  /save  [<file> [<file>...]]
+2017-07-03 11:18:44		save configuration files to disk
+2017-07-03 11:18:44		file: configuration file to save (without extension ".conf")
+2017-07-03 11:18:44		Without argument, all files (WeeChat and plugins) are saved.
+2017-07-03 11:18:44		By default all configuration files are saved to disk on /quit command (see option "weechat.look.save_config_on_exit").
+2017-07-03 11:19:03		Options saved to sec.conf
+2017-07-03 11:19:03		Options saved to weechat.conf
+2017-07-03 11:19:03		Options saved to plugins.conf
+2017-07-03 11:19:03		Options saved to charset.conf
+2017-07-03 11:19:03		Options saved to logger.conf
+2017-07-03 11:19:03		Options saved to exec.conf
+2017-07-03 11:19:03		Options saved to trigger.conf
+2017-07-03 11:19:03		Options saved to aspell.conf
+2017-07-03 11:19:03		Options saved to alias.conf
+2017-07-03 11:19:03		Options saved to fifo.conf
+2017-07-03 11:19:03		Options saved to xfer.conf
+2017-07-03 11:19:03		Options saved to irc.conf
+2017-07-03 11:19:03		Options saved to relay.conf
+2017-07-03 11:19:03		Options saved to script.conf
+2017-07-03 11:19:03		Options saved to buffers.conf
+2017-07-03 11:19:03		Options saved to autosort.conf
+2017-07-03 11:31:55		New key binding (context "default"): meta-w => /window +1
+2017-07-03 13:07:25		irc: server bitlbee added
+2017-07-03 13:07:40		Option changed: irc.server.bitlbee.addresses = "localhost/666"  (default if null: "")
+2017-07-03 13:07:46		Option changed: irc.server.bitlbee.addresses = "localhost/6667"  (default if null: "")
+2017-07-03 13:11:29		Option changed: irc.server.bitlbee.command = "/msg &bitlbee identify ${sec.data.bitlbee_password}"  (default if null: "")
+2017-07-03 13:11:55		Secured data "bitlbee_password" set
+2017-07-03 13:11:55		Options saved to sec.conf
+2017-07-03 13:23:11	=!=	Option "irc.server.freenode-znc.autconnect" not found (tip: you can use wildcard "*" in option to see a sublist)
+2017-07-03 13:23:30		[server] (irc.conf)
+2017-07-03 13:23:30		  irc.server.freenode-znc.autoconnect = on  (default if null: off)
+2017-07-03 13:23:30		1 option (matching with "irc.server.freenode-znc.autoconnect")
+2017-07-03 13:23:36		[server] (irc.conf)
+2017-07-03 13:23:36		  irc.server.oftc-znc.autoconnect = on  (default if null: off)
+2017-07-03 13:23:36		1 option (matching with "irc.server.oftc-znc.autoconnect")
+2017-07-03 13:23:45		Option changed: irc.server.bitlbee.autoconnect = on  (default if null: off)
+2017-07-03 13:24:25		Key "meta-q" unbound (context: "default")
+2017-07-03 13:24:25		New key binding (context "default"): meta-q => /close
+2017-07-03 13:49:29	=!=	Error with command "/server listful" (help on command: /help server)
+2017-07-03 13:49:31		All servers:
+2017-07-03 13:49:31		Server: redhat-znc [connected]
+2017-07-03 13:49:31		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 13:49:31		  proxy. . . . . . . . :   ('')
+2017-07-03 13:49:31		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:49:31		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:49:31		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:49:31		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:49:31		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:49:31		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:49:31		  ssl_verify . . . . . :   (on)
+2017-07-03 13:49:31		  password . . . . . . : (hidden)
+2017-07-03 13:49:31		  capabilities . . . . :   ('')
+2017-07-03 13:49:31		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:49:31		  sasl_username. . . . :   ('')
+2017-07-03 13:49:31		  sasl_password. . . . :   (hidden)
+2017-07-03 13:49:31		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:49:31		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:49:31		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:49:31		  autoconnect. . . . . : on
+2017-07-03 13:49:31		  autoreconnect. . . . :   (on)
+2017-07-03 13:49:31		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:49:31		  nicks. . . . . . . . : 'brdeoliv,brdeoliv_'
+2017-07-03 13:49:31		  nicks_alternate. . . :   (on)
+2017-07-03 13:49:31		  username . . . . . . : 'brdeoliv'
+2017-07-03 13:49:31		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 13:49:31		  local_hostname . . . :   ('')
+2017-07-03 13:49:31		  usermode . . . . . . :   ('')
+2017-07-03 13:49:31		  command. . . . . . . : '/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}'
+2017-07-03 13:49:31		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:49:31		  autojoin . . . . . . :   ('')
+2017-07-03 13:49:31		  autorejoin . . . . . :   (off)
+2017-07-03 13:49:31		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:49:31		  connection_timeout . :   (60 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:49:31		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:49:31		  away_check_max_nicks :   (25)
+2017-07-03 13:49:31		  msg_kick . . . . . . :   ('')
+2017-07-03 13:49:31		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  notify . . . . . . . :   ('')
+2017-07-03 13:49:31		Server: freenode-znc [connected]
+2017-07-03 13:49:31		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 13:49:31		  proxy. . . . . . . . :   ('')
+2017-07-03 13:49:31		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:49:31		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:49:31		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:49:31		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:49:31		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:49:31		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:49:31		  ssl_verify . . . . . :   (on)
+2017-07-03 13:49:31		  password . . . . . . : (hidden)
+2017-07-03 13:49:31		  capabilities . . . . :   ('')
+2017-07-03 13:49:31		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:49:31		  sasl_username. . . . :   ('')
+2017-07-03 13:49:31		  sasl_password. . . . :   (hidden)
+2017-07-03 13:49:31		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:49:31		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:49:31		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:49:31		  autoconnect. . . . . : on
+2017-07-03 13:49:31		  autoreconnect. . . . :   (on)
+2017-07-03 13:49:31		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:49:31		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-03 13:49:31		  nicks_alternate. . . :   (on)
+2017-07-03 13:49:31		  username . . . . . . :   ('bmeneg')
+2017-07-03 13:49:31		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 13:49:31		  local_hostname . . . :   ('')
+2017-07-03 13:49:31		  usermode . . . . . . :   ('')
+2017-07-03 13:49:31		  command. . . . . . . : '/msg nickserv identify *******************************************'
+2017-07-03 13:49:31		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:49:31		  autojoin . . . . . . :   ('')
+2017-07-03 13:49:31		  autorejoin . . . . . :   (off)
+2017-07-03 13:49:31		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:49:31		  connection_timeout . :   (60 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:49:31		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:49:31		  away_check_max_nicks :   (25)
+2017-07-03 13:49:31		  msg_kick . . . . . . :   ('')
+2017-07-03 13:49:31		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  notify . . . . . . . :   ('')
+2017-07-03 13:49:31		Server: oftc-znc [connected]
+2017-07-03 13:49:31		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 13:49:31		  proxy. . . . . . . . :   ('')
+2017-07-03 13:49:31		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:49:31		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:49:31		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:49:31		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:49:31		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:49:31		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:49:31		  ssl_verify . . . . . :   (on)
+2017-07-03 13:49:31		  password . . . . . . : (hidden)
+2017-07-03 13:49:31		  capabilities . . . . :   ('')
+2017-07-03 13:49:31		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:49:31		  sasl_username. . . . :   ('')
+2017-07-03 13:49:31		  sasl_password. . . . :   (hidden)
+2017-07-03 13:49:31		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:49:31		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:49:31		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:49:31		  autoconnect. . . . . : on
+2017-07-03 13:49:31		  autoreconnect. . . . :   (on)
+2017-07-03 13:49:31		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:49:31		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-03 13:49:31		  nicks_alternate. . . :   (on)
+2017-07-03 13:49:31		  username . . . . . . :   ('bmeneg')
+2017-07-03 13:49:31		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 13:49:31		  local_hostname . . . :   ('')
+2017-07-03 13:49:31		  usermode . . . . . . :   ('')
+2017-07-03 13:49:31		  command. . . . . . . : '/msg nickserv identify **********************************'
+2017-07-03 13:49:31		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:49:31		  autojoin . . . . . . :   ('')
+2017-07-03 13:49:31		  autorejoin . . . . . :   (off)
+2017-07-03 13:49:31		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:49:31		  connection_timeout . :   (60 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:49:31		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:49:31		  away_check_max_nicks :   (25)
+2017-07-03 13:49:31		  msg_kick . . . . . . :   ('')
+2017-07-03 13:49:31		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  notify . . . . . . . :   ('')
+2017-07-03 13:49:31		Server: bitlbee [connected]
+2017-07-03 13:49:31		  addresses. . . . . . : 'localhost/6667'
+2017-07-03 13:49:31		  proxy. . . . . . . . :   ('')
+2017-07-03 13:49:31		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:49:31		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:49:31		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:49:31		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:49:31		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:49:31		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:49:31		  ssl_verify . . . . . :   (on)
+2017-07-03 13:49:31		  password . . . . . . :   (hidden)
+2017-07-03 13:49:31		  capabilities . . . . :   ('')
+2017-07-03 13:49:31		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:49:31		  sasl_username. . . . :   ('')
+2017-07-03 13:49:31		  sasl_password. . . . :   (hidden)
+2017-07-03 13:49:31		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:49:31		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:49:31		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:49:31		  autoconnect. . . . . : on
+2017-07-03 13:49:31		  autoreconnect. . . . :   (on)
+2017-07-03 13:49:31		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:49:31		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 13:49:31		  nicks_alternate. . . :   (on)
+2017-07-03 13:49:31		  username . . . . . . :   ('bmeneg')
+2017-07-03 13:49:31		  realname . . . . . . :   ('')
+2017-07-03 13:49:31		  local_hostname . . . :   ('')
+2017-07-03 13:49:31		  usermode . . . . . . :   ('')
+2017-07-03 13:49:31		  command. . . . . . . : '/msg &bitlbee identify ${sec.data.bitlbee_password}'
+2017-07-03 13:49:31		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:49:31		  autojoin . . . . . . :   ('')
+2017-07-03 13:49:31		  autorejoin . . . . . :   (off)
+2017-07-03 13:49:31		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:49:31		  connection_timeout . :   (60 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:49:31		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:49:31		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:49:31		  away_check_max_nicks :   (25)
+2017-07-03 13:49:31		  msg_kick . . . . . . :   ('')
+2017-07-03 13:49:31		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:49:31		  notify . . . . . . . :   ('')
+2017-07-03 13:50:52		Option changed: irc.server.bitlbee.command = "/msg &bitlbee identify ${sec.data.bitlbee_password};/msg &bitlbee account gtalk on;/msg &bitlbee account twitter on"  (default if null: "")
+2017-07-03 13:50:57		All servers:
+2017-07-03 13:50:57		Server: redhat-znc [connected]
+2017-07-03 13:50:57		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 13:50:57		  proxy. . . . . . . . :   ('')
+2017-07-03 13:50:57		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:50:57		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:50:57		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:50:57		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:50:57		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:50:57		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:50:57		  ssl_verify . . . . . :   (on)
+2017-07-03 13:50:57		  password . . . . . . : (hidden)
+2017-07-03 13:50:57		  capabilities . . . . :   ('')
+2017-07-03 13:50:57		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:50:57		  sasl_username. . . . :   ('')
+2017-07-03 13:50:57		  sasl_password. . . . :   (hidden)
+2017-07-03 13:50:57		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:50:57		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:50:57		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:50:57		  autoconnect. . . . . : on
+2017-07-03 13:50:57		  autoreconnect. . . . :   (on)
+2017-07-03 13:50:57		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:50:57		  nicks. . . . . . . . : 'brdeoliv,brdeoliv_'
+2017-07-03 13:50:57		  nicks_alternate. . . :   (on)
+2017-07-03 13:50:57		  username . . . . . . : 'brdeoliv'
+2017-07-03 13:50:57		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 13:50:57		  local_hostname . . . :   ('')
+2017-07-03 13:50:57		  usermode . . . . . . :   ('')
+2017-07-03 13:50:57		  command. . . . . . . : '/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}'
+2017-07-03 13:50:57		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:50:57		  autojoin . . . . . . :   ('')
+2017-07-03 13:50:57		  autorejoin . . . . . :   (off)
+2017-07-03 13:50:57		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:50:57		  connection_timeout . :   (60 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:50:57		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:50:57		  away_check_max_nicks :   (25)
+2017-07-03 13:50:57		  msg_kick . . . . . . :   ('')
+2017-07-03 13:50:57		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  notify . . . . . . . :   ('')
+2017-07-03 13:50:57		Server: freenode-znc [connected]
+2017-07-03 13:50:57		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 13:50:57		  proxy. . . . . . . . :   ('')
+2017-07-03 13:50:57		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:50:57		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:50:57		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:50:57		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:50:57		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:50:57		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:50:57		  ssl_verify . . . . . :   (on)
+2017-07-03 13:50:57		  password . . . . . . : (hidden)
+2017-07-03 13:50:57		  capabilities . . . . :   ('')
+2017-07-03 13:50:57		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:50:57		  sasl_username. . . . :   ('')
+2017-07-03 13:50:57		  sasl_password. . . . :   (hidden)
+2017-07-03 13:50:57		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:50:57		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:50:57		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:50:57		  autoconnect. . . . . : on
+2017-07-03 13:50:57		  autoreconnect. . . . :   (on)
+2017-07-03 13:50:57		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:50:57		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-03 13:50:57		  nicks_alternate. . . :   (on)
+2017-07-03 13:50:57		  username . . . . . . :   ('bmeneg')
+2017-07-03 13:50:57		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 13:50:57		  local_hostname . . . :   ('')
+2017-07-03 13:50:57		  usermode . . . . . . :   ('')
+2017-07-03 13:50:57		  command. . . . . . . : '/msg nickserv identify *******************************************'
+2017-07-03 13:50:57		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:50:57		  autojoin . . . . . . :   ('')
+2017-07-03 13:50:57		  autorejoin . . . . . :   (off)
+2017-07-03 13:50:57		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:50:57		  connection_timeout . :   (60 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:50:57		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:50:57		  away_check_max_nicks :   (25)
+2017-07-03 13:50:57		  msg_kick . . . . . . :   ('')
+2017-07-03 13:50:57		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  notify . . . . . . . :   ('')
+2017-07-03 13:50:57		Server: oftc-znc [connected]
+2017-07-03 13:50:57		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-03 13:50:57		  proxy. . . . . . . . :   ('')
+2017-07-03 13:50:57		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:50:57		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:50:57		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:50:57		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:50:57		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:50:57		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:50:57		  ssl_verify . . . . . :   (on)
+2017-07-03 13:50:57		  password . . . . . . : (hidden)
+2017-07-03 13:50:57		  capabilities . . . . :   ('')
+2017-07-03 13:50:57		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:50:57		  sasl_username. . . . :   ('')
+2017-07-03 13:50:57		  sasl_password. . . . :   (hidden)
+2017-07-03 13:50:57		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:50:57		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:50:57		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:50:57		  autoconnect. . . . . : on
+2017-07-03 13:50:57		  autoreconnect. . . . :   (on)
+2017-07-03 13:50:57		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:50:57		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-03 13:50:57		  nicks_alternate. . . :   (on)
+2017-07-03 13:50:57		  username . . . . . . :   ('bmeneg')
+2017-07-03 13:50:57		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-03 13:50:57		  local_hostname . . . :   ('')
+2017-07-03 13:50:57		  usermode . . . . . . :   ('')
+2017-07-03 13:50:57		  command. . . . . . . : '/msg nickserv identify **********************************'
+2017-07-03 13:50:57		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:50:57		  autojoin . . . . . . :   ('')
+2017-07-03 13:50:57		  autorejoin . . . . . :   (off)
+2017-07-03 13:50:57		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:50:57		  connection_timeout . :   (60 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:50:57		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:50:57		  away_check_max_nicks :   (25)
+2017-07-03 13:50:57		  msg_kick . . . . . . :   ('')
+2017-07-03 13:50:57		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  notify . . . . . . . :   ('')
+2017-07-03 13:50:57		Server: bitlbee [connected]
+2017-07-03 13:50:57		  addresses. . . . . . : 'localhost/6667'
+2017-07-03 13:50:57		  proxy. . . . . . . . :   ('')
+2017-07-03 13:50:57		  ipv6 . . . . . . . . :   (on)
+2017-07-03 13:50:57		  ssl. . . . . . . . . :   (off)
+2017-07-03 13:50:57		  ssl_cert . . . . . . :   ('')
+2017-07-03 13:50:57		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-03 13:50:57		  ssl_dhkey_size . . . :   (2048)
+2017-07-03 13:50:57		  ssl_fingerprint. . . :   ('')
+2017-07-03 13:50:57		  ssl_verify . . . . . :   (on)
+2017-07-03 13:50:57		  password . . . . . . :   (hidden)
+2017-07-03 13:50:57		  capabilities . . . . :   ('')
+2017-07-03 13:50:57		  sasl_mechanism . . . :   ('plain')
+2017-07-03 13:50:57		  sasl_username. . . . :   ('')
+2017-07-03 13:50:57		  sasl_password. . . . :   (hidden)
+2017-07-03 13:50:57		  sasl_key. .  . . . . :   ('')
+2017-07-03 13:50:57		  sasl_timeout . . . . :   (15 seconds)
+2017-07-03 13:50:57		  sasl_fail. . . . . . :   ('continue')
+2017-07-03 13:50:57		  autoconnect. . . . . : on
+2017-07-03 13:50:57		  autoreconnect. . . . :   (on)
+2017-07-03 13:50:57		  autoreconnect_delay. :   (10 seconds)
+2017-07-03 13:50:57		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-03 13:50:57		  nicks_alternate. . . :   (on)
+2017-07-03 13:50:57		  username . . . . . . :   ('bmeneg')
+2017-07-03 13:50:57		  realname . . . . . . :   ('')
+2017-07-03 13:50:57		  local_hostname . . . :   ('')
+2017-07-03 13:50:57		  usermode . . . . . . :   ('')
+2017-07-03 13:50:57		  command. . . . . . . : '/msg &bitlbee identify ${sec.data.bitlbee_password};/msg &bitlbee account gtalk on;/msg &bitlbee account twitter on'
+2017-07-03 13:50:57		  command_delay. . . . :   (0 seconds)
+2017-07-03 13:50:57		  autojoin . . . . . . :   ('')
+2017-07-03 13:50:57		  autorejoin . . . . . :   (off)
+2017-07-03 13:50:57		  autorejoin_delay . . :   (30 seconds)
+2017-07-03 13:50:57		  connection_timeout . :   (60 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_high :   (2 seconds)
+2017-07-03 13:50:57		  anti_flood_prio_low. :   (2 seconds)
+2017-07-03 13:50:57		  away_check . . . . . :   (0 minutes)
+2017-07-03 13:50:57		  away_check_max_nicks :   (25)
+2017-07-03 13:50:57		  msg_kick . . . . . . :   ('')
+2017-07-03 13:50:57		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-03 13:50:57		  notify . . . . . . . :   ('')
+2017-07-03 13:51:49		[core]  /plugin  list|listfull [<name>]
+2017-07-03 13:51:49		                 load <filename> [<arguments>]
+2017-07-03 13:51:49		                 autoload [<arguments>]
+2017-07-03 13:51:49		                 reload [<name>|* [<arguments>]]
+2017-07-03 13:51:49		                 unload [<name>]
+2017-07-03 13:51:49		list/load/unload plugins
+2017-07-03 13:51:49		     list: list loaded plugins
+2017-07-03 13:51:49		 listfull: list loaded plugins (verbose)
+2017-07-03 13:51:49		     load: load a plugin
+2017-07-03 13:51:49		 autoload: autoload plugins in system or user directory
+2017-07-03 13:51:49		   reload: reload a plugin (if no name given, unload all plugins, then autoload plugins)
+2017-07-03 13:51:49		   unload: unload a plugin (if no name given, unload all plugins)
+2017-07-03 13:51:49		 filename: plugin (file) to load
+2017-07-03 13:51:49		     name: a plugin name
+2017-07-03 13:51:49		arguments: arguments given to plugin on load
+2017-07-03 13:51:49		Without argument, this command lists loaded plugins.
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/alias.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/aspell.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/charset.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/exec.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/fifo.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/guile.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/irc.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/logger.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/lua.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/perl.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/python.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/relay.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/ruby.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/script.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/tcl.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/trigger.so": a plugin with same name already exists
+2017-07-03 13:52:54	=!=	Error: unable to load plugin "/usr/lib64/weechat/plugins/xfer.so": a plugin with same name already exists
+2017-07-03 13:53:37		Options saved to sec.conf
+2017-07-03 13:53:37		Options saved to weechat.conf
+2017-07-03 13:53:37		Options saved to plugins.conf
+2017-07-03 13:53:37		Options saved to charset.conf
+2017-07-03 13:53:37		Options saved to logger.conf
+2017-07-03 13:53:37		Options saved to exec.conf
+2017-07-03 13:53:37		Options saved to trigger.conf
+2017-07-03 13:53:37		Options saved to aspell.conf
+2017-07-03 13:53:37		Options saved to alias.conf
+2017-07-03 13:53:37		Options saved to fifo.conf
+2017-07-03 13:53:37		Options saved to xfer.conf
+2017-07-03 13:53:37		Options saved to irc.conf
+2017-07-03 13:53:37		Options saved to relay.conf
+2017-07-03 13:53:37		Options saved to script.conf
+2017-07-03 13:53:37		Options saved to buffers.conf
+2017-07-03 13:53:37		Options saved to autosort.conf
+2017-07-03 14:10:05		script: script "notify_send" not found
+2017-07-03 14:12:12		Plugins loaded:
+2017-07-03 14:12:12		  alias: Alias commands
+2017-07-03 14:12:12		  aspell: Spell checker for input (with Aspell)
+2017-07-03 14:12:12		  charset: Charset conversions
+2017-07-03 14:12:12		  exec: Execution of external commands in WeeChat
+2017-07-03 14:12:12		  fifo: FIFO pipe for remote control
+2017-07-03 14:12:12		  guile: Support of scheme scripts (with Guile)
+2017-07-03 14:12:12		  irc: IRC (Internet Relay Chat) protocol
+2017-07-03 14:12:12		  logger: Log buffers to files
+2017-07-03 14:12:12		  lua: Support of lua scripts
+2017-07-03 14:12:12		  perl: Support of perl scripts
+2017-07-03 14:12:12		  python: Support of python scripts
+2017-07-03 14:12:12		  relay: Relay WeeChat data to remote application (irc/weechat protocols)
+2017-07-03 14:12:12		  ruby: Support of ruby scripts
+2017-07-03 14:12:12		  script: Scripts manager
+2017-07-03 14:12:12		  tcl: Support of tcl scripts
+2017-07-03 14:12:12		  trigger: Text replacement and command execution on events triggered by WeeChat/plugins
+2017-07-03 14:12:12		  xfer: DCC file transfer and direct chat
+2017-07-03 14:12:27	=!=	Error: unable to load plugin "notify_send": notify_send: cannot open shared object file: No such file or directory
+2017-07-03 14:12:27	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2017-07-03 14:12:46	=!=	python: script "notify_send" not found
+2017-07-03 14:12:48		python: loading script "/home/bmeneg/.weechat/python/autoload/notify_send.py"
+2017-07-03 14:12:48		python: registered script "notify_send", version 0.8 (dev) (Sends highlight and message notifications through notify-send.)
+2017-07-03 14:26:52		script: script "colorize_nicks" not found
+2017-07-03 14:27:18		python: loading script "/home/bmeneg/.weechat/python/colorize_nicks.py"
+2017-07-03 14:27:19		python: registered script "colorize_nicks", version 23 (Use the weechat nick colors in the chat area)
+2017-07-04 09:20:32		perl scripts loaded: buffers, highmon
+2017-07-04 09:20:32		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-04 09:20:32		script: 349 scripts for WeeChat 1.7.1
+2017-07-04 09:20:32		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-04 09:21:16	=!=	Option "irc.server.redhat-znc" not found (tip: you can use wildcard "*" in option to see a sublist)
+2017-07-04 09:21:24	=!=	Error: unknown command "/sserver" (type /help for help)
+2017-07-04 09:21:28		All servers:
+2017-07-04 09:21:28		Server: redhat-znc [not connected]
+2017-07-04 09:21:28		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-04 09:21:28		  proxy. . . . . . . . :   ('')
+2017-07-04 09:21:28		  ipv6 . . . . . . . . :   (on)
+2017-07-04 09:21:28		  ssl. . . . . . . . . :   (off)
+2017-07-04 09:21:28		  ssl_cert . . . . . . :   ('')
+2017-07-04 09:21:28		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-04 09:21:28		  ssl_dhkey_size . . . :   (2048)
+2017-07-04 09:21:28		  ssl_fingerprint. . . :   ('')
+2017-07-04 09:21:28		  ssl_verify . . . . . :   (on)
+2017-07-04 09:21:28		  password . . . . . . : (hidden)
+2017-07-04 09:21:28		  capabilities . . . . :   ('')
+2017-07-04 09:21:28		  sasl_mechanism . . . :   ('plain')
+2017-07-04 09:21:28		  sasl_username. . . . :   ('')
+2017-07-04 09:21:28		  sasl_password. . . . :   (hidden)
+2017-07-04 09:21:28		  sasl_key. .  . . . . :   ('')
+2017-07-04 09:21:28		  sasl_timeout . . . . :   (15 seconds)
+2017-07-04 09:21:28		  sasl_fail. . . . . . :   ('continue')
+2017-07-04 09:21:28		  autoconnect. . . . . : on
+2017-07-04 09:21:28		  autoreconnect. . . . :   (on)
+2017-07-04 09:21:28		  autoreconnect_delay. :   (10 seconds)
+2017-07-04 09:21:28		  nicks. . . . . . . . : 'brdeoliv,brdeoliv_'
+2017-07-04 09:21:28		  nicks_alternate. . . :   (on)
+2017-07-04 09:21:28		  username . . . . . . : 'brdeoliv'
+2017-07-04 09:21:28		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-04 09:21:28		  local_hostname . . . :   ('')
+2017-07-04 09:21:28		  usermode . . . . . . :   ('')
+2017-07-04 09:21:28		  command. . . . . . . : '/msg userserv login brdeoliv ${sec.data.redhat_userserv_password}'
+2017-07-04 09:21:28		  command_delay. . . . :   (0 seconds)
+2017-07-04 09:21:28		  autojoin . . . . . . :   ('')
+2017-07-04 09:21:28		  autorejoin . . . . . :   (off)
+2017-07-04 09:21:28		  autorejoin_delay . . :   (30 seconds)
+2017-07-04 09:21:28		  connection_timeout . :   (60 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_high :   (2 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_low. :   (2 seconds)
+2017-07-04 09:21:28		  away_check . . . . . :   (0 minutes)
+2017-07-04 09:21:28		  away_check_max_nicks :   (25)
+2017-07-04 09:21:28		  msg_kick . . . . . . :   ('')
+2017-07-04 09:21:28		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  notify . . . . . . . :   ('')
+2017-07-04 09:21:28		Server: freenode-znc [not connected]
+2017-07-04 09:21:28		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-04 09:21:28		  proxy. . . . . . . . :   ('')
+2017-07-04 09:21:28		  ipv6 . . . . . . . . :   (on)
+2017-07-04 09:21:28		  ssl. . . . . . . . . :   (off)
+2017-07-04 09:21:28		  ssl_cert . . . . . . :   ('')
+2017-07-04 09:21:28		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-04 09:21:28		  ssl_dhkey_size . . . :   (2048)
+2017-07-04 09:21:28		  ssl_fingerprint. . . :   ('')
+2017-07-04 09:21:28		  ssl_verify . . . . . :   (on)
+2017-07-04 09:21:28		  password . . . . . . : (hidden)
+2017-07-04 09:21:28		  capabilities . . . . :   ('')
+2017-07-04 09:21:28		  sasl_mechanism . . . :   ('plain')
+2017-07-04 09:21:28		  sasl_username. . . . :   ('')
+2017-07-04 09:21:28		  sasl_password. . . . :   (hidden)
+2017-07-04 09:21:28		  sasl_key. .  . . . . :   ('')
+2017-07-04 09:21:28		  sasl_timeout . . . . :   (15 seconds)
+2017-07-04 09:21:28		  sasl_fail. . . . . . :   ('continue')
+2017-07-04 09:21:28		  autoconnect. . . . . : on
+2017-07-04 09:21:28		  autoreconnect. . . . :   (on)
+2017-07-04 09:21:28		  autoreconnect_delay. :   (10 seconds)
+2017-07-04 09:21:28		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-04 09:21:28		  nicks_alternate. . . :   (on)
+2017-07-04 09:21:28		  username . . . . . . :   ('bmeneg')
+2017-07-04 09:21:28		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-04 09:21:28		  local_hostname . . . :   ('')
+2017-07-04 09:21:28		  usermode . . . . . . :   ('')
+2017-07-04 09:21:28		  command. . . . . . . : '/msg nickserv identify *******************************************'
+2017-07-04 09:21:28		  command_delay. . . . :   (0 seconds)
+2017-07-04 09:21:28		  autojoin . . . . . . :   ('')
+2017-07-04 09:21:28		  autorejoin . . . . . :   (off)
+2017-07-04 09:21:28		  autorejoin_delay . . :   (30 seconds)
+2017-07-04 09:21:28		  connection_timeout . :   (60 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_high :   (2 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_low. :   (2 seconds)
+2017-07-04 09:21:28		  away_check . . . . . :   (0 minutes)
+2017-07-04 09:21:28		  away_check_max_nicks :   (25)
+2017-07-04 09:21:28		  msg_kick . . . . . . :   ('')
+2017-07-04 09:21:28		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  notify . . . . . . . :   ('')
+2017-07-04 09:21:28		Server: oftc-znc [not connected]
+2017-07-04 09:21:28		  addresses. . . . . . : 'ibm-x3755m3-02.lab.bos.redhat.com/2029'
+2017-07-04 09:21:28		  proxy. . . . . . . . :   ('')
+2017-07-04 09:21:28		  ipv6 . . . . . . . . :   (on)
+2017-07-04 09:21:28		  ssl. . . . . . . . . :   (off)
+2017-07-04 09:21:28		  ssl_cert . . . . . . :   ('')
+2017-07-04 09:21:28		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-04 09:21:28		  ssl_dhkey_size . . . :   (2048)
+2017-07-04 09:21:28		  ssl_fingerprint. . . :   ('')
+2017-07-04 09:21:28		  ssl_verify . . . . . :   (on)
+2017-07-04 09:21:28		  password . . . . . . : (hidden)
+2017-07-04 09:21:28		  capabilities . . . . :   ('')
+2017-07-04 09:21:28		  sasl_mechanism . . . :   ('plain')
+2017-07-04 09:21:28		  sasl_username. . . . :   ('')
+2017-07-04 09:21:28		  sasl_password. . . . :   (hidden)
+2017-07-04 09:21:28		  sasl_key. .  . . . . :   ('')
+2017-07-04 09:21:28		  sasl_timeout . . . . :   (15 seconds)
+2017-07-04 09:21:28		  sasl_fail. . . . . . :   ('continue')
+2017-07-04 09:21:28		  autoconnect. . . . . : on
+2017-07-04 09:21:28		  autoreconnect. . . . :   (on)
+2017-07-04 09:21:28		  autoreconnect_delay. :   (10 seconds)
+2017-07-04 09:21:28		  nicks. . . . . . . . : 'bmeneg,bmeneg_'
+2017-07-04 09:21:28		  nicks_alternate. . . :   (on)
+2017-07-04 09:21:28		  username . . . . . . :   ('bmeneg')
+2017-07-04 09:21:28		  realname . . . . . . : 'Bruno Meneguele'
+2017-07-04 09:21:28		  local_hostname . . . :   ('')
+2017-07-04 09:21:28		  usermode . . . . . . :   ('')
+2017-07-04 09:21:28		  command. . . . . . . : '/msg nickserv identify **********************************'
+2017-07-04 09:21:28		  command_delay. . . . :   (0 seconds)
+2017-07-04 09:21:28		  autojoin . . . . . . :   ('')
+2017-07-04 09:21:28		  autorejoin . . . . . :   (off)
+2017-07-04 09:21:28		  autorejoin_delay . . :   (30 seconds)
+2017-07-04 09:21:28		  connection_timeout . :   (60 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_high :   (2 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_low. :   (2 seconds)
+2017-07-04 09:21:28		  away_check . . . . . :   (0 minutes)
+2017-07-04 09:21:28		  away_check_max_nicks :   (25)
+2017-07-04 09:21:28		  msg_kick . . . . . . :   ('')
+2017-07-04 09:21:28		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  notify . . . . . . . :   ('')
+2017-07-04 09:21:28		Server: bitlbee [connected]
+2017-07-04 09:21:28		  addresses. . . . . . : 'localhost/6667'
+2017-07-04 09:21:28		  proxy. . . . . . . . :   ('')
+2017-07-04 09:21:28		  ipv6 . . . . . . . . :   (on)
+2017-07-04 09:21:28		  ssl. . . . . . . . . :   (off)
+2017-07-04 09:21:28		  ssl_cert . . . . . . :   ('')
+2017-07-04 09:21:28		  ssl_priorities . . . :   ('NORMAL:-VERS-SSL3.0')
+2017-07-04 09:21:28		  ssl_dhkey_size . . . :   (2048)
+2017-07-04 09:21:28		  ssl_fingerprint. . . :   ('')
+2017-07-04 09:21:28		  ssl_verify . . . . . :   (on)
+2017-07-04 09:21:28		  password . . . . . . :   (hidden)
+2017-07-04 09:21:28		  capabilities . . . . :   ('')
+2017-07-04 09:21:28		  sasl_mechanism . . . :   ('plain')
+2017-07-04 09:21:28		  sasl_username. . . . :   ('')
+2017-07-04 09:21:28		  sasl_password. . . . :   (hidden)
+2017-07-04 09:21:28		  sasl_key. .  . . . . :   ('')
+2017-07-04 09:21:28		  sasl_timeout . . . . :   (15 seconds)
+2017-07-04 09:21:28		  sasl_fail. . . . . . :   ('continue')
+2017-07-04 09:21:28		  autoconnect. . . . . : on
+2017-07-04 09:21:28		  autoreconnect. . . . :   (on)
+2017-07-04 09:21:28		  autoreconnect_delay. :   (10 seconds)
+2017-07-04 09:21:28		  nicks. . . . . . . . :   ('bmeneg,bmeneg1,bmeneg2,bmeneg3,bmeneg4')
+2017-07-04 09:21:28		  nicks_alternate. . . :   (on)
+2017-07-04 09:21:28		  username . . . . . . :   ('bmeneg')
+2017-07-04 09:21:28		  realname . . . . . . :   ('')
+2017-07-04 09:21:28		  local_hostname . . . :   ('')
+2017-07-04 09:21:28		  usermode . . . . . . :   ('')
+2017-07-04 09:21:28		  command. . . . . . . : '/msg &bitlbee identify ${sec.data.bitlbee_password};/msg &bitlbee account gtalk on;/msg &bitlbee account twitter on'
+2017-07-04 09:21:28		  command_delay. . . . :   (0 seconds)
+2017-07-04 09:21:28		  autojoin . . . . . . :   ('')
+2017-07-04 09:21:28		  autorejoin . . . . . :   (off)
+2017-07-04 09:21:28		  autorejoin_delay . . :   (30 seconds)
+2017-07-04 09:21:28		  connection_timeout . :   (60 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_high :   (2 seconds)
+2017-07-04 09:21:28		  anti_flood_prio_low. :   (2 seconds)
+2017-07-04 09:21:28		  away_check . . . . . :   (0 minutes)
+2017-07-04 09:21:28		  away_check_max_nicks :   (25)
+2017-07-04 09:21:28		  msg_kick . . . . . . :   ('')
+2017-07-04 09:21:28		  msg_part . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  msg_quit . . . . . . :   ('WeeChat ${info:version}')
+2017-07-04 09:21:28		  notify . . . . . . . :   ('')
+2017-07-04 09:21:58	=!=	No help available, "irc.server.autojoin" is not a command or an option
+2017-07-04 09:22:13	=!=	No help available, "autojoin" is not a command or an option
+2017-07-04 09:23:22		Option changed: irc.server.redhat-znc.autojoin = "#kmaint,#kernel"  (default if null: "")
+2017-07-04 09:23:44		Option changed: irc.server.oftc-znc.autojoin = "#kernelnewbies"  (default if null: "")
+2017-07-04 09:24:33	=!=	You can not write text in this buffer
+2017-07-04 09:24:35		python: scripts unloaded
+2017-07-04 09:24:35		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-04 09:24:35		perl: scripts unloaded
+2017-07-04 09:24:39		perl scripts loaded: buffers, highmon
+2017-07-04 09:24:39		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-04 09:24:39		script: 349 scripts for WeeChat 1.7.1
+2017-07-04 09:24:39		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-04 09:24:57	=!=	Error: unknown command "/account" (type /help for help)
+2017-07-04 09:25:58		python: scripts unloaded
+2017-07-04 09:25:58		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-04 09:25:58		perl: scripts unloaded
+2017-07-04 09:26:02		perl scripts loaded: buffers, highmon
+2017-07-04 09:26:02		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-04 09:26:02		script: 349 scripts for WeeChat 1.7.1
+2017-07-04 09:26:02		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-05 09:17:53		perl scripts loaded: buffers, highmon
+2017-07-05 09:17:53		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-05 09:17:53		script: downloading list of scripts...
+2017-07-05 09:17:53		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-05 09:17:56		script: 349 scripts for WeeChat 1.7.1
+2017-07-05 09:19:20		python: scripts unloaded
+2017-07-05 09:19:20		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-05 09:19:20		perl: scripts unloaded
+2017-07-05 09:19:23		perl scripts loaded: buffers, highmon
+2017-07-05 09:19:23		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-05 09:19:23		script: 349 scripts for WeeChat 1.7.1
+2017-07-05 09:19:23		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-05 09:37:41		python: scripts unloaded
+2017-07-05 09:37:41		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-05 09:37:41		perl: scripts unloaded
+2017-07-05 09:37:46		perl scripts loaded: buffers, highmon
+2017-07-05 09:37:46		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-05 09:37:46		script: 349 scripts for WeeChat 1.7.1
+2017-07-05 09:37:46		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-06 10:05:03		perl scripts loaded: buffers, highmon
+2017-07-06 10:05:03		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-06 10:05:03		script: downloading list of scripts...
+2017-07-06 10:05:03		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-06 10:05:07		script: 349 scripts for WeeChat 1.7.1
+2017-07-06 19:12:34		python: scripts unloaded
+2017-07-06 19:12:34		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-06 19:12:34		perl: scripts unloaded
+2017-07-07 09:24:50		perl scripts loaded: buffers, highmon
+2017-07-07 09:24:50		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-07 09:24:50		script: 349 scripts for WeeChat 1.7.1
+2017-07-07 09:24:50		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-10 09:25:25		perl scripts loaded: buffers, highmon
+2017-07-10 09:25:25		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-10 09:25:25		script: downloading list of scripts...
+2017-07-10 09:25:25		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-10 09:25:29		script: 349 scripts for WeeChat 1.7.1
+2017-07-10 09:26:25	=!=	Error: unknown command "/nibk" (type /help for help)
+2017-07-11 09:14:37		perl scripts loaded: buffers, highmon
+2017-07-11 09:14:37		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-11 09:14:37		script: 349 scripts for WeeChat 1.7.1
+2017-07-11 09:14:37		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-12 09:42:51		perl scripts loaded: buffers, highmon
+2017-07-12 09:42:51		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-12 09:42:51		script: downloading list of scripts...
+2017-07-12 09:42:51		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-12 09:42:59		script: 349 scripts for WeeChat 1.7.1
+2017-07-14 10:02:06	=!=	Warning: /home/bmeneg/.weechat/aspell.conf, line 14: unknown option for section "color": suggestions = default
+2017-07-14 10:02:06		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2017-07-14 10:02:06		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2017-07-14 10:02:06		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2017-07-14 10:02:06		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2017-07-14 10:02:06	=!=	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2017-07-14 10:02:06		perl scripts loaded: buffers, highmon
+2017-07-14 10:02:06		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-14 10:02:06	=!=	Warning: /home/bmeneg/.weechat/script.conf, line 57: unknown option for section "scripts": url_force_https = on
+2017-07-14 10:02:06		script: downloading list of scripts...
+2017-07-14 10:02:06		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-14 10:02:10		script: 349 scripts for WeeChat 1.9
+2017-07-14 10:02:32		python: scripts unloaded
+2017-07-14 10:02:32		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-14 10:02:32		perl: scripts unloaded
+2017-07-14 10:02:36	=!=	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2017-07-14 10:02:36		perl scripts loaded: buffers, highmon
+2017-07-14 10:02:36		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-14 10:02:36		script: 349 scripts for WeeChat 1.9
+2017-07-14 10:02:36		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-14 10:07:13	=!=	Error with command "/buflist help" (help on command: /help buflist)
+2017-07-14 10:07:19		[buflist]  /buflist  bar
+2017-07-14 10:07:19		                     refresh
+2017-07-14 10:07:19		bar item with list of buffers
+2017-07-14 10:07:19		    bar: add the "buflist" bar
+2017-07-14 10:07:19		refresh: force the refresh of the "buflist" bar item
+2017-07-14 10:07:19		The lines with buffers are displayed using string evaluation (see /help eval for the format), with these options:
+2017-07-14 10:07:19		  - buflist.look.display_conditions: conditions to display a buffer in the list
+2017-07-14 10:07:19		  - buflist.format.buffer: format for a buffer which is not current buffer
+2017-07-14 10:07:19		  - buflist.format.buffer_current: format for the current buffer
+2017-07-14 10:07:19		The following variables can be used in these options:
+2017-07-14 10:07:19		  - buffer data (see hdata "buffer" in API doc for a complete list), for example:
+2017-07-14 10:07:19		    - ${buffer.number}
+2017-07-14 10:07:19		    - ${buffer.name}
+2017-07-14 10:07:19		    - ${buffer.full_name}
+2017-07-14 10:07:19		    - ${buffer.short_name}
+2017-07-14 10:07:19		    - ${buffer.nicklist_nicks_count}
+2017-07-14 10:07:19		  - irc_server: IRC server data, defined only on an IRC buffer (see hdata "irc_server" in API doc)
+2017-07-14 10:07:19		  - irc_channel: IRC channel data, defined only on an IRC channel buffer (see hdata "irc_channel" in API doc)
+2017-07-14 10:07:19		  - extra variables added by buflist for convenience:
+2017-07-14 10:07:19		    - ${format_buffer}: the evaluated value of option buflist.format.buffer; this can be used in option buflist.format.buffer_current to just change the background color for example
+2017-07-14 10:07:19		    - ${current_buffer}: a boolean ("0" or "1"), "1" if this is the current buffer; it can be used in a condition: ${if:${current_buffer}?...:...}
+2017-07-14 10:07:19		    - ${merged}: a boolean ("0" or "1"), "1" if the buffer is merged with at least another buffer; it can be used in a condition: ${if:${merged}?...:...}
+2017-07-14 10:07:19		    - ${format_number}: indented number with separator (evaluation of option buflist.format.number)
+2017-07-14 10:07:19		    - ${number}: indented number, for example " 1" if there are between 10 and 99 buffers
+2017-07-14 10:07:19		    - ${number_displayed}: "1" if the number is displayed, otherwise "0"
+2017-07-14 10:07:19		    - ${indent}: indentation for name (channel and private buffers are indented) (evaluation of option buflist.format.indent)
+2017-07-14 10:07:19		    - ${format_nick_prefix}: colored nick prefix for a channel (evaluation of option buflist.format.nick_prefix)
+2017-07-14 10:07:19		    - ${color_nick_prefix}: color of nick prefix for a channel (set only if the option buflist.look.nick_prefix is enabled)
+2017-07-14 10:07:19		    - ${nick_prefix}: nick prefix for a channel (set only if the option buflist.look.nick_prefix is enabled)
+2017-07-14 10:07:19		    - ${format_name}: formatted name (evaluation of option buflist.format.name)
+2017-07-14 10:07:19		    - ${name}: the short name (if set), with a fallback on the name
+2017-07-14 10:07:19		    - ${color_hotlist}: the color depending on the highest hotlist level for the buffer (evaluation of option buflist.format.hotlist_xxx where xxx is the level)
+2017-07-14 10:07:19		    - ${format_hotlist}: the formatted hotlist (evaluation of option buflist.format.hotlist)
+2017-07-14 10:07:19		    - ${hotlist}: the raw hotlist
+2017-07-14 10:07:19		    - ${hotlist_priority}: "none", "low", "message", "private" or "highlight"
+2017-07-14 10:07:19		    - ${format_lag}: the lag for an IRC server buffer, empty if there's no lag (evaluation of option buflist.format.lag)
+2017-07-14 10:10:44		python: scripts unloaded
+2017-07-14 10:10:44		Highmon buffer has been closed but output is still set to buffer, unusual results may occur. To recreate the buffer use /highmon fix
+2017-07-14 10:10:44		perl: scripts unloaded
+2017-07-14 10:10:48	=!=	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2017-07-14 10:10:48		perl scripts loaded: buffers, highmon
+2017-07-14 10:10:48		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-14 10:10:48		script: 349 scripts for WeeChat 1.9
+2017-07-14 10:10:48		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-14 10:14:32	=!=	Error: unknown command "/perlexec" (type /help for help)
+2017-07-14 10:14:40	=!=	Error: unknown command "/perlexec" (type /help for help)
+2017-07-14 10:14:50	=!=	Error with command "/plugin install perlexec" (help on command: /help plugin)
+2017-07-14 10:14:55	=!=	Error with command "/plugin install perlexec.pl" (help on command: /help plugin)
+2017-07-14 10:15:19		perl: loading script "/home/bmeneg/.weechat/perl/perlexec.pl"
+2017-07-14 10:15:19		perl: registered script "perlexec", version 0.1 (Execute perl code)
+2017-07-14 10:16:07		Layout of buffers+windows stored in "highlight" (current layout: highlight)
+2017-07-14 10:18:21		Layout of buffers+windows stored in "highlight" (current layout: highlight)
+2017-07-14 10:19:11		Option changed: weechat.bar.buflist.size = 18  (default: 0)
+2017-07-14 10:19:22		Option changed: weechat.bar.buflist.size_max = 18  (default: 0)
+2017-07-14 10:19:36		Options saved to sec.conf
+2017-07-14 10:19:36		Options saved to weechat.conf
+2017-07-14 10:19:36		Options saved to plugins.conf
+2017-07-14 10:19:36		Options saved to charset.conf
+2017-07-14 10:19:36		Options saved to logger.conf
+2017-07-14 10:19:36		Options saved to exec.conf
+2017-07-14 10:19:36		Options saved to trigger.conf
+2017-07-14 10:19:36		Options saved to aspell.conf
+2017-07-14 10:19:36		Options saved to alias.conf
+2017-07-14 10:19:36		Options saved to buflist.conf
+2017-07-14 10:19:36		Options saved to fifo.conf
+2017-07-14 10:19:36		Options saved to xfer.conf
+2017-07-14 10:19:36		Options saved to irc.conf
+2017-07-14 10:19:36		Options saved to relay.conf
+2017-07-14 10:19:36		Options saved to autosort.conf
+2017-07-14 10:19:36		Options saved to colorize_nicks.conf
+2017-07-14 10:19:36		Options saved to script.conf
+2017-07-14 10:19:39		Layout of buffers+windows stored in "highlight" (current layout: highlight)
+2017-07-14 10:19:40		Options saved to sec.conf
+2017-07-14 10:19:40		Options saved to weechat.conf
+2017-07-14 10:19:40		Options saved to plugins.conf
+2017-07-14 10:19:40		Options saved to charset.conf
+2017-07-14 10:19:40		Options saved to logger.conf
+2017-07-14 10:19:40		Options saved to exec.conf
+2017-07-14 10:19:40		Options saved to trigger.conf
+2017-07-14 10:19:40		Options saved to aspell.conf
+2017-07-14 10:19:40		Options saved to alias.conf
+2017-07-14 10:19:40		Options saved to buflist.conf
+2017-07-14 10:19:40		Options saved to fifo.conf
+2017-07-14 10:19:40		Options saved to xfer.conf
+2017-07-14 10:19:40		Options saved to irc.conf
+2017-07-14 10:19:40		Options saved to relay.conf
+2017-07-14 10:19:40		Options saved to autosort.conf
+2017-07-14 10:19:40		Options saved to colorize_nicks.conf
+2017-07-14 10:19:40		Options saved to script.conf
+2017-07-17 09:55:24		perl scripts loaded: highmon, perlexec
+2017-07-17 09:55:24		python scripts loaded: autosort, colorize_nicks, notify_send
+2017-07-17 09:55:24		script: downloading list of scripts...
+2017-07-17 09:55:24		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-07-17 09:55:28		script: 349 scripts for WeeChat 1.9

@@ -1,0 +1,960 @@
+2017-07-03 10:46:47	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-03 10:46:47	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-03 10:46:47	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-03 10:46:47	--	MSG(nickserv): identify **********
+2017-07-03 10:46:47	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-03 10:46:47	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-03 10:46:47	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-03 10:46:47	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-03 10:46:47	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-03 10:46:47	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-03 10:46:47	--	17 :IRC Operators online
+2017-07-03 10:46:47	--	2550 :channels formed
+2017-07-03 10:46:47	--	I have 1030 clients and 1 servers
+2017-07-03 10:46:47	--	Current local users: 1030  Max: 1246
+2017-07-03 10:46:47	--	Current global users: 11902  Max: 12161
+2017-07-03 10:46:47	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-03 10:46:47	--	- reflection.oftc.net Message of the Day -
+2017-07-03 10:46:47	--	-   O
+2017-07-03 10:46:47	--	-    \   The Open and Free
+2017-07-03 10:46:47	--	-     O
+2017-07-03 10:46:47	--	-    /|  Technology Community
+2017-07-03 10:46:47	--	- O-O O
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	- Welcome to OFTC's IRC network.
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	- The Open and Free Technology Community was founded at the
+2017-07-03 10:46:47	--	- end of 2001 by a group of experienced members of the Open
+2017-07-03 10:46:47	--	- Source and Free Software communities; it is aimed at
+2017-07-03 10:46:47	--	- providing these communities with better communication,
+2017-07-03 10:46:47	--	- development, and support infrastructure. Our goal is to
+2017-07-03 10:46:47	--	- provide stable services to members of the community in any
+2017-07-03 10:46:47	--	- part of the world, while listening closely to their needs
+2017-07-03 10:46:47	--	- and desires.
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	- We are not a general purpose chat platform, but a topical
+2017-07-03 10:46:47	--	- network intent on providing the open source and free
+2017-07-03 10:46:47	--	- software communities a means to cooperate and communicate.
+2017-07-03 10:46:47	--	- As such, illegal and off-topic activity, such as warez
+2017-07-03 10:46:47	--	- trading, may result in being barred from access.
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-03 10:46:47	--	- support@oftc.net with details.
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	- Thanks and enjoy your stay,
+2017-07-03 10:46:47	--	-
+2017-07-03 10:46:47	--	-         The OFTC team
+2017-07-03 10:46:47	--	End of /MOTD command.
+2017-07-03 10:46:47	--	User mode [+i] by bmeneg
+2017-07-03 10:46:47	--	NickServ (services@services.oftc.net): [10:16:17] This nickname is registered and protected.  If it is your nickname, you may
+2017-07-03 10:46:47	--	NickServ (services@services.oftc.net): [10:16:17] authenticate yourself to services with the IDENTIFY command.  You are
+2017-07-03 10:46:47	--	NickServ (services@services.oftc.net): [10:16:17] getting this message because you are not on the access list for the
+2017-07-03 10:46:47	--	NickServ (services@services.oftc.net): [10:16:17] bmeneg nickname.
+2017-07-03 10:46:47	--	ChanServ (services@services.oftc.net): [10:17:05] [#kernelnewbies] welcome to the kernelnewbies channel
+2017-07-03 10:46:48	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-03 10:46:48	--	NickServ (services@services.oftc.net):  
+2017-07-03 10:46:48	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-03 10:46:48	--	NickServ (services@services.oftc.net):  
+2017-07-03 10:46:48	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-03 10:46:48	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-03 10:47:01	--	MSG(nickserv): identify **********
+2017-07-03 10:47:02	--	User mode [+R] by bmeneg
+2017-07-03 10:47:02	--	NickServ (services@services.oftc.net): You are successfully identified as bmeneg.
+2017-07-03 10:54:20	--	-redhat-znc :Illegal channel name
+2017-07-03 10:56:31		autosort: Replacement patterns:
+2017-07-03 10:56:31		    0: ## -> #
+2017-07-03 10:56:55		autosort: Sorting rules:
+2017-07-03 10:56:55		    0: core = 0
+2017-07-03 10:56:55		    1: irc = 2
+2017-07-03 10:56:55		    2: * = 1
+2017-07-03 10:56:55		    3: irc.irc_raw = 0
+2017-07-03 10:56:55		    4: irc.server = 1
+2017-07-03 10:56:55		    5: irc.server.*.&* = 0
+2017-07-03 10:57:01		autosort: Sorting rules:
+2017-07-03 10:57:01		    0: core = 0
+2017-07-03 10:57:01		    1: irc = 2
+2017-07-03 10:57:01		    2: * = 1
+2017-07-03 10:57:01		    3: irc.irc_raw = 0
+2017-07-03 10:57:01		    4: irc.server = 1
+2017-07-03 10:57:01		    5: irc.server.*.&* = 0
+2017-07-03 10:57:01		    6: irc.server.*.#* = 1
+2017-07-03 10:57:16		autosort: Sorting rules:
+2017-07-03 10:57:16		    0: core = 0
+2017-07-03 10:57:16		    1: irc = 2
+2017-07-03 10:57:16		    2: * = 1
+2017-07-03 10:57:16		    3: irc.irc_raw = 0
+2017-07-03 10:57:16		    4: irc.server = 1
+2017-07-03 10:57:16		    5: irc.server.*.&* = 0
+2017-07-03 10:57:16		    6: irc.server.*.#* = 1
+2017-07-03 10:57:16		    7: irc.server.*.\*status = 2
+2017-07-03 11:14:05	--	[bmeneg_] (bmeneguele@ipv6.7.gamma.elitebnc.org): Bruno Meneguele
+2017-07-03 11:14:05	--	[bmeneg_] #kernelnewbies
+2017-07-03 11:14:05	--	[bmeneg_] larich.oftc.net (Corvallis, OR, USA)
+2017-07-03 11:14:05	--	[bmeneg_] actually using host 2607:5300:60:6537:20::700
+2017-07-03 11:14:05	--	[bmeneg_] End of /WHOIS list.
+2017-07-04 09:20:32	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:20:33	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:20:33	=!=	irc: error: Name or service not known
+2017-07-04 09:20:33	--	irc: reconnecting to server in 10 seconds
+2017-07-04 09:20:43	--	irc: reconnecting to server...
+2017-07-04 09:20:43	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:20:43	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:20:43	=!=	irc: error: Name or service not known
+2017-07-04 09:20:43	--	irc: reconnecting to server in 20 seconds
+2017-07-04 09:21:03	--	irc: reconnecting to server...
+2017-07-04 09:21:03	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:21:04	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:21:04	=!=	irc: error: Name or service not known
+2017-07-04 09:21:04	--	irc: reconnecting to server in 40 seconds
+2017-07-04 09:21:44	--	irc: reconnecting to server...
+2017-07-04 09:21:44	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:21:44	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:21:44	=!=	irc: error: Name or service not known
+2017-07-04 09:21:44	--	irc: reconnecting to server in 1 minute, 20 seconds
+2017-07-04 09:23:04	--	irc: reconnecting to server...
+2017-07-04 09:23:04	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:23:04	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:23:04	=!=	irc: error: Name or service not known
+2017-07-04 09:23:04	--	irc: reconnecting to server in 2 minutes, 40 seconds
+2017-07-04 09:24:39	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:24:39	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:24:39	=!=	irc: error: Name or service not known
+2017-07-04 09:24:39	--	irc: reconnecting to server in 10 seconds
+2017-07-04 09:24:49	--	irc: reconnecting to server...
+2017-07-04 09:24:49	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:24:49	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:24:49	=!=	irc: error: Name or service not known
+2017-07-04 09:24:49	--	irc: reconnecting to server in 20 seconds
+2017-07-04 09:25:09	--	irc: reconnecting to server...
+2017-07-04 09:25:09	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:25:09	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:25:09	=!=	irc: error: Name or service not known
+2017-07-04 09:25:09	--	irc: reconnecting to server in 40 seconds
+2017-07-04 09:25:49	--	irc: reconnecting to server...
+2017-07-04 09:25:49	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:25:49	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:25:49	=!=	irc: error: Name or service not known
+2017-07-04 09:25:49	--	irc: reconnecting to server in 1 minute, 20 seconds
+2017-07-04 09:26:02	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:26:02	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-04 09:26:02	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-04 09:26:02	--	MSG(nickserv): identify **********
+2017-07-04 09:26:02	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-04 09:26:02	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-04 09:26:02	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-04 09:26:02	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-04 09:26:02	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-04 09:26:02	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-04 09:26:02	--	17 :IRC Operators online
+2017-07-04 09:26:02	--	2550 :channels formed
+2017-07-04 09:26:02	--	I have 1030 clients and 1 servers
+2017-07-04 09:26:02	--	Current local users: 1030  Max: 1246
+2017-07-04 09:26:02	--	Current global users: 11902  Max: 12161
+2017-07-04 09:26:02	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-04 09:26:02	--	- reflection.oftc.net Message of the Day -
+2017-07-04 09:26:02	--	-   O
+2017-07-04 09:26:02	--	-    \   The Open and Free
+2017-07-04 09:26:02	--	-     O
+2017-07-04 09:26:02	--	-    /|  Technology Community
+2017-07-04 09:26:02	--	- O-O O
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	- Welcome to OFTC's IRC network.
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	- The Open and Free Technology Community was founded at the
+2017-07-04 09:26:02	--	- end of 2001 by a group of experienced members of the Open
+2017-07-04 09:26:02	--	- Source and Free Software communities; it is aimed at
+2017-07-04 09:26:02	--	- providing these communities with better communication,
+2017-07-04 09:26:02	--	- development, and support infrastructure. Our goal is to
+2017-07-04 09:26:02	--	- provide stable services to members of the community in any
+2017-07-04 09:26:02	--	- part of the world, while listening closely to their needs
+2017-07-04 09:26:02	--	- and desires.
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	- We are not a general purpose chat platform, but a topical
+2017-07-04 09:26:02	--	- network intent on providing the open source and free
+2017-07-04 09:26:02	--	- software communities a means to cooperate and communicate.
+2017-07-04 09:26:02	--	- As such, illegal and off-topic activity, such as warez
+2017-07-04 09:26:02	--	- trading, may result in being barred from access.
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-04 09:26:02	--	- support@oftc.net with details.
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	- Thanks and enjoy your stay,
+2017-07-04 09:26:02	--	-
+2017-07-04 09:26:02	--	-         The OFTC team
+2017-07-04 09:26:02	--	End of /MOTD command.
+2017-07-04 09:26:02	--	User mode [+Ri] by bmeneg
+2017-07-04 09:26:03	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-04 09:26:03	--	NickServ (services@services.oftc.net):  
+2017-07-04 09:26:03	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-04 09:26:03	--	NickServ (services@services.oftc.net):  
+2017-07-04 09:26:03	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-04 09:26:03	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-05 09:17:53	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:17:53	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:17:53	=!=	irc: error: Name or service not known
+2017-07-05 09:17:53	--	irc: reconnecting to server in 10 seconds
+2017-07-05 09:18:03	--	irc: reconnecting to server...
+2017-07-05 09:18:03	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:18:03	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:18:03	=!=	irc: error: Name or service not known
+2017-07-05 09:18:03	--	irc: reconnecting to server in 20 seconds
+2017-07-05 09:18:23	--	irc: reconnecting to server...
+2017-07-05 09:18:23	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:18:23	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:18:23	=!=	irc: error: Name or service not known
+2017-07-05 09:18:23	--	irc: reconnecting to server in 40 seconds
+2017-07-05 09:19:03	--	irc: reconnecting to server...
+2017-07-05 09:19:03	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:19:03	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:19:03	=!=	irc: error: Name or service not known
+2017-07-05 09:19:03	--	irc: reconnecting to server in 1 minute, 20 seconds
+2017-07-05 09:19:23	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:19:24	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-05 09:19:24	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-05 09:19:24	--	MSG(nickserv): identify **********
+2017-07-05 09:19:24	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-05 09:19:24	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-05 09:19:24	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-05 09:19:24	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-05 09:19:24	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-05 09:19:24	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-05 09:19:24	--	17 :IRC Operators online
+2017-07-05 09:19:24	--	2550 :channels formed
+2017-07-05 09:19:24	--	I have 1030 clients and 1 servers
+2017-07-05 09:19:24	--	Current local users: 1030  Max: 1246
+2017-07-05 09:19:24	--	Current global users: 11902  Max: 12161
+2017-07-05 09:19:24	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-05 09:19:24	--	- reflection.oftc.net Message of the Day -
+2017-07-05 09:19:24	--	-   O
+2017-07-05 09:19:24	--	-    \   The Open and Free
+2017-07-05 09:19:24	--	-     O
+2017-07-05 09:19:24	--	-    /|  Technology Community
+2017-07-05 09:19:24	--	- O-O O
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- Welcome to OFTC's IRC network.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- The Open and Free Technology Community was founded at the
+2017-07-05 09:19:24	--	- end of 2001 by a group of experienced members of the Open
+2017-07-05 09:19:24	--	- Source and Free Software communities; it is aimed at
+2017-07-05 09:19:24	--	- providing these communities with better communication,
+2017-07-05 09:19:24	--	- development, and support infrastructure. Our goal is to
+2017-07-05 09:19:24	--	- provide stable services to members of the community in any
+2017-07-05 09:19:24	--	- part of the world, while listening closely to their needs
+2017-07-05 09:19:24	--	- and desires.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- We are not a general purpose chat platform, but a topical
+2017-07-05 09:19:24	--	- network intent on providing the open source and free
+2017-07-05 09:19:24	--	- software communities a means to cooperate and communicate.
+2017-07-05 09:19:24	--	- As such, illegal and off-topic activity, such as warez
+2017-07-05 09:19:24	--	- trading, may result in being barred from access.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-05 09:19:24	--	- support@oftc.net with details.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- Thanks and enjoy your stay,
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	-         The OFTC team
+2017-07-05 09:19:24	--	End of /MOTD command.
+2017-07-05 09:19:24	--	User mode [+Ri] by bmeneg
+2017-07-05 09:19:25	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-05 09:19:25	--	NickServ (services@services.oftc.net):  
+2017-07-05 09:19:25	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-05 09:19:25	--	NickServ (services@services.oftc.net):  
+2017-07-05 09:19:25	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-05 09:19:25	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-05 09:37:46	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:37:47	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-05 09:37:47	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-05 09:37:47	--	MSG(nickserv): identify **********
+2017-07-05 09:37:47	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-05 09:37:47	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-05 09:37:47	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-05 09:37:47	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-05 09:37:47	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-05 09:37:47	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-05 09:37:47	--	17 :IRC Operators online
+2017-07-05 09:37:47	--	2550 :channels formed
+2017-07-05 09:37:47	--	I have 1030 clients and 1 servers
+2017-07-05 09:37:47	--	Current local users: 1030  Max: 1246
+2017-07-05 09:37:47	--	Current global users: 11902  Max: 12161
+2017-07-05 09:37:47	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-05 09:37:47	--	- reflection.oftc.net Message of the Day -
+2017-07-05 09:37:47	--	-   O
+2017-07-05 09:37:47	--	-    \   The Open and Free
+2017-07-05 09:37:47	--	-     O
+2017-07-05 09:37:47	--	-    /|  Technology Community
+2017-07-05 09:37:47	--	- O-O O
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- Welcome to OFTC's IRC network.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- The Open and Free Technology Community was founded at the
+2017-07-05 09:37:47	--	- end of 2001 by a group of experienced members of the Open
+2017-07-05 09:37:47	--	- Source and Free Software communities; it is aimed at
+2017-07-05 09:37:47	--	- providing these communities with better communication,
+2017-07-05 09:37:47	--	- development, and support infrastructure. Our goal is to
+2017-07-05 09:37:47	--	- provide stable services to members of the community in any
+2017-07-05 09:37:47	--	- part of the world, while listening closely to their needs
+2017-07-05 09:37:47	--	- and desires.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- We are not a general purpose chat platform, but a topical
+2017-07-05 09:37:47	--	- network intent on providing the open source and free
+2017-07-05 09:37:47	--	- software communities a means to cooperate and communicate.
+2017-07-05 09:37:47	--	- As such, illegal and off-topic activity, such as warez
+2017-07-05 09:37:47	--	- trading, may result in being barred from access.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-05 09:37:47	--	- support@oftc.net with details.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- Thanks and enjoy your stay,
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	-         The OFTC team
+2017-07-05 09:37:47	--	End of /MOTD command.
+2017-07-05 09:37:47	--	User mode [+Ri] by bmeneg
+2017-07-05 09:37:47	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-05 09:37:48	--	NickServ (services@services.oftc.net):  
+2017-07-05 09:37:48	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-05 09:37:48	--	NickServ (services@services.oftc.net):  
+2017-07-05 09:37:48	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-05 09:37:48	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-05 16:05:52	--	irc: lag is high, reconnecting to server oftc-znc
+2017-07-05 16:05:52	--	irc: disconnected from server
+2017-07-05 16:05:52	--	irc: reconnecting to server in 10 seconds
+2017-07-05 16:06:02	--	irc: reconnecting to server...
+2017-07-05 16:06:02	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 16:06:02	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-05 16:06:03	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-05 16:06:03	--	MSG(nickserv): identify **********
+2017-07-05 16:06:03	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-05 16:06:03	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-05 16:06:03	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-05 16:06:03	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-05 16:06:03	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-05 16:06:03	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-05 16:06:03	--	17 :IRC Operators online
+2017-07-05 16:06:03	--	2550 :channels formed
+2017-07-05 16:06:03	--	I have 1030 clients and 1 servers
+2017-07-05 16:06:03	--	Current local users: 1030  Max: 1246
+2017-07-05 16:06:03	--	Current global users: 11902  Max: 12161
+2017-07-05 16:06:03	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-05 16:06:03	--	- reflection.oftc.net Message of the Day -
+2017-07-05 16:06:03	--	-   O
+2017-07-05 16:06:03	--	-    \   The Open and Free
+2017-07-05 16:06:03	--	-     O
+2017-07-05 16:06:03	--	-    /|  Technology Community
+2017-07-05 16:06:03	--	- O-O O
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- Welcome to OFTC's IRC network.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- The Open and Free Technology Community was founded at the
+2017-07-05 16:06:03	--	- end of 2001 by a group of experienced members of the Open
+2017-07-05 16:06:03	--	- Source and Free Software communities; it is aimed at
+2017-07-05 16:06:03	--	- providing these communities with better communication,
+2017-07-05 16:06:03	--	- development, and support infrastructure. Our goal is to
+2017-07-05 16:06:03	--	- provide stable services to members of the community in any
+2017-07-05 16:06:03	--	- part of the world, while listening closely to their needs
+2017-07-05 16:06:03	--	- and desires.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- We are not a general purpose chat platform, but a topical
+2017-07-05 16:06:03	--	- network intent on providing the open source and free
+2017-07-05 16:06:03	--	- software communities a means to cooperate and communicate.
+2017-07-05 16:06:03	--	- As such, illegal and off-topic activity, such as warez
+2017-07-05 16:06:03	--	- trading, may result in being barred from access.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-05 16:06:03	--	- support@oftc.net with details.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- Thanks and enjoy your stay,
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	-         The OFTC team
+2017-07-05 16:06:03	--	End of /MOTD command.
+2017-07-05 16:06:03	--	User mode [+Ri] by bmeneg
+2017-07-05 16:06:03	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-05 16:06:03	--	NickServ (services@services.oftc.net):  
+2017-07-05 16:06:03	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-05 16:06:03	--	NickServ (services@services.oftc.net):  
+2017-07-05 16:06:03	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-05 16:06:03	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-06 10:05:03	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-06 10:05:04	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-06 10:05:04	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-06 10:05:04	--	MSG(nickserv): identify **********
+2017-07-06 10:05:04	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-06 10:05:04	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-06 10:05:04	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-06 10:05:04	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-06 10:05:04	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-06 10:05:04	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-06 10:05:04	--	17 :IRC Operators online
+2017-07-06 10:05:04	--	2550 :channels formed
+2017-07-06 10:05:04	--	I have 1030 clients and 1 servers
+2017-07-06 10:05:04	--	Current local users: 1030  Max: 1246
+2017-07-06 10:05:04	--	Current global users: 11902  Max: 12161
+2017-07-06 10:05:04	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-06 10:05:04	--	- reflection.oftc.net Message of the Day -
+2017-07-06 10:05:04	--	-   O
+2017-07-06 10:05:04	--	-    \   The Open and Free
+2017-07-06 10:05:04	--	-     O
+2017-07-06 10:05:04	--	-    /|  Technology Community
+2017-07-06 10:05:04	--	- O-O O
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- Welcome to OFTC's IRC network.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- The Open and Free Technology Community was founded at the
+2017-07-06 10:05:04	--	- end of 2001 by a group of experienced members of the Open
+2017-07-06 10:05:04	--	- Source and Free Software communities; it is aimed at
+2017-07-06 10:05:04	--	- providing these communities with better communication,
+2017-07-06 10:05:04	--	- development, and support infrastructure. Our goal is to
+2017-07-06 10:05:04	--	- provide stable services to members of the community in any
+2017-07-06 10:05:04	--	- part of the world, while listening closely to their needs
+2017-07-06 10:05:04	--	- and desires.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- We are not a general purpose chat platform, but a topical
+2017-07-06 10:05:04	--	- network intent on providing the open source and free
+2017-07-06 10:05:04	--	- software communities a means to cooperate and communicate.
+2017-07-06 10:05:04	--	- As such, illegal and off-topic activity, such as warez
+2017-07-06 10:05:04	--	- trading, may result in being barred from access.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-06 10:05:04	--	- support@oftc.net with details.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- Thanks and enjoy your stay,
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	-         The OFTC team
+2017-07-06 10:05:04	--	End of /MOTD command.
+2017-07-06 10:05:04	--	User mode [+Ri] by bmeneg
+2017-07-06 10:05:04	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-06 10:05:05	--	NickServ (services@services.oftc.net):  
+2017-07-06 10:05:05	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-06 10:05:05	--	NickServ (services@services.oftc.net):  
+2017-07-06 10:05:05	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-06 10:05:05	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-07 09:24:50	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-07 09:24:51	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-07 09:24:51	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-07 09:24:51	--	MSG(nickserv): identify **********
+2017-07-07 09:24:51	--	Your host is reflection.oftc.net[64.86.243.183/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-07 09:24:51	--	This server was created Jun 24 2017 at 19:51:34
+2017-07-07 09:24:51	--	reflection.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-07 09:24:51	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-07 09:24:51	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2017-07-07 09:24:51	--	There are 32 users and 11870 invisible on 18 servers
+2017-07-07 09:24:51	--	17 :IRC Operators online
+2017-07-07 09:24:51	--	2550 :channels formed
+2017-07-07 09:24:51	--	I have 1030 clients and 1 servers
+2017-07-07 09:24:51	--	Current local users: 1030  Max: 1246
+2017-07-07 09:24:51	--	Current global users: 11902  Max: 12161
+2017-07-07 09:24:51	--	Highest connection count: 1247 (1246 clients) (6777 connections received)
+2017-07-07 09:24:51	--	- reflection.oftc.net Message of the Day -
+2017-07-07 09:24:51	--	-   O
+2017-07-07 09:24:51	--	-    \   The Open and Free
+2017-07-07 09:24:51	--	-     O
+2017-07-07 09:24:51	--	-    /|  Technology Community
+2017-07-07 09:24:51	--	- O-O O
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- Welcome to OFTC's IRC network.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- The Open and Free Technology Community was founded at the
+2017-07-07 09:24:51	--	- end of 2001 by a group of experienced members of the Open
+2017-07-07 09:24:51	--	- Source and Free Software communities; it is aimed at
+2017-07-07 09:24:51	--	- providing these communities with better communication,
+2017-07-07 09:24:51	--	- development, and support infrastructure. Our goal is to
+2017-07-07 09:24:51	--	- provide stable services to members of the community in any
+2017-07-07 09:24:51	--	- part of the world, while listening closely to their needs
+2017-07-07 09:24:51	--	- and desires.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- We are not a general purpose chat platform, but a topical
+2017-07-07 09:24:51	--	- network intent on providing the open source and free
+2017-07-07 09:24:51	--	- software communities a means to cooperate and communicate.
+2017-07-07 09:24:51	--	- As such, illegal and off-topic activity, such as warez
+2017-07-07 09:24:51	--	- trading, may result in being barred from access.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-07 09:24:51	--	- support@oftc.net with details.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- Thanks and enjoy your stay,
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	-         The OFTC team
+2017-07-07 09:24:51	--	End of /MOTD command.
+2017-07-07 09:24:51	--	User mode [+Ri] by bmeneg
+2017-07-07 09:24:53	--	User mode [-Ri] by bmeneg
+2017-07-07 09:24:55	--	charm.oftc.net: *** Looking up your hostname...
+2017-07-07 09:24:55	--	charm.oftc.net: *** Checking Ident
+2017-07-07 09:24:55	--	charm.oftc.net: *** Found your hostname
+2017-07-07 09:25:05	--	charm.oftc.net: *** No Ident response
+2017-07-07 09:25:05	--	*: Register first.
+2017-07-07 09:25:05	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-07 09:25:05	--	MSG(nickserv): identify **********
+2017-07-07 09:25:05	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-07 09:25:05	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-07 09:25:05	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-07 09:25:05	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-07 09:25:05	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-07 09:25:05	--	4JHAAAHNG :your unique ID
+2017-07-07 09:25:05	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-07 09:25:05	--	17 :IRC Operators online
+2017-07-07 09:25:05	--	5 :unknown connection(s)
+2017-07-07 09:25:05	--	2547 :channels formed
+2017-07-07 09:25:05	--	I have 734 clients and 1 servers
+2017-07-07 09:25:05	--	Current local users: 734  Max: 756
+2017-07-07 09:25:05	--	Current global users: 11902  Max: 12161
+2017-07-07 09:25:05	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-07 09:25:05	--	- charm.oftc.net Message of the Day -
+2017-07-07 09:25:05	--	-   O
+2017-07-07 09:25:05	--	-    \   The Open and Free
+2017-07-07 09:25:05	--	-     O
+2017-07-07 09:25:05	--	-    /|  Technology Community
+2017-07-07 09:25:05	--	- O-O O
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	- Welcome to OFTC's IRC network.
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	- The Open and Free Technology Community was founded at the
+2017-07-07 09:25:05	--	- end of 2001 by a group of experienced members of the Open
+2017-07-07 09:25:05	--	- Source and Free Software communities; it is aimed at
+2017-07-07 09:25:05	--	- providing these communities with better communication,
+2017-07-07 09:25:05	--	- development, and support infrastructure. Our goal is to
+2017-07-07 09:25:05	--	- provide stable services to members of the community in any
+2017-07-07 09:25:05	--	- part of the world, while listening closely to their needs
+2017-07-07 09:25:05	--	- and desires.
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	- We are not a general purpose chat platform, but a topical
+2017-07-07 09:25:05	--	- network intent on providing the open source and free
+2017-07-07 09:25:05	--	- software communities a means to cooperate and communicate.
+2017-07-07 09:25:05	--	- As such, illegal and off-topic activity, such as warez
+2017-07-07 09:25:05	--	- trading, may result in being barred from access.
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-07 09:25:05	--	- support@oftc.net with details.
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	- Thanks and enjoy your stay,
+2017-07-07 09:25:05	--	-
+2017-07-07 09:25:05	--	-         The OFTC team
+2017-07-07 09:25:05	--	End of /MOTD command.
+2017-07-07 09:25:05	--	User mode [+i] by bmeneg
+2017-07-07 09:25:05	--	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2017-07-07 09:25:05	--	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2017-07-07 09:25:05	--	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2017-07-07 09:25:05	--	NickServ (services@services.oftc.net): bmeneg nickname.
+2017-07-07 09:25:05	--	[*] bmeneg (~Bruno@nat-pool-bos-t.redhat.com) H 0 (Meneguele")
+2017-07-07 09:25:05	--	[bmeneg] End of /WHO list.
+2017-07-07 09:25:06	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-07 09:25:06	--	NickServ (services@services.oftc.net):  
+2017-07-07 09:25:06	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-07 09:25:06	--	NickServ (services@services.oftc.net):  
+2017-07-07 09:25:06	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-07 09:25:06	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-10 09:25:25	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-10 09:25:25	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-10 09:25:26	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-10 09:25:26	--	MSG(nickserv): identify **********
+2017-07-10 09:25:26	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-10 09:25:26	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-10 09:25:26	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-10 09:25:26	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-10 09:25:26	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-10 09:25:26	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-10 09:25:26	--	17 :IRC Operators online
+2017-07-10 09:25:26	--	2547 :channels formed
+2017-07-10 09:25:26	--	I have 734 clients and 1 servers
+2017-07-10 09:25:26	--	Current local users: 734  Max: 756
+2017-07-10 09:25:26	--	Current global users: 11902  Max: 12161
+2017-07-10 09:25:26	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-10 09:25:26	--	- charm.oftc.net Message of the Day -
+2017-07-10 09:25:26	--	-   O
+2017-07-10 09:25:26	--	-    \   The Open and Free
+2017-07-10 09:25:26	--	-     O
+2017-07-10 09:25:26	--	-    /|  Technology Community
+2017-07-10 09:25:26	--	- O-O O
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- Welcome to OFTC's IRC network.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- The Open and Free Technology Community was founded at the
+2017-07-10 09:25:26	--	- end of 2001 by a group of experienced members of the Open
+2017-07-10 09:25:26	--	- Source and Free Software communities; it is aimed at
+2017-07-10 09:25:26	--	- providing these communities with better communication,
+2017-07-10 09:25:26	--	- development, and support infrastructure. Our goal is to
+2017-07-10 09:25:26	--	- provide stable services to members of the community in any
+2017-07-10 09:25:26	--	- part of the world, while listening closely to their needs
+2017-07-10 09:25:26	--	- and desires.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- We are not a general purpose chat platform, but a topical
+2017-07-10 09:25:26	--	- network intent on providing the open source and free
+2017-07-10 09:25:26	--	- software communities a means to cooperate and communicate.
+2017-07-10 09:25:26	--	- As such, illegal and off-topic activity, such as warez
+2017-07-10 09:25:26	--	- trading, may result in being barred from access.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-10 09:25:26	--	- support@oftc.net with details.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- Thanks and enjoy your stay,
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	-         The OFTC team
+2017-07-10 09:25:26	--	End of /MOTD command.
+2017-07-10 09:25:26	--	User mode [+i] by bmeneg
+2017-07-10 09:25:26	--	NickServ (services@services.oftc.net): [15:57:13] This nickname is registered and protected.  If it is your nickname, you may
+2017-07-10 09:25:26	--	NickServ (services@services.oftc.net): [15:57:13] authenticate yourself to services with the IDENTIFY command.  You are
+2017-07-10 09:25:26	--	NickServ (services@services.oftc.net): [15:57:13] getting this message because you are not on the access list for the
+2017-07-10 09:25:26	--	NickServ (services@services.oftc.net): [15:57:13] bmeneg nickname.
+2017-07-10 09:25:26	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-10 09:25:27	--	NickServ (services@services.oftc.net):  
+2017-07-10 09:25:27	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-10 09:25:27	--	NickServ (services@services.oftc.net):  
+2017-07-10 09:25:27	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-10 09:25:27	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-11 09:14:37	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-11 09:14:38	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-11 09:14:38	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-11 09:14:38	--	MSG(nickserv): identify **********
+2017-07-11 09:14:38	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-11 09:14:38	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-11 09:14:38	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-11 09:14:38	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-11 09:14:38	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-11 09:14:38	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-11 09:14:38	--	17 :IRC Operators online
+2017-07-11 09:14:38	--	2547 :channels formed
+2017-07-11 09:14:38	--	I have 734 clients and 1 servers
+2017-07-11 09:14:38	--	Current local users: 734  Max: 756
+2017-07-11 09:14:38	--	Current global users: 11902  Max: 12161
+2017-07-11 09:14:38	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-11 09:14:38	--	- charm.oftc.net Message of the Day -
+2017-07-11 09:14:38	--	-   O
+2017-07-11 09:14:38	--	-    \   The Open and Free
+2017-07-11 09:14:38	--	-     O
+2017-07-11 09:14:38	--	-    /|  Technology Community
+2017-07-11 09:14:38	--	- O-O O
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- Welcome to OFTC's IRC network.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- The Open and Free Technology Community was founded at the
+2017-07-11 09:14:38	--	- end of 2001 by a group of experienced members of the Open
+2017-07-11 09:14:38	--	- Source and Free Software communities; it is aimed at
+2017-07-11 09:14:38	--	- providing these communities with better communication,
+2017-07-11 09:14:38	--	- development, and support infrastructure. Our goal is to
+2017-07-11 09:14:38	--	- provide stable services to members of the community in any
+2017-07-11 09:14:38	--	- part of the world, while listening closely to their needs
+2017-07-11 09:14:38	--	- and desires.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- We are not a general purpose chat platform, but a topical
+2017-07-11 09:14:38	--	- network intent on providing the open source and free
+2017-07-11 09:14:38	--	- software communities a means to cooperate and communicate.
+2017-07-11 09:14:38	--	- As such, illegal and off-topic activity, such as warez
+2017-07-11 09:14:38	--	- trading, may result in being barred from access.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-11 09:14:38	--	- support@oftc.net with details.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- Thanks and enjoy your stay,
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	-         The OFTC team
+2017-07-11 09:14:38	--	End of /MOTD command.
+2017-07-11 09:14:38	--	User mode [+i] by bmeneg
+2017-07-11 09:14:39	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-11 09:14:39	--	NickServ (services@services.oftc.net):  
+2017-07-11 09:14:39	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-11 09:14:39	--	NickServ (services@services.oftc.net):  
+2017-07-11 09:14:39	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-11 09:14:39	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-12 09:42:51	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-12 09:42:51	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-12 09:42:52	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-12 09:42:52	--	MSG(nickserv): identify **********
+2017-07-12 09:42:52	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-12 09:42:52	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-12 09:42:52	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-12 09:42:52	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-12 09:42:52	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-12 09:42:52	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-12 09:42:52	--	17 :IRC Operators online
+2017-07-12 09:42:52	--	2547 :channels formed
+2017-07-12 09:42:52	--	I have 734 clients and 1 servers
+2017-07-12 09:42:52	--	Current local users: 734  Max: 756
+2017-07-12 09:42:52	--	Current global users: 11902  Max: 12161
+2017-07-12 09:42:52	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-12 09:42:52	--	- charm.oftc.net Message of the Day -
+2017-07-12 09:42:52	--	-   O
+2017-07-12 09:42:52	--	-    \   The Open and Free
+2017-07-12 09:42:52	--	-     O
+2017-07-12 09:42:52	--	-    /|  Technology Community
+2017-07-12 09:42:52	--	- O-O O
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- Welcome to OFTC's IRC network.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- The Open and Free Technology Community was founded at the
+2017-07-12 09:42:52	--	- end of 2001 by a group of experienced members of the Open
+2017-07-12 09:42:52	--	- Source and Free Software communities; it is aimed at
+2017-07-12 09:42:52	--	- providing these communities with better communication,
+2017-07-12 09:42:52	--	- development, and support infrastructure. Our goal is to
+2017-07-12 09:42:52	--	- provide stable services to members of the community in any
+2017-07-12 09:42:52	--	- part of the world, while listening closely to their needs
+2017-07-12 09:42:52	--	- and desires.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- We are not a general purpose chat platform, but a topical
+2017-07-12 09:42:52	--	- network intent on providing the open source and free
+2017-07-12 09:42:52	--	- software communities a means to cooperate and communicate.
+2017-07-12 09:42:52	--	- As such, illegal and off-topic activity, such as warez
+2017-07-12 09:42:52	--	- trading, may result in being barred from access.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-12 09:42:52	--	- support@oftc.net with details.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- Thanks and enjoy your stay,
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	-         The OFTC team
+2017-07-12 09:42:52	--	End of /MOTD command.
+2017-07-12 09:42:52	--	User mode [+i] by bmeneg
+2017-07-12 09:42:52	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-12 09:42:53	--	NickServ (services@services.oftc.net):  
+2017-07-12 09:42:53	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-12 09:42:53	--	NickServ (services@services.oftc.net):  
+2017-07-12 09:42:53	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-12 09:42:53	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-13 08:17:35	--	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2017-07-13 08:17:35	--	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2017-07-13 08:17:35	--	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2017-07-13 08:17:35	--	NickServ (services@services.oftc.net): bmeneg nickname.
+2017-07-14 10:02:06	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-14 10:02:07	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-14 10:02:07	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-14 10:02:07	--	MSG(nickserv): identify **********
+2017-07-14 10:02:07	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-14 10:02:07	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-14 10:02:07	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-14 10:02:07	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-14 10:02:07	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-14 10:02:07	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-14 10:02:07	--	17 :IRC Operators online
+2017-07-14 10:02:07	--	2547 :channels formed
+2017-07-14 10:02:07	--	I have 734 clients and 1 servers
+2017-07-14 10:02:07	--	Current local users: 734  Max: 756
+2017-07-14 10:02:07	--	Current global users: 11902  Max: 12161
+2017-07-14 10:02:07	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-14 10:02:07	--	- charm.oftc.net Message of the Day -
+2017-07-14 10:02:07	--	-   O
+2017-07-14 10:02:07	--	-    \   The Open and Free
+2017-07-14 10:02:07	--	-     O
+2017-07-14 10:02:07	--	-    /|  Technology Community
+2017-07-14 10:02:07	--	- O-O O
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- Welcome to OFTC's IRC network.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- The Open and Free Technology Community was founded at the
+2017-07-14 10:02:07	--	- end of 2001 by a group of experienced members of the Open
+2017-07-14 10:02:07	--	- Source and Free Software communities; it is aimed at
+2017-07-14 10:02:07	--	- providing these communities with better communication,
+2017-07-14 10:02:07	--	- development, and support infrastructure. Our goal is to
+2017-07-14 10:02:07	--	- provide stable services to members of the community in any
+2017-07-14 10:02:07	--	- part of the world, while listening closely to their needs
+2017-07-14 10:02:07	--	- and desires.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- We are not a general purpose chat platform, but a topical
+2017-07-14 10:02:07	--	- network intent on providing the open source and free
+2017-07-14 10:02:07	--	- software communities a means to cooperate and communicate.
+2017-07-14 10:02:07	--	- As such, illegal and off-topic activity, such as warez
+2017-07-14 10:02:07	--	- trading, may result in being barred from access.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-14 10:02:07	--	- support@oftc.net with details.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- Thanks and enjoy your stay,
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	-         The OFTC team
+2017-07-14 10:02:07	--	End of /MOTD command.
+2017-07-14 10:02:07	--	User mode [+i] by bmeneg
+2017-07-14 10:02:08	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-14 10:02:08	--	NickServ (services@services.oftc.net):  
+2017-07-14 10:02:08	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-14 10:02:08	--	NickServ (services@services.oftc.net):  
+2017-07-14 10:02:08	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-14 10:02:08	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-14 10:02:36	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-14 10:02:36	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-14 10:02:36	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-14 10:02:36	--	MSG(nickserv): identify **********
+2017-07-14 10:02:36	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-14 10:02:36	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-14 10:02:36	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-14 10:02:36	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-14 10:02:36	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-14 10:02:36	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-14 10:02:36	--	17 :IRC Operators online
+2017-07-14 10:02:36	--	2547 :channels formed
+2017-07-14 10:02:36	--	I have 734 clients and 1 servers
+2017-07-14 10:02:36	--	Current local users: 734  Max: 756
+2017-07-14 10:02:36	--	Current global users: 11902  Max: 12161
+2017-07-14 10:02:36	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-14 10:02:36	--	- charm.oftc.net Message of the Day -
+2017-07-14 10:02:36	--	-   O
+2017-07-14 10:02:36	--	-    \   The Open and Free
+2017-07-14 10:02:36	--	-     O
+2017-07-14 10:02:36	--	-    /|  Technology Community
+2017-07-14 10:02:36	--	- O-O O
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- Welcome to OFTC's IRC network.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- The Open and Free Technology Community was founded at the
+2017-07-14 10:02:36	--	- end of 2001 by a group of experienced members of the Open
+2017-07-14 10:02:36	--	- Source and Free Software communities; it is aimed at
+2017-07-14 10:02:36	--	- providing these communities with better communication,
+2017-07-14 10:02:36	--	- development, and support infrastructure. Our goal is to
+2017-07-14 10:02:36	--	- provide stable services to members of the community in any
+2017-07-14 10:02:36	--	- part of the world, while listening closely to their needs
+2017-07-14 10:02:36	--	- and desires.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- We are not a general purpose chat platform, but a topical
+2017-07-14 10:02:36	--	- network intent on providing the open source and free
+2017-07-14 10:02:36	--	- software communities a means to cooperate and communicate.
+2017-07-14 10:02:36	--	- As such, illegal and off-topic activity, such as warez
+2017-07-14 10:02:36	--	- trading, may result in being barred from access.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-14 10:02:36	--	- support@oftc.net with details.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- Thanks and enjoy your stay,
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	-         The OFTC team
+2017-07-14 10:02:36	--	End of /MOTD command.
+2017-07-14 10:02:36	--	User mode [+i] by bmeneg
+2017-07-14 10:02:37	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-14 10:02:37	--	NickServ (services@services.oftc.net):  
+2017-07-14 10:02:37	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-14 10:02:37	--	NickServ (services@services.oftc.net):  
+2017-07-14 10:02:37	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-14 10:02:37	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-14 10:10:48	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-14 10:10:48	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-14 10:10:49	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-14 10:10:49	--	MSG(nickserv): identify **********
+2017-07-14 10:10:49	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-14 10:10:49	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-14 10:10:49	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-14 10:10:49	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-14 10:10:49	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-14 10:10:49	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-14 10:10:49	--	17 :IRC Operators online
+2017-07-14 10:10:49	--	2547 :channels formed
+2017-07-14 10:10:49	--	I have 734 clients and 1 servers
+2017-07-14 10:10:49	--	Current local users: 734  Max: 756
+2017-07-14 10:10:49	--	Current global users: 11902  Max: 12161
+2017-07-14 10:10:49	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-14 10:10:49	--	- charm.oftc.net Message of the Day -
+2017-07-14 10:10:49	--	-   O
+2017-07-14 10:10:49	--	-    \   The Open and Free
+2017-07-14 10:10:49	--	-     O
+2017-07-14 10:10:49	--	-    /|  Technology Community
+2017-07-14 10:10:49	--	- O-O O
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- Welcome to OFTC's IRC network.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- The Open and Free Technology Community was founded at the
+2017-07-14 10:10:49	--	- end of 2001 by a group of experienced members of the Open
+2017-07-14 10:10:49	--	- Source and Free Software communities; it is aimed at
+2017-07-14 10:10:49	--	- providing these communities with better communication,
+2017-07-14 10:10:49	--	- development, and support infrastructure. Our goal is to
+2017-07-14 10:10:49	--	- provide stable services to members of the community in any
+2017-07-14 10:10:49	--	- part of the world, while listening closely to their needs
+2017-07-14 10:10:49	--	- and desires.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- We are not a general purpose chat platform, but a topical
+2017-07-14 10:10:49	--	- network intent on providing the open source and free
+2017-07-14 10:10:49	--	- software communities a means to cooperate and communicate.
+2017-07-14 10:10:49	--	- As such, illegal and off-topic activity, such as warez
+2017-07-14 10:10:49	--	- trading, may result in being barred from access.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-14 10:10:49	--	- support@oftc.net with details.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- Thanks and enjoy your stay,
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	-         The OFTC team
+2017-07-14 10:10:49	--	End of /MOTD command.
+2017-07-14 10:10:49	--	User mode [+i] by bmeneg
+2017-07-14 10:10:49	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-14 10:10:49	--	NickServ (services@services.oftc.net):  
+2017-07-14 10:10:49	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-14 10:10:49	--	NickServ (services@services.oftc.net):  
+2017-07-14 10:10:49	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-14 10:10:49	--	NickServ (services@services.oftc.net): this message, please contact network support.
+2017-07-17 09:55:24	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-17 09:55:25	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-17 09:55:25	--	Welcome to the OFTC Internet Relay Chat Network bmeneg
+2017-07-17 09:55:25	--	MSG(nickserv): identify **********
+2017-07-17 09:55:25	--	Your host is charm.oftc.net[64.62.190.36/6667], running version hybrid-7.2.2+oftc1.7.3
+2017-07-17 09:55:25	--	This server was created Jun 26 2017 at 20:43:35
+2017-07-17 09:55:25	--	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2017-07-17 09:55:25	--	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2017-07-17 09:55:25	--	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2017-07-17 09:55:25	--	There are 33 users and 11869 invisible on 18 servers
+2017-07-17 09:55:25	--	17 :IRC Operators online
+2017-07-17 09:55:25	--	2547 :channels formed
+2017-07-17 09:55:25	--	I have 734 clients and 1 servers
+2017-07-17 09:55:25	--	Current local users: 734  Max: 756
+2017-07-17 09:55:25	--	Current global users: 11902  Max: 12161
+2017-07-17 09:55:25	--	Highest connection count: 757 (756 clients) (9547 connections received)
+2017-07-17 09:55:25	--	- charm.oftc.net Message of the Day -
+2017-07-17 09:55:25	--	-   O
+2017-07-17 09:55:25	--	-    \   The Open and Free
+2017-07-17 09:55:25	--	-     O
+2017-07-17 09:55:25	--	-    /|  Technology Community
+2017-07-17 09:55:25	--	- O-O O
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- Welcome to OFTC's IRC network.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- The Open and Free Technology Community was founded at the
+2017-07-17 09:55:25	--	- end of 2001 by a group of experienced members of the Open
+2017-07-17 09:55:25	--	- Source and Free Software communities; it is aimed at
+2017-07-17 09:55:25	--	- providing these communities with better communication,
+2017-07-17 09:55:25	--	- development, and support infrastructure. Our goal is to
+2017-07-17 09:55:25	--	- provide stable services to members of the community in any
+2017-07-17 09:55:25	--	- part of the world, while listening closely to their needs
+2017-07-17 09:55:25	--	- and desires.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- We are not a general purpose chat platform, but a topical
+2017-07-17 09:55:25	--	- network intent on providing the open source and free
+2017-07-17 09:55:25	--	- software communities a means to cooperate and communicate.
+2017-07-17 09:55:25	--	- As such, illegal and off-topic activity, such as warez
+2017-07-17 09:55:25	--	- trading, may result in being barred from access.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- For more information on OFTC, please visit https://www.oftc.net/.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- If you require assistance stop by in channel #oftc, or email
+2017-07-17 09:55:25	--	- support@oftc.net with details.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- Thanks and enjoy your stay,
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	-         The OFTC team
+2017-07-17 09:55:25	--	End of /MOTD command.
+2017-07-17 09:55:25	--	User mode [+i] by bmeneg
+2017-07-17 09:55:25	--	NickServ (services@services.oftc.net): Identify failed as bmeneg.  You may have entered an incorrect password.
+2017-07-17 09:55:26	--	NickServ (services@services.oftc.net):  
+2017-07-17 09:55:26	--	NickServ (services@services.oftc.net): If you have forgotten your password please see HELP SENDPASS
+2017-07-17 09:55:26	--	NickServ (services@services.oftc.net):  
+2017-07-17 09:55:26	--	NickServ (services@services.oftc.net): If you believe you have entered the correct password and are still getting
+2017-07-17 09:55:26	--	NickServ (services@services.oftc.net): this message, please contact network support.

@@ -1,0 +1,70 @@
+2017-07-03 09:56:52	--	irc: disconnected from server
+2017-07-05 09:38:17	brdeoliv	bom ia aquini, tudo certo?
+2017-07-05 09:39:02	brdeoliv	imagino que as coisas na fase de RC do 7.4 devem estar meio aceleradas ainda, hehehe 
+2017-07-05 09:39:36	brdeoliv	mas apenas para informar, estou estudando algumas coisas por aqui, tanto a respeito do fedora/redhat como tbm do kernel
+2017-07-05 09:40:17	brdeoliv	qualquer coisa, caso quando estiver mais tranquilo e ver que já é possível, estarei aqui ou para ajudar ou para iniciar de fato no treinamento para kmaint :)
+2017-07-05 09:50:13	aquini	OK
+2017-07-06 10:32:45	brdeoliv	aquini, dúvida.. aqueles patches que o pessoal posta como RHEL7.4, considerando o período em que estamos, se eles não forem blockers eles ficarão para 7.5? 
+2017-07-06 10:32:58	brdeoliv	alías, bom dia kkk
+2017-07-06 10:34:47	aquini	sim
+2017-07-06 10:35:02	brdeoliv	certo
+2017-07-06 10:35:47	aquini	o subject prefix 7.4 não quer dizer muita coisa, na verdade. e não é levado em consideração p/ priorizar o merge
+2017-07-06 10:37:35	aquini	basicamente, a gente precisa do subject prefix preenchido, para que possamos classificar corretamente, no patchwork, para qual  "patch-bucket" o patch tem que ir
+2017-07-06 10:38:13	aquini	apenas RHEL{5,6,7,...} serviria bem
+2017-07-06 10:39:07	brdeoliv	nossa, verdade, faz sentido.
+2017-07-06 10:39:33	brdeoliv	tudo bem, entendido :)
+2017-07-06 10:40:13	aquini	quem diz, precisamente, em qual release cycle o patch é esperado é o BZ correlato (em suas flags)
+2017-07-06 10:41:23	aquini	e todos os BZ preechidos para o 7.4, que não foram integrados (pq não ganharam flags requeridas em tempo habil) são automaticamente repassados para o 7.5
+2017-07-06 10:42:44	brdeoliv	ahh, perfeito entendi
+2017-07-06 10:42:50	brdeoliv	é que estava olhando o caso do patch https://bugzilla.redhat.com/show_bug.cgi?id=1461892
+2017-07-06 10:43:00	brdeoliv	o patch para esse BZ ^ digo
+2017-07-06 10:43:57	brdeoliv	e ele está com flag 7.4, porém ele não está flagged como blocker +
+2017-07-06 10:45:17	aquini	sim
+2017-07-06 10:45:39	aquini	por enquanto ele está fora da lista para o RC respin
+2017-07-06 10:45:56	brdeoliv	ficando então, a princípio, para z-stream
+2017-07-06 10:46:03	aquini	isso
+2017-07-06 10:46:25	brdeoliv	ok
+2017-07-06 10:46:26	aquini	se nada mudar, ele vai ficar de fora do build
+2017-07-06 10:46:38	aquini	e terá de ser integrado no proximo release (7.5)
+2017-07-06 10:47:04	aquini	e no 7.4, via z-stream
+2017-07-06 10:47:08	brdeoliv	entendi
+2017-07-06 10:48:17	brdeoliv	mesmo se ele tiver os 3 post acks, não estando como blocker, não entra mais no 7.4 RC, correto?
+2017-07-06 10:48:25	aquini	isso
+2017-07-06 10:49:04	brdeoliv	obg :)
+2017-07-11 10:21:19	brdeoliv	aquini, bom dia, tudo certo?
+2017-07-11 10:21:58	brdeoliv	viu, estava andando pelo site do patchwork e acabei notando que não tenho acesso a ele. (seja com kinit ou login kerberos), tem algo que devo fazer?
+2017-07-11 10:22:37	brdeoliv	sei que a ideia é trabalhar basicamente com scripts, mas pela web eu deveria ter acesso ou preciso requisitar de alguma forma?
+2017-07-13 15:32:21	brdeoliv	rafael, está por aí? 
+2017-07-13 15:32:30	brdeoliv	aliás, boa tarde hehe. 
+2017-07-13 15:33:04	brdeoliv	a linda chegou a comentar com você sobre uma conversa que eu e ela tivemos na terça?
+2017-07-13 15:34:57	aquini	nope
+2017-07-13 15:35:06	aquini	to mais por fora, do que arco de barril
+2017-07-13 15:35:25	brdeoliv	"arco de barril" hahaha
+2017-07-13 15:36:38	brdeoliv	então, ela queria saber como as coisas estavam indo nos estudos, mas ela estava preocupada como eu poderia me sair trabalhando como um kmaint em releases que tão grandes como estão sendo
+2017-07-13 15:37:24	brdeoliv	como vc falou, 7.3 foi gigante, 7.4 outra paulada e assim por diante, ela achou que meu conhecimento não muito sólido no kernel em si poderia vir a me atrapalhar e também a prejudicar em tomadas de decisão
+2017-07-13 15:39:09	brdeoliv	com isso ela falou que iria conversar com vc e com o herton sobra a possibilidade de eu ajudar o aris com patchtools e ir treinando com o patchwork. 
+2017-07-13 15:39:28	brdeoliv	mas também ao invés de agora eu ficar em y-stream, iria para algo em z-stream
+2017-07-13 15:39:37	brdeoliv	já que o montante de coisas é menor para lidar.
+2017-07-13 15:40:42	brdeoliv	de certa forma eu não discordo da ideia, considerando que as coisas acontecendo um tanto rápido e eu sem experiência pode realmente me "quebrar"
+2017-07-13 15:42:46	brdeoliv	agora eu não sei se ela está preocupado com o aprendizado mesmo ou se em algum momento passei a impressão errada para ela hehehe, mas independente.. acredito que ela ira conversar com vc e o herton na segunda que vem
+2017-07-13 15:43:25	brdeoliv	então queria deixar vc já informado a respeito.
+2017-07-13 15:43:59	brdeoliv	parece que ela comentou com o aris a respeito também
+2017-07-13 15:45:17	aquini	parece uma boa ideia, IMO -- assumir uma posição de menos exposição, e ficar como um suitable replacement, para casos de afastamentos temporarios
+2017-07-13 15:45:54	aquini	te "compra" mais tempo para se acostumar com o tranco do trabalho, sem necessariamente ter de encarar a chibata ;)
+2017-07-13 15:47:12	aquini	te lembra que eu te disse, que a Linda é um tipo de chefe que se importa com o time, e tenta ao maximo proteger o time?
+2017-07-13 15:47:40	aquini	(de vez em quando ela dá umas despirocadas malucas, mas no geral é boa gente)
+2017-07-13 15:49:13	aquini	essa proposta dela para ti, me parece exatamente isso. ela preocupada em não jogar todo o peso da responsabilidade sobre os teus ombros, de soco.
+2017-07-13 15:56:43	brdeoliv	entendo
+2017-07-13 15:58:00	brdeoliv	confesso que com a agitação que vc e ela estavam dias atrás eu me vi preocupado em como eu realmente poderia me sair nesse tipo de situação
+2017-07-13 15:58:24	brdeoliv	mas tudo bem então, segunda que vem na reunião se ela não vier a mencionar nada eu tento puxar para ver como ficou a decisão dela
+2017-07-13 16:07:04	brdeoliv	mais uma coisa, ela comentou sobre a ida para lá e as conferências em setembro/outubro.. como funciona?
+2017-07-13 16:10:39	aquini	nunca fui muito de ir a conferencias, na real. Mas baicamente é ver o schedule, orçar os gastos e acertar com ela para ver se tem budget ou nao
+2017-07-13 16:10:58	aquini	eu, particularmente, prefiro as visitas a westford
+2017-07-13 16:11:32	aquini	passar uma semana trabalhando de lá, no meu caso, vale muito mais do que qqer conf
+2017-07-13 16:12:08	brdeoliv	ah sim! compartilho da sua opinião 
+2017-07-13 16:12:43	brdeoliv	mas isso acontece todo ano? 
+2017-07-13 16:12:53	brdeoliv	digo, tanto herton quanto você geralmente vão?
+2017-07-13 16:13:16	aquini	quase todo o ano, sim.
+2017-07-13 16:14:50	brdeoliv	interessante.
+2017-07-13 16:16:03	brdeoliv	terei que ir atrás do visto para o EUA.. 
+2017-07-13 16:16:23	brdeoliv	a própria redhat brasil ajuda com alguns papeis/

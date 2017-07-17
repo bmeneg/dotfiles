@@ -1,0 +1,912 @@
+2017-07-03 10:39:09	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-03 10:39:09	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-03 10:39:10	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-03 10:39:10	--	MSG(nickserv): identify
+2017-07-03 10:39:10	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-03 10:39:10	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-03 10:39:10	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-03 10:39:10	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-03 10:39:10	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-03 10:39:10	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-03 10:39:10	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-03 10:39:10	--	28 :IRC Operators online
+2017-07-03 10:39:10	--	48783 :channels formed
+2017-07-03 10:39:10	--	I have 5537 clients and 1 servers
+2017-07-03 10:39:10	--	5537 6026 :Current local users 5537, max 6026
+2017-07-03 10:39:10	--	91079 92681 :Current global users 91079, max 92681
+2017-07-03 10:39:10	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-03 10:39:10	--	- wilhelm.freenode.net Message of the Day -
+2017-07-03 10:39:10	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-03 10:39:10	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-03 10:39:10	--	- this server!
+2017-07-03 10:39:10	--	-
+2017-07-03 10:39:10	--	- Welcome to freenode - supporting the free and open source
+2017-07-03 10:39:10	--	- software communities since 1998.
+2017-07-03 10:39:10	--	-
+2017-07-03 10:39:10	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:39:10	--	- accept our policies as set out on http://www.freenode.net
+2017-07-03 10:39:10	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-03 10:39:10	--	- any network-related questions or queries, where a number of
+2017-07-03 10:39:10	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-03 10:39:10	--	-
+2017-07-03 10:39:10	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-03 10:39:10	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-03 10:39:10	--	- real-life collaboration.
+2017-07-03 10:39:10	--	-
+2017-07-03 10:39:10	--	- We would like to thank Private Internet Access
+2017-07-03 10:39:10	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-03 10:39:10	--	- organisations that help keep freenode and our other projects
+2017-07-03 10:39:10	--	- running for their sustained support.
+2017-07-03 10:39:10	--	-
+2017-07-03 10:39:10	--	- In particular we would like to thank the sponsor
+2017-07-03 10:39:10	--	- of this server, details of which can be found above.
+2017-07-03 10:39:10	--	-
+2017-07-03 10:39:10	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:39:10	--	- agree with our policies and guidelines as published on
+2017-07-03 10:39:10	--	- https://freenode.net
+2017-07-03 10:39:10	--	End of /MOTD command.
+2017-07-03 10:39:10	--	User mode [+i] by bmeneg
+2017-07-03 10:39:10	--	wilhelm.freenode.net: [10:14:25] *** Spoofing your IP
+2017-07-03 10:39:10	--	NickServ (NickServ@services.): [10:14:26] This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2017-07-03 10:39:10	--	ChanServ (ChanServ@services.): [10:15:19] [#fedora-unregistered] You have been redirected to the #fedora-unregistered because you are not registered with freenode. See http://freenode.net/faq.shtml#nicksetup for information on how to do this.
+2017-07-03 10:39:10	--	NickServ (NickServ@services.): Insufficient parameters for IDENTIFY.
+2017-07-03 10:39:10	--	NickServ (NickServ@services.): Syntax: IDENTIFY [nick] <password>
+2017-07-03 10:40:11	--	irc: disconnected from server
+2017-07-03 10:40:29	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-03 10:40:30	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-03 10:40:30	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-03 10:40:30	--	MSG(nickserv): identify ******
+2017-07-03 10:40:30	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-03 10:40:30	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-03 10:40:30	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-03 10:40:30	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-03 10:40:30	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-03 10:40:30	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-03 10:40:30	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-03 10:40:30	--	28 :IRC Operators online
+2017-07-03 10:40:30	--	48783 :channels formed
+2017-07-03 10:40:30	--	I have 5537 clients and 1 servers
+2017-07-03 10:40:30	--	5537 6026 :Current local users 5537, max 6026
+2017-07-03 10:40:30	--	91079 92681 :Current global users 91079, max 92681
+2017-07-03 10:40:30	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-03 10:40:30	--	- wilhelm.freenode.net Message of the Day -
+2017-07-03 10:40:30	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-03 10:40:30	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-03 10:40:30	--	- this server!
+2017-07-03 10:40:30	--	-
+2017-07-03 10:40:30	--	- Welcome to freenode - supporting the free and open source
+2017-07-03 10:40:30	--	- software communities since 1998.
+2017-07-03 10:40:30	--	-
+2017-07-03 10:40:30	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:40:30	--	- accept our policies as set out on http://www.freenode.net
+2017-07-03 10:40:30	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-03 10:40:30	--	- any network-related questions or queries, where a number of
+2017-07-03 10:40:30	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-03 10:40:30	--	-
+2017-07-03 10:40:30	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-03 10:40:30	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-03 10:40:30	--	- real-life collaboration.
+2017-07-03 10:40:30	--	-
+2017-07-03 10:40:30	--	- We would like to thank Private Internet Access
+2017-07-03 10:40:30	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-03 10:40:30	--	- organisations that help keep freenode and our other projects
+2017-07-03 10:40:30	--	- running for their sustained support.
+2017-07-03 10:40:30	--	-
+2017-07-03 10:40:30	--	- In particular we would like to thank the sponsor
+2017-07-03 10:40:30	--	- of this server, details of which can be found above.
+2017-07-03 10:40:30	--	-
+2017-07-03 10:40:30	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:40:30	--	- agree with our policies and guidelines as published on
+2017-07-03 10:40:30	--	- https://freenode.net
+2017-07-03 10:40:30	--	End of /MOTD command.
+2017-07-03 10:40:30	--	User mode [+i] by bmeneg
+2017-07-03 10:40:30	--	NickServ (NickServ@services.): Invalid password for bmeneg.
+2017-07-03 10:41:29	--	irc: disconnected from server
+2017-07-03 10:43:35	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-03 10:43:35	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-03 10:43:36	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-03 10:43:36	--	MSG(nickserv): identify ******
+2017-07-03 10:43:36	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-03 10:43:36	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-03 10:43:36	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-03 10:43:36	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-03 10:43:36	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-03 10:43:36	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-03 10:43:36	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-03 10:43:36	--	28 :IRC Operators online
+2017-07-03 10:43:36	--	48783 :channels formed
+2017-07-03 10:43:36	--	I have 5537 clients and 1 servers
+2017-07-03 10:43:36	--	5537 6026 :Current local users 5537, max 6026
+2017-07-03 10:43:36	--	91079 92681 :Current global users 91079, max 92681
+2017-07-03 10:43:36	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-03 10:43:36	--	- wilhelm.freenode.net Message of the Day -
+2017-07-03 10:43:36	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-03 10:43:36	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-03 10:43:36	--	- this server!
+2017-07-03 10:43:36	--	-
+2017-07-03 10:43:36	--	- Welcome to freenode - supporting the free and open source
+2017-07-03 10:43:36	--	- software communities since 1998.
+2017-07-03 10:43:36	--	-
+2017-07-03 10:43:36	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:43:36	--	- accept our policies as set out on http://www.freenode.net
+2017-07-03 10:43:36	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-03 10:43:36	--	- any network-related questions or queries, where a number of
+2017-07-03 10:43:36	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-03 10:43:36	--	-
+2017-07-03 10:43:36	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-03 10:43:36	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-03 10:43:36	--	- real-life collaboration.
+2017-07-03 10:43:36	--	-
+2017-07-03 10:43:36	--	- We would like to thank Private Internet Access
+2017-07-03 10:43:36	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-03 10:43:36	--	- organisations that help keep freenode and our other projects
+2017-07-03 10:43:36	--	- running for their sustained support.
+2017-07-03 10:43:36	--	-
+2017-07-03 10:43:36	--	- In particular we would like to thank the sponsor
+2017-07-03 10:43:36	--	- of this server, details of which can be found above.
+2017-07-03 10:43:36	--	-
+2017-07-03 10:43:36	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:43:36	--	- agree with our policies and guidelines as published on
+2017-07-03 10:43:36	--	- https://freenode.net
+2017-07-03 10:43:36	--	End of /MOTD command.
+2017-07-03 10:43:36	--	User mode [+i] by bmeneg
+2017-07-03 10:43:36	--	NickServ (NickServ@services.): Invalid password for bmeneg.
+2017-07-03 10:44:38	--	MSG(nickserv): identify *****************
+2017-07-03 10:44:39	--	NickServ (NickServ@services.): You are now identified for bmeneg.
+2017-07-03 10:44:39	--	NickServ (NickServ@services.): 2 failed logins since last login.
+2017-07-03 10:44:39	--	NickServ (NickServ@services.): Last failed attempt from: bmeneg!Bruno@nat/redhat/x-vbapzwskhdmbsnge on Jul 03 13:43:35 2017.
+2017-07-03 10:45:09	--	irc: disconnected from server
+2017-07-03 10:45:25	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-03 10:45:25	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-03 10:45:25	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-03 10:45:25	--	MSG(nickserv): identify ******
+2017-07-03 10:45:25	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-03 10:45:25	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-03 10:45:25	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-03 10:45:25	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-03 10:45:25	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-03 10:45:25	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-03 10:45:25	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-03 10:45:25	--	28 :IRC Operators online
+2017-07-03 10:45:25	--	48783 :channels formed
+2017-07-03 10:45:25	--	I have 5537 clients and 1 servers
+2017-07-03 10:45:25	--	5537 6026 :Current local users 5537, max 6026
+2017-07-03 10:45:25	--	91079 92681 :Current global users 91079, max 92681
+2017-07-03 10:45:25	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-03 10:45:25	--	- wilhelm.freenode.net Message of the Day -
+2017-07-03 10:45:25	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-03 10:45:25	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-03 10:45:25	--	- this server!
+2017-07-03 10:45:25	--	-
+2017-07-03 10:45:25	--	- Welcome to freenode - supporting the free and open source
+2017-07-03 10:45:25	--	- software communities since 1998.
+2017-07-03 10:45:25	--	-
+2017-07-03 10:45:25	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:45:25	--	- accept our policies as set out on http://www.freenode.net
+2017-07-03 10:45:25	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-03 10:45:25	--	- any network-related questions or queries, where a number of
+2017-07-03 10:45:25	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-03 10:45:25	--	-
+2017-07-03 10:45:25	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-03 10:45:25	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-03 10:45:25	--	- real-life collaboration.
+2017-07-03 10:45:25	--	-
+2017-07-03 10:45:25	--	- We would like to thank Private Internet Access
+2017-07-03 10:45:25	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-03 10:45:25	--	- organisations that help keep freenode and our other projects
+2017-07-03 10:45:25	--	- running for their sustained support.
+2017-07-03 10:45:25	--	-
+2017-07-03 10:45:25	--	- In particular we would like to thank the sponsor
+2017-07-03 10:45:25	--	- of this server, details of which can be found above.
+2017-07-03 10:45:25	--	-
+2017-07-03 10:45:25	--	- By connecting to freenode you indicate that you have read and
+2017-07-03 10:45:25	--	- agree with our policies and guidelines as published on
+2017-07-03 10:45:25	--	- https://freenode.net
+2017-07-03 10:45:25	--	End of /MOTD command.
+2017-07-03 10:45:25	--	User mode [+i] by bmeneg
+2017-07-03 10:45:26	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-03 14:15:55	--	kernel-br: No such channel
+2017-07-04 09:20:32	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:20:33	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:20:33	=!=	irc: error: Name or service not known
+2017-07-04 09:20:33	--	irc: reconnecting to server in 10 seconds
+2017-07-04 09:20:43	--	irc: reconnecting to server...
+2017-07-04 09:20:43	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:20:44	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:20:44	=!=	irc: error: Name or service not known
+2017-07-04 09:20:44	--	irc: reconnecting to server in 20 seconds
+2017-07-04 09:21:04	--	irc: reconnecting to server...
+2017-07-04 09:21:04	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:21:04	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:21:04	=!=	irc: error: Name or service not known
+2017-07-04 09:21:04	--	irc: reconnecting to server in 40 seconds
+2017-07-04 09:21:44	--	irc: reconnecting to server...
+2017-07-04 09:21:44	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:21:44	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:21:44	=!=	irc: error: Name or service not known
+2017-07-04 09:21:44	--	irc: reconnecting to server in 1 minute, 20 seconds
+2017-07-04 09:23:04	--	irc: reconnecting to server...
+2017-07-04 09:23:04	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:23:04	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:23:04	=!=	irc: error: Name or service not known
+2017-07-04 09:23:04	--	irc: reconnecting to server in 2 minutes, 40 seconds
+2017-07-04 09:24:39	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:24:39	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:24:39	=!=	irc: error: Name or service not known
+2017-07-04 09:24:39	--	irc: reconnecting to server in 10 seconds
+2017-07-04 09:24:49	--	irc: reconnecting to server...
+2017-07-04 09:24:49	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:24:49	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:24:49	=!=	irc: error: Name or service not known
+2017-07-04 09:24:49	--	irc: reconnecting to server in 20 seconds
+2017-07-04 09:25:09	--	irc: reconnecting to server...
+2017-07-04 09:25:09	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:25:09	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:25:09	=!=	irc: error: Name or service not known
+2017-07-04 09:25:09	--	irc: reconnecting to server in 40 seconds
+2017-07-04 09:25:49	--	irc: reconnecting to server...
+2017-07-04 09:25:49	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:25:49	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-04 09:25:49	=!=	irc: error: Name or service not known
+2017-07-04 09:25:49	--	irc: reconnecting to server in 1 minute, 20 seconds
+2017-07-04 09:26:02	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-04 09:26:02	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-04 09:26:02	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-04 09:26:02	--	MSG(nickserv): identify ******
+2017-07-04 09:26:02	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-04 09:26:02	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-04 09:26:02	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-04 09:26:02	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-04 09:26:02	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-04 09:26:02	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-04 09:26:02	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-04 09:26:02	--	28 :IRC Operators online
+2017-07-04 09:26:02	--	48783 :channels formed
+2017-07-04 09:26:02	--	I have 5537 clients and 1 servers
+2017-07-04 09:26:02	--	5537 6026 :Current local users 5537, max 6026
+2017-07-04 09:26:02	--	91079 92681 :Current global users 91079, max 92681
+2017-07-04 09:26:02	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-04 09:26:02	--	- wilhelm.freenode.net Message of the Day -
+2017-07-04 09:26:03	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-04 09:26:03	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-04 09:26:03	--	- this server!
+2017-07-04 09:26:03	--	-
+2017-07-04 09:26:03	--	- Welcome to freenode - supporting the free and open source
+2017-07-04 09:26:03	--	- software communities since 1998.
+2017-07-04 09:26:03	--	-
+2017-07-04 09:26:03	--	- By connecting to freenode you indicate that you have read and
+2017-07-04 09:26:03	--	- accept our policies as set out on http://www.freenode.net
+2017-07-04 09:26:03	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-04 09:26:03	--	- any network-related questions or queries, where a number of
+2017-07-04 09:26:03	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-04 09:26:03	--	-
+2017-07-04 09:26:03	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-04 09:26:03	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-04 09:26:03	--	- real-life collaboration.
+2017-07-04 09:26:03	--	-
+2017-07-04 09:26:03	--	- We would like to thank Private Internet Access
+2017-07-04 09:26:03	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-04 09:26:03	--	- organisations that help keep freenode and our other projects
+2017-07-04 09:26:03	--	- running for their sustained support.
+2017-07-04 09:26:03	--	-
+2017-07-04 09:26:03	--	- In particular we would like to thank the sponsor
+2017-07-04 09:26:03	--	- of this server, details of which can be found above.
+2017-07-04 09:26:03	--	-
+2017-07-04 09:26:03	--	- By connecting to freenode you indicate that you have read and
+2017-07-04 09:26:03	--	- agree with our policies and guidelines as published on
+2017-07-04 09:26:03	--	- https://freenode.net
+2017-07-04 09:26:03	--	End of /MOTD command.
+2017-07-04 09:26:03	--	User mode [+i] by bmeneg
+2017-07-04 09:26:03	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-05 09:17:53	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:17:54	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:17:54	=!=	irc: error: Name or service not known
+2017-07-05 09:17:54	--	irc: reconnecting to server in 10 seconds
+2017-07-05 09:18:04	--	irc: reconnecting to server...
+2017-07-05 09:18:04	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:18:04	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:18:04	=!=	irc: error: Name or service not known
+2017-07-05 09:18:04	--	irc: reconnecting to server in 20 seconds
+2017-07-05 09:18:24	--	irc: reconnecting to server...
+2017-07-05 09:18:24	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:18:24	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:18:24	=!=	irc: error: Name or service not known
+2017-07-05 09:18:24	--	irc: reconnecting to server in 40 seconds
+2017-07-05 09:19:04	--	irc: reconnecting to server...
+2017-07-05 09:19:04	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:19:04	=!=	irc: address "ibm-x3755m3-02.lab.bos.redhat.com" not found
+2017-07-05 09:19:04	=!=	irc: error: Name or service not known
+2017-07-05 09:19:04	--	irc: reconnecting to server in 1 minute, 20 seconds
+2017-07-05 09:19:23	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:19:24	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-05 09:19:24	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-05 09:19:24	--	MSG(nickserv): identify ******
+2017-07-05 09:19:24	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-05 09:19:24	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-05 09:19:24	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-05 09:19:24	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-05 09:19:24	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-05 09:19:24	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-05 09:19:24	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-05 09:19:24	--	28 :IRC Operators online
+2017-07-05 09:19:24	--	48783 :channels formed
+2017-07-05 09:19:24	--	I have 5537 clients and 1 servers
+2017-07-05 09:19:24	--	5537 6026 :Current local users 5537, max 6026
+2017-07-05 09:19:24	--	91079 92681 :Current global users 91079, max 92681
+2017-07-05 09:19:24	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-05 09:19:24	--	- wilhelm.freenode.net Message of the Day -
+2017-07-05 09:19:24	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-05 09:19:24	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-05 09:19:24	--	- this server!
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- Welcome to freenode - supporting the free and open source
+2017-07-05 09:19:24	--	- software communities since 1998.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- By connecting to freenode you indicate that you have read and
+2017-07-05 09:19:24	--	- accept our policies as set out on http://www.freenode.net
+2017-07-05 09:19:24	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-05 09:19:24	--	- any network-related questions or queries, where a number of
+2017-07-05 09:19:24	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-05 09:19:24	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-05 09:19:24	--	- real-life collaboration.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- We would like to thank Private Internet Access
+2017-07-05 09:19:24	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-05 09:19:24	--	- organisations that help keep freenode and our other projects
+2017-07-05 09:19:24	--	- running for their sustained support.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- In particular we would like to thank the sponsor
+2017-07-05 09:19:24	--	- of this server, details of which can be found above.
+2017-07-05 09:19:24	--	-
+2017-07-05 09:19:24	--	- By connecting to freenode you indicate that you have read and
+2017-07-05 09:19:24	--	- agree with our policies and guidelines as published on
+2017-07-05 09:19:24	--	- https://freenode.net
+2017-07-05 09:19:24	--	End of /MOTD command.
+2017-07-05 09:19:24	--	User mode [+i] by bmeneg
+2017-07-05 09:19:33	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-05 09:37:46	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 09:37:47	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-05 09:37:47	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-05 09:37:47	--	MSG(nickserv): identify ******
+2017-07-05 09:37:47	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-05 09:37:47	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-05 09:37:47	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-05 09:37:47	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-05 09:37:47	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-05 09:37:47	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-05 09:37:47	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-05 09:37:47	--	28 :IRC Operators online
+2017-07-05 09:37:47	--	48783 :channels formed
+2017-07-05 09:37:47	--	I have 5537 clients and 1 servers
+2017-07-05 09:37:47	--	5537 6026 :Current local users 5537, max 6026
+2017-07-05 09:37:47	--	91079 92681 :Current global users 91079, max 92681
+2017-07-05 09:37:47	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-05 09:37:47	--	- wilhelm.freenode.net Message of the Day -
+2017-07-05 09:37:47	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-05 09:37:47	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-05 09:37:47	--	- this server!
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- Welcome to freenode - supporting the free and open source
+2017-07-05 09:37:47	--	- software communities since 1998.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- By connecting to freenode you indicate that you have read and
+2017-07-05 09:37:47	--	- accept our policies as set out on http://www.freenode.net
+2017-07-05 09:37:47	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-05 09:37:47	--	- any network-related questions or queries, where a number of
+2017-07-05 09:37:47	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-05 09:37:47	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-05 09:37:47	--	- real-life collaboration.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- We would like to thank Private Internet Access
+2017-07-05 09:37:47	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-05 09:37:47	--	- organisations that help keep freenode and our other projects
+2017-07-05 09:37:47	--	- running for their sustained support.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- In particular we would like to thank the sponsor
+2017-07-05 09:37:47	--	- of this server, details of which can be found above.
+2017-07-05 09:37:47	--	-
+2017-07-05 09:37:47	--	- By connecting to freenode you indicate that you have read and
+2017-07-05 09:37:47	--	- agree with our policies and guidelines as published on
+2017-07-05 09:37:47	--	- https://freenode.net
+2017-07-05 09:37:47	--	End of /MOTD command.
+2017-07-05 09:37:47	--	User mode [+i] by bmeneg
+2017-07-05 09:37:47	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-05 16:05:52	--	irc: lag is high, reconnecting to server freenode-znc
+2017-07-05 16:05:52	--	irc: disconnected from server
+2017-07-05 16:05:52	--	irc: reconnecting to server in 10 seconds
+2017-07-05 16:06:02	--	irc: reconnecting to server...
+2017-07-05 16:06:02	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-05 16:06:02	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-05 16:06:03	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-05 16:06:03	--	MSG(nickserv): identify ******
+2017-07-05 16:06:03	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-05 16:06:03	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-05 16:06:03	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-05 16:06:03	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-05 16:06:03	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-05 16:06:03	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-05 16:06:03	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-05 16:06:03	--	28 :IRC Operators online
+2017-07-05 16:06:03	--	48783 :channels formed
+2017-07-05 16:06:03	--	I have 5537 clients and 1 servers
+2017-07-05 16:06:03	--	5537 6026 :Current local users 5537, max 6026
+2017-07-05 16:06:03	--	91079 92681 :Current global users 91079, max 92681
+2017-07-05 16:06:03	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-05 16:06:03	--	- wilhelm.freenode.net Message of the Day -
+2017-07-05 16:06:03	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-05 16:06:03	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-05 16:06:03	--	- this server!
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- Welcome to freenode - supporting the free and open source
+2017-07-05 16:06:03	--	- software communities since 1998.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- By connecting to freenode you indicate that you have read and
+2017-07-05 16:06:03	--	- accept our policies as set out on http://www.freenode.net
+2017-07-05 16:06:03	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-05 16:06:03	--	- any network-related questions or queries, where a number of
+2017-07-05 16:06:03	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-05 16:06:03	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-05 16:06:03	--	- real-life collaboration.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- We would like to thank Private Internet Access
+2017-07-05 16:06:03	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-05 16:06:03	--	- organisations that help keep freenode and our other projects
+2017-07-05 16:06:03	--	- running for their sustained support.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- In particular we would like to thank the sponsor
+2017-07-05 16:06:03	--	- of this server, details of which can be found above.
+2017-07-05 16:06:03	--	-
+2017-07-05 16:06:03	--	- By connecting to freenode you indicate that you have read and
+2017-07-05 16:06:03	--	- agree with our policies and guidelines as published on
+2017-07-05 16:06:03	--	- https://freenode.net
+2017-07-05 16:06:03	--	End of /MOTD command.
+2017-07-05 16:06:03	--	User mode [+i] by bmeneg
+2017-07-05 16:06:03	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-06 10:05:03	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-06 10:05:04	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-06 10:05:04	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-06 10:05:04	--	MSG(nickserv): identify ******
+2017-07-06 10:05:04	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-06 10:05:04	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-06 10:05:04	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-06 10:05:04	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-06 10:05:04	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-06 10:05:04	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-06 10:05:04	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-06 10:05:04	--	28 :IRC Operators online
+2017-07-06 10:05:04	--	48783 :channels formed
+2017-07-06 10:05:04	--	I have 5537 clients and 1 servers
+2017-07-06 10:05:04	--	5537 6026 :Current local users 5537, max 6026
+2017-07-06 10:05:04	--	91079 92681 :Current global users 91079, max 92681
+2017-07-06 10:05:04	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-06 10:05:04	--	- wilhelm.freenode.net Message of the Day -
+2017-07-06 10:05:04	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-06 10:05:04	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-06 10:05:04	--	- this server!
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- Welcome to freenode - supporting the free and open source
+2017-07-06 10:05:04	--	- software communities since 1998.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- By connecting to freenode you indicate that you have read and
+2017-07-06 10:05:04	--	- accept our policies as set out on http://www.freenode.net
+2017-07-06 10:05:04	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-06 10:05:04	--	- any network-related questions or queries, where a number of
+2017-07-06 10:05:04	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-06 10:05:04	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-06 10:05:04	--	- real-life collaboration.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- We would like to thank Private Internet Access
+2017-07-06 10:05:04	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-06 10:05:04	--	- organisations that help keep freenode and our other projects
+2017-07-06 10:05:04	--	- running for their sustained support.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- In particular we would like to thank the sponsor
+2017-07-06 10:05:04	--	- of this server, details of which can be found above.
+2017-07-06 10:05:04	--	-
+2017-07-06 10:05:04	--	- By connecting to freenode you indicate that you have read and
+2017-07-06 10:05:04	--	- agree with our policies and guidelines as published on
+2017-07-06 10:05:04	--	- https://freenode.net
+2017-07-06 10:05:04	--	End of /MOTD command.
+2017-07-06 10:05:04	--	User mode [+i] by bmeneg
+2017-07-06 10:05:04	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-07 09:24:50	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-07 09:24:51	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-07 09:24:51	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-07 09:24:51	--	MSG(nickserv): identify ******
+2017-07-07 09:24:51	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-07 09:24:51	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-07 09:24:51	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-07 09:24:51	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-07 09:24:51	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-07 09:24:51	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-07 09:24:51	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-07 09:24:51	--	28 :IRC Operators online
+2017-07-07 09:24:51	--	48783 :channels formed
+2017-07-07 09:24:51	--	I have 5537 clients and 1 servers
+2017-07-07 09:24:51	--	5537 6026 :Current local users 5537, max 6026
+2017-07-07 09:24:51	--	91079 92681 :Current global users 91079, max 92681
+2017-07-07 09:24:51	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-07 09:24:51	--	- wilhelm.freenode.net Message of the Day -
+2017-07-07 09:24:51	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-07 09:24:51	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-07 09:24:51	--	- this server!
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- Welcome to freenode - supporting the free and open source
+2017-07-07 09:24:51	--	- software communities since 1998.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- By connecting to freenode you indicate that you have read and
+2017-07-07 09:24:51	--	- accept our policies as set out on http://www.freenode.net
+2017-07-07 09:24:51	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-07 09:24:51	--	- any network-related questions or queries, where a number of
+2017-07-07 09:24:51	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-07 09:24:51	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-07 09:24:51	--	- real-life collaboration.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- We would like to thank Private Internet Access
+2017-07-07 09:24:51	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-07 09:24:51	--	- organisations that help keep freenode and our other projects
+2017-07-07 09:24:51	--	- running for their sustained support.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- In particular we would like to thank the sponsor
+2017-07-07 09:24:51	--	- of this server, details of which can be found above.
+2017-07-07 09:24:51	--	-
+2017-07-07 09:24:51	--	- By connecting to freenode you indicate that you have read and
+2017-07-07 09:24:51	--	- agree with our policies and guidelines as published on
+2017-07-07 09:24:51	--	- https://freenode.net
+2017-07-07 09:24:51	--	End of /MOTD command.
+2017-07-07 09:24:51	--	User mode [+i] by bmeneg
+2017-07-07 09:24:52	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-10 09:25:25	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-10 09:25:25	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-10 09:25:26	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-10 09:25:26	--	MSG(nickserv): identify ******
+2017-07-10 09:25:26	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-10 09:25:26	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-10 09:25:26	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-10 09:25:26	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-10 09:25:26	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-10 09:25:26	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-10 09:25:26	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-10 09:25:26	--	28 :IRC Operators online
+2017-07-10 09:25:26	--	48783 :channels formed
+2017-07-10 09:25:26	--	I have 5537 clients and 1 servers
+2017-07-10 09:25:26	--	5537 6026 :Current local users 5537, max 6026
+2017-07-10 09:25:26	--	91079 92681 :Current global users 91079, max 92681
+2017-07-10 09:25:26	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-10 09:25:26	--	- wilhelm.freenode.net Message of the Day -
+2017-07-10 09:25:26	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-10 09:25:26	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-10 09:25:26	--	- this server!
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- Welcome to freenode - supporting the free and open source
+2017-07-10 09:25:26	--	- software communities since 1998.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- By connecting to freenode you indicate that you have read and
+2017-07-10 09:25:26	--	- accept our policies as set out on http://www.freenode.net
+2017-07-10 09:25:26	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-10 09:25:26	--	- any network-related questions or queries, where a number of
+2017-07-10 09:25:26	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-10 09:25:26	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-10 09:25:26	--	- real-life collaboration.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- We would like to thank Private Internet Access
+2017-07-10 09:25:26	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-10 09:25:26	--	- organisations that help keep freenode and our other projects
+2017-07-10 09:25:26	--	- running for their sustained support.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- In particular we would like to thank the sponsor
+2017-07-10 09:25:26	--	- of this server, details of which can be found above.
+2017-07-10 09:25:26	--	-
+2017-07-10 09:25:26	--	- By connecting to freenode you indicate that you have read and
+2017-07-10 09:25:26	--	- agree with our policies and guidelines as published on
+2017-07-10 09:25:26	--	- https://freenode.net
+2017-07-10 09:25:26	--	End of /MOTD command.
+2017-07-10 09:25:26	--	User mode [+i] by bmeneg
+2017-07-10 09:25:26	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-11 09:14:37	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-11 09:14:38	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-11 09:14:38	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-11 09:14:38	--	MSG(nickserv): identify ******
+2017-07-11 09:14:38	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-11 09:14:38	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-11 09:14:38	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-11 09:14:38	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-11 09:14:38	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-11 09:14:38	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-11 09:14:38	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-11 09:14:38	--	28 :IRC Operators online
+2017-07-11 09:14:38	--	48783 :channels formed
+2017-07-11 09:14:38	--	I have 5537 clients and 1 servers
+2017-07-11 09:14:38	--	5537 6026 :Current local users 5537, max 6026
+2017-07-11 09:14:38	--	91079 92681 :Current global users 91079, max 92681
+2017-07-11 09:14:38	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-11 09:14:38	--	- wilhelm.freenode.net Message of the Day -
+2017-07-11 09:14:38	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-11 09:14:38	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-11 09:14:38	--	- this server!
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- Welcome to freenode - supporting the free and open source
+2017-07-11 09:14:38	--	- software communities since 1998.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- By connecting to freenode you indicate that you have read and
+2017-07-11 09:14:38	--	- accept our policies as set out on http://www.freenode.net
+2017-07-11 09:14:38	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-11 09:14:38	--	- any network-related questions or queries, where a number of
+2017-07-11 09:14:38	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-11 09:14:38	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-11 09:14:38	--	- real-life collaboration.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- We would like to thank Private Internet Access
+2017-07-11 09:14:38	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-11 09:14:38	--	- organisations that help keep freenode and our other projects
+2017-07-11 09:14:38	--	- running for their sustained support.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- In particular we would like to thank the sponsor
+2017-07-11 09:14:38	--	- of this server, details of which can be found above.
+2017-07-11 09:14:38	--	-
+2017-07-11 09:14:38	--	- By connecting to freenode you indicate that you have read and
+2017-07-11 09:14:38	--	- agree with our policies and guidelines as published on
+2017-07-11 09:14:38	--	- https://freenode.net
+2017-07-11 09:14:38	--	End of /MOTD command.
+2017-07-11 09:14:38	--	User mode [+i] by bmeneg
+2017-07-11 09:14:39	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-12 09:42:51	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-12 09:42:51	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-12 09:42:52	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-12 09:42:52	--	MSG(nickserv): identify ******
+2017-07-12 09:42:52	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-12 09:42:52	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-12 09:42:52	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-12 09:42:52	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-12 09:42:52	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-12 09:42:52	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-12 09:42:52	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-12 09:42:52	--	28 :IRC Operators online
+2017-07-12 09:42:52	--	48783 :channels formed
+2017-07-12 09:42:52	--	I have 5537 clients and 1 servers
+2017-07-12 09:42:52	--	5537 6026 :Current local users 5537, max 6026
+2017-07-12 09:42:52	--	91079 92681 :Current global users 91079, max 92681
+2017-07-12 09:42:52	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-12 09:42:52	--	- wilhelm.freenode.net Message of the Day -
+2017-07-12 09:42:52	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-12 09:42:52	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-12 09:42:52	--	- this server!
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- Welcome to freenode - supporting the free and open source
+2017-07-12 09:42:52	--	- software communities since 1998.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- By connecting to freenode you indicate that you have read and
+2017-07-12 09:42:52	--	- accept our policies as set out on http://www.freenode.net
+2017-07-12 09:42:52	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-12 09:42:52	--	- any network-related questions or queries, where a number of
+2017-07-12 09:42:52	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-12 09:42:52	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-12 09:42:52	--	- real-life collaboration.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- We would like to thank Private Internet Access
+2017-07-12 09:42:52	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-12 09:42:52	--	- organisations that help keep freenode and our other projects
+2017-07-12 09:42:52	--	- running for their sustained support.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- In particular we would like to thank the sponsor
+2017-07-12 09:42:52	--	- of this server, details of which can be found above.
+2017-07-12 09:42:52	--	-
+2017-07-12 09:42:52	--	- By connecting to freenode you indicate that you have read and
+2017-07-12 09:42:52	--	- agree with our policies and guidelines as published on
+2017-07-12 09:42:52	--	- https://freenode.net
+2017-07-12 09:42:52	--	End of /MOTD command.
+2017-07-12 09:42:52	--	User mode [+i] by bmeneg
+2017-07-12 09:42:53	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-12 14:01:04	--	mquin (~mquin@freenode/staff/mquin): [Global Notice] The next two months could mark a turning point for the Internet as we know it. The FCC is deciding what its future course on Net Neutrality will be. To learn more, and to see how you might make a difference - particularly if you live in the USA -  see https://www.battleforthenet.com . Thank you for your attention, and for flying freenode!
+2017-07-14 10:02:06	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-14 10:02:07	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-14 10:02:07	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-14 10:02:07	--	MSG(nickserv): identify ******
+2017-07-14 10:02:07	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-14 10:02:07	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-14 10:02:07	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-14 10:02:07	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-14 10:02:07	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-14 10:02:07	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-14 10:02:07	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-14 10:02:07	--	28 :IRC Operators online
+2017-07-14 10:02:07	--	48783 :channels formed
+2017-07-14 10:02:07	--	I have 5537 clients and 1 servers
+2017-07-14 10:02:07	--	5537 6026 :Current local users 5537, max 6026
+2017-07-14 10:02:07	--	91079 92681 :Current global users 91079, max 92681
+2017-07-14 10:02:07	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-14 10:02:07	--	- wilhelm.freenode.net Message of the Day -
+2017-07-14 10:02:07	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-14 10:02:07	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-14 10:02:07	--	- this server!
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- Welcome to freenode - supporting the free and open source
+2017-07-14 10:02:07	--	- software communities since 1998.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- By connecting to freenode you indicate that you have read and
+2017-07-14 10:02:07	--	- accept our policies as set out on http://www.freenode.net
+2017-07-14 10:02:07	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-14 10:02:07	--	- any network-related questions or queries, where a number of
+2017-07-14 10:02:07	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-14 10:02:07	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-14 10:02:07	--	- real-life collaboration.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- We would like to thank Private Internet Access
+2017-07-14 10:02:07	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-14 10:02:07	--	- organisations that help keep freenode and our other projects
+2017-07-14 10:02:07	--	- running for their sustained support.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- In particular we would like to thank the sponsor
+2017-07-14 10:02:07	--	- of this server, details of which can be found above.
+2017-07-14 10:02:07	--	-
+2017-07-14 10:02:07	--	- By connecting to freenode you indicate that you have read and
+2017-07-14 10:02:07	--	- agree with our policies and guidelines as published on
+2017-07-14 10:02:07	--	- https://freenode.net
+2017-07-14 10:02:07	--	End of /MOTD command.
+2017-07-14 10:02:07	--	User mode [+i] by bmeneg
+2017-07-14 10:02:08	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-14 10:02:36	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-14 10:02:36	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-14 10:02:36	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-14 10:02:36	--	MSG(nickserv): identify ******
+2017-07-14 10:02:36	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-14 10:02:36	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-14 10:02:36	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-14 10:02:36	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-14 10:02:36	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-14 10:02:36	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-14 10:02:36	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-14 10:02:36	--	28 :IRC Operators online
+2017-07-14 10:02:36	--	48783 :channels formed
+2017-07-14 10:02:36	--	I have 5537 clients and 1 servers
+2017-07-14 10:02:36	--	5537 6026 :Current local users 5537, max 6026
+2017-07-14 10:02:36	--	91079 92681 :Current global users 91079, max 92681
+2017-07-14 10:02:36	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-14 10:02:36	--	- wilhelm.freenode.net Message of the Day -
+2017-07-14 10:02:36	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-14 10:02:36	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-14 10:02:36	--	- this server!
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- Welcome to freenode - supporting the free and open source
+2017-07-14 10:02:36	--	- software communities since 1998.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- By connecting to freenode you indicate that you have read and
+2017-07-14 10:02:36	--	- accept our policies as set out on http://www.freenode.net
+2017-07-14 10:02:36	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-14 10:02:36	--	- any network-related questions or queries, where a number of
+2017-07-14 10:02:36	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-14 10:02:36	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-14 10:02:36	--	- real-life collaboration.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- We would like to thank Private Internet Access
+2017-07-14 10:02:36	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-14 10:02:36	--	- organisations that help keep freenode and our other projects
+2017-07-14 10:02:36	--	- running for their sustained support.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- In particular we would like to thank the sponsor
+2017-07-14 10:02:36	--	- of this server, details of which can be found above.
+2017-07-14 10:02:36	--	-
+2017-07-14 10:02:36	--	- By connecting to freenode you indicate that you have read and
+2017-07-14 10:02:36	--	- agree with our policies and guidelines as published on
+2017-07-14 10:02:36	--	- https://freenode.net
+2017-07-14 10:02:36	--	End of /MOTD command.
+2017-07-14 10:02:36	--	User mode [+i] by bmeneg
+2017-07-14 10:02:37	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-14 10:10:48	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-14 10:10:48	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-14 10:10:49	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-14 10:10:49	--	MSG(nickserv): identify ******
+2017-07-14 10:10:49	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-14 10:10:49	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-14 10:10:49	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-14 10:10:49	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-14 10:10:49	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-14 10:10:49	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-14 10:10:49	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-14 10:10:49	--	28 :IRC Operators online
+2017-07-14 10:10:49	--	48783 :channels formed
+2017-07-14 10:10:49	--	I have 5537 clients and 1 servers
+2017-07-14 10:10:49	--	5537 6026 :Current local users 5537, max 6026
+2017-07-14 10:10:49	--	91079 92681 :Current global users 91079, max 92681
+2017-07-14 10:10:49	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-14 10:10:49	--	- wilhelm.freenode.net Message of the Day -
+2017-07-14 10:10:49	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-14 10:10:49	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-14 10:10:49	--	- this server!
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- Welcome to freenode - supporting the free and open source
+2017-07-14 10:10:49	--	- software communities since 1998.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- By connecting to freenode you indicate that you have read and
+2017-07-14 10:10:49	--	- accept our policies as set out on http://www.freenode.net
+2017-07-14 10:10:49	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-14 10:10:49	--	- any network-related questions or queries, where a number of
+2017-07-14 10:10:49	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-14 10:10:49	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-14 10:10:49	--	- real-life collaboration.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- We would like to thank Private Internet Access
+2017-07-14 10:10:49	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-14 10:10:49	--	- organisations that help keep freenode and our other projects
+2017-07-14 10:10:49	--	- running for their sustained support.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- In particular we would like to thank the sponsor
+2017-07-14 10:10:49	--	- of this server, details of which can be found above.
+2017-07-14 10:10:49	--	-
+2017-07-14 10:10:49	--	- By connecting to freenode you indicate that you have read and
+2017-07-14 10:10:49	--	- agree with our policies and guidelines as published on
+2017-07-14 10:10:49	--	- https://freenode.net
+2017-07-14 10:10:49	--	End of /MOTD command.
+2017-07-14 10:10:49	--	User mode [+i] by bmeneg
+2017-07-14 10:10:49	--	NickServ (NickServ@services.): You are already logged in as bmeneg.
+2017-07-17 09:55:24	--	irc: connecting to server ibm-x3755m3-02.lab.bos.redhat.com/2029...
+2017-07-17 09:55:25	--	irc: connected to ibm-x3755m3-02.lab.bos.redhat.com/2029 (10.16.44.37)
+2017-07-17 09:55:25	--	Welcome to the freenode Internet Relay Chat Network bmeneg
+2017-07-17 09:55:25	--	MSG(nickserv): identify ******
+2017-07-17 09:55:25	--	Your host is wilhelm.freenode.net[164.132.77.237/6667], running version ircd-seven-1.1.4
+2017-07-17 09:55:25	--	This server was created Wed Jan 4 2017 at 22:44:42 CET
+2017-07-17 09:55:25	--	wilhelm.freenode.net ircd-seven-1.1.4 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2017-07-17 09:55:25	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2017-07-17 09:55:25	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE SAFELIST :are supported by this server
+2017-07-17 09:55:25	--	ELIST=CTU WHOX ETRACE KNOCK :are supported by this server
+2017-07-17 09:55:25	--	There are 119 users and 90960 invisible on 28 servers
+2017-07-17 09:55:25	--	28 :IRC Operators online
+2017-07-17 09:55:25	--	48783 :channels formed
+2017-07-17 09:55:25	--	I have 5537 clients and 1 servers
+2017-07-17 09:55:25	--	5537 6026 :Current local users 5537, max 6026
+2017-07-17 09:55:25	--	91079 92681 :Current global users 91079, max 92681
+2017-07-17 09:55:25	--	Highest connection count: 6027 (6026 clients) (141959 connections received)
+2017-07-17 09:55:25	--	- wilhelm.freenode.net Message of the Day -
+2017-07-17 09:55:25	--	- Welcome to wilhelm.freenode.net in Strasbourg, France.
+2017-07-17 09:55:25	--	- Thanks to http://digitaltreemedia.co.uk/ for sponsoring
+2017-07-17 09:55:25	--	- this server!
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- Welcome to freenode - supporting the free and open source
+2017-07-17 09:55:25	--	- software communities since 1998.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- By connecting to freenode you indicate that you have read and
+2017-07-17 09:55:25	--	- accept our policies as set out on http://www.freenode.net
+2017-07-17 09:55:25	--	- freenode runs an open proxy scanner. Please join #freenode for
+2017-07-17 09:55:25	--	- any network-related questions or queries, where a number of
+2017-07-17 09:55:25	--	- volunteer staff and helpful users will be happy to assist you.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2017-07-17 09:55:25	--	- together with like-minded FOSS enthusiasts for talks and
+2017-07-17 09:55:25	--	- real-life collaboration.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- We would like to thank Private Internet Access
+2017-07-17 09:55:25	--	- (https://www.privateinternetaccess.com/) and the other
+2017-07-17 09:55:25	--	- organisations that help keep freenode and our other projects
+2017-07-17 09:55:25	--	- running for their sustained support.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- In particular we would like to thank the sponsor
+2017-07-17 09:55:25	--	- of this server, details of which can be found above.
+2017-07-17 09:55:25	--	-
+2017-07-17 09:55:25	--	- By connecting to freenode you indicate that you have read and
+2017-07-17 09:55:25	--	- agree with our policies and guidelines as published on
+2017-07-17 09:55:25	--	- https://freenode.net
+2017-07-17 09:55:25	--	End of /MOTD command.
+2017-07-17 09:55:25	--	User mode [+i] by bmeneg
+2017-07-17 09:55:25	--	NickServ (NickServ@services.): You are already logged in as bmeneg.

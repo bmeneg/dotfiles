@@ -1,0 +1,854 @@
+2017-07-03 09:55:26	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-03 09:55:26	--	Channel #kmaint: 5 nicks (1 op, 0 voices, 4 normals)
+2017-07-03 09:55:28	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-03 09:56:52	--	irc: disconnected from server
+2017-07-03 10:00:52	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-03 10:00:52	--	Channel #kmaint: 5 nicks (1 op, 0 voices, 4 normals)
+2017-07-03 10:00:58	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-03 10:17:06	--	irc: disconnected from server
+2017-07-03 10:33:40	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-03 10:33:40	--	Channel #kmaint: 5 nicks (1 op, 0 voices, 4 normals)
+2017-07-03 10:33:46	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-03 12:38:50	lwang	aquini, ping looks like we will be respining 7.4 RC kernel
+2017-07-03 12:39:21	lwang	after all that complaining from the HW enablement team and networking team,
+2017-07-03 12:39:24	aquini	lwang: do we have a date for that respin?
+2017-07-03 12:39:36	lwang	we are respiing for their patches
+2017-07-03 12:40:15	lwang	aquini, likely Wednesday
+2017-07-03 12:40:21	lwang	sorry Thursday
+2017-07-03 12:40:30	lwang	not Wednesday, Lubos is out on Wednesday
+2017-07-03 12:40:47	lwang	we need to give QE a couple more days to see if they run into any issues with RC compose..
+2017-07-03 12:40:53	lwang	so we are waiting for a couple more days
+2017-07-03 12:41:27	aquini	lwang: and do we have a BZ candidate list? so I can start testing ahead?
+2017-07-03 12:41:35	lwang	aquini, however, you are welcome to do a scratch build on the following bzs
+2017-07-03 12:41:38	lwang	yes
+2017-07-03 12:41:45	lwang	let me give that to you
+2017-07-03 12:43:03	lwang	---
+2017-07-03 12:43:04	lwang	1458687 kernel [600] BLOCKER POST nf_conntrack leaks memory and does not register sysctl for DCCP and SCTP
+2017-07-03 12:43:11	lwang	1461892 kernel [600] BLOCKER REGRESSSION POST Changes made to sysfs directories may break current scripts and/or configurations
+2017-07-03 12:43:17	lwang	1465830 kernel [1800] BLOCKER POST RHEL7.4 - mlx5 driver could not be initialized correctly on s390x - dmesg is showing RC -22 for PCI Card (Mellanox)
+2017-07-03 12:43:26	lwang	966840 kernel [1200] BLOCKER POST e1000e has problem reattached itself after device is detached:  ndodedev-reattach fail: driver file is not a symlink
+2017-07-03 12:43:29	lwang	----
+2017-07-03 12:43:31	lwang	4 so far
+2017-07-03 12:49:19	aquini	11:39 < lwang> after all that complaining from the HW enablement team and networking team,
+2017-07-03 12:49:22	aquini	11:39 < lwang> we are respiing for their patches
+2017-07-03 12:50:03	aquini	lwang: ^ now we know why they were crying,  then.
+2017-07-03 13:01:21	lwang	why?
+2017-07-03 13:01:24	lwang	I don't get it..
+2017-07-03 13:06:21	aquini	seems that they would like to push for a crypto revert and thus a forced respin so these patches could take a ride on the respin without being the responsibles by the respin
+2017-07-03 13:16:20	aquini	lwang: FYI: I'm starting the scratch-build for that BZ list, but there still are pending questions on patches for bugs 966840 & 1461892.
+2017-07-03 13:16:59	lwang	by these patches weren't ready at the time..
+2017-07-03 13:17:05	lwang	but these patches weren't ready at the time..
+2017-07-03 13:17:11	lwang	ah.. they need an execuse
+2017-07-03 16:28:24	<--	lwang (~lwang@10.16.197.118) has quit (Ping timeout: 600 seconds)
+2017-07-03 16:28:24	<--	lwang_ (~lwang@10.16.197.118) has quit (Ping timeout: 600 seconds)
+2017-07-03 16:37:51	-->	lwang (~lwang@ovpn-117-3.phx2.redhat.com) has joined #kmaint
+2017-07-03 16:37:52	-->	lwang_ (~lwang@ovpn-117-3.phx2.redhat.com) has joined #kmaint
+2017-07-03 16:53:24	lwang	aquini, do you when the cpuscalling, turbostat tools got moved to inside the kernel-tools pkg?
+2017-07-03 16:53:48	lwang	are they part of kernel-tools upstream?
+2017-07-03 16:53:50	lwang	just curious..
+2017-07-03 17:28:51	aquini	lwang: lemme check it, I don't have that info on top of my head.
+2017-07-03 17:31:15	lwang	aquini, I can't believe Jiri Benc posted a RC resping patch himself.
+2017-07-03 17:31:40	lwang	aquini, I like to see " a plan how we can improve the process of catching these memory corruption and memory leak issues ..
+2017-07-03 17:31:44	lwang	and ... "
+2017-07-03 17:31:53	lwang	Oh mine.. I am so concerned
+2017-07-03 17:32:20	 *	lwang puts her hand over her forehead..
+2017-07-03 17:32:44	lwang	someone should ask him the same question he asked me..
+2017-07-03 17:33:05	lwang	that would be hilarious
+2017-07-03 17:33:28	lwang	especially the bug was found by Longman.. whom point it out to him
+2017-07-03 17:34:01	lwang	the interesting part is the memory leak issue is 1.2G of memory leak per 100,000 namespace tear down
+2017-07-03 17:34:07	lwang	the interesting part is the memory leak issue is 1.2G of memory leak per 100,000 network namespace tear down
+2017-07-03 17:34:24	lwang	and they have a NULL ptr deference kernel panic patch that they defer to 7.5
+2017-07-03 17:36:04	aquini	lwang: which bug is that? (sorry I was working on analyzing 1373519 -- to help lwoodman a bit)
+2017-07-03 17:42:32	aquini	lwang: on that turbostat question: it was inherited from upstream (fedora)
+2017-07-03 17:43:54	aquini	this is the change that put it into kenrel-tools pkg:
+2017-07-03 17:43:56	aquini	commit 58d1d69e1225aa53ea8303171fbd044cd3181db8
+2017-07-03 17:43:56	aquini	Author: Kyle McMartin <kmcmarti@redhat.com>
+2017-07-03 17:43:56	aquini	Date:   Sun Feb 24 23:21:55 2013 -0500
+2017-07-03 17:43:56	aquini	[redhat] rebase to v3.8 
+2017-07-03 17:43:58	aquini	Imported Fedora configs from commit 7da15bc.
+2017-07-03 17:45:24	<--	lwang_ (~lwang@ovpn-117-3.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-03 17:45:24	<--	lwang (~lwang@ovpn-117-3.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-03 18:30:54	--	You are now known as brdeoliv|afk
+2017-07-04 09:26:02	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-04 09:26:02	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-04 09:26:06	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-04 09:27:32	--	You are now known as brdeoliv
+2017-07-04 11:53:59	--	You are now known as brdeoliv|afk
+2017-07-04 13:52:03	--	You are now known as brdeoliv
+2017-07-05 09:19:24	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-05 09:19:24	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-05 09:19:29	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-05 09:19:33	--	You are now known as brdeoliv
+2017-07-05 09:37:47	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-05 09:37:47	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-05 09:37:51	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-05 10:10:54	-->	lwang_ (~lwang@ovpn-116-210.phx2.redhat.com) has joined #kmaint
+2017-07-05 10:11:10	-->	lwang (~lwang@ovpn-116-210.phx2.redhat.com) has joined #kmaint
+2017-07-05 10:12:55	--	aris_out is now known as aris
+2017-07-05 10:27:30	lwang	aquini, ping
+2017-07-05 10:27:35	lwang	aris, ping
+2017-07-05 10:27:45	lwang	do you know which patch enable this config:
+2017-07-05 10:27:46	lwang	CONFIG_FTRACE_SYSCALLS
+2017-07-05 10:27:47	lwang	?
+2017-07-05 10:37:37	aquini	lwang: if came enabled from fedora
+2017-07-05 10:37:48	lwang	aquini, thanks!
+2017-07-05 10:38:03	lwang	aquini, but only on x86_64.. 
+2017-07-05 10:38:16	lwang	looks like Jirka enable it on s390x w/ bug 1436323, right?
+2017-07-05 10:40:26	aquini	lwang: yes. jolsa just sent a revert for that config on s390
+2017-07-05 10:46:22	aquini	lwang: as a matter of fact, we inherited from fedora CONFIG_FTRACE_SYSCALLS=y set for the generic setup -- all arches except s390
+2017-07-05 10:46:54	aquini	lwang: jolsa changed that s390 diff from other arches with 1436323
+2017-07-05 10:47:10	lwang	aquini, *nod* thanks
+2017-07-05 10:49:11	aquini	lwang: and he's asking to revert it via 1464697, so the proper fix for the later bz gets soaktime upstream
+2017-07-05 10:50:20	aquini	unfortunately, getting that config set on s390 triggered a bug.
+2017-07-05 10:51:44	aquini	lwang: is PM going for that respin you mentioned last Monday?
+2017-07-05 11:21:21	lwang	hangon still discussing a few blockers..
+2017-07-05 11:21:50	aquini	lwang: OK
+2017-07-05 13:05:17	lwang	aquini, the list of patches stays at 7
+2017-07-05 13:06:00	lwang	they are:
+2017-07-05 13:06:18	lwang	1464697 kernel [1600] BLOCKER REGRESSSION POST s390x: Oops: 0004 [#1] SMP DEBUG_PAGEALLOC on ftrace enabled system
+2017-07-05 13:06:25	lwang	1464292 kernel [2700] BLOCKER POST panic caused by unexpected change of variables in the thread_info data structure
+2017-07-05 13:06:37	lwang	1458687 kernel [600] BLOCKER POST nf_conntrack leaks memory and does not register sysctl for DCCP and SCTP
+2017-07-05 13:07:06	lwang	1461892 kernel [600] BLOCKER REGRESSSION POST Changes made to sysfs directories may break current scripts and/or configurations
+2017-07-05 13:07:18	lwang	1465830 kernel [1800] BLOCKER POST RHEL7.4 - mlx5 driver could not be initialized correctly on s390x - dmesg is showing RC -22 for PCI Card (Mellanox)
+2017-07-05 13:07:27	lwang	 966840 kernel [1200] BLOCKER POST e1000e has problem reattached itself after device is detached:  ndodedev-reattach fail: driver file is not a symlink
+2017-07-05 13:07:33	lwang	---
+2017-07-05 13:08:15	lwang	we are still waiting on test result of 1458687 and peer review acks on 1461892
+2017-07-05 13:38:03	aquini	lwang: jbenc mailed me earlier reporting that patches for 1458687 && 1464292 would be OK to go into a respin
+2017-07-05 13:38:33	lwang	aquini, well, I don't think he tested it throughly yet
+2017-07-05 13:38:46	aquini	lwang: he did not mention the patch for 1461892, though. I don't think he even tested that one given the pending question
+2017-07-05 13:39:37	aquini	lwang: just fwd that email to you.
+2017-07-05 16:17:49	lwang	aquini, thanks.
+2017-07-05 16:17:52	lwang	another patch came in:
+2017-07-05 16:17:53	lwang	1346106
+2017-07-05 16:18:17	lwang	aquini, bcoddington has tested it against 7.4 nfs.. and seems to work,
+2017-07-05 16:18:26	lwang	but we need a bit more testing against 7.4 fips-mode
+2017-07-05 16:21:24	aquini	lwang: when the respin compose will happen?
+2017-07-05 16:21:36	lwang	aquini, tomorrow night EOB
+2017-07-05 16:21:39	lwang	EDT
+2017-07-05 16:21:49	lwang	aquini, sorry..
+2017-07-05 16:21:51	lwang	wrong info.
+2017-07-05 16:22:09	lwang	the respin compose will not happen 'til Monday Noon EDT time
+2017-07-05 16:22:25	aquini	Ok
+2017-07-05 16:22:28	lwang	however, QE would like to get your kernel early enough to run through tier1 and tier2 testing Friday their time,
+2017-07-05 16:22:33	lwang	and Monday their  time.
+2017-07-05 16:23:07	lwang	so we likely will have a RC respin kernel candidate ready for them to test tomorrow night 
+2017-07-05 16:23:25	lwang	so that development and QE can have a quick run at this kernel before we hand it off to RC respin compose
+2017-07-05 16:23:31	lwang	we don't want to respin again
+2017-07-05 16:26:47	lwang	that is at least the current plan
+2017-07-05 16:27:01	aquini	sounds like a good plan to me
+2017-07-05 16:27:11	lwang	I see a bunch patches now posted to rhkernel-list targeted for 7.4
+2017-07-05 16:27:22	lwang	as if the door is open now
+2017-07-05 16:27:33	aquini	I'm asking 'cause we still have to let room for kenrel-rt re-sync
+2017-07-05 16:27:56	aquini	this plan you detailed will work fine for that matter, AFAICS
+2017-07-05 16:29:26	lwang	kernel-rt is really a problem. we need to ask rt team to get their rt patches upstream
+2017-07-05 16:29:32	lwang	so that we don't have to worry about them
+2017-07-05 16:29:40	lwang	have you asked them about their progress?
+2017-07-05 16:30:49	aquini	lwang: I believe one of their goals is to get that, so the -rt variant can become a simple config change in the spec file
+2017-07-05 16:31:04	lwang	aquini, *nod* when?
+2017-07-05 16:31:08	lwang	do they have an ETA?
+2017-07-05 16:32:16	aquini	lwang: I don't know if they have an ETA, though.
+2017-07-05 16:32:38	lwang	they have been saying that for the last 5 years
+2017-07-05 16:32:41	lwang	or more
+2017-07-05 16:34:23	lwang	aquini, can you help build a test kernel for Ben/Herbert's patch?
+2017-07-05 16:34:33	lwang	need to verify that it doesn't panic during boot
+2017-07-05 16:34:44	lwang	in both fip_mode=1 or fip-mode=0
+2017-07-05 16:34:55	aquini	lwang: it's scratching as we speak
+2017-07-05 16:35:01	lwang	:-) thanks!
+2017-07-05 16:45:37	lwang	looks like the kernel panic/memory corruption is off the RC respin list
+2017-07-05 16:49:35	aquini	bz1464292?
+2017-07-05 16:50:27	aquini	it still shows up as an rc blocker to my bugzilla queries, though.
+2017-07-05 16:50:50	lwang	yeah..
+2017-07-05 16:50:58	lwang	PM has not taken that off yet
+2017-07-05 16:51:18	lwang	likely in the next hour.. 
+2017-07-05 16:51:20	lwang	though
+2017-07-05 16:51:26	lwang	it will dissapear
+2017-07-05 16:52:06	aquini	I'll reconcile the queued-for next patch bundle with blocker list later.
+2017-07-05 16:52:31	aquini	so I'll clean up patches for BZs that loose blocker+ flag
+2017-07-05 16:53:19	aquini	it's even better having to carry less patches, at this point.
+2017-07-05 17:28:58	lwang	ok
+2017-07-05 17:29:07	lwang	looks like Ivan's patch got reposted:
+2017-07-05 17:29:08	lwang	1461892 180378 ++++P? A-- -- nhorman  [RHEL7.4 PATCH] bonding: Restore old symlink names in sysfs to pr
+2017-07-05 17:42:18	aquini	lwang: yes, I have that one in my scratch build, as well
+2017-07-05 18:06:55	lwang	aquini, going back.. Jben's memory corruption patch back on..
+2017-07-05 18:06:58	lwang	just fyi.
+2017-07-05 18:07:58	aquini	lwang: NP
+2017-07-05 18:08:13	aquini	had not taken it out of queue yet
+2017-07-05 18:09:03	lwang	aquini, just fyi, jbenc is not around 'til Sunday.. so you may have to pick Neil horman's patch up and do the build.
+2017-07-05 18:09:15	lwang	if you have the scratch build id for neil's patch, can you let us know?
+2017-07-05 18:09:26	lwang	they are going to run the networking test over it..
+2017-07-05 18:09:52	lwang	can you also when builindg the officical kernels, before building them, please let us know.
+2017-07-05 18:10:32	aquini	lwang: Neil's patch doesn't touch common networking stuff. it only partially revert that troublesome sysfs change for bonding driver
+2017-07-05 18:10:35	lwang	we like to get the FS/Sha1-avx2 patch + jben's memory corrpution patch in a separate kernel, the last one if possible..
+2017-07-05 18:10:43	lwang	in case either of the patches cause problem.
+2017-07-05 18:11:23	lwang	they/netowrking team tests bonding + vlan as well.
+2017-07-05 18:11:40	lwang	so if you have a scratch build id.. then I will give it to them.
+2017-07-05 18:13:01	aquini	lwang: https://brewweb.engineering.redhat.com/brew/taskinfo?taskID=13604878
+2017-07-05 18:13:41	aquini	that build has all patches in queue-for-next, plus:
+2017-07-05 18:13:43	aquini	1346106 180360 ++++PZ AAA -- bcodding [RHEL7.4 PATCH] crypto: sha1-ssse3 - Disable avx2
+2017-07-05 18:13:54	aquini	1461892 180378 ++++P? A-- -- nhorman  [RHEL7.4 PATCH] bonding: Restore old symlink names in sysfs to pr
+2017-07-05 18:17:35	lwang	  thanks!
+2017-07-06 10:05:04	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-06 10:05:04	--	Channel #kmaint: 5 nicks (1 op, 0 voices, 4 normals)
+2017-07-06 10:05:08	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-06 10:05:16	--	You are now known as brdeoliv
+2017-07-06 10:54:01	aquini	lwang: ping
+2017-07-06 10:54:30	lwang	aquini, pong
+2017-07-06 10:54:42	lwang	aquini, any issues?
+2017-07-06 10:55:21	aquini	lwang: out of yesterday's patch/BZ just one (minor)
+2017-07-06 10:55:38	aquini	BZ 1461892  still missing blocker+ flag
+2017-07-06 10:58:17	lwang	ok.. let me pull that up
+2017-07-06 10:59:41	lwang	oh.. the sysctrl one.. this is the one we are waiting on jbenc/networking team's testsuite testing result.
+2017-07-06 10:59:57	lwang	I can grant it now..
+2017-07-06 11:00:15	aquini	lwang: FYI I have to run some errands here. I'll be away for some time -- but I'll be back in time to wrap up and kick off the interim build as planned
+2017-07-06 11:01:30	lwang	aquini, sounds good thanks!
+2017-07-06 12:23:01	--	You are now known as brdeoliv|afk
+2017-07-06 13:41:37	aquini	lwang: I'm back. errands turned out to be quicker than I anticipated.
+2017-07-06 13:43:51	--	You are now known as brdeoliv
+2017-07-06 13:51:29	lwang	aquini, *nod* Neil's patch is acked by Linville, and it has sushil's team testing/blessing
+2017-07-06 13:52:01	lwang	aquini, I was trying to see if Jan is online or not.. probably not, due to Brno holiday
+2017-07-06 13:52:29	lwang	aquini, so I am curious to know if you have run any fips-mode related boot up test yet?
+2017-07-06 13:56:04	aquini	lwang: I did
+2017-07-06 13:56:16	aquini	lwang: all green on my tests
+2017-07-06 13:57:39	aquini	lwang: https://beaker.engineering.redhat.com/recipes/4029750#tasks
+2017-07-06 14:28:29	lwang	aquini, thanks!
+2017-07-06 17:07:21	aquini	lwang: I belive we have everything ready to start building the rc-spin canditade. shall I kick that build now?
+2017-07-06 17:28:21	lwang	aquini, go for it
+2017-07-06 17:28:30	aquini	lwang: OK
+2017-07-06 17:29:03	lwang	aquini, oh
+2017-07-06 17:29:41	lwang	just fyi.. can you build a separate kernel with Jbenc's memory corruption patch and sha1-avx2 patch?
+2017-07-06 17:29:45	lwang	as the last kernel?
+2017-07-06 17:30:21	lwang	mainly because Sushil is extremely leerwary about that patch.. he is afraid further testing will find issues with that patch..
+2017-07-06 17:30:34	lwang	since there is no extensive testing and soak time on it..
+2017-07-06 17:33:03	aquini	lwang: we could split the, but it's just extra work, IMO. if any issue pops up with those patches we _WILL_ have to revert them before branching 7.5
+2017-07-06 17:33:46	lwang	aquini, *nod* but at least we don't have to wait for the revert, and compose can happen continousely
+2017-07-06 17:33:54	lwang	with the earlier version of the kernel#
+2017-07-06 17:34:12	lwang	right?
+2017-07-06 17:35:08	lwang	can't RCM branch the 7.5 based on the earlier version?
+2017-07-06 17:35:18	aquini	nope
+2017-07-06 17:35:31	lwang	even though we have already used up the version#?
+2017-07-06 17:35:47	lwang	I know they can help cancel the un-wanted nvr..
+2017-07-06 17:36:14	lwang	hmm..
+2017-07-06 17:36:32	lwang	we need to have a talk with RCM
+2017-07-06 17:36:53	lwang	are you sure?
+2017-07-06 17:36:58	lwang	have you asked them before?
+2017-07-06 17:37:11	aquini	if we do, lets say 692.el7 and 693.el7, and for any reason we decide that 693.el7 will not make GA, we have to revert patches for the last build in a subsequent build
+2017-07-06 17:38:21	lwang	but can they branched on 692.el7? 
+2017-07-06 17:38:43	lwang	and once they branched, then 693.el7 is built based on the new branch..
+2017-07-06 17:38:44	aquini	that's because we'll have 693.el7 build committed to both trees master trunk, and there's no way we can get back from that
+2017-07-06 17:39:02	lwang	hmm. that's true
+2017-07-06 17:39:15	aquini	we only go foward, once we commit to master trunk
+2017-07-06 17:39:37	lwang	can they remove a nvr commit from master trunk?
+2017-07-06 17:40:02	lwang	or how bout.. 7.4 GAs with 692.el7.
+2017-07-06 17:40:25	lwang	7.5 branched on 692.el7, but start building with 694.el7... or
+2017-07-06 17:40:39	lwang	7.5 branched on 694el7, and continue building from there..
+2017-07-06 17:41:00	lwang	becuase i don't think anyone ever look at the beginning of an update's nvr..
+2017-07-06 17:41:38	lwang	and the changelog will have the history of 693/694 <- which is the revert
+2017-07-06 17:41:47	aquini	it doesn't work like that, unfortunately. the way git tree is used, we can only do fast-forwarding merges.
+2017-07-06 17:42:01	lwang	but this is branching
+2017-07-06 17:42:10	lwang	I am not asking to stop moveing forward..
+2017-07-06 17:42:19	lwang	I am asking to branch at a different point
+2017-07-06 17:42:48	lwang	then the GA kernel nvr
+2017-07-06 17:43:42	lwang	unless they have to branch based on the GA nvr tag.
+2017-07-06 17:44:22	aquini	for dist-git that would work, as the branching goes as branches...
+2017-07-06 17:44:38	aquini	the problem is the git.app tree, where we do not branch
+2017-07-06 17:44:46	lwang	ah
+2017-07-06 17:46:08	aquini	so, if we split the builds, and nothing goes south, nothing changes...
+2017-07-06 17:47:25	aquini	but if the patches are troublesome, for any reason, we'll be forced to shipt a 3rd build to revert them and pick that last one as the RC/GA
+2017-07-06 17:47:53	aquini	humm
+2017-07-06 17:48:09	aquini	that might work, actually.
+2017-07-06 17:48:19	lwang	no time
+2017-07-06 17:48:34	aquini	no, I mean splitting the builds
+2017-07-06 17:48:56	lwang	you lost me
+2017-07-06 17:49:21	aquini	:) (sorry, I did not mean to lost you)
+2017-07-06 17:50:05	aquini	I'm giving it a second thought here. the problem I thought we sould have on git.app is not a bit problem, 
+2017-07-06 17:50:25	aquini	the real problem is with dist-git, though.
+2017-07-06 17:51:43	aquini	we have to make sure RCM can do the branch for 7.5 in the split point, if we need to ship the earlier kernel instead of the latest
+2017-07-06 17:54:09	aquini	RCM just need to be sure they can  make 7.4 branch stays with, lets say 692.el7, and 7.5 branch picks up 693.el7 as its base
+2017-07-06 17:54:46	aquini	the oter part (git.app) will just take a manual tag adjust I'll have to perform to reflect that.
+2017-07-06 17:57:27	lwang	yeah.. can you remind me again what does git.app do?
+2017-07-06 17:58:18	lwang	and how it is getting updated from dist-git? 
+2017-07-06 17:58:26	aquini	lwang: git.app is where we keep the real source tree for the kernel. dist-git just keeps the artifacts for rpm build reproduceability
+2017-07-06 18:00:36	aquini	lwang: every build committed on dist-git comes from a bundle of patches committed into git.app for the same N-V-R
+2017-07-06 18:01:26	lwang	is srpm check into the dist-git?
+2017-07-06 18:01:36	aquini	lwang: yes
+2017-07-06 18:02:42	aquini	lwang: dist-git keeps the adjusted spec file and source files due to the RPM generation, for each N-V-R
+2017-07-06 18:03:42	aquini	lwang: git.app keeps the code changes that produce those aforementioned artifacts (kernel.spec, linux-source tarball, abi symbol lists, ...)
+2017-07-06 18:04:11	@aris	aquini, this was made in the past without issues
+2017-07-06 18:04:18	@aris	you have version A, version B
+2017-07-06 18:04:28	@aris	B is a tentative with a patch that isn't sure we'll get in
+2017-07-06 18:04:37	@aris	both go through the entire process
+2017-07-06 18:05:08	@aris	B fails, A is shipped, they fork from A to zstream
+2017-07-06 18:05:18	@aris	main branch gets C, reverting B
+2017-07-06 18:05:40	lwang	aris, except RCM changed the branching policy.. 
+2017-07-06 18:05:55	lwang	they fork from A to continue with the main branch
+2017-07-06 18:06:06	@aris	sigh
+2017-07-06 18:06:08	@aris	well
+2017-07-06 18:06:15	@aris	zstream can revert B in that case
+2017-07-06 18:06:23	@aris	it doesn't matter really
+2017-07-06 18:06:28	lwang	*nod* 
+2017-07-06 18:06:50	aquini	aris: problem is that there's no main branch usage in dist-git, they branch out 7.5 from what we have in 7.4
+2017-07-06 18:06:54	@aris	we can build whatever we want on dist-git and it'll never see the light of day unless we tag it into something that will turn into a compose
+2017-07-06 18:07:07	@aris	right
+2017-07-06 18:07:12	@aris	but what stays is zstream
+2017-07-06 18:07:21	@aris	they can revert B and start from there
+2017-07-06 18:07:25	@aris	just need communication
+2017-07-06 18:08:16	@aris	interesting change
+2017-07-06 18:08:19	@aris	wondering what's behind it
+2017-07-06 18:08:23	aquini	if RCM cannot branch into that split point, letting A to z-stream (7.4) and B to y-stream (7.5) in dist-git, then we have a problem
+2017-07-06 18:09:01	@aris	let's say they branch on HEAD
+2017-07-06 18:09:07	@aris	you get B
+2017-07-06 18:09:17	@aris	B is never shipped because the rpm was never tagged
+2017-07-06 18:09:23	@aris	you revert B, done
+2017-07-06 18:09:38	@aris	if they fork from A, zstream folks revert B
+2017-07-06 18:09:43	@aris	if, for some reason
+2017-07-06 18:10:03	@aris	they fork from A and remove everything else, forcing zstream to also start with A, there's no problem
+2017-07-06 18:10:18	@aris	the key point here is: doesn't matter what's on dist-git
+2017-07-06 18:10:23	@aris	what gets shipped is what's tagged
+2017-07-06 18:10:36	aquini	and that's where you're missing the issue
+2017-07-06 18:10:38	@aris	if you never tag B into rhel-7.4-candidate, that rpm never goes out
+2017-07-06 18:11:16	aquini	they cannot get rid of B on dist-git (make it vanish), without also making it vanish from git.app
+2017-07-06 18:11:59	aquini	once B is in dist-git, it also is on git.app.
+2017-07-06 18:12:05	@aris	remember that you don't push to git.app until the kernel is released?
+2017-07-06 18:12:20	@aris	during embargo?
+2017-07-06 18:12:25	@aris	you do the same
+2017-07-06 18:12:45	@aris	it's not the standard procedure
+2017-07-06 18:13:05	@aris	but the whole thing is an exception anyway
+2017-07-06 18:13:42	aquini	in this picture, you're not considering that the issues lwang refers to might show up after the kernel gets released ,but before we start the compose
+2017-07-06 18:14:32	aquini	so you have both A and B fully committed
+2017-07-06 18:14:42	@aris	if this is GA
+2017-07-06 18:14:51	@aris	there's no time for it
+2017-07-06 18:14:58	@aris	and that'd be something we never done before
+2017-07-06 18:15:25	@aris	with that in mind we can simply go cherry picking kernels back in time
+2017-07-06 18:15:32	@aris	even if there's no gamble
+2017-07-06 18:15:38	@aris	someone finds out that -900 has a problem
+2017-07-06 18:15:43	@aris	way way late in the game
+2017-07-06 18:15:49	@aris	instead of 0 day
+2017-07-06 18:15:53	@aris	through zstream
+2017-07-06 18:15:58	@aris	you go and pick 899
+2017-07-06 18:16:09	@aris	we never did this before
+2017-07-06 18:16:11	@aris	and if we do
+2017-07-06 18:16:23	@aris	RCM better make it work on their enbd
+2017-07-06 18:16:29	@aris	because it's not just an issue for us
+2017-07-06 18:16:33	@aris	it'll be for everyone else
+2017-07-06 18:16:43	@aris	after released, you have BZs closed
+2017-07-06 18:17:08	@aris	you have to revert all that manually and "lose" a version or two
+2017-07-06 18:17:32	@aris	IOW, if something like this happens, it's new and RCM needs to play ball on their side as well
+2017-07-06 18:17:51	@aris	even if they don't
+2017-07-06 18:18:05	@aris	you can simply have a reverted version C on git.app
+2017-07-06 18:18:13	aquini	aris: that's why I started stating that it would be extra work splitting the builds in this scenario. any problem with any build will mandate a revert in a subsequent build, to keep things flowing as designated by the current process
+2017-07-06 18:18:15	@aris	you overwrite everything anyway in rhel7
+2017-07-06 18:18:21	@aris	it's a tarball
+2017-07-06 18:18:41	@aris	so dist-git will simply lack version B
+2017-07-06 18:18:53	aquini	anything outside the ordinary scritp will require sync with other teams and RCM support
+2017-07-06 18:18:55	@aris	and that can be documented as needed
+2017-07-06 18:19:07	@aris	of course
+2017-07-06 18:22:14	aquini	lwang: the key here, to avoid headaches is RCM being able to branch out 7.5 in an arbitrary commit of current 7.4 branch
+2017-07-06 18:23:04	lwang	sigh lets just hope that Jiri Benc's patch is good
+2017-07-06 18:23:06	aquini	this way we avoid having to perform reverts on 7.4 z-stream, or git history overwrites
+2017-07-06 18:24:13	lwang	but it is better than pulling it into a single kernel.. and cause havoc with RC respin and GA schedule
+2017-07-06 18:24:18	aquini	if RCM cannot do that, I'd say it's better to not split the builds, and if anything go wrong with jbenc's patches we revert them in a subsequent build
+2017-07-06 18:24:34	lwang	I don't think we will get an answer from RCM today
+2017-07-06 18:24:48	lwang	can you build them?
+2017-07-06 18:24:51	aquini	I'm quite sure those two build will be released by KGTT, given the test results we have
+2017-07-06 18:25:00	lwang	k
+2017-07-06 18:25:06	lwang	lets do it
+2017-07-06 18:25:40	lwang	I think either way, if it fails testing, then we will have to deal with the consequence whatever that might be
+2017-07-06 18:25:41	aquini	lwang: just to double check: you want to go with 2 separate builds ?
+2017-07-06 18:25:54	lwang	*nod* that is what I told Sushil to ease his worry
+2017-07-06 18:26:01	lwang	if you can.. please
+2017-07-06 18:26:11	@aris	are both parts troublesome?
+2017-07-06 18:26:25	@aris	i.e. can A be bad but patches in B good?
+2017-07-06 18:26:40	lwang	if RCM can't do what we thought they can do before, then it is no worst than what we have to deal with
+2017-07-06 18:26:45	lwang	as a single kernel.
+2017-07-06 18:27:07	lwang	aris, :-) it is possible.
+2017-07-06 18:27:54	@aris	ugh
+2017-07-06 18:27:57	lwang	aris, and we don't have plan for that.. the result will likely be as bad as single kernel..
+2017-07-06 18:28:00	aquini	lwang: I'd go simpler, with one build. and if patches proven to be bad, revert them later. I think it's safer as well, as the action to recover from that is just revert patches.
+2017-07-06 18:28:27	lwang	either way its time that we are trying to conserve
+2017-07-06 18:28:32	lwang	not build#
+2017-07-06 18:29:02	lwang	aquini, let me guess, you have already kick off the build with all the patches?
+2017-07-06 18:29:16	aquini	lwang: no, I yet have not.
+2017-07-06 18:29:17	lwang	or at least prepare them or commit them 
+2017-07-06 18:29:53	aquini	lwang: I have them all ready to go, but did not kicked the build.
+2017-07-06 18:30:01	lwang	ok.. can we do two builds if you don't mind the extra work?
+2017-07-06 18:30:28	lwang	because if there is anything wrong with 2nd kernel.. at least I can use this as an example and ask RCM to see what they can do for us
+2017-07-06 18:30:52	lwang	to save time in this case.
+2017-07-06 18:31:10	aquini	lwang: ok, your call. 
+2017-07-06 18:31:11	lwang	otherwise, either way, the worst case is to respin the RC respin kernel
+2017-07-06 18:31:34	lwang	likely to move out the GA date
+2017-07-06 18:31:42	@aris	you both deserve company paid 2 week cruise after 7.4
+2017-07-06 18:31:44	lwang	doesn' t look like we have much option
+2017-07-06 18:32:29	lwang	:-) you can take that for me..
+2017-07-06 18:32:37	lwang	we have pegas coming up
+2017-07-06 18:33:21	lwang	or give it to aquini 
+2017-07-06 18:33:30	lwang	he deserves all that time off
+2017-07-06 18:42:08	@aris	ack
+2017-07-06 18:42:11	@aris	:)
+2017-07-06 18:42:14	--	aris is now known as aris_out
+2017-07-06 18:45:14	aquini	lwang: just to double check, before I start building, could you refresh the status page and check out the 2 bundles?
+2017-07-06 18:45:43	aquini	lwang: queued for next will be 692.el7 and pipeline will become 693.el7
+2017-07-06 18:47:35	lwang	k pulling the page up
+2017-07-06 18:48:04	lwang	ack
+2017-07-06 18:48:08	lwang	that looks good
+2017-07-06 18:48:11	aquini	ok
+2017-07-06 18:48:21	aquini	kickin off those builds
+2017-07-06 18:48:27	lwang	thank you for going the extra mile on this
+2017-07-06 19:11:13	--	You are now known as brdeoliv|afk
+2017-07-07 09:24:51	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-07 09:24:51	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-07 09:24:56	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-07 09:29:48	--	You are now known as brdeoliv
+2017-07-07 10:08:51	-->	lwang (~lwang@ovpn-116-195.phx2.redhat.com) has joined #kmaint
+2017-07-07 10:08:56	-->	lwang_ (~lwang@ovpn-116-195.phx2.redhat.com) has joined #kmaint
+2017-07-07 10:30:06	--	aris_out is now known as aris
+2017-07-07 15:12:44	<--	lwang_ (~lwang@ovpn-116-195.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-07 15:12:44	<--	lwang (~lwang@ovpn-116-195.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-07 16:29:36	-->	lwang (~lwang@ovpn-117-80.phx2.redhat.com) has joined #kmaint
+2017-07-07 16:29:38	-->	lwang_ (~lwang@ovpn-117-80.phx2.redhat.com) has joined #kmaint
+2017-07-07 17:34:44	--	You are now known as brdeoliv|afk
+2017-07-10 09:25:26	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-10 09:25:26	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-10 09:25:30	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-10 09:25:34	brdeoliv|afk	nick brdeoliv
+2017-07-10 09:26:31	--	You are now known as brdeoliv
+2017-07-10 10:17:19	-->	lwang_ (~lwang@ovpn-116-217.phx2.redhat.com) has joined #kmaint
+2017-07-10 10:17:37	--	aris_out is now known as aris
+2017-07-10 10:17:38	-->	lwang_errand (~lwang@ovpn-116-217.phx2.redhat.com) has joined #kmaint
+2017-07-10 10:30:43	brdeoliv	lwang_errand, aquini: I need to handle some errands today afternoon, 15:30 BRT, it will take 30min~1h, that's ok?
+2017-07-10 10:30:55	--	lwang_errand is now known as lwang
+2017-07-10 10:31:18	lwang	brdeoliv, ack. we probably need to catch up after you get back
+2017-07-10 10:31:49	brdeoliv	lwang: right
+2017-07-10 12:33:07	lwang	aquini, 693.el7.. is the candidate for RC2 respin, right? just confirming.
+2017-07-10 12:33:38	lwang	aquini, ping ^
+2017-07-10 12:35:48	aquini	lwang: yes, that's the one
+2017-07-10 13:02:33	--	You are now known as brdeoliv|afk
+2017-07-10 13:34:59	lwang	aquini, thanks. do you plan to send an email to ship-list@
+2017-07-10 13:35:00	lwang	?
+2017-07-10 13:37:30	aquini	lwang: I was waiting for your word on that
+2017-07-10 13:37:45	lwang	aquini, *nod* go for it thanks
+2017-07-10 13:37:58	--	You are now known as brdeoliv
+2017-07-10 15:01:04	<--	lwang (~lwang@ovpn-116-217.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-10 15:01:04	<--	lwang_ (~lwang@ovpn-116-217.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-10 15:19:14	--	You are now known as brdeoliv|errands
+2017-07-10 15:37:27	-->	lwang_ (~lwang@ovpn-117-139.phx2.redhat.com) has joined #kmaint
+2017-07-10 15:37:38	-->	lwang (~lwang@ovpn-117-139.phx2.redhat.com) has joined #kmaint
+2017-07-10 16:40:02	--	You are now known as brdeoliv
+2017-07-10 16:40:53	brdeoliv	lwang, aquini: I'm back :)
+2017-07-10 16:41:21	lwang	brdeoliv, I'll schedule something
+2017-07-10 16:43:32	brdeoliv	lwang: ok, 
+2017-07-10 16:55:20	brdeoliv	lwang: I'm already there :)
+2017-07-10 16:55:28	lwang	brdeoliv, k
+2017-07-10 18:30:10	--	aris is now known as aris_out
+2017-07-10 19:11:06	--	You are now known as brdeoliv|afk
+2017-07-11 09:14:38	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-11 09:14:38	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-11 09:14:42	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-11 09:17:32	--	You are now known as brdeoliv
+2017-07-11 10:15:07	-->	lwang_ (~lwang@ovpn-116-229.phx2.redhat.com) has joined #kmaint
+2017-07-11 10:15:20	-->	lwang (~lwang@ovpn-116-229.phx2.redhat.com) has joined #kmaint
+2017-07-11 10:17:33	--	aris_out is now known as aris
+2017-07-11 12:17:37	lwang	aris, ping
+2017-07-11 12:17:46	lwang	aris, just fyi, we are not rebasing to 4.12..
+2017-07-11 12:17:49	lwang	on pegas 1.0
+2017-07-11 12:17:50	lwang	just fyi
+2017-07-11 12:18:02	lwang	if you have not read the emails on pegas ML.
+2017-07-11 12:18:05	@aris	lwang, ok
+2017-07-11 12:18:07	@aris	I did
+2017-07-11 12:18:39	@aris	lwang, thanks
+2017-07-11 13:01:03	--	You are now known as brdeoliv|afk
+2017-07-11 14:12:26	--	You are now known as brdeoliv
+2017-07-11 18:02:29	--	aris is now known as aris_out
+2017-07-11 18:23:09	--	You are now known as brdeoliv|afk
+2017-07-11 18:30:44	<--	lwang (~lwang@ovpn-116-229.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-11 18:30:44	<--	lwang_ (~lwang@ovpn-116-229.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-11 18:43:10	-->	lwang_ (~lwang@ovpn-116-144.phx2.redhat.com) has joined #kmaint
+2017-07-11 18:43:29	-->	lwang (~lwang@ovpn-116-144.phx2.redhat.com) has joined #kmaint
+2017-07-12 09:42:52	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-12 09:42:52	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-12 09:42:56	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-12 09:43:04	--	You are now known as brdeoliv
+2017-07-12 10:09:53	-->	lwang (~lwang@ovpn-116-241.phx2.redhat.com) has joined #kmaint
+2017-07-12 10:09:55	-->	lwang_ (~lwang@ovpn-116-241.phx2.redhat.com) has joined #kmaint
+2017-07-12 10:24:32	--	aris_out is now known as aris
+2017-07-12 13:02:59	--	You are now known as brdeoliv|afk
+2017-07-12 13:04:46	--	Mode #kmaint [+oooo aquini brdeoliv|afk lwang lwang_] by aris
+2017-07-12 13:52:35	--	You are now known as brdeoliv
+2017-07-12 16:37:24	<--	lwang (~lwang@ovpn-116-241.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-12 16:37:44	<--	lwang_ (~lwang@ovpn-116-241.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-12 16:51:01	-->	lwang_ (~lwang@ovpn-116-82.phx2.redhat.com) has joined #kmaint
+2017-07-12 16:51:12	-->	lwang (~lwang@ovpn-116-82.phx2.redhat.com) has joined #kmaint
+2017-07-12 18:00:32	--	aris is now known as aris_out
+2017-07-12 18:14:26	--	You are now known as brdeoliv|afk
+2017-07-12 19:59:04	<--	lwang_ (~lwang@ovpn-116-82.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-12 19:59:24	<--	lwang (~lwang@ovpn-116-82.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-12 20:31:03	-->	lwang_ (~lwang@ovpn-116-56.phx2.redhat.com) has joined #kmaint
+2017-07-12 20:33:09	-->	lwang (~lwang@ovpn-116-56.phx2.redhat.com) has joined #kmaint
+2017-07-12 21:38:04	<--	lwang (~lwang@ovpn-116-56.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-12 21:38:04	<--	lwang_ (~lwang@ovpn-116-56.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-13 09:00:31	--	You are now known as brdeoliv
+2017-07-13 09:16:37	-->	lwang (~lwang@ovpn-116-91.phx2.redhat.com) has joined #kmaint
+2017-07-13 09:17:01	-->	lwang_ (~lwang@ovpn-116-91.phx2.redhat.com) has joined #kmaint
+2017-07-13 10:17:47	--	aris_out is now known as aris
+2017-07-13 12:29:35	--	You are now known as brdeoliv|afk
+2017-07-13 13:14:56	--	You are now known as brdeoliv
+2017-07-13 15:00:50	-->	herton (~herton@ovpn-116-72.gru2.redhat.com) has joined #kmaint
+2017-07-13 15:10:31	@aquini	lwang: quick access stats on el7: http://patchwork.lab.bos.redhat.com/status/rhel7/stats
+2017-07-13 15:32:57	lwang	*nod* thanks!
+2017-07-13 15:33:10	lwang	I will use it to update the stats chart:
+2017-07-13 15:34:17	@aquini	lwang: if you need more stats, let me know. I can adjust the scritps to get them reported.
+2017-07-13 15:34:39	@aris	aquini, I think what boils down to is: do you want to do 8.0
+2017-07-13 15:35:26	@aris	because of how deadlines are aligned, 7.5 then 8.0 will be a massive amount of work by itself, not counting the amount of time you're under pressure
+2017-07-13 15:36:49	@aris	you swap to pegas, you get to understand how it works (and how the new model with devel tree will work for rhel)
+2017-07-13 15:37:17	@aris	herton gets ystream experience
+2017-07-13 15:37:36	@aris	in the end both will be seasoned on both
+2017-07-13 15:38:35	@aris	and because pegas has way less volume than 7.5 and it's a different thing, it'll help you "rest" from rhel7 for a bit
+2017-07-13 15:38:42	@aris	then go back to 8.0
+2017-07-13 15:39:49	@aris	you two are amazing maintainers and we can all agree we don't want any of you to burn out
+2017-07-13 15:42:49	@aquini	aris: yeah, I get that. and swapping probably is a good way to ensure both of us gets experience on the two different beasts we have to cope with.
+2017-07-13 15:43:10	@aquini	sounds like a win-win plan
+2017-07-13 16:15:44	<--	lwang_ (~lwang@ovpn-116-91.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-13 16:15:44	<--	lwang (~lwang@ovpn-116-91.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-13 16:29:46	-->	lwang_ (~lwang@ovpn-116-150.phx2.redhat.com) has joined #kmaint
+2017-07-13 16:29:47	-->	lwang (~lwang@ovpn-116-150.phx2.redhat.com) has joined #kmaint
+2017-07-13 17:48:41	--	aris is now known as aris_out
+2017-07-13 17:59:37	--	You are now known as brdeoliv|afk
+2017-07-13 19:06:04	<--	lwang_ (~lwang@ovpn-116-150.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-13 19:06:24	<--	lwang (~lwang@ovpn-116-150.phx2.redhat.com) has quit (Ping timeout: 600 seconds)
+2017-07-14 03:27:25	<--	herton (~herton@ovpn-116-72.gru2.redhat.com) has quit (Ping timeout: 610 seconds)
+2017-07-14 10:02:07	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-14 10:02:07	--	Channel #kmaint: 3 nicks (3 ops, 0 voices, 0 normals)
+2017-07-14 10:02:11	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-14 10:02:36	-->	brdeoliv|afk (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-14 10:02:36	--	Channel #kmaint: 3 nicks (3 ops, 0 voices, 0 normals)
+2017-07-14 10:02:40	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-14 10:02:52	--	You are now known as brdeoliv
+2017-07-14 10:05:24	-->	lwang (~lwang@ovpn-116-211.phx2.redhat.com) has joined #kmaint
+2017-07-14 10:05:33	-->	lwang_ (~lwang@ovpn-116-211.phx2.redhat.com) has joined #kmaint
+2017-07-14 10:10:49	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-14 10:10:49	--	Channel #kmaint: 5 nicks (3 ops, 0 voices, 2 normals)
+2017-07-14 10:10:53	--	Channel created on Sat, 13 May 2017 00:20:43
+2017-07-14 10:53:02	--	aris_out is now known as aris
+2017-07-14 11:32:25	lwang_	aris, brdeoliv ping
+2017-07-14 11:32:32	lwang_	aris, brdeoliv, we need to talk
+2017-07-14 11:32:35	@brdeoliv	lwang_: pong
+2017-07-14 11:32:52	lwang_	aris, brdeoliv, now... and please dial into the conf#3059425857
+2017-07-14 11:33:00	@brdeoliv	dealing
+2017-07-14 11:33:50	@brdeoliv	done
+2017-07-14 11:38:44	@brdeoliv	aris: stephan sent me the new parser testsuite to be used against Tomas testvectors.
+2017-07-14 11:38:52	@brdeoliv	aris: let me pass it for you
+2017-07-14 11:38:53	@aris	ok
+2017-07-14 11:39:09	@aris	will need the machine(s) hostname(s) and access information
+2017-07-14 11:39:37	@brdeoliv	eal@crimson380.lab.bos.redhat.com <-- this is the machine where you may find the KC_TRIEL zipfile
+2017-07-14 11:40:20	@brdeoliv	although it will request you to have the ssh key atuhorized
+2017-07-14 11:40:32	@aris	 
+2017-07-14 11:40:45	@aris	ok
+2017-07-14 11:41:28	@brdeoliv	and as I said you earlier, I don't know whether this is the VM or not to be used with the testcase
+2017-07-14 11:41:49	@brdeoliv	do you know?
+2017-07-14 11:42:50	@aris	I've used crimson in the past for the testing
+2017-07-14 11:43:52	@brdeoliv	ah, nice then. I think Tomas will be the one to contact to authorize your ssh key, if you don't have it
+2017-07-14 11:44:56	@aris	I haven't yet
+2017-07-14 11:51:16	@brdeoliv	aris: I just sent you the email with Stephan's testsuite attached
+2017-07-14 11:55:41	@aris	got it, thanks
+2017-07-14 11:55:54	@brdeoliv	aris: btw, the KC_API_TRIAL file I said contains the testvectors 
+2017-07-14 11:55:57	@brdeoliv	aris: ok
+2017-07-14 11:56:03	@aris	sent tmraz an email about the access information
+2017-07-14 12:01:55	@brdeoliv	aris: do you remember the first email lwang sent to Stephan requesting the testsuite? you were cc'ed
+2017-07-14 12:02:32	lwang_	aris, let me dig that up.. I believe it is on one of the FIPS page.
+2017-07-14 12:02:38	lwang_	brdeoliv, hold off on sending that email
+2017-07-14 12:02:54	lwang_	brdeoliv, I don't want to trigger any more urgency from them
+2017-07-14 12:03:24	@brdeoliv	lwang_: ah yes, I won't send 
+2017-07-14 12:04:14	@brdeoliv	that email has the first version of Stephan's testsuite, which might be necessary to Aris
+2017-07-14 12:05:00	lwang_	aris, https://mojo.redhat.com/docs/DOC-1131369-rhel-74-fips-testing-platforms
+2017-07-14 12:05:16	@brdeoliv	there is the kmod which enables the /sys/crypto interface
+2017-07-14 12:05:19	lwang_	try test redhat
+2017-07-14 12:12:27	@aris	lwang_, from those, 1 is offline, 1 is performing tests and the others have very outdated RHEL7 installs
+2017-07-14 12:13:30	lwang_	aris, I wonder why they are offline, and outdated..
+2017-07-14 12:13:43	lwang_	do you know which version of RHEL7 is running on that last system?
+2017-07-14 12:13:52	@aris	lwang_, for the kernel I always used two different ones
+2017-07-14 12:13:58	@aris	one of them is crimson
+2017-07-14 12:14:09	@aris	I've sent an email to tmraz asking for access to them
+2017-07-14 12:14:11	lwang_	yes. I remember that machine.. 
+2017-07-14 12:14:20	@aris	I'll perform the tests there
+2017-07-14 12:14:35	lwang_	I think it is the IBM one that we should be using
+2017-07-14 12:14:37	@aris	all the times I did CAVS testing it was on tmraz' machines
+2017-07-14 12:14:42	@aris	right
+2017-07-14 12:14:57	@aris	so for the others, I'd guess they're for userspace testing
+2017-07-14 12:14:58	lwang_	these are not tmarz's machine
+2017-07-14 12:15:06	lwang_	he is safekeeping them
+2017-07-14 12:15:32	lwang_	because we don't have the resource to mgt these.. the QE lady that supposes to handle all of these..
+2017-07-14 12:15:49	lwang_	whom I introduced you to, a while back, is no longer here at RH
+2017-07-14 12:16:28	lwang_	QE supposes to hire someone replacing her, and that got yanked the last minute last year
+2017-07-14 12:16:53	@aris	right, I mean the machines he always pointed me to use
+2017-07-14 12:16:54	lwang_	now, they suppose to hire someone this year.. the july 11 person, I have to find out where this new QE guy is located
+2017-07-14 12:17:04	lwang_	right.. those are supposed to be managed by us
+2017-07-14 12:17:11	@aris	he seems the person taking care of the machines, didn't mean it was his property or anything
+2017-07-14 12:17:20	lwang_	got it
+2017-07-14 12:18:47	lwang_	these systmes should be in beaker here downstairs
+2017-07-14 12:21:29	@aris	hopefully tmraz is not out already
+2017-07-14 12:23:49	lwang_	he might be. cc'ing Jaroslav
+2017-07-14 12:23:54	lwang_	he is always online..
+2017-07-14 12:23:59	lwang_	Jaroslav is the PM
+2017-07-14 12:39:56	lwang_	aris, darn! jjreznik is gone too.. 
+2017-07-14 12:40:01	@aris	argh
+2017-07-14 12:40:02	lwang_	at 11:11 
+2017-07-14 12:40:02	@aris	ok
+2017-07-14 12:40:21	@aris	I'll wait for bruno to be back and will ask him to simply replace his key with mine
+2017-07-14 12:40:29	lwang_	it is likely all the folks whom is doing FIPS will know the password.. 
+2017-07-14 12:40:42	lwang_	like libnss, and etc..
+2017-07-14 12:41:06	@aris	it seems authentication is done now by ssh key
+2017-07-14 12:41:09	@aris	not password
+2017-07-14 12:41:30	@aris	Bruno mentioned he had to give a public key for Tomas to set up his access
+2017-07-14 12:41:46	lwang_	i think rrelyea@REDHAT.COM would know
+2017-07-14 12:42:19	lwang_	you kidding me?
+2017-07-14 12:42:23	lwang_	public key? 
+2017-07-14 12:42:37	@aris	?
+2017-07-14 12:42:44	lwang_	I guess they don't want any random people reserve these machines from beaker
+2017-07-14 12:43:10	@aris	they just don't want to keep weak password for these accounts
+2017-07-14 12:43:25	@aris	nobody can reserve that machine from beaker unless they allow it in beaker
+2017-07-14 12:43:40	@aris	it's just stepping up the security a bit on it, which is fair considering the machine is important
+2017-07-14 12:44:12	lwang_	hmm... what does that say about the rest of the systems on the RH's backbone?
+2017-07-14 12:44:47	@aris	well, beaker for example has huge random generated passwords that are replaced often
+2017-07-14 12:44:54	@aris	no more 100yard-
+2017-07-14 12:45:03	lwang_	*nod*
+2017-07-14 12:45:26	lwang_	so generate a set of password and pass that onto those whom are involved in the FIPS
+2017-07-14 12:45:48	lwang_	adding individual public key as way to get in, and no one outside Brno knows, or can do..
+2017-07-14 12:45:50	lwang_	is limiting.
+2017-07-14 12:45:59	@aris	agreed
+2017-07-14 12:46:32	lwang_	and this supposes to be "urgent" according to tmraz's email
+2017-07-14 12:46:56	lwang_	seriousely?
+2017-07-14 12:47:59	lwang_	they need to stop yanking our chain.. 
+2017-07-14 12:49:24	lwang_	dumping requirements that are listed as part of FIPS cert at the last minute on us
+2017-07-14 12:49:32	lwang_	dumping requirements that are _NOT_ listed as part of FIPS cert at the last minute on us
+2017-07-14 13:52:49	@brdeoliv	aris: try to login on crimaon360
+2017-07-14 13:53:10	@brdeoliv	crimson360*
+2017-07-14 13:53:40	@aris	brdeoliv, did you overwrite your public key?
+2017-07-14 13:53:57	@brdeoliv	no, added yours
+2017-07-14 13:54:51	@brdeoliv	would be better just overwrties mine? since tmraz is safekeeping it
+2017-07-14 13:55:28	@brdeoliv	holly .. my "big" fingers.. overwrite*
+2017-07-14 13:55:42	@aris	no, no worries
+2017-07-14 13:55:52	@aris	I didn't know you could have more than one, that's all
+2017-07-14 13:56:00	@brdeoliv	ok
+2017-07-14 13:57:19	@aris	just a sec and I'll try it
+2017-07-14 13:57:32	@brdeoliv	ah ok
+2017-07-14 14:03:32	@aris	works
+2017-07-14 14:03:43	@aris	root access?
+2017-07-14 14:03:59	@aris	ah,  no need
+2017-07-14 14:08:35	@brdeoliv	nice
+2017-07-14 14:22:55	@aris	lwang_, I'm going to do something risky here
+2017-07-14 14:23:17	@aris	crimson380 is using 7.1
+2017-07-14 14:23:23	@aris	I'll update it to 7.4
+2017-07-14 14:24:14	lwang_	:-)
+2017-07-14 14:24:30	@aris	I mean, the ideal would be wait for Tomas
+2017-07-14 14:24:38	@aris	but we don't have a lot of time, do we
+2017-07-14 14:24:59	lwang_	well, according to him, no
+2017-07-14 14:25:09	lwang_	plus, 7.1 was the last time we did FIPS cert..
+2017-07-14 14:25:25	lwang_	so if you check "last".. I'll bet that no one log on since
+2017-07-14 14:26:09	lwang_	well, according to him, no _time_
+2017-07-14 14:40:18	 *	aris goes get another liter of hot water for his chimarrao while this thing upgrades
+2017-07-14 14:45:16	@brdeoliv	aris :D
+2017-07-14 15:02:31	@aris	argh
+2017-07-14 15:02:34	@aris	I upgraded it
+2017-07-14 15:02:39	@aris	rebooted into the new kernel
+2017-07-14 15:02:45	@aris	ssh: connect to host crimson380.lab.bos.redhat.com port 22: Connection refused
+2017-07-14 15:10:10	lwang	oops
+2017-07-14 15:11:10	@aris	yep, dead
+2017-07-14 15:12:38	lwang	do you want me to ask someone here to see if we can get into the console?
+2017-07-14 15:13:15	lwang	I can go find someone from devops upstairs...
+2017-07-14 15:13:39	lwang	to get into the lab..
+2017-07-14 15:19:38	@aris	lwang, if you cold do that would save the day
+2017-07-14 15:19:50	@aris	otherwise we're locked out until tmraz is back
+2017-07-14 15:19:52	lwang	let me go find geroge
+2017-07-14 15:20:18	lwang	do you remember the name of machine?
+2017-07-14 15:20:43	@aris	crimson380.lab.bos.redhat.com
+2017-07-14 15:20:44	lwang	it is probably here on the chat room here.
+2017-07-14 15:21:10	lwang	aris, ok be right back
+2017-07-14 15:42:00	lwang	aris, ping
+2017-07-14 15:42:04	lwang	aris, so the machine is up..
+2017-07-14 15:42:09	lwang	we see the console login..
+2017-07-14 15:42:18	lwang	however, the typical root pw combination didn't work
+2017-07-14 15:42:27	lwang	so I am going back downstairs, 
+2017-07-14 15:42:53	lwang	oh.. hmm.. I wonder the upgrade blase away the passwd file
+2017-07-14 15:43:01	lwang	s/blase/blast/
+2017-07-14 15:43:31	lwang	anyhow, we can try one more thing..
+2017-07-14 15:43:47	lwang	at the console, we can type in your login and passwd.. and see if we can get in..
+2017-07-14 15:43:53	lwang	that is another option
+2017-07-14 15:44:01	lwang	aris, do you want to try that?
+2017-07-14 15:44:38	lwang	aris, hello?
+2017-07-14 15:45:08	lwang	I can't get into the lab, and george is waiting by the door.. so I need to know..
+2017-07-14 15:45:15	lwang	hello?
+2017-07-14 15:45:24	@aris	lwang, yes, sorry
+2017-07-14 15:45:38	@aris	the upgrade shouldn't have done that
+2017-07-14 15:45:40	lwang	ok.. I will get my phone and text you..
+2017-07-14 15:45:46	@aris	but it's likely they have a different password
+2017-07-14 15:45:48	lwang	when I get back in
+2017-07-14 15:46:08	@aris	the user is eal but we don't have a password
+2017-07-14 15:46:11	@aris	nor root password
+2017-07-14 15:46:24	@aris	we log using certificate login then /bin/su - asks no password
+2017-07-14 15:47:03	@aris	something to try:
+2017-07-14 15:47:08	@aris	reboot the machine and boot the old kernel
+2017-07-14 15:47:19	@aris	3.10.0-229.11.1.el7
+2017-07-14 15:47:24	@aris	see if it works
+2017-07-14 16:22:32	@aris	it'd be interesting to know why booting with fips=1 would not work
+2017-07-14 16:22:39	@aris	this is latest rhel-7.4
+2017-07-14 16:25:16	@aris	:q
+2017-07-14 16:33:06	@brdeoliv	aris: did you boot as fips-mode? wow.
+2017-07-14 16:34:19	@aris	no
+2017-07-14 16:34:22	@aris	had to disable it
+2017-07-14 16:34:44	@aris	now trying to build the freaking thing
+2017-07-14 16:34:54	@aris	apparently we have a too old version of gcrypt in rhel
+2017-07-14 16:35:13	@brdeoliv	yea. indeed, I had to install it by hand
+2017-07-14 16:37:29	@aris	I'm using other frontend though
+2017-07-14 16:37:32	@aris	kernel module one
+2017-07-14 16:42:47	@brdeoliv	that one seems to be outdated
+2017-07-14 16:43:11	@brdeoliv	wait, you meant the one sent by stpehan on the first email to linda?
+2017-07-14 16:43:24	@aris	no
+2017-07-14 16:43:31	@aris	you can pick which one on Makefile
+2017-07-14 16:47:07	@brdeoliv	aris: ahh right. I also got confused at first, kcapi (kmod one) using libgcrypt
+2017-07-14 16:51:58	@aris	brdeoliv, I don't see the vectors anywhere
+2017-07-14 16:52:56	@brdeoliv	aris: the KC_API_Trail .zip file must be extracted into a 'testvectors' folder inside parser folder
+2017-07-14 16:53:38	@brdeoliv	unzip -d parser/testvectors/ KC_API...zip
+2017-07-14 16:53:57	@aris	ok
+2017-07-14 16:54:10	@brdeoliv	btw, this zip file is inside eal user home folder on crinsom machine
+2017-07-14 16:54:16	@aris	hm
+2017-07-14 16:54:29	@aris	the parser you gave me has no 'testvectors' in it
+2017-07-14 16:55:05	@brdeoliv	yea, it has about 115MB
+2017-07-14 16:55:06	@aris	and on that machine only 7.1 test vectors exist
+2017-07-14 16:55:12	@aris	please take a look on your emails
+2017-07-14 16:56:18	@brdeoliv	tmraz said "KC_API_Trial_20170510.zip" are the most recent testvectors
+2017-07-14 16:58:14	@brdeoliv	what I meant is that the file "KC_API_Trial_20170510.zip" inside eal@crimson380 home folder is the most recent
+2017-07-14 16:59:31	@aris	ah
+2017-07-14 16:59:32	@aris	that one
+2017-07-14 17:03:06	@aris	brdeoliv, now missing piece is the latest kcapi_cavs driver
+2017-07-14 17:03:20	@aris	did Stephan gave you that? or perhaps a github link?
+2017-07-14 17:03:35	@brdeoliv	aris: stephan, in the first email he sent to linda
+2017-07-14 17:03:45	@brdeoliv	I can send you, easier
+2017-07-14 17:05:34	@brdeoliv	aris: sent
+2017-07-14 17:05:54	@aris	thanks
+2017-07-14 17:06:18	@aris	2015?!?
+2017-07-14 17:07:24	@brdeoliv	aris: yes, :/ or the driver didn't was updated since than or stephan sent us the wrong one
+2017-07-14 17:08:14	@brdeoliv	wasn't*
+2017-07-14 17:09:38	@brdeoliv	btw, I got some errors while compiling this driver, regarding some calls not present or different on RHEL7.4 kernel
+2017-07-14 17:16:20	@brdeoliv	aris: look at your email again.. in fact I sent the wrong file sorry
+2017-07-14 17:16:56	@aris	didn't arrive yet
+2017-07-14 17:18:44	@brdeoliv	nothing yet?
+2017-07-14 17:19:48	@aris	got it
+2017-07-14 17:20:56	@brdeoliv	ok
+2017-07-14 17:24:27	@aris	now it makes more sense
+2017-07-14 17:25:59	@brdeoliv	yeah
+2017-07-14 17:26:57	@aris	brdeoliv, where are the fixes to build the module? I got the definitions needed but not the rest
+2017-07-14 17:28:36	@brdeoliv	aris: I made one but it isn't official at all
+2017-07-14 17:29:12	@aris	send the patch my way please
+2017-07-14 17:29:37	@brdeoliv	but it is a simple one, let's say that is one just "to run"
+2017-07-14 17:29:39	@brdeoliv	one sec
+2017-07-14 17:33:31	@brdeoliv	aris: sent
+2017-07-14 17:34:16	@aris	already got it
+2017-07-14 17:34:27	@aris	included two -helper.c that exist upstream inside the driver
+2017-07-14 17:35:20	@aris	finally
+2017-07-14 17:35:22	@aris	running
+2017-07-14 17:35:41	@aris	I was already attempting to use his libkcapi thing that exist on github
+2017-07-14 17:35:55	@aris	and doing all the patching to make it work with the libraries we have in rhel7
+2017-07-14 17:36:02	@aris	when you found out the right version
+2017-07-14 17:36:02	@aris	phew
+2017-07-14 17:36:17	@brdeoliv	:D
+2017-07-14 17:38:20	@brdeoliv	which -help.c files did you added?
+2017-07-14 17:38:48	@aris	crypto/ecdh_helper.c
+2017-07-14 17:38:51	@aris	crypto/dh_helper.c
+2017-07-14 17:38:53	@aris	from upstream
+2017-07-14 17:39:07	@aris	sigh
+2017-07-14 17:39:13	@brdeoliv	ah right :D 
+2017-07-14 17:39:15	@aris	driver returns _EEXIST_ to a _read_
+2017-07-14 17:40:38	@brdeoliv	something related to AES GCM?
+2017-07-14 17:41:00	@aris	sec, lemme get the exact name
+2017-07-14 17:41:11	@aris	Test result for testvectors/aesasm/CCM/req/DVPT128.req inconsistent with expected result
+2017-07-14 17:41:14	@aris	for example
+2017-07-14 17:41:27	@aris	but there's one that simply won't work
+2017-07-14 17:43:26	@aris	Execution of testvectors/aesasm_iiv/AES_GCM/req/gcmEncryptIntIV128.req failed: 1
+2017-07-14 17:43:31	@aris	Test invocation:
+2017-07-14 17:43:37	@aris	PATH=.:.:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/home/eal/20170714 KCAPI_CBC_AES="cbc(aes-asm)"                 KCAPI_ECB_AES="e
+2017-07-14 17:43:43	@aris	cb(aes-asm)"            KCAPI_GCM_AES="rfc4106(gcm_base(ctr(aes-asm),ghash-generic))"           cavs_driver testvectors/aesasm_iiv/AES_GCM/req/gcmEncryptIntIV12
+2017-07-14 17:43:48	@aris	8.req testvectors/aesasm_iiv/AES_GCM/resp/gcmEncryptIntIV128.rsp
+2017-07-14 17:46:12	@brdeoliv	aris: yea.. that one is the one I got today earlier
+2017-07-14 17:46:46	@brdeoliv	but I didn't had time to check before linda's call 
+2017-07-14 17:57:02	@aris	well
+2017-07-14 17:57:13	@aris	I did changed the script to not stop the test if there's an error
+2017-07-14 17:57:29	@aris	and will submit what we have and ask stephan on the same email about stuff that failed and see what we can do
+2017-07-14 17:57:40	@aris	it's too late for stephan to respond today
+2017-07-14 17:57:47	@aris	so at least we get something out
+2017-07-14 18:03:40	@brdeoliv	RIGHT
+2017-07-14 18:03:52	@brdeoliv	oops, sorry caps lock
+2017-07-14 18:18:07	@brdeoliv	aris: when the script calls this line that returned error, the KCAPI_GCM_AES variable is set using a call to iiv_name function
+2017-07-14 18:18:52	@brdeoliv	aris: this function checks the kernel version.. case it is greater than 4.2 the KCAPI_GCM_AES is changed to another value
+2017-07-14 18:19:10	@brdeoliv	just to check I changed the 4.2 to 3.10 an the reran the test:
+2017-07-14 18:19:22	@brdeoliv	Executing testvectors/aesasm_iiv/AES_GCM/req/gcmEncryptIntIV128.req
+2017-07-14 18:19:23	@brdeoliv	Check testvectors/aesasm_iiv/AES_GCM/resp/gcmEncryptIntIV128.rsp with CAVS tool
+2017-07-14 18:19:23	@brdeoliv	Executing testvectors/aesasm_iiv/AES_GCM/req/gcmEncryptIntIV192.req
+2017-07-14 18:19:23	@brdeoliv	Check testvectors/aesasm_iiv/AES_GCM/resp/gcmEncryptIntIV192.rsp with CAVS tool
+2017-07-14 18:19:23	@brdeoliv	Executing testvectors/aesasm_iiv/AES_GCM/req/gcmEncryptIntIV256.req
+2017-07-14 18:19:23	@brdeoliv	Check testvectors/aesasm_iiv/AES_GCM/resp/gcmEncryptIntIV256.rsp with CAVS tool
+2017-07-14 18:19:37	@brdeoliv	no errors 
+2017-07-14 18:19:58	@aris	aha
+2017-07-14 18:19:59	@aris	awesome
+2017-07-14 18:20:10	@brdeoliv	since this testsuite was made with upstream in mind some backport might change this "peace of code"
+2017-07-14 18:20:29	@brdeoliv	I mean, where it is actually handled
+2017-07-14 18:21:59	@aris	running again
+2017-07-14 18:24:23	@brdeoliv	I thought it could happen once I got almost the same behavior when compiling the kcapi_cavs driver, because of that I added some ifdefs on the "configuration" part 
+2017-07-14 18:32:18	@brdeoliv	aris: what exactly happen with all of these inconsistent results?
+2017-07-14 18:32:33	@brdeoliv	aris: I mean, what is the procedure/process to handle them?
+2017-07-14 18:34:20	@aris	basically shouldnb't happen
+2017-07-14 18:34:27	@aris	either kernel bug or something with the test
+2017-07-14 18:37:39	@brdeoliv	right :/
+2017-07-14 18:38:01	@brdeoliv	"Total number of failures: 23"
+2017-07-14 18:39:51	@brdeoliv	well, it's time to go. 
+2017-07-14 18:40:01	@brdeoliv	have a nice weekend
+2017-07-14 18:40:43	@aris	you too
+2017-07-14 18:40:54	@brdeoliv	thanks
+2017-07-14 18:41:06	--	You are now known as brdeoliv|afk
+2017-07-14 19:10:51	@aris	lwang, sent an email to stephen, you're cc'd
+2017-07-14 19:11:06	lwang_	aris, how does it look?
+2017-07-14 19:11:14	@aris	23 errors
+2017-07-14 19:11:24	@aris	not sure if it's the testing script or kernel
+2017-07-14 19:11:32	lwang_	heh..  probably the kernel
+2017-07-14 19:11:41	lwang_	I am sure that is what Stephen will say ;-)
+2017-07-14 19:12:17	lwang_	you probably should also cc Herbert
+2017-07-17 09:55:25	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-17 09:55:25	--	Channel #kmaint: 3 nicks (1 op, 0 voices, 2 normals)
+2017-07-17 09:55:25	***	Buffer Playback...
+2017-07-17 09:55:25	lwang_	[19:13:56] sigh
+2017-07-17 09:55:25	aris	[19:14:09] that won't do because it won't test the new algorithms, no?
+2017-07-17 09:55:25	lwang_	[19:15:44] what new algorithms?
+2017-07-17 09:55:25	lwang_	[19:15:51] we didn't add any except probably 1
+2017-07-17 09:55:25	lwang_	[19:17:14] cc Herbert
+2017-07-17 09:55:25	aris	[19:17:28] I did forward the email to him already
+2017-07-17 09:55:25	lwang_	[19:18:00] why forward?
+2017-07-17 09:55:25	lwang_	[19:18:10] include him in the discussion from Stephen
+2017-07-17 09:55:25	lwang_	[19:18:34] he needs to know right a way so that he can submit patches upstream to fix any breakage
+2017-07-17 09:55:25	aris	[19:19:46] done
+2017-07-17 09:55:25	lwang_	[19:19:51] thanks!
+2017-07-17 09:55:25	aris_out	[19:42:51] I'm running the old version right now aswell, will submit the results once it's done
+2017-07-17 09:55:25	***	Playback Complete.
+2017-07-17 09:55:29	--	Channel created on Fri, 14 Jul 2017 22:58:00
+2017-07-17 10:15:19	--	aris_out is now known as aris
+2017-07-17 10:25:32	-->	herton (~herton@ovpn-116-65.gru2.redhat.com) has joined #kmaint
+2017-07-17 10:34:06	-->	lwang_ (~lwang@ovpn-117-16.phx2.redhat.com) has joined #kmaint
+2017-07-17 10:34:12	-->	lwang (~lwang@ovpn-117-16.phx2.redhat.com) has joined #kmaint
+2017-07-17 10:39:39	aris	herton, welcome back
+2017-07-17 10:40:11	aris	I suggest to copy the bundles I have and look on 'queue' bundle in specific, I ran a test build/kt1 with it
+2017-07-17 10:40:49	aris	there're some discussion around changing "PEGAS PATCH" to "RHEL-7*-ALT"
+2017-07-17 10:41:28	aris	I implemented a regex to match both and deferred the decision/email on the change to you
+2017-07-17 10:41:37	herton	aris, thanks
+2017-07-17 10:42:19	herton	aris, ok, did you change anything else? I'll just start processing patches again, and copy your queue, let me see here
+2017-07-17 10:48:05	aris	I didn't do any official builds, just processed patches
+2017-07-17 11:00:48	lwang	herton, welcome back too.. just been asked when we will start building pegas kernel
+2017-07-17 11:01:06	herton	lwang, I will do a build today
+2017-07-17 11:01:11	lwang	herton, thanks
+2017-07-17 11:02:04	herton	lwang, just checking the patch queues here, I'll first build a kernel with patches aris processed and did a kt1, then looking at the rest
+2017-07-17 11:03:41	lwang	herton, i hope we won't get too many merge conflicts with recent patchsets..
+2017-07-17 11:03:53	lwang	herton, thanks
+2017-07-17 11:57:47	aris	sigh
+2017-07-17 12:51:47	-->	brdeoliv (~Bruno@ibm-x3755m3-02.lab.bos.redhat.com) has joined #kmaint
+2017-07-17 12:51:47	--	Channel #kmaint: 6 nicks (0 ops, 0 voices, 6 normals)
+2017-07-17 12:51:49	--	Channel created on Fri, 14 Jul 2017 22:58:00
+2017-07-17 13:03:22	lwang_	aris, no worries..  I don't think there are that many patches and they don't normally overlap
+2017-07-17 13:03:41	lwang_	aris, the only overlap ones will likely come this week
+2017-07-17 13:04:04	lwang_	herton, ^^ Lauro and Waiman are cherry picking the -stable tree
+2017-07-17 13:04:42	herton	lwang_, *nod*
