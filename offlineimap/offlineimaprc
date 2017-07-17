@@ -1,0 +1,78 @@
+[general]
+ui = ttyui
+accounts = brdeoliv-redhat, bmeneguele-gmail
+pythonfile = ~/Mail/scripts/offlineimap.py
+
+[Account brdeoliv-redhat]
+localrepository = brdeoliv-redhat-local
+remoterepository = brdeoliv-redhat-remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Account bmeneguele-gmail]
+localrepository = bmeneguele-gmail-local
+remoterepository = bmeneguele-gmail-remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Repository brdeoliv-redhat-local]
+type = Maildir
+localfolders = ~/Mail/brdeoliv-redhat
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts', 
+                            'sent': '[Gmail]/Sent Mail', 
+                            'flagged': '[Gmail]/Starred', 
+                            'trash': '[Gmail]/Trash', 
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder)
+
+[Repository bmeneguele-gmail-local]
+type = Maildir
+localfolders = ~/Mail/bmeneguele-gmail
+nametrans = lambda folder: {'drafts':  '[Gmail]/Rascunhos', 
+                            'sent': '[Gmail]/E-mails enviados', 
+                            'flagged': '[Gmail]/Com estrela', 
+                            'trash': '[Gmail]/Lixeira', 
+                            'archive': '[Gmail]/Todos os e-mails',
+                            }.get(folder, folder)
+
+[Repository brdeoliv-redhat-remote]
+type = Gmail
+remoteuser = brdeoliv@redhat.com
+remotepasseval = get_password_from_file("pgp", 
+                                        "~/Mail/brdeoliv-redhat-imap.gpg")
+realdelete = no
+sync_deletes = no
+maxconnections = 3
+auth_mechanisms = LOGIN
+sslcacertfile = /etc/ssl/certs/ca-bundle.crt
+nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred': 'flagged',
+                            '[Gmail]/Trash': 'trash',
+                            '[Gmail]/All Mail': 'archive'
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Spam',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Trash'
+                                             ]
+
+[Repository bmeneguele-gmail-remote]
+type = Gmail
+remoteuser = bmeneguele@gmail.com
+remotepasseval = get_password_from_file("pgp", 
+                                        "~/Mail/bmeneguele-gmail-imap.gpg")
+realdelete = no
+sync_deletes = no
+maxconnections = 3
+auth_mechanisms = LOGIN
+sslcacertfile = /etc/ssl/certs/ca-bundle.crt
+nametrans = lambda folder: {'[Gmail]/Rascunhos': 'drafts',
+                            '[Gmail]/E-mails enviados': 'sent',
+                            '[Gmail]/Com estrela': 'flagged',
+                            '[Gmail]/Lixeira': 'trash', 
+                            '[Gmail]/Todos os e-mails': 'archive'
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Spam',
+                                             '[Gmail]/Importante',
+                                             '[Gmail]/Lixeira'
+                                             ]
