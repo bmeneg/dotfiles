@@ -1,3 +1,8 @@
 text/html; firefox %s &; test=test -n "$DISPLAY"; needsterminal
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
-application/pdf; okular %s &;
+
+# Gnome default pdf viewer
+application/pdf; evince %s &;
+
+# KDE default pdf viewer
+#application/pdf; okular %s &;
