@@ -10,6 +10,7 @@ mailboxes = $spoolfile $postponed $mbox $record \
             +brdeoliv-redhat/announce-list \
             +brdeoliv-redhat/brazil-list \
             +brdeoliv-redhat/memo-list \
+            +brdeoliv-redhat/patch-tools \
             +tmp/search
 
 set sendmail = "/usr/bin/msmtp -a brdeoliv-redhat"
