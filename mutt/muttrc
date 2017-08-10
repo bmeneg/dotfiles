@@ -152,7 +152,7 @@ macro index \Ch "<enter-command>unset wait_key<enter><enter-command>set pipe_dec
 ########
 
 #### GPG - messages signatures
-source ~/.mutt/gpg.rc
+source ~/.mutt/muttgpgrc
 set pgp_use_gpg_agent = yes
 set pgp_sign_as = 0x4660608D
 set pgp_timeout = 3600
