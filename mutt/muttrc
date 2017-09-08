@@ -124,14 +124,13 @@ bind attach <return> view-mailcap
 
 ## Compose email
 set realname = "Bruno E. O. Meneguele"
-set envelope_from
+set use_envelope_from
 set editor = `echo \$EDITOR`
 set edit_headers
 set charset = UTF-8
 set sig_dashes
-set fast_reply
+set fast_reply # not set by default
 set askcc
-set fcc_attach
 unset mime_forward
 set forward_format = "Fwd: %s"
 set forward_quote
@@ -139,8 +138,6 @@ set forward_decode
 set include 
 
 bind editor <space> noop
-
-my_hdr X-PGP-Key: http://keys.gnupg.net/pks/lookup?op=get&search=0x3823031E4660608D
 
 ## RedHat Gmail custom macros
 macro index,pager d "<save-message>=trash<enter><enter>" "Trash"
@@ -153,6 +150,7 @@ macro index \Ch "<enter-command>unset wait_key<enter><enter-command>set pipe_dec
 
 #### GPG - messages signatures
 source ~/.mutt/muttgpgrc
+my_hdr X-PGP-Key: http://keys.gnupg.net/pks/lookup?op=get&search=0x3823031E4660608D
 set pgp_use_gpg_agent = yes
 set pgp_sign_as = 0x4660608D
 set pgp_timeout = 3600
