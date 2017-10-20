@@ -1,0 +1,20 @@
+# Setting keyboard from cli
+$ setxkbmap us -variant intl
+
+# Setting/Connecting bluetooth device from cli: (make sure device is turned on)
+$ bluetoothctl
+$ devices
+$ pair <device MAC>
+$ connect <device MAC>
+
+# Setting VPN from cli using nmcli (after all VPN config file is placed on
+# /etc/NetworkManager/system-connections/):
+$ nmcli con up <VPN UUID> --ask
+
+# Use ARandR to manage dual screen
+$ sudo dnf install arandr
+
+# Set default sink/audio device when new headset/phone is attached
+$ pactl list short # get device name
+$ pactl set-default-sink <device-name>
+
