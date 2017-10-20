@@ -3,7 +3,7 @@ set postponed = '+brdeoliv-redhat/drafts'
 set mbox = '+brdeoliv-redhat/archive'
 set record = '+brdeoliv-redhat/sent'
 
-mailboxes = $spoolfile $postponed $mbox $record \
+mailboxes = $spoolfile $postponed $record \
             +brdeoliv-redhat/kernel-general \
             +brdeoliv-redhat/kernel-internal \
             +brdeoliv-redhat/rhel-product \
@@ -11,6 +11,7 @@ mailboxes = $spoolfile $postponed $mbox $record \
             +brdeoliv-redhat/brazil-list \
             +brdeoliv-redhat/memo-list \
             +brdeoliv-redhat/patch-tools \
+            +brdeoliv-redhat/linux-integrity \
             +tmp/search
 
 set sendmail = "/usr/bin/msmtp -a brdeoliv-redhat"

@@ -3,7 +3,7 @@ set postponed = '+bmeneguele-gmail/drafts'
 set mbox = '+bmeneguele-gmail/archive'
 unset record
 
-mailboxes = $spoolfile $postponed $mbox \
+mailboxes = $spoolfile $postponed \
             +bmeneguele-gmail/sent \
             +bmeneguele-gmail/djalma-lanches \
             +bmeneguele-gmail/linux-kernel.to-me \
