@@ -184,14 +184,13 @@ bindcode 173 exec dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.spo
 bindcode 171 exec dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 # autostart applications
-exec_always xrandr --output DisplayPort-0 --mode 1600x900 --pos 1440x0 --rotate normal --output DVI-0 --primary --mode 1440x900 --pos 0x600 --rotate normal
+exec_always sh ~/.screenlayout/1-mon.sh 
 exec_always feh --bg-scale /usr/share/wallpapers/Next/contents/images/1920x1080.png
 exec_always xset -b
 
 assign [class="Spotify"] $workspace10
 assign [class="Firefox"] $workspace2
-assign [class="Skype"] $workspace9
 
-exec firefox
-exec skype
 exec spotify
+exec firefox
+exec systemctl --user start offlineimap
