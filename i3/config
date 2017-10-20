@@ -167,10 +167,21 @@ bar {
 # bindcode 133+l exec --no-startup-id i3lock
 bindsym Mod4+l exec --no-startup-id i3lock-fancy
 
-# audio controller
+# audio controller - generic keyboard
 bindsym F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym F9 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym F12 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# audio controller - DasKeyboard Pro 4
+bindcode 123 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindcode 122 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindcode 121 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# audio controller - DasKeyboard Pro 4 - specific commands for Spotify (a
+# script to all media players should be made)
+bindcode 172 exec dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindcode 173 exec dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindcode 171 exec dbus-send --type=method_call --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 # autostart applications
 exec_always xrandr --output DisplayPort-0 --mode 1600x900 --pos 1440x0 --rotate normal --output DVI-0 --primary --mode 1440x900 --pos 0x600 --rotate normal
