@@ -93,6 +93,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# workspace names with 'font awesome'
 set $workspace1 "1: "
 set $workspace2 "2: "
 set $workspace3 "3: "
@@ -164,8 +165,8 @@ bar {
 }
 
 ## User modifications
-# bindcode 133+l exec --no-startup-id i3lock
-bindsym Mod4+l exec --no-startup-id i3lock-fancy
+# i3lock-fancy-multimonitor github project
+bindsym Mod4+l exec --no-startup-id i3lock-fancy-multimonitor
 
 # audio controller - generic keyboard
 bindsym F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
