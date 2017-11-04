@@ -12,6 +12,7 @@ mailboxes = $spoolfile $postponed $record \
             +brdeoliv-redhat/memo-list \
             +brdeoliv-redhat/patch-tools \
             +brdeoliv-redhat/linux-integrity \
+            +brdeoliv-redhat/linux-security-module\
             +tmp/search
 
 set sendmail = "/usr/bin/msmtp -a brdeoliv-redhat"
