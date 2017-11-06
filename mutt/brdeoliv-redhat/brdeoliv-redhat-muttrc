@@ -15,6 +15,6 @@ mailboxes = $spoolfile $postponed $record \
             +brdeoliv-redhat/linux-security-module\
             +tmp/search
 
-set sendmail = "/usr/bin/msmtp -a brdeoliv-redhat"
+set sendmail = "/usr/bin/msmtp -C ~/.msmtp/msmtprc -a brdeoliv-redhat"
 set from = "brdeoliv@redhat.com"
 set signature = "+brdeoliv-redhat-signature.txt"
