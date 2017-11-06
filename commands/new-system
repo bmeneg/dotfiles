@@ -1,12 +1,44 @@
+-------------------------
 Packages to be installed when initializing system at the first time after
 installation:
 
 Window manager:
-    i3: i3 i3status i3-ipc i3lock xbacklight feh
+    i3: 
+        i3 i3status i3-ipc i3lock xbacklight feh
 
 Development:
-    general: libtool automake autoconf gcc-c++ vim
+    general: 
+        libtool automake autoconf gcc-c++ vim
+    redhat: 
+        krb5-workstation openldap
+        (pip) python-bugzilla
+            bugzilla --login login
 
 Applications:
-    general: weechat
-    mail: offlineimap msmtp notmuch mutt
+    general: 
+        weechat spotify-client#negativo17
+    mail: 
+        offlineimap msmtp notmuch mutt
+
+-------------------------
+Manual configurations:
+
+Setup previously created GPG private/public key as SSH authentication key:
+	$ echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf # create the file if needed
+	$ cat << EOF >> ~/.bash_profile
+		export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+		gpgconf --launch gpg-agent
+		EOF
+	$ gpgconf --kill gpg-agent  # just in case it's already running
+	$ source ~/.bash_profile
+	$ gpg -k --with-keygrip
+
+	copy the keygrip of the Authentication subkey ([*A]) and:
+
+	$ echo "<keygrip>" > ~/.gnupg/sshcontrol
+
+	check if the key was properly added:
+
+	$ ssh-add -l
+
+	In this way there is no need of ~/.ssh/id_rsa file to git/ssh/... authenticate.
