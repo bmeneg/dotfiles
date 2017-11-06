@@ -9,7 +9,8 @@ $ connect <device MAC>
 
 # Setting VPN from cli using nmcli (after all VPN config file is placed on
 # /etc/NetworkManager/system-connections/):
-$ nmcli con up <VPN UUID> --ask
+$ nmcli con modify <CONN UUID> vpn.user-name <username> # just once
+$ nmcli con up <CONN UUID> --ask
 
 # Use ARandR to manage dual screen
 $ sudo dnf install arandr

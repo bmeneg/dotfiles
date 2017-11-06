@@ -1,0 +1,12 @@
+Packages to be installed when initializing system at the first time after
+installation:
+
+Window manager:
+    i3: i3 i3status i3-ipc i3lock xbacklight feh
+
+Development:
+    general: libtool automake autoconf gcc-c++ vim
+
+Applications:
+    general: weechat
+    mail: offlineimap msmtp notmuch mutt
