@@ -1,2 +1,0 @@
-# Sync IMAP every min for offline use
-* * * * * sh /home/bmeneg/Mail/scripts/mail-sync.sh

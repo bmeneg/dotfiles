@@ -2,7 +2,7 @@
 ui = ttyui
 accounts = brdeoliv-redhat, bmeneguele-gmail
 maxsyncaccounts=2
-pythonfile = ~/Mail/scripts/offlineimap.py
+pythonfile = ~/.offlineimap/scripts/offlineimap.py
 
 [Account brdeoliv-redhat]
 localrepository = brdeoliv-redhat-local
