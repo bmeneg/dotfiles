@@ -18,3 +18,6 @@ PS1="$LIGHT_GRAY[\$(date +%H:%M)] \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $
 xrdb -merge ~/.Xdefaults
 
 export EDITOR="vim"
+
+alias la="ls -a"
+alias ll="ls -lah"
