@@ -11,7 +11,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/home/bmeneg/Mail/brdeoliv-redhat
+path=/home/bmeneg/Mail
 
 # User configuration
 #
