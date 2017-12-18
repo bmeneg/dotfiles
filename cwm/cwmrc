@@ -1,0 +1,83 @@
+## look'n'feel
+borderwidth 4
+snapdist 4
+color activeborder goldenrod
+color inactiveborder grey50
+
+## keyboard movements
+moveamount 15
+
+## inherit current selected group
+sticky yes
+
+## key bindings
+# first, lets unbind all keys, beacuse we want to use Mod4 key instead of Ctrl
+# one, since Ctrl is used for almost all software out there and might conflict
+# somehow
+unbind-key all
+
+# rebind every key to Mod4
+bind-key 4-Return "xterm -e tmux -f /home/bmeneg/.tmux/tmux.conf"
+bind-key 4-Escape window-delete
+bind-key 4-h window-move-left-big
+bind-key 4-j window-move-down-big
+bind-key 4-k window-move-up-big
+bind-key 4-l window-move-right-big
+bind-key S4-h window-resize-left-big
+bind-key S4-j window-resize-down-big
+bind-key S4-k window-resize-up-big
+bind-key S4-l window-resize-right-big
+bind-key 4-z window-maximize
+bind-key 4-y window-vmaximize
+bind-key 4-x window-hmaximize
+bind-key 4-g window-group
+bind-key 4-1 group-toggle-1
+bind-key 4-2 group-toggle-2
+bind-key 4-3 group-toggle-3
+bind-key 4-4 group-toggle-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-7 group-only-7
+bind-key 4-8 group-only-8
+bind-key 4-9 group-only-9
+bind-key S4-1 window-movetogroup-1
+bind-key S4-2 window-movetogroup-2
+bind-key S4-3 window-movetogroup-3
+bind-key S4-4 window-movetogroup-4
+bind-key S4-5 window-movetogroup-5
+bind-key S4-6 window-movetogroup-6
+bind-key S4-7 window-movetogroup-7
+bind-key S4-8 window-movetogroup-8
+bind-key S4-9 window-movetogroup-9
+bind-key M-Tab window-cycle
+bind-key SM-Tab window-rcycle
+bind-key 4-Tab window-cycle-ingroup
+bind-key S4-Tab window-rcycle-ingroup
+bind-key 4-c window-hide
+bind-key 4-r restart
+bind-key S4-slash menu-exec-wm
+bind-key 4-slash menu-exec
+bind-key 4-period menu-window
+bind-key 4-comma menu-cmd
+bind-key S4-q quit
+
+## mouse bindings 
+unbind-mouse M-1
+unbind-mouse M-2
+unbind-mouse M-3
+bind-mouse 4-1 window-move
+bind-mouse 4-2 window-lower
+bind-mouse 4-3 window-resize
+
+## predefined apps grouping
+autogroup 1 "xterm,XTerm"
+autogroup 2 "Firefox"
+autogroup 3 "xterm,email"
+autogroup 3 "xterm,chat"
+autogroup 9 "Spotify"
+
+## app menu
+command mutt "xterm -class email -e mutt"
+command weechat "xterm -class chat -e weechat"
+command vim "xterm -e vim"
+command xsession "source /home/bmeneg/.xsession"
