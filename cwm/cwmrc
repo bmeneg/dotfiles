@@ -3,9 +3,10 @@ borderwidth 4
 snapdist 4
 color activeborder goldenrod
 color inactiveborder grey50
+gap 14 0 0 0
 
 ## keyboard movements
-moveamount 15
+moveamount 10
 
 ## inherit current selected group
 sticky yes
