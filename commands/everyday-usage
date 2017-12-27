@@ -12,6 +12,11 @@ $ connect <device MAC>
 $ nmcli con modify <CONN UUID> vpn.user-name <username> # just once
 $ nmcli con up <CONN UUID> --ask
 
+# Connecting to a wifi network
+$ nmcli device wifi on
+$ nmcli device wifi list
+$ nmcli device wifi connect <SSID> --ask
+
 # Use ARandR to manage dual screen
 $ sudo dnf install arandr
 
@@ -19,3 +24,7 @@ $ sudo dnf install arandr
 $ pactl list short # get device name
 $ pactl set-default-sink <device-name>
 
+# Create and share tmux sessions
+$ tmux -S /tmp/shareds new -s shared # create session
+$ tmux -S /tmp/shareds attach -t shared # attach to session with write access
+$ tmux -S /tmp/shareds attach -t shared -r # attach to session read-only
