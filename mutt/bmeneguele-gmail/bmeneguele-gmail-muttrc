@@ -12,6 +12,6 @@ mailboxes = $spoolfile $postponed \
             +bmeneguele-gmail/linux-kernel.eudyptula \
             +tmp/search
 
-set sendmail = "/usr/bin/msmtp -C ~/.msmtp/mstmprc -a bmeneguele-gmail"
+set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/mstmprc -a bmeneguele-gmail"
 set from = "bmeneguele@gmail.com" 
 set signature = "+bmeneguele-gmail-signature.txt"
