@@ -1,7 +1,24 @@
 # personal bashrc modifications. the idea is to symlink this file in ~/ as
 # .personal_bashrc or something similar and source it on .bashrc
 
-# get git current branch name
+# some personal default variables
+export EDITOR="vim"
+
+# x-tools are tools to handle cross-compiling such as arm gcc and others that
+# were compile or by hand or through some other tool like crosstool-ng
+# And .cabal/bin is the place where xmobar is placed once it's installed through
+# cabal (pkg manager for haskell projects)
+export PATH="$PATH:/home/bmeneg/bin/x-tools/arm-cortexa7-linux-musleabihf/bin:/home/bmeneg/.cabal/bin"
+
+# change defaults for xterm fonts
+xrdb -merge ~/.Xdefaults
+
+# general aliases
+alias la="ls -a"
+alias ll="ls -lah"
+
+# get git current branch name and apply it to PS1 var for every time a terminal
+# is launched
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -14,10 +31,3 @@ LIGHT_GRAY="\[\033[0;37m\]"
 END_COLOR="\[\033[0m"
 
 PS1="$LIGHT_GRAY[\$(date +%H:%M)] \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
-
-xrdb -merge ~/.Xdefaults
-
-export EDITOR="vim"
-
-alias la="ls -a"
-alias ll="ls -lah"
