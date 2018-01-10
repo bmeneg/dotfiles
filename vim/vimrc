@@ -50,6 +50,8 @@ set mouse=a
 set showmatch
 set t_Co=256
 set laststatus=2
+set ignorecase
+set smartcase
 
 hi ColorColumn ctermbg=black guibg=black
 
