@@ -111,6 +111,8 @@ let OmniCpp_MayCompleteScope = 0
 " Don't select first item in pop-up menu
 let OmniCpp_SelectFirstItem = 0
 
+set nocscopeverbose
+
 " Key remapping
 " --------------------------------------------------------------------------
 map <F2> :NERDTreeToggle<CR>
