@@ -19,7 +19,7 @@ Plugin 'bogado/file-line'
 Plugin 'majutsushi/tagbar'
 Plugin 'joe-skb7/cscope-maps'
 Plugin 'tpope/vim-fugitive'
-" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe
 
 call vundle#end()            
 filetype plugin indent on
@@ -28,8 +28,10 @@ filetype plugin indent on
 " User specific configuretion 
 " --------------------------------------------------------------------------
 syntax on se title
+set background=light
 " colorscheme mrkn256
-colorscheme 256-grayvim
+" colorscheme 256-grayvim
+colorscheme solarized
 
 " Configs already set within editorconfig's file
 " --------------------------------------------------------------------------
@@ -53,7 +55,8 @@ set laststatus=2
 set ignorecase
 set smartcase
 
-hi ColorColumn ctermbg=black guibg=black
+"hi ColorColumn ctermbg=black guibg=black
+hi ColorColumn ctermbg=254 guibg=#E2D3A9
 
 " Python-mode plugin options
 " --------------------------------------------------------------------------
