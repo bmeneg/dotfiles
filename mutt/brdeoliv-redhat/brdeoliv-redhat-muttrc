@@ -6,11 +6,14 @@ set record = '+brdeoliv-redhat/sent'
 mailboxes = $spoolfile $postponed $record \
             +brdeoliv-redhat/kernel-general \
             +brdeoliv-redhat/kernel-internal \
+            +brdeoliv-redhat/rh-bugzilla \
+            +brdeoliv-redhat/rh-build \
+            +brdeoliv-redhat/patch-tools \
+            +brdeoliv-redhat/rhel8-devel \
             +brdeoliv-redhat/rhel-product \
             +brdeoliv-redhat/announce-list \
             +brdeoliv-redhat/brazil-list \
             +brdeoliv-redhat/memo-list \
-            +brdeoliv-redhat/patch-tools \
             +brdeoliv-redhat/linux-integrity \
             +brdeoliv-redhat/linux-security-module\
             +tmp/search
