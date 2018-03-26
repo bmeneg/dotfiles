@@ -89,12 +89,12 @@ bind index,pager j next-entry
 bind index,pager k previous-entry
 bind index,pager J next-undeleted
 bind index,pager K previous-undeleted
-source ~/.mutt/colors/ivy/ivy_league.theme
+#source ~/.mutt/colors/ivy/ivy_league.theme
+source ~/.mutt/colors/solarized/solarized-light-16.theme
 
 ## Index
 unset collapse_unread
-set date_format = "%d-%m"
-set index_format = "[%Z]  %D  %-20.20F  %s"
+set index_format = "[%Z]  %[%d-%m]  %-20.20F  %s"
 set sort = "threads"
 set strict_threads = "yes"
 set sort_browser = "reverse-date"
@@ -129,12 +129,11 @@ bind attach <return> view-mailcap
 
 ## Compose email
 set realname = "Bruno E. O. Meneguele"
-set use_envelope_from
 set editor = `echo \$EDITOR`
 set edit_headers
 set charset = UTF-8
 set sig_dashes
-set fast_reply # not set by default
+set fast_reply
 set askcc
 unset mime_forward
 set forward_format = "Fwd: %s"
@@ -163,4 +162,3 @@ set pgp_autosign = yes
 set pgp_replyencrypt = yes
 set pgp_good_sign = "^gpg: Good signature from"
 ########
-
