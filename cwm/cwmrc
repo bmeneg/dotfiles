@@ -57,7 +57,7 @@ bind-key S4-Tab window-rcycle-ingroup
 bind-key 4-c window-hide
 bind-key 4-r restart
 bind-key S4-slash menu-exec-wm
-bind-key 4-slash menu-exec
+bind-key 4-e menu-exec
 bind-key 4-period menu-window
 bind-key 4-comma menu-cmd
 bind-key S4-q quit
