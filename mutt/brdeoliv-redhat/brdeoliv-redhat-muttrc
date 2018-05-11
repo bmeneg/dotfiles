@@ -19,5 +19,5 @@ mailboxes = $spoolfile $postponed $record \
             +tmp/search
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a brdeoliv-redhat"
-set from = "brdeoliv@redhat.com"
+set from = "bmeneg@redhat.com"
 set signature = "+brdeoliv-redhat-signature.txt"
