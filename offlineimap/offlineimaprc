@@ -1,27 +1,20 @@
 [general]
 ui = ttyui
 accounts = brdeoliv-redhat, bmeneguele-gmail
-maxsyncaccounts=2
+maxsyncaccounts = 1
 pythonfile = ~/.offlineimap/scripts/offlineimap.py
+fsync = false
 
 [Account brdeoliv-redhat]
 localrepository = brdeoliv-redhat-local
 remoterepository = brdeoliv-redhat-remote
-status_backend = sqlite
-quick = 10
-autorefresh = 5
-postsynchook = notmuch new
 
 [Account bmeneguele-gmail]
 localrepository = bmeneguele-gmail-local
 remoterepository = bmeneguele-gmail-remote
-status_backend = sqlite
-quick = 10
-autorefresh = 5
-postsynchook = notmuch new
 
 [Repository brdeoliv-redhat-local]
-type = Maildir
+type = GmailMaildir
 localfolders = ~/Mail/brdeoliv-redhat
 nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts', 
                             'sent': '[Gmail]/Sent Mail', 
@@ -31,7 +24,7 @@ nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
                             }.get(folder, folder)
 
 [Repository bmeneguele-gmail-local]
-type = Maildir
+type = GmailMaildir
 localfolders = ~/Mail/bmeneguele-gmail
 nametrans = lambda folder: {'drafts':  '[Gmail]/Rascunhos', 
                             'sent': '[Gmail]/E-mails enviados', 
@@ -45,11 +38,6 @@ type = Gmail
 remoteuser = brdeoliv@redhat.com
 remotepasseval = get_password_from_file("pgp", 
                                         "~/.mutt/brdeoliv-redhat-imap.gpg")
-realdelete = no
-sync_deletes = no
-maxconnections = 3
-holdconnectionopen = true
-keepalive = 60
 auth_mechanisms = LOGIN
 sslcacertfile = /etc/ssl/certs/ca-bundle.crt
 nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
@@ -68,11 +56,6 @@ type = Gmail
 remoteuser = bmeneguele@gmail.com
 remotepasseval = get_password_from_file("pgp", 
                                         "~/.mutt/bmeneguele-gmail-imap.gpg")
-realdelete = no
-sync_deletes = no
-maxconnections = 3
-holdconnectionopen = true
-keepalive = 60
 auth_mechanisms = LOGIN
 sslcacertfile = /etc/ssl/certs/ca-bundle.crt
 nametrans = lambda folder: {'[Gmail]/Rascunhos': 'drafts',
