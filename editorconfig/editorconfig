@@ -8,7 +8,7 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespaces = true
-max_line_length = 80
+max_line_length = 79
 wrap_width = 80
 indent_style = space
 indent_size = 4
@@ -19,7 +19,7 @@ indent_style = tab
 tab_width = 8
 indent_size = 8
 
-[Makefile]
+[{Makefile.*,*.spec}]
 indent_style = tab
 tab_width = 8
 indent_size = 8
@@ -27,6 +27,7 @@ max_line_length = 120
 wrap_width = 120
 
 [*.sh]
+indent_style = tab
 max_line_length = 120
 wrap_width = 120
 
@@ -37,3 +38,6 @@ trim_trailing_whitespaces = false
 trim_trailing_whitespaces = false
 max_line_length = 120
 wrap_width = 120
+
+[*.{lisp,cl}]
+indent_size = 2
