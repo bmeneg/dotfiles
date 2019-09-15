@@ -74,6 +74,11 @@ if [ "$EUID" -ne 0 ]; then
 	exit 1
 fi
 
+if [ ! -d $backlight_dir ]; then
+	echo "BUG: $backlight_dir does not exist"
+	exit 1
+fi
+
 if [ -z "$bl_sys" ]; then
 	bl_available=""
 
