@@ -115,16 +115,18 @@ if [ -z "$curr" ]; then
 fi
 
 if [ -n "$increase" ]; then
-	if [ $((curr + increase * perc)) -ge "$max_brightness" ]; then
+	calc=$((curr + increase * perc))
+	if [ $calc -ge "$max_brightness" ]; then
 		echo "$max_brightness" > $backlight_dir/$bl_sys/brightness
 	else
-		echo "$((curr + increase * perc))" > $backlight_dir/$bl_sys/brightness
+		echo "$calc" > $backlight_dir/$bl_sys/brightness
 	fi
 elif [ -n "$decrease" ]; then
-	if [ "$((curr - decrease * perc))" -le 0 ]; then
+	calc=$((curr - decrease * perc))
+	if [ $calc -le 0 ]; then
 		echo "0" > $backlight_dir/$bl_sys/brightness
 	else
-		echo "$((curr - decrease * perc))" > $backlight_dir/$bl_sys/brightness
+		echo "$calc" > $backlight_dir/$bl_sys/brightness
 	fi
 elif [ -n "$set_bright" ]; then
 	if [ "$set_bright" -ge "100" ]; then
