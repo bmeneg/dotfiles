@@ -6,8 +6,8 @@ Options:
     -s <value>   Set specific percentage <value>
     -i <value>   Increase the current value by <value> percentage
     -d <value>   Decrease the current value by <value> percentage
-	-l           List all backlight backend available
-	-b <backend> Set the specific backlight backend to use
+    -l           List all backlight backend available
+    -b <backend> Set the specific backlight backend to use
     -h           Print this help message"
 
 backlight_dir="/sys/class/backlight"
@@ -77,20 +77,20 @@ fi
 if [ -z "$bl_sys" ]; then
 	bl_available=""
 
-	for bl_hw in *; do
-		bl_available+="$bl_hw "
+	for bl_hw in $backlight_dir/*; do
+		bl_available+="$(basename $bl_hw) "
 	done
 
 	if [ "$(echo "$bl_available" | wc -w)" -gt 1 ]; then
 		echo "please choose one of the backlight system available to use with -b option"
 		echo "$bl_available"
 	else
-		bl_sys=$(echo $bl_available | sed "s/.$//")
+		bl_sys=$(echo $bl_available | xargs)
 	fi
 fi
 
 if [ ! -d "$backlight_dir/$bl_sys" ]; then
-	echo "BUG: \'$backlight_dir/$bl_sys\' isn't a valid path"
+	echo "BUG: '$backlight_dir/$bl_sys' isn't a valid path"
 	exit 1
 fi
 
