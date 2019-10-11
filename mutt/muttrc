@@ -90,7 +90,7 @@ bind index,pager k previous-entry
 bind index,pager J next-undeleted
 bind index,pager K previous-undeleted
 #source ~/.mutt/colors/ivy/ivy_league.theme
-source ~/.mutt/colors/solarized/solarized-light-16.theme
+#source ~/.mutt/colors/solarized/solarized-light-16.theme
 
 ## Index
 unset collapse_unread
@@ -128,7 +128,7 @@ bind pager R group-reply
 bind attach <return> view-mailcap
 
 ## Compose email
-set realname = "Bruno E. O. Meneguele"
+set realname = "Bruno Meneguele"
 set editor = `echo \$EDITOR`
 set edit_headers
 set charset = UTF-8

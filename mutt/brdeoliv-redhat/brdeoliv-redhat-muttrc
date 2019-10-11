@@ -8,6 +8,8 @@ mailboxes = $spoolfile $postponed $record \
             +brdeoliv-redhat/kernel-internal \
             +brdeoliv-redhat/rh-bugzilla \
             +brdeoliv-redhat/rh-build \
+            +brdeoliv-redhat/quatro-list \
+            +brdeoliv-redhat/cinco-list \
             +brdeoliv-redhat/patch-tools \
             +brdeoliv-redhat/rhel8-devel \
             +brdeoliv-redhat/rhel-product \

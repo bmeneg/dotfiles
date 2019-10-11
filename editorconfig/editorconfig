@@ -14,12 +14,12 @@ indent_style = space
 indent_size = 4
 tab_width = 4
 
-[*.{c,h}]
+[*.{c,h,cpp,hpp}]
 indent_style = tab
 tab_width = 8
 indent_size = 8
 
-[{Makefile.*,*.spec}]
+[{Makefile*,*.spec}]
 indent_style = tab
 tab_width = 8
 indent_size = 8

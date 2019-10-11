@@ -18,7 +18,10 @@ sticky yes
 unbind-key all
 
 # rebind every key to Mod4
-bind-key 4-Return "xterm -e tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
+bind-key 4-Return "xterm -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
+#bind-key 4-Return "gnome-terminal -- tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
+#bind-key 4-i "sudo sh ~/Documents/git/dotfiles/commands/backlight-control.sh -i 25"
+#bind-key 4-d "sudo sh ~/Documents/git/dotfiles/commands/backlight-control.sh -d 25"
 bind-key 4-Escape window-delete
 bind-key 4-h window-move-left-big
 bind-key 4-j window-move-down-big
@@ -74,11 +77,16 @@ bind-mouse 4-3 window-resize
 autogroup 1 "xterm,XTerm"
 autogroup 2 "Firefox"
 autogroup 3 "xterm,email"
-autogroup 3 "xterm,chat"
+autogroup 4 "xterm,chat"
 autogroup 9 "Spotify"
 
 ## app menu
-command mutt "xterm -class email -e mutt"
-command weechat "xterm -class chat -e weechat"
-command vim "xterm -e vim"
+command mutt "xterm -class email -bg black -fg lightgrey -e mutt"
+command weechat "xterm -class chat -bg black -fg lightgrey -e weechat"
+command irssi "xterm -class chat -bg black -fg lightgrey -e irssi"
+command vim "xterm -bg black -fg lightgrey -e vim"
 command xsession "source /home/bmeneg/.xsession"
+#command xterm "xterm -geometry 80x40 -bg black -fg lightgrey"
+
+#command mutt "gnome-terminal -- mutt"
+#command irssi "gnome-terminal -- irssi"

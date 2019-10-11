@@ -40,6 +40,7 @@ remotepasseval = get_password_from_file("pgp",
                                         "~/.mutt/brdeoliv-redhat-imap.gpg")
 auth_mechanisms = LOGIN
 sslcacertfile = /etc/ssl/certs/ca-bundle.crt
+ssl_version=tls1_2
 nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
                             '[Gmail]/Sent Mail': 'sent',
                             '[Gmail]/Starred': 'flagged',
@@ -58,6 +59,7 @@ remotepasseval = get_password_from_file("pgp",
                                         "~/.mutt/bmeneguele-gmail-imap.gpg")
 auth_mechanisms = LOGIN
 sslcacertfile = /etc/ssl/certs/ca-bundle.crt
+ssl_version=tls1_2
 nametrans = lambda folder: {'[Gmail]/Rascunhos': 'drafts',
                             '[Gmail]/E-mails enviados': 'sent',
                             '[Gmail]/Com estrela': 'flagged',
