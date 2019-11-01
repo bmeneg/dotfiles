@@ -44,16 +44,15 @@ alias xsession-1m="bash ~/.xsession -m 1:laptop -k br-thinkpad"
 
 # get git current branch name and apply it to PS1 var for every time a terminal
 # is launched
-function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
+export parse_git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'"
 
 RED="\[\033[0;31m\]"
 GREEN="\[\033[0;32m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
 YELLOW="\[\033[0;33m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
-END_COLOR="\[\033[0m"
+END_COLOR="\[\033[0m\]"
 
 #export PS1="$LIGHT_GRAY[\$(date +%H:%M)] \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
-export PS1="[\$(date +%H:%M)] \w$RED \$(parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
+#export PS1="[\$(date +%H:%M)] \w$RED \$(parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
+export PS1="[\A] <\u> \w$RED \$(eval $parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
