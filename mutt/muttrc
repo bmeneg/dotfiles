@@ -10,16 +10,16 @@ set tmpdir = '~/.mutt/tmp'
 ########
 
 #### Multiple accounts handler ####
-## Folder hooks
-folder-hook 'bmeneguele-gmail' 'source ~/.mutt/bmeneguele-gmail-muttrc'
-folder-hook 'brdeoliv-redhat' 'source ~/.mutt/brdeoliv-redhat-muttrc'
-
 ## Default account
-source ~/.mutt/bmeneguele-gmail-muttrc
+source ~/.mutt/bmeneguele-gmail/bmeneguele-gmail-muttrc
+
+## Folder hooks
+folder-hook 'bmeneguele-gmail' 'source ~/.mutt/bmeneguele-gmail/bmeneguele-gmail-muttrc'
+folder-hook 'brdeoliv-redhat' 'source ~/.mutt/brdeoliv-redhat/brdeoliv-redhat-muttrc'
 
 ## Switch accounts
-macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/bmeneguele-gmail-muttrc<enter><change-folder>!<enter>'
-macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/brdeoliv-redhat-muttrc<enter><change-folder>!<enter>'
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/bmeneguele-gmail/bmeneguele-gmail-muttrc<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/brdeoliv-redhat/brdeoliv-redhat-muttrc<enter><change-folder>!<enter>'
 ########
 
 #### SMTP configuration ####

@@ -1,0 +1,113 @@
+# Global configurations
+Create Slave
+Sync All
+SyncState *
+Expunge Both
+
+# bmeneguele@gmail.com account configuration
+IMAPAccount bmeneguele-gmail
+CertificateFile /etc/pki/tls/certs/ca-bundle.crt
+SSLType IMAPS
+PipelineDepth 25
+Host imap.gmail.com
+User bmeneguele@gmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneguele-gmail/bmeneguele-gmail-imap.gpg"
+
+IMAPStore bmeneguele-gmail-remote
+Account bmeneguele-gmail
+
+MaildirStore bmeneguele-gmail-local
+Path ~/Mail/bmeneguele-gmail/
+Inbox ~/Mail/bmeneguele-gmail/INBOX
+Subfolders Verbatim
+
+Channel bmeneguele-gmail-inbox
+Master :bmeneguele-gmail-remote:"INBOX"
+Slave :bmeneguele-gmail-local:inbox
+
+Channel bmeneguele-gmail-sent
+Master :bmeneguele-gmail-remote:"[Gmail]/E-mails enviados"
+Slave :bmeneguele-gmail-local:sent
+
+Channel bmeneguele-gmail-drafts
+Master :bmeneguele-gmail-remote:"[Gmail]/Rascunhos"
+Slave :bmeneguele-gmail-local:drafts
+
+Channel bmeneguele-gmail-trash
+Master :bmeneguele-gmail-remote:"[Gmail]/Lixeira"
+Slave :bmeneguele-gmail-local:trash
+
+#Channel bmeneguele-gmail-archive
+#Master :bmeneguele-gmail-remote:"[Gmail]/Todos os e-mails"
+#Slave :bmeneguele-gmail-local:archive
+
+Channel bmeneguele-gmail-kernelnewbies
+Master :bmeneguele-gmail-remote:"linux-kernel/kernelnewbies"
+Slave :bmeneguele-gmail-local:linux-kernel.kernelnewbies
+
+Channel bmeneguele-gmail-lkcamp
+Master :bmeneguele-gmail-remote:"linux-kernel/lkcamp"
+Slave :bmeneguele-gmail-local:linux-kernel.lkcamp
+
+Channel bmeneguele-gmail-eudyptula
+Master :bmeneguele-gmail-remote:"linux-kernel/eudyptula"
+Slave :bmeneguele-gmail-local:linux-kernel.eudyptula
+
+Group group-bmeneguele-gmail
+Channel bmeneguele-gmail-inbox
+Channel bmeneguele-gmail-sent
+Channel bmeneguele-gmail-drafts
+Channel bmeneguele-gmail-trash
+Channel bmeneguele-gmail-eudyptula 
+Channel bmeneguele-gmail-lkcamp 
+Channel bmeneguele-gmail-kernelnewbies
+#Channel bmeneguele-gmail-archive
+
+# brdeoliv@redhat.com account configuration
+IMAPAccount brdeoliv-redhat
+CertificateFile /etc/pki/tls/certs/ca-bundle.crt
+SSLType IMAPS
+PipelineDepth 25
+Host imap.gmail.com
+User brdeoliv@redhat.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/brdeoliv-redhat/brdeoliv-redhat-imap.gpg"
+
+IMAPStore brdeoliv-redhat-remote
+Account brdeoliv-redhat
+
+MaildirStore brdeoliv-redhat-local
+Path ~/Mail/brdeoliv-redhat/
+Inbox ~/Mail/brdeoliv-redhat/INBOX
+Subfolders Verbatim
+
+# Channel brdeoliv-redhat-inbox
+# Master :brdeoliv-redhat-remote:"INBOX"
+# Slave :brdeoliv-redhat-local:inbox
+
+Channel brdeoliv-redhat-lists
+Master :brdeoliv-redhat-remote:
+Slave :brdeoliv-redhat-local:
+Patterns * ![Gmail]/* !draft !sent !trash
+
+Channel brdeoliv-redhat-sent
+Master :brdeoliv-redhat-remote:"[Gmail]/Sent Mail"
+Slave :brdeoliv-redhat-local:sent
+
+Channel brdeoliv-redhat-draft
+Master :brdeoliv-redhat-remote:"[Gmail]/Drafts"
+Slave :brdeoliv-redhat-local:draft
+
+Channel brdeoliv-redhat-trash
+Master :brdeoliv-redhat-remote:"[Gmail]/Trash"
+Slave :brdeoliv-redhat-local:trash
+
+#Channel brdeoliv-redhat-archive
+#Master :brdeoliv-redhat-remote:"[Gmail]/All Mail"
+#Slave :brdeoliv-redhat-local:archive
+
+Group group-brdeoliv-redhat
+Channel brdeoliv-redhat-sent 
+Channel brdeoliv-redhat-draft 
+Channel brdeoliv-redhat-trash
+Channel brdeoliv-redhat-lists
+#Channel brdeoliv-redhat-inbox
