@@ -1,0 +1,11 @@
+[Unit]
+Description=mbsync service [all]
+Documentation=man:mbsync(1)
+ConditionPathExists=%h/.mbsyncrc
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mbsync -a -C
+
+[Install]
+WantedBy=mail.target
