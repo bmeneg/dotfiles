@@ -1,14 +1,15 @@
-set spoolfile = +bmeneguele-gmail/inbox
-set postponed = +bmeneguele-gmail/drafts
+set folder = ~/Mail/bmeneguele-gmail/
+set spoolfile = +inbox
+set postponed = +drafts
 #set mbox = '+bmeneguele-gmail/archive'
 unset record
 
 mailboxes = $spoolfile $postponed \
-            +bmeneguele-gmail/sent \
-            +bmeneguele-gmail/djalma-lanches \
-            +bmeneguele-gmail/linux-kernel.kernelnewbies \
-            +bmeneguele-gmail/linux-kernel.lkcamp \
-            +bmeneguele-gmail/linux-kernel.eudyptula 
+            +sent \
+            +djalma-lanches \
+            +linux-kernel.kernelnewbies \
+            +linux-kernel.lkcamp \
+            +linux-kernel.eudyptula
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneguele-gmail"
 set from = "bmeneguele@gmail.com" 

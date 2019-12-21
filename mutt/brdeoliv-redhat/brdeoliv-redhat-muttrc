@@ -1,23 +1,24 @@
-set spoolfile = +brdeoliv-redhat/INBOX
-set postponed = '+brdeoliv-redhat/drafts'
+set folder = ~/Mail/brdeoliv-redhat/
+set spoolfile = +INBOX
+set postponed = '+drafts'
 #set mbox = '+brdeoliv-redhat/archive'
-set record = '+brdeoliv-redhat/sent'
+set record = '+sent'
 
 mailboxes = $spoolfile $postponed $record \
-            +brdeoliv-redhat/kernel-general \
-            +brdeoliv-redhat/kernel-internal \
-            +brdeoliv-redhat/rh-bugzilla \
-            +brdeoliv-redhat/rh-build \
-            +brdeoliv-redhat/quatro-list \
-            +brdeoliv-redhat/cinco-list \
-            +brdeoliv-redhat/patch-tools \
-            +brdeoliv-redhat/rhel8-devel \
-            +brdeoliv-redhat/rhel-product \
-            +brdeoliv-redhat/announce-list \
-            +brdeoliv-redhat/brazil-list \
-            +brdeoliv-redhat/memo-list \
-            +brdeoliv-redhat/linux-integrity \
-            +brdeoliv-redhat/linux-security-module
+            +kernel-general \
+            +kernel-internal \
+            +rh-bugzilla \
+            +rh-build \
+            +quatro-list \
+            +cinco-list \
+            +patch-tools \
+            +rhel8-devel \
+            +rhel-product \
+            +announce-list \
+            +brazil-list \
+            +memo-list \
+            +linux-integrity \
+            +linux-security-module
 #            +tmp/search
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a brdeoliv-redhat"
