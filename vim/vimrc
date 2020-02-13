@@ -7,20 +7,42 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
+" VIM decoration
 Plugin 'vim-airline/vim-airline'
-Plugin 'mhinz/vim-signify'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'scrooloose/nerdcommenter'
-Plugin 'python-mode/python-mode'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'vivien/vim-linux-coding-style'
-"Plugin 'bogado/file-line'
-Plugin 'majutsushi/tagbar'
-Plugin 'joe-skb7/cscope-maps'
+
+" Git
 Plugin 'tpope/vim-fugitive'
-" Plugin 'Valloric/YouCompleteMe
-Plugin 'pboettch/vim-cmake-syntax'
+Plugin 'mhinz/vim-signify'
+
+" Tools
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+"Plugin 'wincent/command-t'
+"Plugin 'junegunn/goyo.vim'
+Plugin 'tomtom/tcomment_vim'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
+Plugin 'jpalardy/vim-slime.git'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Programming lenguage styling and configuration
+"Plugin 'vivien/vim-linux-coding-style'
+"Plugin 'pboettch/vim-cmake-syntax'
+Plugin 'editorconfig/editorconfig-vim'
+
+" Programming facilities
+"Plugin 'python-mode/python-mode'
+"Plugin 'joe-skb7/cscope-maps'
+Plugin 'Yggdroot/indentLine'
+Plugin 'mattn/emmet-vim'
+"Plugin 'hail2u/vim-css3-syntax'
 
 call vundle#end()
 filetype plugin indent on
@@ -83,49 +105,23 @@ hi LineNr term=none
 
 " YouCompleteMe plugin options
 " --------------------------------------------------------------------------
-" let g:ycm_auto_trigger = 0
-" let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_use_clangd = 0
+"let g:ycm_auto_trigger = 1
+"let g:ycm_autoclose_preview_window_after_completion = 1
 
-" OmniCompletition options
+" Snippets plugin options
 " --------------------------------------------------------------------------
-"set omnifunc=syntaxcomplete#Complete
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
-" Configure menu behavior
-"set completeopt=longest,menuone
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-"  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-"inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-"  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-"
-"" Use Ctrl+Space for omni-completion
-"inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-"  \ "\<lt>C-n>" :
-"  \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-"  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-"  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-"imap <C-@> <C-Space>
-"
-"" Popup menu hightLight Group
-"highlight Pmenu ctermbg=13 guibg=LightGray
-"highlight PmenuSel ctermbg=7 guibg=DarkBlue guifg=White
-"highlight PmenuSbar ctermbg=7 guibg=DarkGray
-"highlight PmenuThumb guibg=Black
-"
-"" Enable global scope search
-"let OmniCpp_GlobalScopeSearch = 1
-"" Show function parameters
-"let OmniCpp_ShowPrototypeInAbbr = 1
-"" Show access information in pop-up menu
-"let OmniCpp_ShowAccess = 1
-"" Auto complete after '.'
-"let OmniCpp_MayCompleteDot = 1
-"" Auto complete after '->'
-"let OmniCpp_MayCompleteArrow = 1
-"" Auto complete after '::'
-"let OmniCpp_MayCompleteScope = 0
-"" Don't select first item in pop-up menu
-"let OmniCpp_SelectFirstItem = 0
+" Deoplete plugin options
+" --------------------------------------------------------------------------
+let g:deoplete#enable_at_startup = 1
+
+" Emmet plugin options
+" --------------------------------------------------------------------------
+let g:user_emmet_leader_key=','
 
 " Key remapping
 " --------------------------------------------------------------------------
