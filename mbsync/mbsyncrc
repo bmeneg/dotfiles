@@ -8,6 +8,7 @@ Expunge Both
 IMAPAccount bmeneguele-gmail
 CertificateFile /etc/pki/tls/certs/ca-bundle.crt
 SSLType IMAPS
+AuthMechs PLAIN
 PipelineDepth 25
 Host imap.gmail.com
 User bmeneguele@gmail.com
@@ -67,6 +68,7 @@ Channel bmeneguele-gmail-kernelnewbies
 IMAPAccount brdeoliv-redhat
 CertificateFile /etc/pki/tls/certs/ca-bundle.crt
 SSLType IMAPS
+AuthMechs PLAIN
 PipelineDepth 25
 Host imap.gmail.com
 User brdeoliv@redhat.com
