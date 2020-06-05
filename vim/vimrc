@@ -33,16 +33,17 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Programming lenguage styling and configuration
-"Plugin 'vivien/vim-linux-coding-style'
+Plugin 'vivien/vim-linux-coding-style'
 "Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'editorconfig/editorconfig-vim'
 
 " Programming facilities
 "Plugin 'python-mode/python-mode'
-"Plugin 'joe-skb7/cscope-maps'
+Plugin 'joe-skb7/cscope-maps'
 Plugin 'Yggdroot/indentLine'
 Plugin 'mattn/emmet-vim'
 "Plugin 'hail2u/vim-css3-syntax'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
