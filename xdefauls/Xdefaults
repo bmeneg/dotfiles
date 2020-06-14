@@ -11,6 +11,7 @@
 *eightBitInput: false
 *font: fixed
 *boldFont: fixed
+!xterm*ScrollBar: false
 
 URxvt*font: xft:Inconsolata:pixelsize=14
 !!! ------- SOLARIZED DARK COLOR SCHEME ---------
