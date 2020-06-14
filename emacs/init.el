@@ -42,6 +42,9 @@
 (use-package powerline
     :ensure t
     :init (powerline-default-theme))
+(use-package emmet-mode
+	:ensure t
+	:init (emmet-mode))
 
 ;; Show line number on the left
 (setq linum-format "%d ")
@@ -57,6 +60,9 @@
 ;; autofill automatically in all modes
 (setq-default auto-fill-funtion 'do-auto-fill)
 
+(add-hook 'sqml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+
 ;; kbd remapping
 (global-set-key (kbd "M-o") 'open-line-below)
 (global-set-key (kbd "M-O") 'open-line-above)
@@ -67,9 +73,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-    '(package-selected-packages
-         (quote
-             (rpm-spec-mode yaml-mode company ac-slime helm-slime slime xcscope markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig))))
+	'(package-selected-packages
+		 (quote
+			 (emmet-mode web-mode rpm-spec-mode yaml-mode company ac-slime helm-slime slime xcscope markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
