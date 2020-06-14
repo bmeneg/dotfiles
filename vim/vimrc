@@ -11,6 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 " VIM decoration
 Plugin 'vim-airline/vim-airline'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -22,15 +24,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
 "Plugin 'wincent/command-t'
 "Plugin 'junegunn/goyo.vim'
-Plugin 'tomtom/tcomment_vim'
+"Plugin 'tomtom/tcomment_vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
-Plugin 'jpalardy/vim-slime.git'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+"Plugin 'jpalardy/vim-slime.git'
+"Plugin 'roxma/nvim-yarp'
+"Plugin 'roxma/vim-hug-neovim-rpc'
+"Plugin 'Shougo/deoplete.nvim'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
 
 " Programming lenguage styling and configuration
 Plugin 'vivien/vim-linux-coding-style'
@@ -41,9 +43,8 @@ Plugin 'editorconfig/editorconfig-vim'
 "Plugin 'python-mode/python-mode'
 Plugin 'joe-skb7/cscope-maps'
 Plugin 'Yggdroot/indentLine'
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 "Plugin 'hail2u/vim-css3-syntax'
-Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
@@ -52,12 +53,13 @@ filetype plugin indent on
 " User specific configuretion 
 " --------------------------------------------------------------------------
 syntax on se title
-"set background=light
+set background=light
+let g:airline_theme='angr'
 "colorscheme Atelier_CaveDark
 "colorscheme mrkn256
 "colorscheme 256-grayvim
-"colorscheme solarized
-colorscheme 1989
+"colorscheme solarized8_light_high
+"colorscheme 1989
 "colorscheme molokai
 
 " Configs already set within editorconfig's file
