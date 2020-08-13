@@ -52,14 +52,22 @@ filetype plugin indent on
 " --------------------------------------------------------------------------
 " User specific configuretion 
 " --------------------------------------------------------------------------
+
+"highlight ExtraWhitespace ctermbg=black guibg=black
+"match ExtraWhitespace /\s\+$/
+"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+"autocmd BufWinLeave * call clearmatches()
+
 syntax on se title
-set background=light
+"set background=dark
 let g:airline_theme='angr'
 "colorscheme Atelier_CaveDark
 "colorscheme mrkn256
 "colorscheme 256-grayvim
 "colorscheme solarized8_light_high
-"colorscheme 1989
+colorscheme 1989
 "colorscheme molokai
 
 " Configs already set within editorconfig's file
@@ -89,11 +97,14 @@ set nocscopeverbose
 " NO COLOR VIM
 " -------------------------------------------------------------------------
 "syntax off
+"hi LineNr term=none
 "set nohlsearch
 "set t_Co=0
-hi LineNr term=none
 
-"hi ColorColumn ctermbg=black guibg=black
+let g:EditorConfig_max_line_indicator = "none"
+
+"hi ColorColumn ctermbg=0 guibg=black
+"hi ColorColumn ctermbg=grey guibg=grey
 "hi ColorColumn ctermbg=254 guibg=#E2D3A9
 
 " Python-mode plugin options
@@ -114,9 +125,9 @@ hi LineNr term=none
 
 " Snippets plugin options
 " --------------------------------------------------------------------------
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-f>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " Deoplete plugin options
 " --------------------------------------------------------------------------
@@ -124,7 +135,7 @@ let g:deoplete#enable_at_startup = 1
 
 " Emmet plugin options
 " --------------------------------------------------------------------------
-let g:user_emmet_leader_key=','
+"let g:user_emmet_leader_key=','
 
 " Key remapping
 " --------------------------------------------------------------------------
