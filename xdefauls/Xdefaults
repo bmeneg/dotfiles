@@ -2,12 +2,12 @@
 *faceName: Bitstream Vera Sans Mono
 !*faceName: Monaco
 !*faceName: Inconsolata
-*faceSize: 9
+*faceSize: 10
 *vt100*geometry: 80x60
 *saveLines: 16384
 *loginShell: true
 *charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
-*termName: screen-256color
+*termName: xterm-256color
 *eightBitInput: false
 *font: fixed
 *boldFont: fixed
