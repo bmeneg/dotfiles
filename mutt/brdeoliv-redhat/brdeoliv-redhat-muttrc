@@ -17,7 +17,9 @@ mailboxes = $spoolfile $postponed $record \
             +announce-list \
             +brazil-list \
             +memo-list \
+            +linux-ltp \
             +linux-integrity \
+            +linux-sgx \
             +linux-security-module
 #            +tmp/search
 
