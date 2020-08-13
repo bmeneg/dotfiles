@@ -86,7 +86,7 @@ command mutt "xterm -class email -bg black -fg lightgrey -e mutt"
 #command weechat "xterm -class chat -bg black -fg lightgrey -e weechat"
 command irssi "xterm -class chat -bg black -fg lightgrey -e irssi"
 command vim "xterm -bg black -fg lightgrey -e vim"
-command xsession "source /home/bmeneg/.xsession"
+command xmobar "bash -c xmobar &"
 command xterm "xterm -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
 
 #command mutt "gnome-terminal -- mutt"
