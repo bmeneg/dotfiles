@@ -42,3 +42,7 @@ Setup previously created GPG private/public key as SSH authentication key:
 	$ ssh-add -l
 
 	In this way there is no need of ~/.ssh/id_rsa file to git/ssh/... authenticate.
+
+    Note: the default GnuPG pinentry program conflicts somehow with tmux, so
+    you might see issues during the ssh key usage. Install pinentry-gtk or -qt
+    to workaround it (or stop using tmux).
