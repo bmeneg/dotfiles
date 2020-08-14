@@ -18,7 +18,7 @@ sticky yes
 unbind-key all
 
 # rebind every key to Mod4
-bind-key 4-Return "xterm -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
+bind-key 4-Return "xterm +sb -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
 #bind-key 4-Return "gnome-terminal -- tmux -2 -f /home/bmeneg/.tmux.conf"
 #bind-key 4-Return "konsole --profile tmux"
 #bind-key 4-i "sudo sh ~/Documents/git/dotfiles/commands/backlight-control.sh -i 25"
@@ -82,12 +82,12 @@ autogroup 4 "xterm,chat"
 autogroup 9 "Spotify"
 
 ## app menu
-command mutt "xterm -class email -bg black -fg lightgrey -e mutt"
+command mutt "xterm +sb -class email -bg black -fg lightgrey -e mutt"
 #command weechat "xterm -class chat -bg black -fg lightgrey -e weechat"
-command irssi "xterm -class chat -bg black -fg lightgrey -e irssi"
-command vim "xterm -bg black -fg lightgrey -e vim"
+command irssi "xterm +sb -class chat -bg black -fg lightgrey -e irssi"
+command vim "xterm +sb -bg black -fg lightgrey -e vim"
 command xmobar "bash -c xmobar &"
-command xterm "xterm -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
+command xterm "xterm +sb -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
 
 #command mutt "gnome-terminal -- mutt"
 #command irssi "gnome-terminal -- irssi"
