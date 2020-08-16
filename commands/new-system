@@ -24,7 +24,10 @@ Applications:
 Manual configurations:
 
 Setup previously created GPG private/public key as SSH authentication key:
-	$ echo "enable-ssh-support" >> ~/.gnupg/gpg-agent.conf # create the file if needed
+	$ cat << EOF >> ~/.gnupg/gpg-agent.conf # create the file if needed
+        default-cache-ttl 7200
+        enable-ssh-support
+        EOF
 	$ cat << EOF >> ~/.bash_profile
 		export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 		gpgconf --launch gpg-agent
