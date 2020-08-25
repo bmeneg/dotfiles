@@ -23,7 +23,8 @@ Applications:
 -------------------------
 Manual configurations:
 
-Setup previously created GPG private/public key as SSH authentication key:
+- SSH key from GPG key:
+    Setup previously created GPG private/public key as SSH authentication key:
 	$ cat << EOF >> ~/.gnupg/gpg-agent.conf # create the file if needed
         default-cache-ttl 7200
         enable-ssh-support
@@ -49,3 +50,26 @@ Setup previously created GPG private/public key as SSH authentication key:
     Note: the default GnuPG pinentry program conflicts somehow with tmux, so
     you might see issues during the ssh key usage. Install pinentry-gtk or -qt
     to workaround it (or stop using tmux).
+
+- Setup MIT Kerberos on Windows:
+    Download the client for windows: https://web.mit.edu/kerberos/dist/
+    
+    Check if the cache env variable was created:
+        PS> $Env:KRB5CCNAME
+        C:\ProgramData\MIT\Kerberos5\krb5cache
+    otherwise create it yourself.
+
+    Add all krb5 configuration to C:\ProgramData\MIT\Kerberos5\krb5.ini.
+    Note: it can be copied from the Linux one (in /etc/krb5.conf), you only
+    need to change the file extension from .conf to .ini.
+
+    Now, to get Firefox working with SSO through GSSAPI:
+        Open about:config page
+        Set 'network.negotiate-auth.trusted-uris' to the desired domain
+        Set 'network.auth.use-sspi' to 'false' (forcing GSSAPI usage)
+    Some optional changes are:
+        Set 'network.negotiate-auth.delegation-uris' to the same domain
+        Set 'network.negotiate-auth.using-native-gsslib' to 'false'
+        Set 'network.negotiate-auth.gsslib' to 'C:\Program Files\MIT\Kerberos\bin\gssapi64.dll'
+        
+    And you are done.
