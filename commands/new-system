@@ -4,34 +4,38 @@ installation:
 
 Window manager:
     i3: 
-        i3 i3status i3-ipc i3lock xbacklight feh
+		i3 i3status i3-ipc i3lock xbacklight feh
 
 Development:
     general: 
-        libtool automake autoconf gcc-c++ vim
+		libtool automake autoconf gcc-c++ vim
     redhat: 
-        krb5-workstation openldap
-        (pip) python-bugzilla
-            bugzilla --login login
+		krb5-workstation openldap
+		(pip) python-bugzilla
+			bugzilla --login login
 
 Applications:
     general: 
-        weechat spotify-client#negativo17
-    mail: 
-        offlineimap msmtp notmuch mutt
+        irssi
+	mail: 
+		mbsync msmtp mutt
 
 -------------------------
 Manual configurations:
 
 - SSH key from GPG key:
-    Setup previously created GPG private/public key as SSH authentication key:
+	Setup previously created GPG private/public key as SSH authentication key:
 	$ cat << EOF >> ~/.gnupg/gpg-agent.conf # create the file if needed
-        default-cache-ttl 7200
-        enable-ssh-support
-        EOF
+		default-cache-ttl 7200
+		default-cache-ttl-ssh 7200
+		enable-ssh-support
+		EOF
 	$ cat << EOF >> ~/.bash_profile
-		export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-		gpgconf --launch gpg-agent
+		unset SSH_AGENT_PID
+		if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+			export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+			gpgconf --launch gpg-agent
+		fi
 		EOF
 	$ gpgconf --kill gpg-agent  # just in case it's already running
 	$ source ~/.bash_profile
@@ -47,29 +51,29 @@ Manual configurations:
 
 	In this way there is no need of ~/.ssh/id_rsa file to git/ssh/... authenticate.
 
-    Note: the default GnuPG pinentry program conflicts somehow with tmux, so
-    you might see issues during the ssh key usage. Install pinentry-gtk or -qt
-    to workaround it (or stop using tmux).
+	Note: the default GnuPG pinentry program conflicts somehow with tmux, so
+	you might see issues during the ssh key usage. Install pinentry-gtk or -qt
+	to workaround it (or stop using tmux).
 
 - Setup MIT Kerberos on Windows:
-    Download the client for windows: https://web.mit.edu/kerberos/dist/
+	Download the client for windows: https://web.mit.edu/kerberos/dist/
     
-    Check if the cache env variable was created:
-        PS> $Env:KRB5CCNAME
-        C:\ProgramData\MIT\Kerberos5\krb5cache
-    otherwise create it yourself.
+	Check if the cache env variable was created:
+		PS> $Env:KRB5CCNAME
+		C:\ProgramData\MIT\Kerberos5\krb5cache
+	otherwise create it yourself.
 
-    Add all krb5 configuration to C:\ProgramData\MIT\Kerberos5\krb5.ini.
-    Note: it can be copied from the Linux one (in /etc/krb5.conf), you only
-    need to change the file extension from .conf to .ini.
+	Add all krb5 configuration to C:\ProgramData\MIT\Kerberos5\krb5.ini.
+	Note: it can be copied from the Linux one (in /etc/krb5.conf), you only
+	need to change the file extension from .conf to .ini.
 
-    Now, to get Firefox working with SSO through GSSAPI:
-        Open about:config page
-        Set 'network.negotiate-auth.trusted-uris' to the desired domain
-        Set 'network.auth.use-sspi' to 'false' (forcing GSSAPI usage)
-    Some optional changes are:
-        Set 'network.negotiate-auth.delegation-uris' to the same domain
-        Set 'network.negotiate-auth.using-native-gsslib' to 'false'
-        Set 'network.negotiate-auth.gsslib' to 'C:\Program Files\MIT\Kerberos\bin\gssapi64.dll'
-        
-    And you are done.
+	Now, to get Firefox working with SSO through GSSAPI:
+		Open about:config page
+		Set 'network.negotiate-auth.trusted-uris' to the desired domain
+		Set 'network.auth.use-sspi' to 'false' (forcing GSSAPI usage)
+	Some optional changes are:
+		Set 'network.negotiate-auth.delegation-uris' to the same domain
+		Set 'network.negotiate-auth.using-native-gsslib' to 'false'
+		Set 'network.negotiate-auth.gsslib' to 'C:\Program Files\MIT\Kerberos\bin\gssapi64.dll'
+
+		And you are done.
