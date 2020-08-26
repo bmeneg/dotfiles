@@ -128,7 +128,7 @@ bind attach <return> view-mailcap
 
 ## Compose email
 set realname = "Bruno Meneguele"
-set editor = `echo \$EDITOR`
+set editor = vim
 set edit_headers
 set charset = UTF-8
 set sig_dashes
