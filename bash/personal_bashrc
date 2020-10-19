@@ -6,15 +6,15 @@
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # perl local::lib env vars
-#PATH="/home/bmeneg/perl5/bin${PATH:+:${PATH}}"; export PATH;
-#PERL5LIB="/home/bmeneg/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-#PERL_LOCAL_LIB_ROOT="/home/bmeneg/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-#PERL_MB_OPT="--install_base \"/home/bmeneg/perl5\""; export PERL_MB_OPT;
-#PERL_MM_OPT="INSTALL_BASE=/home/bmeneg/perl5"; export PERL_MM_OPT;
+PATH="/home/bmeneg/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/bmeneg/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/bmeneg/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/bmeneg/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/bmeneg/perl5"; export PERL_MM_OPT;
 
 # GOLANG environment
-#export GOPATH=$HOME/Documents/go
-#export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # default term color (for tmux/screen sessions)
 export TERM=xterm-256color
@@ -39,6 +39,7 @@ export EDITOR="vim"
 alias la="ls -a"
 alias ll="ls -lah"
 alias emacs="emacs -nw"
+alias vim="nvim"
 alias xsession-2m="bash ~/.xsession -m 2:hdmi -k us-intl"
 alias xsession-1m="bash ~/.xsession -m 1:laptop -k br-thinkpad"
 
