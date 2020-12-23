@@ -113,3 +113,42 @@ Channel brdeoliv-redhat-draft
 Channel brdeoliv-redhat-trash
 Channel brdeoliv-redhat-lists
 #Channel brdeoliv-redhat-inbox
+
+# bmeneg@heredoc.io account configuration
+IMAPAccount bmeneg-heredoc
+CertificateFile /etc/pki/tls/certs/ca-bundle.crt
+SSLType IMAPS
+AuthMechs PLAIN
+PipelineDepth 25
+Host mail.heredoc.io
+User bmeneg@heredoc.io
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-heredoc/bmeneg-heredoc-imap.gpg"
+
+IMAPStore bmeneg-heredoc-remote
+Account bmeneg-heredoc
+
+MaildirStore bmeneg-heredoc-local
+Path ~/Mail/bmeneg-heredoc/
+Inbox ~/Mail/bmeneg-heredoc/INBOX
+Subfolders Verbatim
+
+#Channel bmeneg-heredoc-inbox
+#Master :bmeneg-heredoc-remote:"INBOX"
+#Slave :bmeneg-heredoc-local:inbox
+
+Channel bmeneg-heredoc-sent
+Master :bmeneg-heredoc-remote:"Sent"
+Slave :bmeneg-heredoc-local:sent
+
+Channel bmeneg-heredoc-drafts
+Master :bmeneg-heredoc-remote:"Drafts"
+Slave :bmeneg-heredoc-local:drafts
+
+Channel bmeneg-heredoc-trash
+Master :bmeneg-heredoc-remote:"Trash"
+Slave :bmeneg-heredoc-local:trash
+
+Group group-bmeneg-heredoc
+Channel bmeneg-heredoc-sent
+Channel bmeneg-heredoc-drafts
+Channel bmeneg-heredoc-trash

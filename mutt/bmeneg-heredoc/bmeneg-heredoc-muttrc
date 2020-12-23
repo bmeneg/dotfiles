@@ -1,0 +1,12 @@
+set folder = ~/Mail/bmeneg-heredoc/
+set spoolfile = +inbox
+set postponed = +drafts
+#set mbox = '+bmeneg-heredoc/archive'
+unset record
+
+mailboxes = $spoolfile $postponed \
+            +sent
+
+set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneg-heredoc"
+set from = "bmeneg@heredoc.io"
+set signature = "/home/bmeneg/.mutt/bmeneg-heredoc/bmeneg-heredoc-signature.txt"
