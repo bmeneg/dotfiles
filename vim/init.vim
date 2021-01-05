@@ -7,6 +7,11 @@ Plug 'mhinz/vim-signify'
 Plug 'vivien/vim-linux-coding-style'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'joe-skb7/cscope-maps'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'fatih/vim-go'
+Plug 'vim-perl/vim-perl'
 call plug#end()
 
 filetype plugin on
@@ -25,10 +30,11 @@ set showmatch
 set ignorecase
 set nocscopeverbose
 set undofile
-set undodir=.config/nvim/
+set undodir=.nvim/
 
 let g:EditorConfig_max_line_indicator = "none"
-
+let g:airline_theme = "base16_gruvbox_dark_hard"
+let perl_sub_signatures = 1
 
 "------------------------------------------------
 " Coc START
