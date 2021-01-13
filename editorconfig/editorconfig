@@ -10,34 +10,34 @@ charset = utf-8
 trim_trailing_whitespaces = true
 max_line_length = 79
 wrap_width = 80
-indent_style = space
+indent_style = tab
 indent_size = 4
 tab_width = 4
 
 [*.{c,h,cpp,hpp}]
-indent_style = tab
 tab_width = 8
 indent_size = 8
 
 [{Makefile*,*.spec}]
-indent_style = tab
 tab_width = 8
 indent_size = 8
 max_line_length = 120
 wrap_width = 120
 
 [*.sh]
-indent_style = tab
 max_line_length = 120
 wrap_width = 120
 
 [*.md]
+indent_style = space
 trim_trailing_whitespaces = false
 
 [*.rst]
+indent_style = space
 trim_trailing_whitespaces = false
 max_line_length = 120
 wrap_width = 120
 
 [*.{lisp,cl}]
+indent_style = space
 indent_size = 2
