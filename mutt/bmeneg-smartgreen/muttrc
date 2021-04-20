@@ -1,0 +1,11 @@
+set folder = ~/Mail/bmeneg-smartgreen/
+set spoolfile = +inbox
+set postponed = +drafts
+#set mbox = '+bmeneg-heredoc/archive'
+set record = $spoolfile
+
+mailboxes = $spoolfile $postponed
+
+set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneg-smartgreen"
+set from = "bruno.meneguele@smartgreen.net"
+set signature = "/home/bmeneg/.mutt/bmeneg-smartgreen/bmeneg-smartgreen-signature.txt"
