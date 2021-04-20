@@ -2,7 +2,7 @@ set folder = ~/Mail/bmeneg-heredoc/
 set spoolfile = +inbox
 set postponed = +drafts
 #set mbox = '+bmeneg-heredoc/archive'
-unset record
+set record = +sent
 
 mailboxes = $spoolfile $postponed \
             +sent

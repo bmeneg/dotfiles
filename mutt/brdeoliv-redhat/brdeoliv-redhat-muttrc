@@ -9,6 +9,7 @@ mailboxes = $spoolfile $postponed $record \
             +kernel-internal \
             +rh-bugzilla \
             +rh-build \
+            +kwftest \
             +quatro-list \
             +cinco-list \
             +patch-tools \

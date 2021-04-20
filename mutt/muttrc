@@ -21,6 +21,7 @@ folder-hook 'brdeoliv-redhat' 'source ~/.mutt/brdeoliv-redhat/brdeoliv-redhat-mu
 macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/bmeneguele-gmail/bmeneguele-gmail-muttrc<enter><change-folder>!<enter>'
 macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/brdeoliv-redhat/brdeoliv-redhat-muttrc<enter><change-folder>!<enter>'
 macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.mutt/bmeneg-heredoc/bmeneg-heredoc-muttrc<enter><change-folder>!<enter>'
+macro index,pager <f5> '<sync-mailbox><enter-command>source ~/.mutt/bmeneg-smartgreen/bmeneg-smartgreen-muttrc<enter><change-folder>!<enter>'
 macro index,pager ç '<sync-mailbox><enter-command>source ~/.mutt/brdeoliv-redhat/brdeoliv-redhat-muttrc<enter><change-folder>!<enter>'
 ########
 
