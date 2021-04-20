@@ -152,3 +152,28 @@ Group group-bmeneg-heredoc
 Channel bmeneg-heredoc-sent
 Channel bmeneg-heredoc-drafts
 Channel bmeneg-heredoc-trash
+
+# bruno.meneguele@smartgreen.net account configuration
+IMAPAccount bmeneg-smartgreen 
+CertificateFile /etc/pki/tls/certs/ca-bundle.crt
+SSLType IMAPS
+AuthMechs PLAIN
+PipelineDepth 25
+Host server4.i7host.com.br
+User bruno.meneguele@smartgreen.net
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-smartgreen/imap.gpg"
+
+IMAPStore bmeneg-smartgreen-remote
+Account bmeneg-smartgreen
+
+MaildirStore bmeneg-smartgreen-local
+Path ~/Mail/bmeneg-smartgreen/
+Inbox ~/Mail/bmeneg-smartgreen/INBOX
+Subfolders Verbatim
+
+Channel bmeneg-smartgreen-inbox
+Far :bmeneg-smartgreen-remote:"INBOX"
+Near :bmeneg-smartgreen-local:inbox
+
+Group group-bmeneg-smartgreen
+Channel bmeneg-smartgreen-inbox
