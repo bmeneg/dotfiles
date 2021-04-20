@@ -6,11 +6,12 @@
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # perl local::lib env vars
-PATH="/home/bmeneg/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/bmeneg/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/bmeneg/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/bmeneg/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/bmeneg/perl5"; export PERL_MM_OPT;
+PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+. ~/perl5/perlbrew/etc/bashrc
 
 # GOLANG environment
 export GOPATH=$HOME/go
@@ -23,25 +24,28 @@ export TERM=xterm-256color
 #export EDITOR="emacs -nw"
 export EDITOR="vim"
 
+# rust cargo bin
+PATH="$HOME/.cargo/bin:$PATH"; export PATH;
+
 # x-tools are tools to handle cross-compiling such as arm gcc and others that
 # were compile or by hand or through some other tool like crosstool-ng
 # And .cabal/bin is the place where xmobar is placed once it's installed through
 # cabal (pkg manager for haskell projects)
-#export PATH="$PATH:/home/bmeneg/bin/x-tools/arm-cortexa7-linux-musleabihf/bin:/home/bmeneg/.cabal/bin"
+#export PATH="$PATH:$HOME/bin/x-tools/arm-cortexa7-linux-musleabihf/bin:/home/bmeneg/.cabal/bin"
 
 # add roswell (common lisp system manager) binaries to path
-#export PATH="$PATH:/home/bmeneg/.roswell/bin"
+#export PATH="$PATH:$HOME/.roswell/bin"
 
 # change defaults for xterm fonts
-#xrdb -merge ~/.Xdefaults
+#xrdb -merge $HOME/.Xdefaults
 
 # general aliases
 alias la="ls -a"
 alias ll="ls -lah"
 alias emacs="emacs -nw"
 alias vim="nvim"
-alias xsession-2m="bash ~/.xsession -m 2:hdmi -k us-intl"
-alias xsession-1m="bash ~/.xsession -m 1:laptop -k br-thinkpad"
+#alias xsession-2m="bash $HOME/.xsession -m 2:hdmi -k us-intl"
+#alias xsession-1m="bash $HOME/.xsession -m 1:laptop -k br-thinkpad"
 
 # get git current branch name and apply it to PS1 var for every time a terminal
 # is launched
@@ -59,3 +63,7 @@ END_COLOR="\[\033[0m\]"
 export PS1="[\A] <\u> \w$RED \$(eval $parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
 
 #eval `dircolors ~/.dircolors`
+
+if [ -f "$HOME/.lab-completion.sh" ]; then
+	. $HOME/.lab-completion.sh
+fi
