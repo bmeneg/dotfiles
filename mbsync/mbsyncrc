@@ -1,5 +1,5 @@
 # Global configurations
-Create Slave
+Create Near
 Sync All
 SyncState *
 Expunge Both
@@ -23,36 +23,36 @@ Inbox ~/Mail/bmeneguele-gmail/INBOX
 Subfolders Verbatim
 
 Channel bmeneguele-gmail-inbox
-Master :bmeneguele-gmail-remote:"INBOX"
-Slave :bmeneguele-gmail-local:inbox
+Far :bmeneguele-gmail-remote:"INBOX"
+Near :bmeneguele-gmail-local:inbox
 
 Channel bmeneguele-gmail-sent
-Master :bmeneguele-gmail-remote:"[Gmail]/E-mails enviados"
-Slave :bmeneguele-gmail-local:sent
+Far :bmeneguele-gmail-remote:"[Gmail]/E-mails enviados"
+Near :bmeneguele-gmail-local:sent
 
 Channel bmeneguele-gmail-drafts
-Master :bmeneguele-gmail-remote:"[Gmail]/Rascunhos"
-Slave :bmeneguele-gmail-local:drafts
+Far :bmeneguele-gmail-remote:"[Gmail]/Rascunhos"
+Near :bmeneguele-gmail-local:drafts
 
 Channel bmeneguele-gmail-trash
-Master :bmeneguele-gmail-remote:"[Gmail]/Lixeira"
-Slave :bmeneguele-gmail-local:trash
+Far :bmeneguele-gmail-remote:"[Gmail]/Lixeira"
+Near :bmeneguele-gmail-local:trash
 
 #Channel bmeneguele-gmail-archive
-#Master :bmeneguele-gmail-remote:"[Gmail]/Todos os e-mails"
-#Slave :bmeneguele-gmail-local:archive
+#Far :bmeneguele-gmail-remote:"[Gmail]/Todos os e-mails"
+#Near :bmeneguele-gmail-local:archive
 
 Channel bmeneguele-gmail-kernelnewbies
-Master :bmeneguele-gmail-remote:"linux-kernel/kernelnewbies"
-Slave :bmeneguele-gmail-local:linux-kernel.kernelnewbies
+Far :bmeneguele-gmail-remote:"linux-kernel/kernelnewbies"
+Near :bmeneguele-gmail-local:linux-kernel.kernelnewbies
 
 Channel bmeneguele-gmail-lkcamp
-Master :bmeneguele-gmail-remote:"linux-kernel/lkcamp"
-Slave :bmeneguele-gmail-local:linux-kernel.lkcamp
+Far :bmeneguele-gmail-remote:"linux-kernel/lkcamp"
+Near :bmeneguele-gmail-local:linux-kernel.lkcamp
 
 Channel bmeneguele-gmail-eudyptula
-Master :bmeneguele-gmail-remote:"linux-kernel/eudyptula"
-Slave :bmeneguele-gmail-local:linux-kernel.eudyptula
+Far :bmeneguele-gmail-remote:"linux-kernel/eudyptula"
+Near :bmeneguele-gmail-local:linux-kernel.eudyptula
 
 Group group-bmeneguele-gmail
 Channel bmeneguele-gmail-inbox
@@ -83,29 +83,29 @@ Inbox ~/Mail/brdeoliv-redhat/INBOX
 Subfolders Verbatim
 
 # Channel brdeoliv-redhat-inbox
-# Master :brdeoliv-redhat-remote:"INBOX"
-# Slave :brdeoliv-redhat-local:inbox
+# Far :brdeoliv-redhat-remote:"INBOX"
+# Near :brdeoliv-redhat-local:inbox
 
 Channel brdeoliv-redhat-lists
-Master :brdeoliv-redhat-remote:
-Slave :brdeoliv-redhat-local:
+Far :brdeoliv-redhat-remote:
+Near :brdeoliv-redhat-local:
 Patterns * ![Gmail]/* !draft !sent !trash
 
 Channel brdeoliv-redhat-sent
-Master :brdeoliv-redhat-remote:"[Gmail]/Sent Mail"
-Slave :brdeoliv-redhat-local:sent
+Far :brdeoliv-redhat-remote:"[Gmail]/Sent Mail"
+Near :brdeoliv-redhat-local:sent
 
 Channel brdeoliv-redhat-draft
-Master :brdeoliv-redhat-remote:"[Gmail]/Drafts"
-Slave :brdeoliv-redhat-local:draft
+Far :brdeoliv-redhat-remote:"[Gmail]/Drafts"
+Near :brdeoliv-redhat-local:draft
 
 Channel brdeoliv-redhat-trash
-Master :brdeoliv-redhat-remote:"[Gmail]/Trash"
-Slave :brdeoliv-redhat-local:trash
+Far :brdeoliv-redhat-remote:"[Gmail]/Trash"
+Near :brdeoliv-redhat-local:trash
 
 #Channel brdeoliv-redhat-archive
-#Master :brdeoliv-redhat-remote:"[Gmail]/All Mail"
-#Slave :brdeoliv-redhat-local:archive
+#Far :brdeoliv-redhat-remote:"[Gmail]/All Mail"
+#Near :brdeoliv-redhat-local:archive
 
 Group group-brdeoliv-redhat
 Channel brdeoliv-redhat-sent 
@@ -133,20 +133,20 @@ Inbox ~/Mail/bmeneg-heredoc/INBOX
 Subfolders Verbatim
 
 #Channel bmeneg-heredoc-inbox
-#Master :bmeneg-heredoc-remote:"INBOX"
-#Slave :bmeneg-heredoc-local:inbox
+#Far :bmeneg-heredoc-remote:"INBOX"
+#Near :bmeneg-heredoc-local:inbox
 
 Channel bmeneg-heredoc-sent
-Master :bmeneg-heredoc-remote:"Sent"
-Slave :bmeneg-heredoc-local:sent
+Far :bmeneg-heredoc-remote:"Sent"
+Near :bmeneg-heredoc-local:sent
 
 Channel bmeneg-heredoc-drafts
-Master :bmeneg-heredoc-remote:"Drafts"
-Slave :bmeneg-heredoc-local:drafts
+Far :bmeneg-heredoc-remote:"Drafts"
+Near :bmeneg-heredoc-local:drafts
 
 Channel bmeneg-heredoc-trash
-Master :bmeneg-heredoc-remote:"Trash"
-Slave :bmeneg-heredoc-local:trash
+Far :bmeneg-heredoc-remote:"Trash"
+Near :bmeneg-heredoc-local:trash
 
 Group group-bmeneg-heredoc
 Channel bmeneg-heredoc-sent
