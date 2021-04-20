@@ -8,4 +8,4 @@ mailboxes = $spoolfile $postponed
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneg-smartgreen"
 set from = "bruno.meneguele@smartgreen.net"
-set signature = "/home/bmeneg/.mutt/bmeneg-smartgreen/bmeneg-smartgreen-signature.txt"
+set signature = "/home/bmeneg/.mutt/bmeneg-smartgreen/signature.txt"

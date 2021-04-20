@@ -13,4 +13,4 @@ mailboxes = $spoolfile $postponed \
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneguele-gmail"
 set from = "bmeneguele@gmail.com" 
-set signature = "/home/bmeneg/.mutt/bmeneguele-gmail/bmeneguele-gmail-signature.txt"
+set signature = "/home/bmeneg/.mutt/bmeneguele-gmail/signature.txt"

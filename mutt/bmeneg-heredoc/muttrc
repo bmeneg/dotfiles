@@ -9,4 +9,4 @@ mailboxes = $spoolfile $postponed \
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneg-heredoc"
 set from = "bmeneg@heredoc.io"
-set signature = "/home/bmeneg/.mutt/bmeneg-heredoc/bmeneg-heredoc-signature.txt"
+set signature = "/home/bmeneg/.mutt/bmeneg-heredoc/signature.txt"
