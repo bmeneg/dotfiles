@@ -12,7 +12,7 @@ AuthMechs PLAIN
 PipelineDepth 25
 Host imap.gmail.com
 User bmeneguele@gmail.com
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneguele-gmail/bmeneguele-gmail-imap.gpg"
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneguele-gmail/imap.gpg"
 
 IMAPStore bmeneguele-gmail-remote
 Account bmeneguele-gmail
@@ -72,7 +72,7 @@ AuthMechs PLAIN
 PipelineDepth 25
 Host imap.gmail.com
 User brdeoliv@redhat.com
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/brdeoliv-redhat/brdeoliv-redhat-imap.gpg"
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/brdeoliv-redhat/imap.gpg"
 
 IMAPStore brdeoliv-redhat-remote
 Account brdeoliv-redhat
@@ -122,7 +122,7 @@ AuthMechs PLAIN
 PipelineDepth 25
 Host mail.heredoc.io
 User bmeneg@heredoc.io
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-heredoc/bmeneg-heredoc-imap.gpg"
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-heredoc/imap.gpg"
 
 IMAPStore bmeneg-heredoc-remote
 Account bmeneg-heredoc
