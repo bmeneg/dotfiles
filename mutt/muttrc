@@ -11,7 +11,7 @@ set tmpdir = '~/.mutt/tmp'
 
 #### Multiple accounts handler ####
 ## Default account
-source ~/.mutt/bmeneguele-gmail/bmeneguele-gmail-muttrc
+source ~/.mutt/bmeneguele-gmail/muttrc
 
 ## Folder hooks
 folder-hook 'bmeneguele-gmail' 'source ~/.mutt/bmeneguele-gmail/muttrc'
