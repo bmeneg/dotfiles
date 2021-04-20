@@ -2,6 +2,11 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'vivien/vim-linux-coding-style'
@@ -12,6 +17,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'fatih/vim-go'
 Plug 'vim-perl/vim-perl'
+Plug 'lervag/vimtex'
+Plug 'python-mode/python-mode'
 call plug#end()
 
 filetype plugin on
@@ -36,6 +43,21 @@ let g:EditorConfig_max_line_indicator = "none"
 let g:airline_theme = "base16_gruvbox_dark_hard"
 let perl_sub_signatures = 1
 
+set background=dark
+colorscheme PaperColor
+
+" NO COLOR VIM
+" -------------------------------------------------------------------------
+"syntax off
+"hi LineNr term=none
+"set nohlsearch
+"
+"let g:EditorConfig_max_line_indicator = "none"
+"
+"hi ColorColumn ctermbg=0 guibg=black
+"hi ColorColumn ctermbg=grey guibg=white
+"hi ColorColumn ctermbg=254 guibg=#E2D3A9
+"
 "------------------------------------------------
 " Coc START
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
@@ -140,3 +162,6 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+
+map <F2> :NERDTreeToggle<CR>
+map <F3> :TagbarToggle<CR>
