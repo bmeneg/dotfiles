@@ -82,9 +82,9 @@ Path ~/Mail/brdeoliv-redhat/
 Inbox ~/Mail/brdeoliv-redhat/INBOX
 Subfolders Verbatim
 
-# Channel brdeoliv-redhat-inbox
-# Far :brdeoliv-redhat-remote:"INBOX"
-# Near :brdeoliv-redhat-local:inbox
+ Channel brdeoliv-redhat-inbox
+ Far :brdeoliv-redhat-remote:"INBOX"
+ Near :brdeoliv-redhat-local:inbox
 
 Channel brdeoliv-redhat-lists
 Far :brdeoliv-redhat-remote:
@@ -112,7 +112,7 @@ Channel brdeoliv-redhat-sent
 Channel brdeoliv-redhat-draft 
 Channel brdeoliv-redhat-trash
 Channel brdeoliv-redhat-lists
-#Channel brdeoliv-redhat-inbox
+Channel brdeoliv-redhat-inbox
 
 # bmeneg@heredoc.io account configuration
 IMAPAccount bmeneg-heredoc
@@ -132,9 +132,9 @@ Path ~/Mail/bmeneg-heredoc/
 Inbox ~/Mail/bmeneg-heredoc/INBOX
 Subfolders Verbatim
 
-#Channel bmeneg-heredoc-inbox
-#Far :bmeneg-heredoc-remote:"INBOX"
-#Near :bmeneg-heredoc-local:inbox
+Channel bmeneg-heredoc-inbox
+Far :bmeneg-heredoc-remote:"INBOX"
+Near :bmeneg-heredoc-local:inbox
 
 Channel bmeneg-heredoc-sent
 Far :bmeneg-heredoc-remote:"Sent"
@@ -149,6 +149,7 @@ Far :bmeneg-heredoc-remote:"Trash"
 Near :bmeneg-heredoc-local:trash
 
 Group group-bmeneg-heredoc
+Channel bmeneg-heredoc-inbox
 Channel bmeneg-heredoc-sent
 Channel bmeneg-heredoc-drafts
 Channel bmeneg-heredoc-trash
@@ -159,7 +160,7 @@ CertificateFile /etc/pki/tls/certs/ca-bundle.crt
 SSLType IMAPS
 AuthMechs PLAIN
 PipelineDepth 25
-Host server4.i7host.com.br
+Host mail.smartgreen.net
 User bruno.meneguele@smartgreen.net
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-smartgreen/imap.gpg"
 
@@ -175,5 +176,20 @@ Channel bmeneg-smartgreen-inbox
 Far :bmeneg-smartgreen-remote:"INBOX"
 Near :bmeneg-smartgreen-local:inbox
 
+Channel bmeneg-smartgreen-sent
+Far :bmeneg-smartgreen-remote:"Sent"
+Near :bmeneg-smartgreen-local:sent
+
+Channel bmeneg-smartgreen-drafts
+Far :bmeneg-smartgreen-remote:"Drafts"
+Near :bmeneg-smartgreen-local:drafts
+
+Channel bmeneg-smartgreen-trash
+Far :bmeneg-smartgreen-remote:"Trash"
+Near :bmeneg-smartgreen-local:trash
+
 Group group-bmeneg-smartgreen
 Channel bmeneg-smartgreen-inbox
+Channel bmeneg-smartgreen-sent
+Channel bmeneg-smartgreen-drafts
+Channel bmeneg-smartgreen-trash
