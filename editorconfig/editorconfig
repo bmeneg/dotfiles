@@ -8,8 +8,8 @@ end_of_line = lf
 insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespaces = true
-max_line_length = 79
-wrap_width = 80
+max_line_length = 76
+wrap_width = 76
 indent_style = tab
 indent_size = 4
 tab_width = 4
@@ -21,23 +21,39 @@ indent_size = 8
 [{Makefile*,*.spec}]
 tab_width = 8
 indent_size = 8
-max_line_length = 120
-wrap_width = 120
+max_line_length = 118
+wrap_width = 118
 
 [*.sh]
-max_line_length = 120
-wrap_width = 120
+max_line_length = 118
+wrap_width = 118
+#indent_style = space
+#indent_size = 2
 
 [*.md]
 indent_style = space
+max_line_length = 118
 trim_trailing_whitespaces = false
+
+#[*.ts]
+#indent_style = space
 
 [*.rst]
 indent_style = space
+max_line_length = 78
 trim_trailing_whitespaces = false
-max_line_length = 120
-wrap_width = 120
 
 [*.{lisp,cl}]
+indent_size = 2
+
+[*.py]
+indent_style = space
+
+[*.{html.*,yml,yaml,tml,toml,dart,ts,js}]
 indent_style = space
 indent_size = 2
+max_line_length = 118
+
+[*.go]
+max_line_length = 80
+wrap_width = 80
