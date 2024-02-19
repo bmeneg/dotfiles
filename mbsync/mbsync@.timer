@@ -1,5 +1,5 @@
 [Unit]
-Description=mbsync timer [all]
+Description=mbsync timer for %I
 ConditionPathExists=%h/.mbsyncrc
 
 [Timer]

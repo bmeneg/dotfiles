@@ -4,18 +4,13 @@ Sync All
 SyncState *
 Expunge Both
 
-# bmeneguele@gmail.com account configuration
-IMAPAccount bmeneguele-gmail
-CertificateFile /etc/pki/tls/certs/ca-bundle.crt
+IMAPStore bmeneguele-gmail-remote
 SSLType IMAPS
 AuthMechs PLAIN
-PipelineDepth 25
+PipelineDepth 50
 Host imap.gmail.com
 User bmeneguele@gmail.com
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneguele-gmail/imap.gpg"
-
-IMAPStore bmeneguele-gmail-remote
-Account bmeneguele-gmail
 
 MaildirStore bmeneguele-gmail-local
 Path ~/Mail/bmeneguele-gmail/
@@ -38,10 +33,6 @@ Channel bmeneguele-gmail-trash
 Far :bmeneguele-gmail-remote:"[Gmail]/Lixeira"
 Near :bmeneguele-gmail-local:trash
 
-#Channel bmeneguele-gmail-archive
-#Far :bmeneguele-gmail-remote:"[Gmail]/Todos os e-mails"
-#Near :bmeneguele-gmail-local:archive
-
 Channel bmeneguele-gmail-kernelnewbies
 Far :bmeneguele-gmail-remote:"linux-kernel/kernelnewbies"
 Near :bmeneguele-gmail-local:linux-kernel.kernelnewbies
@@ -62,10 +53,8 @@ Channel bmeneguele-gmail-trash
 Channel bmeneguele-gmail-eudyptula 
 Channel bmeneguele-gmail-lkcamp 
 Channel bmeneguele-gmail-kernelnewbies
-#Channel bmeneguele-gmail-archive
 
-# brdeoliv@redhat.com account configuration
-IMAPAccount brdeoliv-redhat
+IMAPStore brdeoliv-redhat-remote
 CertificateFile /etc/pki/tls/certs/ca-bundle.crt
 SSLType IMAPS
 AuthMechs PLAIN
@@ -74,22 +63,19 @@ Host imap.gmail.com
 User brdeoliv@redhat.com
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/brdeoliv-redhat/imap.gpg"
 
-IMAPStore brdeoliv-redhat-remote
-Account brdeoliv-redhat
-
 MaildirStore brdeoliv-redhat-local
 Path ~/Mail/brdeoliv-redhat/
 Inbox ~/Mail/brdeoliv-redhat/INBOX
 Subfolders Verbatim
 
- Channel brdeoliv-redhat-inbox
- Far :brdeoliv-redhat-remote:"INBOX"
- Near :brdeoliv-redhat-local:inbox
+Channel brdeoliv-redhat-inbox
+Far :brdeoliv-redhat-remote:"INBOX"
+Near :brdeoliv-redhat-local:INBOX
 
 Channel brdeoliv-redhat-lists
 Far :brdeoliv-redhat-remote:
 Near :brdeoliv-redhat-local:
-Patterns * ![Gmail]/* !draft !sent !trash
+Patterns announce-list brazil-list kernel-info kernel-general kernel-internal linux-integrity linux-ltp linux-security-modules linux-sgx rh-bugzilla rh-build
 
 Channel brdeoliv-redhat-sent
 Far :brdeoliv-redhat-remote:"[Gmail]/Sent Mail"
@@ -103,29 +89,20 @@ Channel brdeoliv-redhat-trash
 Far :brdeoliv-redhat-remote:"[Gmail]/Trash"
 Near :brdeoliv-redhat-local:trash
 
-#Channel brdeoliv-redhat-archive
-#Far :brdeoliv-redhat-remote:"[Gmail]/All Mail"
-#Near :brdeoliv-redhat-local:archive
-
 Group group-brdeoliv-redhat
+Channel brdeoliv-redhat-inbox
 Channel brdeoliv-redhat-sent 
 Channel brdeoliv-redhat-draft 
 Channel brdeoliv-redhat-trash
 Channel brdeoliv-redhat-lists
-Channel brdeoliv-redhat-inbox
 
-# bmeneg@heredoc.io account configuration
-IMAPAccount bmeneg-heredoc
-CertificateFile /etc/pki/tls/certs/ca-bundle.crt
+IMAPStore bmeneg-heredoc-remote
 SSLType IMAPS
 AuthMechs PLAIN
 PipelineDepth 25
 Host mail.heredoc.io
 User bmeneg@heredoc.io
 PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-heredoc/imap.gpg"
-
-IMAPStore bmeneg-heredoc-remote
-Account bmeneg-heredoc
 
 MaildirStore bmeneg-heredoc-local
 Path ~/Mail/bmeneg-heredoc/
@@ -153,43 +130,3 @@ Channel bmeneg-heredoc-inbox
 Channel bmeneg-heredoc-sent
 Channel bmeneg-heredoc-drafts
 Channel bmeneg-heredoc-trash
-
-# bruno.meneguele@smartgreen.net account configuration
-IMAPAccount bmeneg-smartgreen 
-CertificateFile /etc/pki/tls/certs/ca-bundle.crt
-SSLType IMAPS
-AuthMechs PLAIN
-PipelineDepth 25
-Host mail.smartgreen.net
-User bruno.meneguele@smartgreen.net
-PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-smartgreen/imap.gpg"
-
-IMAPStore bmeneg-smartgreen-remote
-Account bmeneg-smartgreen
-
-MaildirStore bmeneg-smartgreen-local
-Path ~/Mail/bmeneg-smartgreen/
-Inbox ~/Mail/bmeneg-smartgreen/INBOX
-Subfolders Verbatim
-
-Channel bmeneg-smartgreen-inbox
-Far :bmeneg-smartgreen-remote:"INBOX"
-Near :bmeneg-smartgreen-local:inbox
-
-Channel bmeneg-smartgreen-sent
-Far :bmeneg-smartgreen-remote:"Sent"
-Near :bmeneg-smartgreen-local:sent
-
-Channel bmeneg-smartgreen-drafts
-Far :bmeneg-smartgreen-remote:"Drafts"
-Near :bmeneg-smartgreen-local:drafts
-
-Channel bmeneg-smartgreen-trash
-Far :bmeneg-smartgreen-remote:"Trash"
-Near :bmeneg-smartgreen-local:trash
-
-Group group-bmeneg-smartgreen
-Channel bmeneg-smartgreen-inbox
-Channel bmeneg-smartgreen-sent
-Channel bmeneg-smartgreen-drafts
-Channel bmeneg-smartgreen-trash
