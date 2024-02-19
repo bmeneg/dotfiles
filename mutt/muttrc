@@ -15,15 +15,17 @@ source ~/.mutt/bmeneguele-gmail/muttrc
 
 ## Folder hooks
 folder-hook 'bmeneguele-gmail' 'source ~/.mutt/bmeneguele-gmail/muttrc'
+#folder-hook 'bmeneg-redfoot' 'source ~/.mutt/bmeneguele-redfoot/muttrc'
+folder-hook 'bmeneg-heredoc' 'source ~/.mutt/bmeneg-heredoc/muttrc'
 folder-hook 'brdeoliv-redhat' 'source ~/.mutt/brdeoliv-redhat/muttrc'
-folder-hook 'bmeneg-heredoc' 'source ~/.mutt/brdeoliv-heredoc/muttrc'
-folder-hook 'bmeneg-smartgreen' 'source ~/.mutt/bmeneg-smartgreen/muttrc'
+#folder-hook 'bmeneg-smartgreen' 'source ~/.mutt/bmeneg-smartgreen/muttrc'
 
 ## Switch accounts
 macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/bmeneguele-gmail/muttrc<enter><change-folder>!<enter>'
 macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/brdeoliv-redhat/muttrc<enter><change-folder>!<enter>'
+#macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/bmeneguele-redfoot/muttrc<enter><change-folder>!<enter>'
 macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.mutt/bmeneg-heredoc/muttrc<enter><change-folder>!<enter>'
-macro index,pager <f5> '<sync-mailbox><enter-command>source ~/.mutt/bmeneg-smartgreen/muttrc<enter><change-folder>!<enter>'
+#macro index,pager <f5> '<sync-mailbox><enter-command>source ~/.mutt/bmeneg-smartgreen/muttrc<enter><change-folder>!<enter>'
 ########
 
 #### SMTP configuration ####
@@ -158,11 +160,11 @@ macro index \Ch "<enter-command>unset wait_key<enter><enter-command>set pipe_dec
 
 #### GPG - messages signatures
 source ~/.mutt/muttgpgrc
-my_hdr X-PGP-Key: http://keys.gnupg.net/pks/lookup?op=get&search=0x3823031E4660608D
+my_hdr X-PGP-Key: https://keys.openpgp.org/vks/v1/by-fingerprint/D27C21A928EACD4D3607EFEC3823031E4660608D
 set pgp_use_gpg_agent = yes
 set pgp_sign_as = 0x4660608D
 set pgp_timeout = 3600
 set pgp_autosign = yes
 set pgp_replyencrypt = yes
-set pgp_good_sign = "^gpg: Good signature from"
+set pgp_good_sign = "^gpg: Good signature from "
 ########

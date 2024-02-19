@@ -1,28 +1,24 @@
 set folder = ~/Mail/brdeoliv-redhat/
 set spoolfile = +INBOX
 set postponed = '+drafts'
-#set mbox = '+brdeoliv-redhat/archive'
 set record = '+sent'
 
 mailboxes = $spoolfile $postponed $record \
+            +kernel-info \
             +kernel-general \
             +kernel-internal \
             +rh-bugzilla \
             +rh-build \
             +kwftest \
-            +quatro-list \
-            +cinco-list \
             +patch-tools \
             +rhel8-devel \
             +rhel-product \
             +announce-list \
             +brazil-list \
-            +memo-list \
             +linux-ltp \
             +linux-integrity \
             +linux-sgx \
             +linux-security-module
-#            +tmp/search
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a brdeoliv-redhat"
 set from = "bmeneg@redhat.com"

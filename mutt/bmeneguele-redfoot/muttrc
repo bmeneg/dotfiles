@@ -1,0 +1,12 @@
+set folder = ~/Mail/bmeneguele-redfoot/
+set spoolfile = +inbox
+set postponed = +drafts
+#set mbox = '+bmeneg-heredoc/archive'
+set record = +sent
+
+mailboxes = $spoolfile $postponed \
+            +sent
+
+set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneguele-redfoot"
+set from = "b.meneguele@redfootagro.com"
+set signature = "/home/bmeneg/.mutt/bmeneguele-redfoot/signature.txt"
