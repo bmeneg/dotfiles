@@ -16,9 +16,9 @@ Development:
 
 Applications:
     general: 
-        irssi
+	irssi
 	mail: 
-		mbsync msmtp mutt
+		isync(mbsync) msmtp mutt
 
 -------------------------
 Manual configurations:
@@ -26,8 +26,6 @@ Manual configurations:
 - SSH key from GPG key:
 	Setup previously created GPG private/public key as SSH authentication key:
 	$ cat << EOF >> ~/.gnupg/gpg-agent.conf # create the file if needed
-		default-cache-ttl 7200
-		default-cache-ttl-ssh 7200
 		enable-ssh-support
 		EOF
 	$ cat << EOF >> ~/.bash_profile
@@ -54,6 +52,39 @@ Manual configurations:
 	Note: the default GnuPG pinentry program conflicts somehow with tmux, so
 	you might see issues during the ssh key usage. Install pinentry-gtk or -qt
 	to workaround it (or stop using tmux).
+
+- Setup Git for signing commits with the PGP key
+	It's possible to use both SSH and PGP keys for signing Git
+	commits, however, considering we're already using a PGP key to
+	authenticate through SSH (previous tip) we're going to setup
+	Git commit signing with PGP as well.
+
+	$ git config --global gpg.program gpg2
+
+	Now get the PGP key long ID
+
+	$ gpg2 -K --keyid-format LONG
+	/home/bmeneg/.gnupg/pubring.kbx
+	-------------------------------
+	sec   rsa2048/3823031E4660608D 2017-06-23 [CA]
+	D27C21A928EACD4D3607EFEC3823031E4660608D
+	...
+
+	In the "sec" line, use the id after "rsa2048/":
+	"3823031E4660608D". That's the original key and even though
+	it's not directly set for "signing" (eg. [CA]) it has a subkey
+	which is (eg. [S]). You can use the subkey directly or the
+	general key that later "gpg2" will use the subkey
+	internally.
+
+	Note: for using the subkey, you need to append "!" to the key
+	id.
+
+	$ git config --global user.signingkey 3823031E4660608D
+
+	And to automatically sign commits on `git commit`:
+
+	$ git config --global commit.gpgsign true
 
 - Setup MIT Kerberos on Windows:
 	Download the client for windows: https://web.mit.edu/kerberos/dist/
