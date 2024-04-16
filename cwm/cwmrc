@@ -1,9 +1,9 @@
 ## look'n'feel
-borderwidth 4
+borderwidth 2
 snapdist 4
 color activeborder goldenrod
-color inactiveborder grey50
-gap 14 0 0 0
+´color inactiveborder grey50
+gap 20 0 0 0
 
 ## keyboard movements
 moveamount 10
@@ -18,12 +18,12 @@ sticky yes
 unbind-key all
 
 # rebind every key to Mod4
-bind-key 4-Return "alacritty --class term -e tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
+bind-key 4-Return "alacritty --class term -e tmux -2 -f /home/bmeneg/.config/tmux/tmux.conf"
 #bind-key 4-Return "xterm +sb -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
 #bind-key 4-Return "gnome-terminal -- tmux -2 -f /home/bmeneg/.tmux.conf"
 #bind-key 4-Return "konsole --profile tmux"
-#bind-key 4-i "sudo sh ~/Documents/git/dotfiles/commands/backlight-control.sh -i 25"
-#bind-key 4-d "sudo sh ~/Documents/git/dotfiles/commands/backlight-control.sh -d 25"
+bind-key 4-i "sudo sh ~/git/dotfiles/commands/backlight-control.sh -i 10"
+bind-key 4-d "sudo sh ~/git/dotfiles/commands/backlight-control.sh -d 10"
 bind-key 4-Escape window-delete
 bind-key 4-h window-move-left-big
 bind-key 4-j window-move-down-big
@@ -77,22 +77,30 @@ bind-mouse 4-3 window-resize
 
 ## predefined apps grouping
 autogroup 1 "term,Alacritty"
-autogroup 2 "Firefox"
-autogroup 3 "email,Alacritty"
-autogroup 4 "chat,Alacritty"
+autogroup 2 "Navigator,firefox"
+autogroup 3 "email"
+#autogroup 4 "chat,Alacritty"
+autogroup 4 "Slack"
 autogroup 9 "Spotify"
+autogroup 9 "discord"
 
 ## app menu
 command mutt "alacritty --class email -e mutt"
+command aerc "alacritty --class email -e aerc"
 #command mutt "xterm +sb -class email -bg black -fg lightgrey -e mutt"
 #command weechat "xterm -class chat -bg black -fg lightgrey -e weechat"
 #command irssi "xterm +sb -class chat -bg black -fg lightgrey -e irssi"
 command irssi "alacritty --class chat -e irssi"
 # command vim "xterm +sb -bg black -fg lightgrey -e vim"
 command vim "alacritty -e nvim"
+command emacs "emacs"
+command enox "alacritty -e emacs -nw"
 command xmobar "bash -c xmobar &"
 #command term "xterm +sb -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
-command term "alacritty --class term -e tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
+command term "alacritty --class term -e tmux -2 -f /home/bmeneg/.config/tmux/tmux.conf"
+command slack "flatpak run com.slack.Slack"
+command spotify "flatpak run com.spotify.Client"
+command discord "flatpak run com.discordapp.Discord"
 
 #command mutt "gnome-terminal -- mutt"
 #command irssi "gnome-terminal -- irssi"
