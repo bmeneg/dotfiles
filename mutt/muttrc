@@ -11,7 +11,8 @@ set tmpdir = '~/.mutt/tmp'
 
 #### Multiple accounts handler ####
 ## Default account
-source ~/.mutt/bmeneguele-gmail/muttrc
+#source ~/.mutt/bmeneguele-gmail/muttrc
+source ~/.mutt/brdeoliv-redhat/muttrc
 
 ## Folder hooks
 folder-hook 'bmeneguele-gmail' 'source ~/.mutt/bmeneguele-gmail/muttrc'
@@ -109,6 +110,7 @@ set sort_aux = "reverse-last-date-received"
 set sort_re
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
+bind index g noop
 bind index gg first-entry
 bind index G last-entry
 bind index R group-reply
@@ -127,6 +129,7 @@ set menu_scroll
 set tilde
 unset markers
 
+bind pager g noop
 bind pager gg top
 bind pager G bottom
 

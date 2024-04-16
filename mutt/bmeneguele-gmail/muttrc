@@ -4,12 +4,11 @@ set postponed = +drafts
 #set mbox = '+bmeneguele-gmail/archive'
 unset record
 
-mailboxes = $spoolfile $postponed \
-            +sent \
-            +djalma-lanches \
-            +linux-kernel.kernelnewbies \
-            +linux-kernel.lkcamp \
-            +linux-kernel.eudyptula
+mailboxes $spoolfile $postponed \
+          +sent \
+          +linux-kernel.kernelnewbies \
+          +linux-kernel.lkcamp \
+          +linux-kernel.eudyptula
 
 set sendmail = "/usr/bin/msmtp -C /home/bmeneg/.msmtp/msmtprc -a bmeneguele-gmail"
 set from = "bmeneguele@gmail.com" 
