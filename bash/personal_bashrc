@@ -6,12 +6,12 @@
 #source /usr/local/bin/virtualenvwrapper.sh
 
 # perl local::lib env vars
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-. ~/perl5/perlbrew/etc/bashrc
+#PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
+#PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+#. ~/perl5/perlbrew/etc/bashrc
 
 # GOLANG environment
 export GOPATH=$HOME/go
@@ -25,7 +25,7 @@ export TERM=xterm-256color
 export EDITOR="vim"
 
 # rust cargo bin
-PATH="$HOME/.cargo/bin:$PATH"; export PATH;
+#PATH="$HOME/.cargo/bin:$PATH"; export PATH;
 
 # x-tools are tools to handle cross-compiling such as arm gcc and others that
 # were compile or by hand or through some other tool like crosstool-ng
@@ -43,6 +43,7 @@ PATH="$HOME/.cargo/bin:$PATH"; export PATH;
 alias la="ls -a"
 alias ll="ls -lah"
 alias emacs="emacs -nw"
+alias e="emacs -nw"
 alias vim="nvim"
 #alias xsession-2m="bash $HOME/.xsession -m 2:hdmi -k us-intl"
 #alias xsession-1m="bash $HOME/.xsession -m 1:laptop -k br-thinkpad"
@@ -64,6 +65,6 @@ export PS1="[\A] <\u> \w$RED \$(eval $parse_git_branch)$LIGHT_GREEN\$ $END_COLOR
 
 #eval `dircolors ~/.dircolors`
 
-if [ -f "$HOME/.lab-completion.sh" ]; then
-	. $HOME/.lab-completion.sh
-fi
+#if [ -f "$HOME/.lab-completion.sh" ]; then
+#	. $HOME/.lab-completion.sh
+#fi
