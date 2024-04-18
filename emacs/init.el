@@ -1,20 +1,24 @@
-;;; init --- INIT Emacs file
-;;; Commentary:
-;;; Code:
+;; Reduce emacs startup time by decreasing the about of gc done
+(setq gc-cons-threshold (* 10 1000 1000))
+(add-hook 'emacs-start-hook
+	  #'(lambda ()
+	      (message "Startup in %s sec with %d garbage collections"
+		       (emacs-init-time "%.2f")
+		       gcs-done)))
 
-;;;; Load external files before anything else
+;;; Load external files before anything else
 (load "~/.emacs.d/custom.el")
 (load "~/.emacs.d/funcs.el")
 
 (autoload 'slime "~/quicklisp/slime-helper.el" "Launch SLIME" t nil)
 (setq-default inferior-lisp-program "sbcl")
 
-;;;; Package/plugin management
+;;; Package/plugin management
 (require 'package)
 
 ;; package manager custom repos
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-
+(add-to-list 'package-archives '("elpa" . "http://orgmode.org/elpa"))
 (setq package-enable-at-startup nil)
 (package-initialize)
 
@@ -27,31 +31,48 @@
 (eval-when-compile
   (require 'use-package))
 
-;; Install minimum set of generic plugins
-; Tmux powerline
+;;; Install minimum set of generic plugins
+;; Tmux powerline
 (use-package powerline
   :ensure t
   :init (powerline-default-theme))
-; Git commands from emacs
+
+;; Git commands from emacs
 (use-package magit
   :ensure t)
-; Syntax checker to replace flymake, which is bundled with emacs
+
+;; Syntax checker to replace flymake, which is bundled with emacs
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode))
-; Autocomplete with LSP support
+  :init (global-flycheck-mode)
+  :config
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+
+;; Autocomplete with LSP support
 (use-package company
   :ensure t
   :config
   (setq company-idle-delay 0.1
 	company-minimum-prefix-length 1))
 
+;; Ability to see the undo tree
+;; NOTE: manually patched, check .emacs.d/elpa/queue/*.patch
+(use-package undo-tree
+  :ensure t
+  :config
+  (global-undo-tree-mode 1)
+  (setq undo-tree-auto-save-history nil))
+
 ;; Language specific package
 (use-package python
-  :ensure t
-  :hook ((python-ts-mode . eglot-ensure)
-	 (python-ts-mode . company-mode))
-  :mode (("\\.py$" . python-ts-mode)))	; for some reason it's not working
+  :hook ((python-ts-mode . company-mode)
+	 (python-ts-mode . eglot-ensure))
+  :mode (("\\.py$" . python-ts-mode)))
+
+(use-package go-mode
+  :hook ((go-ts-mode . company-mode)
+	 (go-ts-mode . eglot-ensure))
+  :mode (("\\.go$" . go-ts-mode)))
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
@@ -64,7 +85,7 @@
     (css "https://github.com/tree-sitter/tree-sitter-css")
     (csharp "https://github.com/tree-sitter/tree-sitter-c-sharp")
     (elisp "https://github.com/Wilfred/tree-sitter-elisp")
-    (go "https://github.com/tree-sitter/tree-sitter-go")
+    (go "https://github.com/tree-sitter/tree-sitter-go" "v0.20.0")
     (gomod "https://github.com/camdencheek/tree-sitter-go-mod")
     (html "https://github.com/tree-sitter/tree-sitter-html")
     (js . ("https://github.com/tree-sitter/tree-sitter-javascript" "master" "src"))
@@ -111,7 +132,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(eglot zenburn-theme xcscope use-package powerline magit flycheck editorconfig)))
+   '(go markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
