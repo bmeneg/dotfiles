@@ -46,7 +46,8 @@
   :ensure t
   :init (global-flycheck-mode)
   :config
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc
+					     )))
 
 ;; Autocomplete with LSP support
 (use-package company
@@ -67,12 +68,17 @@
 (use-package python
   :hook ((python-ts-mode . company-mode)
 	 (python-ts-mode . eglot-ensure))
-  :mode (("\\.py$" . python-ts-mode)))
+  :mode (("\\.py\\'" . python-ts-mode)))
 
 (use-package go-mode
   :hook ((go-ts-mode . company-mode)
 	 (go-ts-mode . eglot-ensure))
-  :mode (("\\.go$" . go-ts-mode)))
+  :mode (("\\.go\\'" . go-ts-mode)))
+
+(use-package sh-mode
+  :hook ((bash-ts-mode . company-mode)
+	 (bash-ts-mode . eglot-ensure))
+  :mode (("\\.sh\\'" . bash-ts-mode)))
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
@@ -102,13 +108,21 @@
     (typescript . ("https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src"))
     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
-;; eglot (emacs builtin) configuration
+;; Eglot configuration
 (setq-default eglot-workspace-configuration
-              '(:pylsp (:plugins (:rope_autoimport (:enabled t)))))
+              '(:pylsp (:plugins (:pycodestyle (:enabled :json-false)
+					       :pyflakes (:enabled :json-false)
+                                               :flake8 (:enabled t))
+                                 :configurationSources ["flake8"])))
 
 ;;;; General configuration
 ;; Show line number on the left
 (global-display-line-numbers-mode)
+;; Remove menu, scroll and tool bar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+;; Enable spell checking on orgmode with flyspell, builtin to emacs
+(add-hook 'org-mode-hook #'flyspell-mode)
 
 ;; Load theme
 (load-theme 'zenburn t)
@@ -123,7 +137,8 @@
 ;; kbd remapping
 (global-set-key (kbd "M-o") 'open-line-below)
 (global-set-key (kbd "M-O") 'open-line-above)
-;;
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
 ;;;;; init.el ends here
 
 (custom-set-variables
@@ -132,7 +147,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(go markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig)))
+   '(adoc-mode yaml-mode go markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
