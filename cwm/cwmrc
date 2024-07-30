@@ -2,8 +2,8 @@
 borderwidth 2
 snapdist 4
 color activeborder goldenrod
-´color inactiveborder grey50
-gap 20 0 0 0
+color inactiveborder grey50
+gap 18 0 0 0
 
 ## keyboard movements
 moveamount 10
@@ -18,7 +18,7 @@ sticky yes
 unbind-key all
 
 # rebind every key to Mod4
-bind-key 4-Return "alacritty --class term -e tmux -2 -f /home/bmeneg/.config/tmux/tmux.conf"
+bind-key 4-Return "alacritty --class term -e tmux -f /home/bmeneg/.config/tmux/tmux.conf"
 #bind-key 4-Return "xterm +sb -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux/tmux.conf"
 #bind-key 4-Return "gnome-terminal -- tmux -2 -f /home/bmeneg/.tmux.conf"
 #bind-key 4-Return "konsole --profile tmux"
@@ -87,13 +87,14 @@ autogroup 9 "discord"
 ## app menu
 command mutt "alacritty --class email -e mutt"
 command aerc "alacritty --class email -e aerc"
+command feh "feh --bg-scale /usr/share/wallpapers/F40/contents/images/1920x1080.png"
 #command mutt "xterm +sb -class email -bg black -fg lightgrey -e mutt"
 #command weechat "xterm -class chat -bg black -fg lightgrey -e weechat"
 #command irssi "xterm +sb -class chat -bg black -fg lightgrey -e irssi"
 command irssi "alacritty --class chat -e irssi"
 # command vim "xterm +sb -bg black -fg lightgrey -e vim"
 command vim "alacritty -e nvim"
-command emacs "emacs"
+command emacs "emacs-gtk+x11"
 command enox "alacritty -e emacs -nw"
 command xmobar "bash -c xmobar &"
 #command term "xterm +sb -geometry 80x40 -bg black -fg lightgrey -e tmux -2 -f /home/bmeneg/.tmux.conf"
