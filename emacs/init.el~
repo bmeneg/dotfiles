@@ -78,7 +78,7 @@
   (progn
     (treemacs-follow-mode t)
     (treemacs-filewatch-mode t)
-    (treemacs-fringe-indicator-mode 'always)
+    (treemacs-fring-indicator-mode 'always)
     (when treemacs-python-executable
       (treemacs-git-commit-diff-mode t)))
   :bind
@@ -91,20 +91,13 @@
 	("C-x t C-t" . treemacs-find-file)
 	("C-x t M-t" . treemacs-find-tag)))
 
-(use-package treemacs-icons-dired
-  :ensure t
-  :hook (dired-mode . treemacs-icons-dired-enabled-once))
+;; (use-package treemacs-icons-dired
+;;   :ensure t
+;;   :hook (dired-mode . treemacs-icons-dired-enabled-once))
 
 (use-package treemacs-magit
   :ensure t
   :after (treemacs magit))
-
-(use-package all-the-icons
-  :ensure t)
-
-(use-package treemacs-all-the-icons
-  :ensure t
-  :after (all-the-icons))
 
 ;; Language specific package
 (use-package python
