@@ -81,6 +81,7 @@ autogroup 2 "Navigator,firefox"
 autogroup 3 "email"
 #autogroup 4 "chat,Alacritty"
 autogroup 4 "Slack"
+autogroup 5 "emacs-gtk_x11,Emacs-gtk+x11"
 autogroup 9 "Spotify"
 autogroup 9 "discord"
 
@@ -102,6 +103,8 @@ command term "alacritty --class term -e tmux -2 -f /home/bmeneg/.config/tmux/tmu
 command slack "flatpak run com.slack.Slack"
 command spotify "flatpak run com.spotify.Client"
 command discord "flatpak run com.discordapp.Discord"
+command xrandr "bash /home/bmeneg/.screenlayout/3-mon.sh"
+command init "bash /home/bmeneg/git/dotfiles/cwm/init.sh"
 
 #command mutt "gnome-terminal -- mutt"
 #command irssi "gnome-terminal -- irssi"
