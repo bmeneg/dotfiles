@@ -10,7 +10,7 @@
 (load "~/.emacs.d/custom.el")
 (load "~/.emacs.d/funcs.el")
 
-(autoload 'slime "~/quicklisp/slime-helper.el" "Launch SLIME" t nil)
+;; Set lisp compiler to run underneath for SLIME
 (setq-default inferior-lisp-program "sbcl")
 
 ;;; Package/plugin management
@@ -175,6 +175,9 @@
 
 ;; autofill automatically in all modes
 (setq-default auto-fill-function 'do-auto-fill)
+;; and make it more than the usual, letting the linters handle the
+;; warnings and the auto-indent can happen with M-q
+(set-fill-column 120)
 
 ;; kbd remapping
 (global-set-key (kbd "M-o") 'open-line-below)
@@ -189,7 +192,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(treemacs-magit treemacs markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig)))
+   '(slime markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
