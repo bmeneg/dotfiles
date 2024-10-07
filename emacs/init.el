@@ -6,10 +6,6 @@
 		       (emacs-init-time "%.2f")
 		       gcs-done)))
 
-;;; Load external files before anything else
-(load "~/.emacs.d/custom.el")
-(load "~/.emacs.d/funcs.el")
-
 ;; Set lisp compiler to run underneath for SLIME
 (setq-default inferior-lisp-program "sbcl")
 
@@ -46,8 +42,7 @@
   :ensure t
   :init (global-flycheck-mode)
   :config
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc
-					     )))
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
 ;; Autocomplete with LSP support
 (use-package company
@@ -61,66 +56,47 @@
 (use-package undo-tree
   :ensure t
   :config
-  (global-undo-tree-mode 1)
-  (setq undo-tree-auto-save-history nil))
+  (progn
+    (global-undo-tree-mode 1)
+    (setq undo-tree-auto-save-history nil)))
 
 ;; File manager
 (use-package posframe
   :ensure t)
 
-(use-package treemacs
-  :ensure t
-  :defer t
-  :init
-  (with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
-  :config
-  (progn
-    (treemacs-follow-mode t)
-    (treemacs-filewatch-mode t)
-    (treemacs-fringe-indicator-mode 'always)
-    (when treemacs-python-executable
-      (treemacs-git-commit-diff-mode t)))
-  :bind
-  (:map global-map
-	("M-0" . treemacs-select-window)
-	("C-x t 1" . treemacs-delete-other-windows)
-	("C-x t t" . treemacs)
-	("C-x t d" . treemacs-select-directory)
-	("C-x t B" . treemacs-bookmark)
-	("C-x t C-t" . treemacs-find-file)
-	("C-x t M-t" . treemacs-find-tag)))
-
-(use-package treemacs-icons-dired
-  :ensure t
-  :hook (dired-mode . treemacs-icons-dired-enabled-once))
-
-(use-package treemacs-magit
-  :ensure t
-  :after (treemacs magit))
-
-(use-package all-the-icons
+;; M-x with IDO support
+(use-package smex
   :ensure t)
 
-(use-package treemacs-all-the-icons
-  :ensure t
-  :after (all-the-icons))
+;; Allow multiple cursor editting and other things
+(use-package multiple-cursors
+  :ensure t)
 
 ;; Language specific package
 (use-package python
+  :mode (("\\.py\\'" . python-ts-mode))
   :hook ((python-ts-mode . company-mode)
-	 (python-ts-mode . eglot-ensure))
-  :mode (("\\.py\\'" . python-ts-mode)))
+	 (python-ts-mode . eglot-ensure)))
 
 (use-package go-mode
+  :mode (("\\.go\\'" . go-ts-mode))
   :hook ((go-ts-mode . company-mode)
-	 (go-ts-mode . eglot-ensure))
-  :mode (("\\.go\\'" . go-ts-mode)))
+	 (go-ts-mode . eglot-ensure)))
+
+(use-package rust-mode
+  :mode (("\\.rs\\'" . rust-ts-mode))
+  :hook ((rust-ts-mode . company-mode)
+	 (rust-ts-mode . eglot-ensure)))
 
 (use-package sh-mode
+  :mode (("\\.sh\\'" . bash-ts-mode))
   :hook ((bash-ts-mode . company-mode)
-	 (bash-ts-mode . eglot-ensure))
-  :mode (("\\.sh\\'" . bash-ts-mode)))
+	 (bash-ts-mode . eglot-ensure)))
+
+(use-package c-mode
+  :mode (("\\.c\\'" . c-ts-mode))
+  :hook ((c-ts-mode . company-mode)
+	 (c-ts-mode . eglot-ensure)))
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
@@ -151,13 +127,27 @@
     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
 ;; Eglot configuration
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+	       '((c-mode c-ts-mode) . ("clangd-17"
+				       "--fallback-style=/home/bmeneg/.config/clangd/config.yaml"))))
 (setq-default eglot-workspace-configuration
-              '(:pylsp (:plugins (:pycodestyle (:enabled :json-false)
+	      '(:pylsp (:plugins (:pycodestyle (:enabled :json-false)
 					       :pyflakes (:enabled :json-false)
-                                               :flake8 (:enabled t))
+					       :flake8 (:enabled t))
                                  :configurationSources ["flake8"])))
 
 ;;;; General configuration
+;; make auto-generated emacs custom configurations land in another
+;; file rather then our own init.el
+(setq custom-file "~/.emacs.d/custom.el")
+;;; Load external files before anything else
+(load-file custom-file)
+(load-file "~/.emacs.d/funcs.el")
+(load-file "~/.emacs.d/linux-kernel.el")
+
+;; Autocompletion for on find-files (and M-x with smex)
+(ido-mode 1)
 ;; Show line number on the left
 (global-display-line-numbers-mode)
 ;; Remove menu, scroll and tool bar
@@ -167,7 +157,7 @@
 (add-hook 'org-mode-hook #'flyspell-mode)
 
 ;; Load theme
-(load-theme 'zenburn t)
+(load-theme 'leuven t)
 
 ;; set default font for XEmacs
 (set-face-attribute 'default nil :font "JetBrains Mono-10")
@@ -183,19 +173,11 @@
 (global-set-key (kbd "M-o") 'open-line-below)
 (global-set-key (kbd "M-O") 'open-line-above)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-,") 'duplicate-line)
 
 ;;;;; init.el ends here
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(slime markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
