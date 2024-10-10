@@ -72,6 +72,20 @@
 (use-package multiple-cursors
   :ensure t)
 
+;; C code formatting
+(use-package clang-format
+  :ensure t
+  :config
+  (setq clang-format-executable "clang-format-17"))
+
+(use-package ggtags
+  :ensure t)
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 ;; Language specific package
 (use-package python
   :mode (("\\.py\\'" . python-ts-mode))
@@ -95,8 +109,8 @@
 
 (use-package c-mode
   :mode (("\\.c\\'" . c-ts-mode))
-  :hook ((c-ts-mode . company-mode)
-	 (c-ts-mode . eglot-ensure)))
+  :hook ((c-ts-mode . company-mode)))
+
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
@@ -128,14 +142,14 @@
 
 ;; Eglot configuration
 (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-	       '((c-mode c-ts-mode) . ("clangd-17"
-				       "--fallback-style=/home/bmeneg/.config/clangd/config.yaml"))))
-(setq-default eglot-workspace-configuration
-	      '(:pylsp (:plugins (:pycodestyle (:enabled :json-false)
-					       :pyflakes (:enabled :json-false)
-					       :flake8 (:enabled t))
-                                 :configurationSources ["flake8"])))
+	;; C/C++ language server
+	(add-to-list 'eglot-server-programs '((c-ts-mode c++-ts-mode) "clangd-17"))
+	;; Python language server config
+	(setq-default eglot-workspace-configuration
+		'(:pylsp (:plugins (:pycodestyle (:enabled :json-false)
+							   :pyflakes (:enabled :json-false)
+							   :flake8 (:enabled t))
+					 :configurationSources ["flake8"]))))
 
 ;;;; General configuration
 ;; make auto-generated emacs custom configurations land in another
@@ -155,13 +169,20 @@
 (tool-bar-mode -1)
 ;; Enable spell checking on orgmode with flyspell, builtin to emacs
 (add-hook 'org-mode-hook #'flyspell-mode)
+;; GTAG configuration
+(add-hook 'c-ts-mode-hook (lambda () (ggtags-mode 1)))
+(setq-local imenu-create-index-function #'ggtags-build-imenu-index)
+
+;; Company-mode (complete anything) configuration
+(setq company-backends (delete 'company-semantic company-backends))
+(add-to-list 'company-backends 'company-c-headers)
 
 ;; Load theme
-(load-theme 'leuven t)
+(load-theme 'zenburn t)
 
 ;; set default font for XEmacs
-(set-face-attribute 'default nil :font "JetBrains Mono-10")
-(set-frame-font "JetBrains Mono-10" nil t)
+(set-face-attribute 'default nil :font "JetBrains Mono-11")
+(set-frame-font "JetBrains Mono-11" nil t)
 
 ;; autofill automatically in all modes
 (setq-default auto-fill-function 'do-auto-fill)
@@ -179,5 +200,20 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-,") 'duplicate-line)
+
+(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
+(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
+(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+(define-key ggtags-navigation-mode-map (kbd "C-c g q") 'ggtags-navigation-mode-done)
+
+(with-eval-after-load 'c-ts-mode
+	(define-key c-ts-mode-map [(tab)] 'company-complete)
+	(define-key c++-ts-mode-map [(tab)] 'company-complete)
+	(define-key c-ts-mode-map (kbd "M-q") 'eglot-format)
+	(define-key c++-ts-mode-map (kbd "M-q") 'eglot-format))
 
 ;;;;; init.el ends here
