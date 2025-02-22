@@ -21,10 +21,12 @@ Plug 'edkolev/tmuxline.vim'
 "Plug 'python-mode/python-mode'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'Nihilus118/vscode-perl-debug'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'cdelledonne/vim-cmake'
 call plug#end()
 
 filetype plugin on
@@ -43,17 +45,20 @@ set showmatch
 set ignorecase
 set undofile
 set undodir=.nvim/
+set laststatus=2
 
-set runtimepath+=/home/bmeneg/git/coc-perl
-set runtimepath+=/home/bmeneg/git/tree-sitter-perl/queries/perl/
+set runtimepath+=/home/bmeneg/git/coc-perl/
+"let g:coc_node_args = ['--nolazy', '--inspect-brk=5858']
+"set runtimepath+=/home/bmeneg/git/tree-sitter-perl/queries/perl/
 
 let g:EditorConfig_max_line_indicator = "none"
-let g:airline_theme = "base16_gruvbox_dark_hard"
+let g:airline_theme = "papercolor"
 "let perl_sub_signatures = 1
 let g:rustfmt_autosave = 1
 
-set background=dark
-colorscheme tokyonight-night
+set t_Co=256
+set background=light
+colorscheme PaperColor
 
 " NO COLOR VIM
 " -------------------------------------------------------------------------
@@ -115,6 +120,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gu <Plug>(coc-references-used)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>

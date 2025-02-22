@@ -33,6 +33,9 @@ export EDITOR="vim"
 # cabal (pkg manager for haskell projects)
 #export PATH="$PATH:$HOME/bin/x-tools/arm-cortexa7-linux-musleabihf/bin:/home/bmeneg/.cabal/bin"
 
+# Add platformIO executables to path
+export PATH="$PATH:$HOME/.platformio/penv/bin"
+
 # add roswell (common lisp system manager) binaries to path
 #export PATH="$PATH:$HOME/.roswell/bin"
 
@@ -42,8 +45,9 @@ export EDITOR="vim"
 # general aliases
 alias la="ls -a"
 alias ll="ls -lah"
-alias emacs="emacs -nw"
-alias e="emacs -nw"
+alias emacs="emacs-gtk+x11"
+alias enw="emacs -nw"
+alias e="emacs"
 alias vim="nvim"
 #alias xsession-2m="bash $HOME/.xsession -m 2:hdmi -k us-intl"
 #alias xsession-1m="bash $HOME/.xsession -m 1:laptop -k br-thinkpad"
@@ -61,10 +65,20 @@ END_COLOR="\[\033[0m\]"
 
 #export PS1="$LIGHT_GRAY[\$(date +%H:%M)] \w$YELLOW \$(parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
 #export PS1="[\$(date +%H:%M)] \w$RED \$(parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
-export PS1="[\A] <\u> \w$RED \$(eval $parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
+#export PS1="[\A] <\u> \w$RED \$(eval $parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
+export PS1="[\A] <\u> \W$RED \$(eval $parse_git_branch)$LIGHT_GREEN\$ $END_COLOR"
+
+short_pwd() {
+    cwd=$(pwd | perl -F/ -ane 'print join( "/", map { $i++ < @F - 1 ?  substr $_,0,1 : $_ } @F)')
+    echo -n $cwd
+}
+# later in your .bashrc
+#export PS1="[\A] <\u> \$(short_pwd) \$(eval $parse_git_branch)\$ "
 
 #eval `dircolors ~/.dircolors`
 
 #if [ -f "$HOME/.lab-completion.sh" ]; then
 #	. $HOME/.lab-completion.sh
 #fi
+
+eval "$(direnv hook bash)"

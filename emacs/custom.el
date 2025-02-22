@@ -6,12 +6,15 @@
  '(duplicate-line-final-position 1)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-	  '(eglot company-c-headers ggtag ggtags clang-format smex dired-icon markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig))
+	  '(rtags perlbrew rainbow-delimiters paredit cider clojure-ts-mode clojure-mode eglot company-c-headers ggtag ggtags clang-format smex dired-icon markdown-mode powerline use-package python-mode projectile magit helm flycheck evil-visual-mark-mode editorconfig))
  '(safe-local-variable-values
-	  '((eval when
-			(eglot-managed-p)
-			(eglot-shutdown
-				(eglot-current-server)))
+	  '((eval eglot-ensure)
+		   (eglot-server-programs
+			   (c-ts-mode "clangd-17" "--compile-commands-dir=build"))
+		   (eval when
+			   (eglot-managed-p)
+			   (eglot-shutdown
+				   (eglot-current-server)))
 		   (eval add-to-list 'company-c-headers-path-user
 			   (expand-file-name "~/git/linux/include/"))
 		   (eval setq company-clang-arguments
