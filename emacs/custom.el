@@ -10,7 +10,7 @@
  '(safe-local-variable-values
 	  '((eval eglot-ensure)
 		   (eglot-server-programs
-			   (c-ts-mode "clangd-17" "--compile-commands-dir=build"))
+			   (c-ts-mode "clangd-19" "--compile-commands-dir=build"))
 		   (eval when
 			   (eglot-managed-p)
 			   (eglot-shutdown

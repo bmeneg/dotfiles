@@ -83,8 +83,8 @@
 
 (use-package editorconfig
   :ensure t
-  :config
-  (editorconfig-mode 1))
+  :config)
+
 
 (use-package rainbow-delimiters
   :ensure t)
@@ -120,17 +120,21 @@
   :mode (("\\.clj\\'" . clojure-mode))
   :hook ((clojure-mode . company-mode)
      (clojure-mode . paredit-mode)
-	 (clojure-mode . rainbow-delimiters-mode)))
+     (clojure-mode . rainbow-delimiters-mode)))
 
 (use-package perl-mode
   :mode (("\\.pl\\'" . perl-mode)
-		 ("\\.pm\\'" . perl-mode))
+	 ("\\.pm\\'" . perl-mode))
   :hook ((perl-mode . company-mode)
-			(perl-mode . eglot-ensure)))
+	 (perl-mode . eglot-ensure)))
 
 (use-package perlbrew
-	:config
-	(with-eval-after-load 'perlbrew-switch "perl-5.40.0"))
+  :config (with-eval-after-load 'perlbrew-switch "perl-5.40.0"))
+
+(use-package yaml-mode
+  :mode (("\\.yaml\\'" . yaml-mode)
+	 ("\\.yml\\'" . yaml-mode)
+	 ("\\.fmf\\'" . yaml-mode)))
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
@@ -173,7 +177,7 @@
 		`((cperl-mode perl-mode perl-ts-mode) . ("/home/bmeneg/git/PerlNavigator/server/bin/perlnavigator", "--stdio")))
 	(add-to-list 'eglot-server-programs
 		;; C/C++ language server
-		`((c-ts-mode c++-ts-mode) . "clangd-17"))
+		`((c-ts-mode c++-ts-mode) . "clangd"))
 
 	(setq-default eglot-workspace-configuration
 		;; Python language server config
@@ -225,8 +229,8 @@
 (load-theme 'zenburn t)
 
 ;; set default font for XEmacs
-(set-face-attribute 'default nil :font "JetBrains Mono-11")
-(set-frame-font "JetBrains Mono-11" nil t)
+(set-face-attribute 'default nil :font "JetBrains Mono-16")
+(set-frame-font "JetBrains Mono-16" nil t)
 
 ;; autofill automatically in all modes
 (setq-default auto-fill-function 'do-auto-fill)
@@ -261,6 +265,6 @@
 	(define-key c++-ts-mode-map [(tab)] 'company-complete)
 	(define-key c-ts-mode-map (kbd "M-q") 'eglot-format)
 	(define-key c++-ts-mode-map (kbd "M-q") 'eglot-format)
-	(define-key c-ts-mode-map (kbd "C-g d") 'xref-find-definitions))
+	(define-key c-ts-mode-map (kbd "C-c d") 'xref-find-definitions))
 
 ;;;;; init.el ends here
