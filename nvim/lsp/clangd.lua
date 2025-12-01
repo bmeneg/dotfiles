@@ -1,7 +1,12 @@
 vim.lsp.config['clangd'] = {
-	cmd = {'clangd-17', '--background-index', '--clang-tidy', '--log=verbose'},
-	filetypes = { 'c', 'cpp', 'h', 'hpp' },
+	cmd = { 'clangd-17', '--background-index', '--pretty', '--clang-tidy', '--log=verbose' },
+	filetypes = { 'c', 'cpp' },
 	init_options = {
-		fallbackFlags = { '-std=c++17' },
+		fallbackFlags = {
+			'-std=c17',
+			'-Wall',
+			'-Wextra',
+			'-pedantic',
+		},
 	},
 }
