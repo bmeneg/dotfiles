@@ -23,4 +23,6 @@ require("lazy").setup({
 	install = { colorscheme = { "habamax" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
+	-- too many concurrent processes were causing issues with `git fetch`
+	concurrency = 8,
 })
