@@ -29,7 +29,51 @@ return {
 	{ 'tpope/vim-fugitive' },
 	{ 'mhinz/vim-signify' },
 	-- coding utilities
-	{ 'nvim-treesitter/nvim-treesitter'},
+	{
+		'nvim-treesitter/nvim-treesitter',
+		dependencies = {
+			'nvim-treesitter/nvim-treesitter-textobjects',
+			{
+				'nvim-treesitter/nvim-treesitter-context',
+				opts = { enabled = true, mode = 'topline', line_numbers = true }
+			},
+		},
+		lazy = false,
+		build = ':TSUpdate',
+		config = function ()
+			vim.api.nvim_create_autocmd('FileType', {
+				pattern = {
+					'go', 'gomod', 'gosum', 'gowork', 'lua', 'yaml', 'toml', 'json',
+					'sql', 'proto', 'c', 'python', 'gitignore', 'dockerfile',
+					'markdown',
+				},
+				callback = function()
+					-- syntax highlighting, provided by Neovim
+					vim.treesitter.start()
+					-- folds, provided by Neovim
+					vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+					vim.wo.foldmethod = 'expr'
+					-- indentation, provided by nvim-treesitter
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
+			})
+
+			require('nvim-treesitter.configs').setup({
+				auto_install = true,
+				ensure_installed = {
+					'go', 'gomod', 'gosum', 'gowork', 'lua', 'yaml', 'toml', 'json',
+					'sql', 'proto', 'c', 'python', 'gitignore', 'dockerfile',
+					'markdown',
+				},
+				sync_install = false,
+				ignore_install = {},
+				modules = {},
+				indent = { enable = true },
+				highlight = { enable = true },
+				textobjects = { select = { enable = true, lookahead = true } }
+			})
+		end
+	},
 	{ 'tpope/vim-commentary' },
 	{
 		'preservim/nerdtree',
