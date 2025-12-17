@@ -26,12 +26,6 @@ vim.cmd.colorscheme('tokyonight')
 --- display diagnostic information as virtual lines
 vim.diagnostic.config({ virtual_lines = { current_line = true } })
 
--- global variables watched by some plugins
-vim.g.EditorConfig_max_line_indicator = 'none'
-vim.g.airline_theme = 'base16_gruvbox_dark_pale'
-vim.g.rustfmt_autosave = 1
-vim.g.linuxsty_patterns = { "/usr/src/", "/home/bmeneg/git/linux" }
-
 -- keymaps
 vim.keymap.set({ 'n', 'i', 'v' }, '<F2>', vim.cmd.NERDTreeToggle)
 vim.keymap.set({ 'n', 'i', 'v' }, '<F3>', vim.cmd.TagbarToggle)

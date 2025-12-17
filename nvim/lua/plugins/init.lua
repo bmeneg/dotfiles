@@ -3,13 +3,28 @@ return {
 	{ 'flazz/vim-colorschemes' },
 	{ 'folke/tokyonight.nvim' },
 	{ 'NLKNguyen/papercolor-theme' },
-	{ 'vim-airline/vim-airline' },
-	{ 'vim-airline/vim-airline-themes' },
+	{
+		'vim-airline/vim-airline',
+		dependencies = { 'vim-airline/vim-airline-themes' },
+		init = function ()
+			vim.g.airline_theme = 'base16_gruvbox_dark_pale'
+		end
+	},
 	{ 'edkolev/tmuxline.vim' },
 	{ 'ryanoasis/vim-devicons' },
 	-- coding styles
-	{ 'editorconfig/editorconfig-vim' },
-	{ 'gregkh/kernel-coding-style' },
+	{
+		'editorconfig/editorconfig-vim',
+		init = function ()
+			vim.g.EditorConfig_max_line_indicator = 'none'
+		end
+	},
+	{
+		'gregkh/kernel-coding-style',
+		init = function ()
+			vim.g.linuxsty_patterns = { "/usr/src/", "/home/bmeneg/git/linux" }
+		end
+	},
 	-- git integration
 	{ 'tpope/vim-fugitive' },
 	{ 'mhinz/vim-signify' },
@@ -24,7 +39,7 @@ return {
 		'majutsushi/tagbar',
 		cmd = 'TagbarToggle',
 	},
-	-- { 'joe-skb7/cscope-maps' },
+	--{ 'joe-skb7/cscope-maps' },
 	{
 		'nvim-telescope/telescope.nvim',
 		 dependencies = { 'nvim-lua/plenary.nvim' },
