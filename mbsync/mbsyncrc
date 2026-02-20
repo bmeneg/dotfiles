@@ -5,7 +5,7 @@ SyncState *
 Expunge Both
 
 IMAPStore bmeneguele-gmail-remote
-SSLType IMAPS
+TLSType IMAPS
 AuthMechs PLAIN
 PipelineDepth 50
 Host imap.gmail.com
@@ -56,7 +56,7 @@ Channel bmeneguele-gmail-kernelnewbies
 
 IMAPStore brdeoliv-redhat-remote
 CertificateFile /etc/pki/tls/certs/ca-bundle.crt
-SSLType IMAPS
+TLSType IMAPS
 AuthMechs PLAIN
 PipelineDepth 25
 Host imap.gmail.com
@@ -97,7 +97,7 @@ Channel brdeoliv-redhat-trash
 Channel brdeoliv-redhat-lists
 
 IMAPStore bmeneg-heredoc-remote
-SSLType IMAPS
+TLSType IMAPS
 AuthMechs PLAIN
 PipelineDepth 25
 Host mail.heredoc.io
@@ -130,3 +130,38 @@ Channel bmeneg-heredoc-inbox
 Channel bmeneg-heredoc-sent
 Channel bmeneg-heredoc-drafts
 Channel bmeneg-heredoc-trash
+
+IMAPStore bmeneg-sdg_archon-remote
+TLSType IMAPS
+AuthMechs PLAIN
+PipelineDepth 25
+Host mail.sdg-archon.com
+User bruno.meneguele@sdg-archon.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d $HOME/.mutt/bmeneg-sdg_archon/imap.gpg"
+
+MaildirStore bmeneg-sdg_archon-local
+Path ~/Mail/bmeneg-sdg_archon/
+Inbox ~/Mail/bmeneg-sdg_archon/INBOX
+Subfolders Verbatim
+
+Channel bmeneg-sdg_archon-inbox
+Far :bmeneg-sdg_archon-remote:"INBOX"
+Near :bmeneg-sdg_archon-local:inbox
+
+Channel bmeneg-sdg_archon-sent
+Far :bmeneg-sdg_archon-remote:"Sent"
+Near :bmeneg-sdg_archon-local:sent
+
+Channel bmeneg-sdg_archon-drafts
+Far :bmeneg-sdg_archon-remote:"Drafts"
+Near :bmeneg-sdg_archon-local:drafts
+
+Channel bmeneg-sdg_archon-trash
+Far :bmeneg-sdg_archon-remote:"Trash"
+Near :bmeneg-sdg_archon-local:trash
+
+Group group-bmeneg-sdg_archon
+Channel bmeneg-sdg_archon-inbox
+Channel bmeneg-sdg_archon-sent
+Channel bmeneg-sdg_archon-drafts
+Channel bmeneg-sdg_archon-trash
