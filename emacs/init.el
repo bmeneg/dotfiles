@@ -134,7 +134,8 @@
 (use-package yaml-mode
   :mode (("\\.yaml\\'" . yaml-mode)
 	 ("\\.yml\\'" . yaml-mode)
-	 ("\\.fmf\\'" . yaml-mode)))
+	 ("\\.fmf\\'" . yaml-mode))
+  :hook ((yaml-mode . company-mode)))
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
