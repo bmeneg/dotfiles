@@ -126,16 +126,14 @@
   :mode (("\\.pl\\'" . perl-mode)
 	 ("\\.pm\\'" . perl-mode))
   :hook ((perl-mode . company-mode)
-	 (perl-mode . eglot-ensure)))
-
-(use-package perlbrew
-  :config (with-eval-after-load 'perlbrew-switch "perl-5.40.0"))
+		 (perl-mode . eglot-ensure))
+  :config
+    (with-eval-after-load 'perlbrew-switch "perl-5.40.0"))
 
 (use-package yaml-mode
   :mode (("\\.yaml\\'" . yaml-mode)
-	 ("\\.yml\\'" . yaml-mode)
-	 ("\\.fmf\\'" . yaml-mode))
-  :hook ((yaml-mode . company-mode)))
+		 ("\\.yml\\'" . yaml-mode)
+		 ("\\.fmf\\'" . yaml-mode)))
 
 ;;;; Plugins specific defaults
 ;; Tree-sitter (emacs builtin) language grammar alist
@@ -266,6 +264,5 @@
 	(define-key c++-ts-mode-map [(tab)] 'company-complete)
 	(define-key c-ts-mode-map (kbd "M-q") 'eglot-format)
 	(define-key c++-ts-mode-map (kbd "M-q") 'eglot-format)
-	(define-key c-ts-mode-map (kbd "C-c d") 'xref-find-definitions))
-
+	(define-key c-ts-mode-map (kbd "C-g d") 'xref-find-definitions))
 ;;;;; init.el ends here
