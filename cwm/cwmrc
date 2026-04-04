@@ -3,6 +3,7 @@ borderwidth 2
 snapdist 4
 color activeborder goldenrod
 color inactiveborder grey50
+fontname "Bitstream Vera Mono:pixelsize=20:regular"
 gap 18 0 0 0
 
 ## keyboard movements
@@ -81,7 +82,7 @@ autogroup 2 "Navigator,firefox"
 autogroup 3 "email"
 #autogroup 4 "chat,Alacritty"
 autogroup 4 "Slack"
-autogroup 5 "emacs-gtk_x11,Emacs-gtk+x11"
+autogroup 5 "emacs,Emacs"
 autogroup 9 "Spotify"
 autogroup 9 "discord"
 
