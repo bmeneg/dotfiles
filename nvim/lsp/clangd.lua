@@ -1,5 +1,5 @@
 return {
-	cmd = { 'clangd-17', '--background-index', '--pretty', '--clang-tidy', '--log=verbose' },
+	cmd = { 'clangd-21', '--background-index', '--pretty', '--clang-tidy', '--log=verbose' },
 	filetypes = { 'c', 'cpp' },
 	init_options = {
 		fallbackFlags = {
